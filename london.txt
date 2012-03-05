@@ -2195,12 +2195,12 @@ platform nb S
 platform sb S
 
 station ISG Island Gardens 94.5,29.5
-platform 2 S DLR R
-platform 1 S DLR L
+platform 2 S DLR L
+platform 1 S DLR R
 
 station CUS Cutty Sark 94.5,34.5
-platform 2 S DLR R
-platform 1 S DLR L
+platform 2 S DLR L
+platform 1 S DLR R
 
 station GRE Greenwich 91.0,38.0
 label S
@@ -2217,8 +2217,8 @@ platform 2 S DLR R
 platform 1 S DLR L
 
 station LEW Lewisham 87.5,51.5
-platform 6 S DLR R
-platform 5 S DLR L
+platform 6 S DLR L
+platform 5 S DLR R
 
 ## Overground
 
