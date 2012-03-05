@@ -548,8 +548,8 @@ platform 2 N Ba L
 
 station KNT Kenton -66.0,-89.5
 label E
-platform 2 N Ba R
-platform 1 N Ba L
+platform 2 N Ba L
+platform 1 N Ba R
 
 station SKT South Kenton -66.0,-83.5
 label W
