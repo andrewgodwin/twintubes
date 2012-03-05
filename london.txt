@@ -2561,8 +2561,12 @@ track WPE-2 SDE-2 Ov
 track SAT-1 GUN-1! Ov
 track SAT-2 GUN-2! Ov
 
+track SBC-2 HPK-2 Ce
+track SBC-1 HPK-1 Ce
+
 track SPBnorth-nb SPB-2 Ov
 track SPBnorth-sb SPB-1 Ov
+
 
 ## Jubilee Line
 
@@ -3454,8 +3458,7 @@ track NHG-4 QWY-1 Ce
 track HPK-2 NHG-3 Ce
 track HPK-1 NHG-4 Ce
 
-track SBC-2 HPK-2 Ce
-track SBC-1 HPK-1 Ce
+# SBC to HPK in pre-fixes
 
 track WCTeast-eb SBC-2 Ce
 track WCTeast-wb SBC-1 Ce
