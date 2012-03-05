@@ -2143,8 +2143,8 @@ platform nbsb N
 
 station PML Pudding \n Mill Lane 99.5,-39.5
 label SE
-platform 1 NE DLR L
-platform 2 NE DLR R
+platform 1 NE DLR R
+platform 2 NE DLR L
 
 waypoint PMLsouth  PML,-1.5,1.5
 platform nbsb NE
