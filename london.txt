@@ -1,0 +1,4558 @@
+
+### Lines ###
+
+line error ff00ff
+line none ff00ff
+
+# Single lines
+line Vi 2d9edf
+line No 231f20
+line Ba ae530e
+line Pi 263d96
+line Ju 94989a
+line Wa 87d5b4
+line Ci fcd006
+line Di 0a8137
+line Ce ee2722
+line Me 960154
+line Ha f468a1
+line DLR 21b5b0
+line Ov f46f1b
+
+# Multiplexed lines
+line CiDi fcd006,0a8137
+line CiHaMe fcd006,f468a1,960154
+line CiMe fcd006,960154
+line CiDiHa fcd006,0a8137,f468a1
+line CiHa fcd006,f468a1
+line MePi 960154,263d96
+line DiHa 0a8137,f468a1
+line DiPi 263d96,0a8137
+
+# National Rail
+line NR cccccc
+
+### Stations and other features ###
+
+# Victoria line stations, south to north
+
+station WAL Walthamstow \n Central 88.5,-81.5
+label N
+platform 1 E Vi R
+platform 2 E Vi L
+
+station BHR Blackhorse \n Road 78.5,-80.5
+label N
+platform 1 E Vi R
+platform 2 E Vi L
+platform 2nr W Ov R
+platform 1nr W Ov L
+
+station TTH Tottenham \n Hale 70.0,-81.5
+label N
+platform 1 E Vi R
+platform 2 E Vi L
+
+station SVS Seven \n Sisters 64.0,-80.0
+label NW
+platform 3 NE Vi R
+platform 4 NE Vi L
+platform 5 NE Vi L
+
+waypoint SVSsouth  SVS,-2.0,2.0
+platform nb NE
+platform mid NE
+platform sb NE
+
+station FPK Finsbury Park 50.0,-66.5
+label NW
+# nb
+platform 1 NE Pi R
+platform 2 NE Vi L
+# sb
+platform 3 NE Pi R
+platform 4 NE Vi L
+
+station HBY Highbury & \n Islington 48.5,-56.0
+label E
+# vic northbound
+platform 3 N Vi R
+#platform 4 N NR L
+# vic southbound
+platform 5 N Vi R
+#platform 6 N NR L
+
+station KXX King's Cross \n St Pancras 27.5,-45.0
+label NW
+label_offset 20,0
+# southbound on top
+platform 4 E Vi R
+platform 3 E Vi L
+# southbound on top
+platform 8 E No R
+platform 7 E No L
+# pic
+platform 6 NE Pi R
+platform 5 NE Pi L
+# circ/met/ham
+platform 2 W CiHaMe L
+platform 1 W CiHaMe R
+
+station EUS Euston 15.0,-48.0
+label N
+# CHX branch
+platform 1 E No R
+platform 2 E No L
+# City branch and Victoria
+platform 6 E No R
+platform 5 E Vi L
+platform 4 E Vi R
+platform 3 E No L
+
+waypoint EUSnorth  EUS,-4.5,-2.5
+platform nb N
+platform sb N
+
+station WST Warren Street 10.0,-37.5
+label E
+# Crossed over, so 4 is southbound
+platform 4 N Vi R
+platform 3 N Vi L
+platform 1 N No L
+platform 2 N No R
+
+station OXC Oxford \n Circus 4.0,-25.0
+label NE
+label_offset 2,6
+platform 2 E Ce R
+platform 1 E Ce L
+platform 6 N Vi R
+platform 4 N Ba L
+platform 3 N Ba R
+platform 5 N Vi L
+
+station GPK Green \n Park -2.0,-14.5
+label NW
+label_offset -10,5
+# Jubilee is lowest
+platform 6 NW Ju L
+platform 5 NW Ju R
+# Pic in middle
+platform 2 E Pi R
+platform 1 E Pi L
+# Victoria is highest
+platform 3 N Vi R
+platform 4 N Vi L
+
+
+station VIC Victoria -2.0,-1.0
+label NW
+platform 3 N Vi R
+platform 4 N Vi L
+platform 2 E CiDi L
+platform 1 E CiDi R
+
+station PIM Pimlico -2.0,12.0
+platform 1 N Vi R
+platform 2 N Vi L
+
+station VUX Vauxhall 4.5,21.0
+label SW
+platform 2 NW Vi L
+platform 1 NW Vi R
+
+station STK Stockwell 11.5,31.0
+platform 1 N Vi R
+platform 2 N No L
+platform 3 N No R
+platform 4 N Vi L
+
+station BRX Brixton STK,5.0,9.0
+label E
+platform 1 NW Vi L
+platform 2 NW Vi R
+
+waypoint BRXcross  BRX,-3.0,-3.0
+platform 1 NW Vi
+platform 2 NW Vi
+
+
+### Northern line stations, north to south
+
+# High Barnet branch
+
+station HBT High Barnet 27.5,-118.5
+label E
+platform 1 N No L
+platform 2 N No R
+platform 3 N No L
+
+waypoint HBTsouth  HBT,0.0,2.0
+label E
+platform nb N
+platform sb N
+
+station TOT Totteridge & \n Whetstone 27.5,-113.5
+label E
+platform 1 N No L
+platform 2 N No R
+
+station WSP Woodside Park 27.5,-108.5
+label E
+platform 1 N No L
+platform 2 N No R
+
+station WFY West Finchley 27.5,-103.5
+label E
+platform 1 N No L
+platform 2 N No R
+
+station MHE Mill Hill East 23.0,-104.0
+platform 1 NW No R
+
+station FYC Finchley Central 27.0,-98.5
+platform 1 N No R
+platform 2 N No L
+platform 3 N No R
+
+station EFY East Finchley 27.5,-92.5
+platform 1 N No R
+platform 2 N No L
+platform 3 N No R
+platform 4 N No L
+
+waypoint EFYnorth  EFY,0.0,-3.0
+platform nb N
+platform sb N
+
+station HIG Highgate 27.5,-87.5
+platform 1 N No R
+platform 2 N No L
+
+station ARC Archway 27.5,-83.0
+label W
+platform 1 N No R
+platform 2 N No L
+
+station TPK Tuffnell \n Park 27.5,-78.0
+label E
+platform 1 N No R
+platform 2 N No R
+
+station KTN Kentish Town 25.0,-72.5
+label SE
+platform 2 NE No R
+platform 1 NE No R
+
+# Edgware branch
+
+station EDG Edgware -24.5,-112.0
+label SW
+platform 3 NW No L
+platform 2 NW No R
+platform 1 NW No L
+
+waypoint EDGsouth  EDG,3.0,3.0
+platform sb NW
+platform nb NW
+
+station BUR Burnt Oak -19.5,-107.0
+label SW
+platform 2 NW No L
+platform 1 NW No R
+
+station COL Colindale -14.5,-102.0
+label SW
+platform 2 NW No L
+platform 1 NW No R
+
+station HND Hendon Central -9.5,-97.0
+label SW
+platform 2 NW No L
+platform 1 NW No R
+
+station BTX Brent Cross -4.5,-92.0
+label SW
+platform 2 NW No L
+platform 1 NW No R
+
+station GGR Golders Green 0.5,-87.0
+label SW
+platform 5 NW No L
+platform 3,4 NW No B
+platform 1,2 NW No B
+
+station HMP Hampstead 5.5,-82.0
+label SW
+platform 2 NW No L
+platform 1 NW No R
+
+station BPK Belsize \n Park 10.5,-77.0
+label SW
+platform 2 NW No L
+platform 1 NW No R
+
+station CHF Chalk Farm 15.5,-72.0
+label SW
+platform 2 NW No L
+platform 1 NW No R
+
+# Main bit
+
+station CTN Camden Town 18.5,-66.0
+# Edgware branch
+platform 1 N No R
+platform 2 N No R
+# Barnet branch
+platform 3 N No L
+platform 4 N No L
+
+waypoint CTNsouth2  CTN,0.0,4.5
+platform 6 N
+platform 5 N
+platform 4 N
+platform 3 N
+platform 2 N
+platform 1 N
+
+waypoint CTNsouth  CTN,0.0,3.0
+platform 6 N
+platform 5 N
+platform 4 N
+platform 3 N
+platform 2 N
+platform 1 N
+
+station MCR Mornington \n Crescent 18.5,-53.5
+label E
+platform 2 N No R
+platform 1 N No L
+
+waypoint MCRnorth  MCR,0.0,-2.0
+platform nb N
+platform sb N
+
+# CHX branch
+
+station GST Goodge \n Street 14.5,-32.5
+label SW
+platform 2 NW No L
+platform 1 NW No R
+
+station TCR Tottenham \n Court Road 19.5,-25.0
+label SW
+label_offset 3,-2
+platform 3 N No R
+platform 4 N No L
+platform 2 E Ce R
+platform 1 E Ce L
+
+station LSQ Leicester Square 19.5,-16.5
+label E
+label_offset -4,4
+platform 4 N No R
+platform 3 N No L
+platform 2 NE Pi R
+platform 1 NE Pi L
+
+station CHX Charing \n Cross 20.5,-9.0
+platform 5 N No R
+platform 6 N No L
+platform 3 N Ba R
+platform 4 N Ba L
+
+station EMB Embankment 20.5,-4.0
+label W
+label_offset 3,0
+platform 3 N No L
+platform 4 N No L
+platform 5 N Ba L
+platform 6 N Ba R
+
+station EMBcnc  EMB,-0.5,3.0
+platform 2 E CiDi L
+platform 1 E CiDi R
+
+station WLO Waterloo 20.5,6.5
+platform 5 N Ju R
+platform 6 N Ju L
+platform 1 N No R
+platform 2 N No L
+platform 3 N Ba R
+platform 4 N Ba R
+platform 25 N Wa L
+platform 26 N Wa R
+
+# City branch
+
+station ANG Angel 36.0,-45.0
+label S
+platform 1 W No L
+platform 2 W No R
+
+station OLD Old Street 44.0,-40.0
+label E
+platform 1 N No R
+platform 2 N No L
+
+station BNK Bank 45.0,-21.5
+label E
+label_offset 0,10
+platform 6 E Ce R
+platform 5 E Ce L
+platform 8 E Wa R
+platform 7 E Wa L
+
+station BNKdlr  BNK,0.0,3.0
+platform 3 N No R
+platform 4 N No L
+platform 10 S DLR R
+platform 9 S DLR L
+
+station LON London Bridge 44.0,-2.5
+label NE
+label_offset -3,3
+platform 2 N No R
+platform 1 N No L
+platform 4 W Ju L
+platform 3 W Ju R
+
+station BOR Borough 36.5,7.0
+label SE
+platform 2 NE No L
+platform 1 NE No L
+
+station ELE Elephant & Castle 25.0,18.5
+draw last
+label E
+platform 1 NE No L
+platform 2 NE No R
+platform 4 NW Ba L
+platform 3 NW Ba R
+
+# Morden branch
+
+station KEN Kennington 18.0,22.0
+label SE
+platform 1 NE No R
+platform 3 NE No L
+platform 4 NE No R
+platform 2 NE No L
+
+waypoint KENsouth  KEN,-2.0,2.0
+platform nb NE
+platform sb NE
+
+waypoint KENsi  KEN,3.0,4.5
+platform nb NE
+platform si NE
+platform sb NE
+
+station OVL Oval STK,2.5,-5.0
+label NW
+platform 3 NE No L
+platform 4 NE No L
+
+station CPN Clapham North STK,-3.0,5.0
+label NW
+platform 1 NE No R
+platform 2 NE No L
+
+station CPC Clapham Common 5.0,39.5
+label NW
+platform 1 NE No R
+platform 2 NE No L
+
+station CPS Clapham South 1.5,43.0
+label NW
+platform 1 NE No R
+platform 2 NE No L
+
+station BAL Balham -2.0,46.5
+label NW
+platform 1 NE No R
+platform 2 NE No L
+
+station TBE Tooting Bec -5.5,50.0
+label NW
+platform 1 NE No R
+platform 2 NE No L
+
+station TBY Tooting Broadway -9.0,53.5
+label NW
+platform 1 NE No R
+platform 2 NE No L
+
+station CLW Colliers Wood -12.5,57.0
+label NW
+platform 1 NE No R
+platform 2 NE No L
+
+station SWM South Wimbledon -16.0,60.5
+label NW
+platform 1 NE No R
+platform 2 NE No L
+
+station MOR Morden -20.0,64.5
+label NW
+platform 5 NE No R
+platform 3 NE No B
+platform 2 NE No B
+
+waypoint MORnorth  MOR,1.5,-1.5
+platform nb NE
+platform sb NE
+
+# Bakerloo line stations
+
+station WFJ Watford \n Junction -85.5,-115.5
+label W
+platform 4 NW Ov L
+platform 3 NW Ov R
+platform 2 NW Ov L
+platform 1 NW Ov R
+
+waypoint WFJsouth  WFJ,2.0,2.0
+platform sb NW
+platform nb NW
+
+station WFH Watford \n High Street -81.5,-111.5
+label NE
+platform 1 NW Ov R
+platform 2 NW Ov L
+
+station BSH Bushey -78.0,-108.0
+label NE
+platform 2 NW Ov R
+platform 1 NW Ov L
+
+station CPKnr Carpenders \n Park -74.5,-104.5
+label NE
+platform 1 NW Ov R
+platform 2 NW Ov L
+
+station HTE Hatch \n End -71.0,-101.0
+label NE
+platform 1 NW Ov R
+platform 2 NW Ov L
+
+station HDL Headstone \n Lane -67.5,-97.5
+label NE
+platform 1 NW Ov R
+platform 2 NW Ov L
+
+station HAW Harrow & \n Wealdstone -66.0,-93.5
+label W
+platform 1 N Ba R
+platform 2 N Ba L
+
+station KNT Kenton -66.0,-89.5
+label E
+platform 2 N Ba R
+platform 1 N Ba L
+
+station SKT South Kenton -66.0,-83.5
+label W
+platform 2 N Ba R
+platform 1 N Ba L
+
+station NWM North Wembley -66.0,-79.0
+label W
+platform 2 N Ba L
+platform 1 N Ba R
+
+station WEM Wembley Central -66.0,-74.0
+label W
+platform 1 N Ba L
+platform 2 N Ba R
+
+station SPK Stonebridge Park -66.0,-69.5
+label W
+platform 2 N Ba L
+platform 1 N Ba R
+
+station HSD Harlesden -64.0,-65.0
+label NE
+platform 1 NW Ba R
+platform 2 NW Ba L
+
+station WJN Willesden Junction -61.5,-61.0
+label SW
+platform 1 NW Ba L
+platform 2 NW Ov B
+platform 3 NW Ba R
+
+waypoint WJNsouth  WJN,1.5,1.5
+platform sb NW
+platform nb NW
+
+station KGN Kensal \n Green -56.5,-56.0
+label SW
+platform 1 NW Ba L
+platform 2 NW Ba R
+
+waypoint KGNnorth  KGN,-2.0,-2.0
+platform sb NW
+platform nb NW
+
+station QPK Queen's \n Park -48.5,-53.5
+label N
+platform 1 W Ov L
+platform 2 W Ba R
+platform 3 W Ba L
+platform 4 W Ov R
+
+station KPK Kilburn Park -42.5,-51.0
+label SW
+platform 2 NW Ba L
+platform 1 NW Ba R
+
+station MDV Maida Vale -39.5,-48.0
+label SW
+platform 2 NW Ba L
+platform 1 NW Ba R
+
+station WAR Warwick Avenue -36.0,-44.5
+label SW
+platform 2 NW Ba L
+platform 1 NW Ba R
+
+station PAD Paddington -30.5,-40.5
+label N
+platform 4 W Ba L
+platform 3 W Ba R
+platform 16 W CiHa L
+platform 15 W CiHa R
+platform 2 W CiHa R
+platform 1 W CiHa L
+
+station ERB Edgware \n Road -22.5,-42.5
+label N
+platform 2 W Ba R
+platform 1 W Ba L
+
+station MYB Marylebone -15.5,-42.5
+label N
+platform 2 W Ba R
+platform 1 W Ba L
+
+station RPK Regent's \n Park 1.0,-35.5
+label NE
+platform 2 NW Ba L
+platform 1 NW Ba L
+
+station PIC Piccadilly \n Circus 10.5,-15.5
+label S
+platform 2 W Ba R
+platform 1 W Ba L
+platform 3 E Pi R
+platform 4 E Pi L
+
+station LAM Lambeth \n North 21.5,12.5
+# TODO: siding
+label E
+platform 1 N Ba R
+platform 2 N Ba L
+
+### Jubilee line stations
+
+station STA Stanmore -55.5,-105.0
+label E
+platform 1 N Ju R
+platform 2 N Ju L
+
+station CPK Canons Park -55.5,-100.0
+label E
+platform 1 N Ju L
+platform 2 N Ju R
+
+station QBY Queensbury -55.5,-95.0
+label E
+platform 1 N Ju L
+platform 2 N Ju R
+
+station KBY Kingsbury -55.5,-90.0
+label E
+platform 1 N Ju L
+platform 2 N Ju R
+
+station WPK Wembley Park -54.5,-82.5
+label NE
+platform 6 NW Me R
+platform 5 NW Me L
+platform 4 NW Ju R
+platform 3 NW Ju L
+platform 2 NW Me R
+platform 1 NW Me L
+
+station NEA Neasden -50.5,-78.5
+label NE
+platform 4 NW Me N
+platform 3 NW Ju L
+platform 2 NW Ju R
+platform 1 NW Me N
+
+station DHL Dollis Hill -46.5,-74.5
+label NE
+platform msb NW Me N
+platform 2 NW Ju L
+platform 1 NW Ju R
+platform mnb NW Me N
+
+station WLG Willesden Green -42.5,-70.5
+label NE
+platform 4 NW Me N
+platform 3 NW Ju L
+platform 2 NW Ju R
+platform 1 NW Me N
+
+station KIL Kilburn -38.0,-66.0
+label NE
+platform msb NW Me N
+platform 2 NW Ju L
+platform 1 NW Ju R
+platform mnb NW Me N
+
+station WHD West Hampstead -34.0,-62.0
+label NE
+platform msb NW Me N
+platform 2 NW Ju L
+platform 1 NW Ju R
+platform mnb NW Me N
+
+station FRD Finchley Road -29.5,-57.5
+label NE
+platform 4 NW Me L
+platform 3 NW Ju R
+platform 2 NW Ju L
+platform 1 NW Me R
+
+station SWC Swiss Cottage -22.5,-54.5
+label NE
+platform 2 NW Ju L
+platform 1 NW Ju R
+
+station SJW St. John's \n Wood -17.0,-49.0
+label NE
+platform 2 NW Ju L
+platform 1 NW Ju R
+
+station BDS Bond \n Street -3.5,-25.0
+label NW
+label_offset 3,4
+platform 2 E Ce R
+platform 1 E Ce L
+platform 3 N Ju R
+platform 4 N Ju L
+
+station WMS Westminster 12.0,-1.0
+label SW
+label_offset 20,2
+platform 3 NW Ju R
+platform 4 NW Ju R
+platform 2 E CiDi L
+platform 1 E CiDi R
+
+station SWK Southwark 32.5,4.0
+label NW
+platform 2 SW Ju L
+platform 1 SW Ju R
+
+waypoint SWKwest  SWK,-8.5,6.0
+platform eb W
+platform wb W
+
+station BER Bermondsey 57.5,4.0
+label SW
+platform 2 NW Ju L
+platform 1 NW Ju R
+
+station CWR Canada \n Water 70.5,7.0
+label SW
+label_offset -13,2
+platform 2 W Ju L
+platform 1 W Ju R
+
+station CWF  89.5,7.0
+label NE
+platform 2 W Ju L
+platform 1 W Ju R
+
+station NGW North \n Greenwich 104.5,2.5
+label SE
+platform 3 SW Ju R
+platform 2 SW Ju L
+platform 1 SW Ju R
+
+station CNT  109.0,-10.5
+label NE
+platform 6 S Ju L
+platform 5 S Ju R
+
+### Metropolitan Line stations ###
+
+# Amersham branch
+
+station CHE Chesham -144.5,-113.5
+label NE
+platform 2 NW Me L
+
+station AME Amersham -146.0,-106.5
+label S
+platform 3 W Me R
+platform 2 W Me L
+platform 1 W Me R
+
+station CLF Chalfont & \n Latimer -135.5,-107.0
+label S
+platform 3 W Me L
+platform 2 W Me R
+platform 1 W Me L
+
+station CWD Chorleywood -126.5,-106.5
+label N
+platform 2 W Me R
+platform 1 W Me L
+
+station RKY Rickmansworth -118.5,-106.5
+label S
+platform 2 W Me R
+platform 1 W Me L
+
+# Watford branch
+
+station WAT Watford -111.0,-114.5
+label E
+platform 1 N Me R
+platform 2 N Me L
+
+station CRX Croxley -111.0,-109.5
+label E
+platform 1 N Me L
+platform 2 N Me R
+
+# Towards Amersham
+
+station MPK Moor Park -109.5,-103.5
+label NE
+platform 4 NW Me L
+platform 3 NW Me R
+platform 2 NW Me L
+platform 1 NW Me R
+
+station NWD Northwood -106.0,-100.0
+label NE
+platform 2 NW Me R
+platform 1 NW Me L
+platform sbfast NW Me N
+platform nbfast NW Me N
+
+station NWH Northwood \n Hills -102.5,-96.5
+label NE
+platform 2 NW Me R
+platform 1 NW Me L
+platform sbfast NW Me N
+platform nbfast NW Me N
+
+station PIN Pinner -99.0,-93.0
+label NE
+platform 2 NW Me R
+platform 1 NW Me L
+platform sbfast NW Me N
+platform nbfast NW Me N
+
+station NHR North Harrow -95.5,-89.5
+label NE
+platform 2 NW Me R
+platform 1 NW Me L
+platform sbfast NW Me N
+platform nbfast NW Me N
+
+# Uxbridge branch
+
+station WHR West Harrow -100.5,-81.5
+label SE
+platform 2 SW Me L
+
+platform 1 SW Me R
+
+# Into London
+
+station HOH Harrow- \n on-the-Hill -84.0,-85.0
+label S
+platform 6 W Me L
+platform 5 W Me R
+platform 4 W Me L
+platform 3 W Me R
+platform 2 W Me L
+platform 1 W Me R
+
+waypoint HOHwest  HOH,-3.0,0.0
+platform 6 W
+platform 5 W
+platform 4 W
+platform 3 W
+platform 2 W
+platform 1 W
+
+waypoint HOHwest2  HOH,-5.0,1.5
+platform 3 W
+platform 2 W
+platform 1 W
+
+waypoint HOHeast  HOH,3.0,0.0
+platform 6 W
+platform 5 W
+platform 4 W
+platform 3 W
+platform 2 W
+platform 1 W
+
+station NWP Northwick \n Park -74.0,-86.0
+label N
+platform sbfast W Me N
+platform 2 W Me L
+platform 1 W Me R
+platform nbfast W Me N
+
+station PRD Preston \n Road -62.0,-86.0
+label S
+label_offset 0,2
+platform sbfast W Me N
+platform 2 W Me L
+platform 1 W Me R
+platform nbfast W Me N
+
+# Piccadilly Line stations
+
+station CFS Cockfosters 51.0,-112.5
+platform 1 N Pi R
+platform 2 N Pi B
+platform 4 N Pi L
+
+waypoint CFSsouth  CFS,0.0,2.5
+platform nb N
+platform sb N
+
+station OAK Oakwood 51.0,-107.0
+platform 2 N Pi R
+platform 1 N Pi L
+
+station SGT Southgate 51.0,-102.5
+platform 1 N Pi R
+platform 2 N Pi L
+
+station AGR Arnos Grove 51.0,-97.5
+platform 1 N Pi R
+platform 2 N Pi B
+platform 4 N Pi L
+
+station BGR Bounds Green 51.0,-92.5
+platform 1 N Pi R
+platform 2 N Pi L
+
+station WGN Wood Green 51.0,-87.5
+platform 1 N Pi R
+platform 2 N Pi L
+
+station TPL Turnpike Lane 51.0,-82.5
+platform 1 N Pi R
+platform 2 N Pi L
+
+station MNR Manor House 51.0,-73.0
+platform 1 N Pi R
+platform 2 N Pi L
+
+station ARL Arsenal KXX,18.5,-19.0
+label NW
+platform 1 NE Pi R
+platform 2 NE Pi L
+
+station HRD Holloway Road KXX,15.0,-15.5
+label NW
+platform 2 NE Pi R
+platform 1 NE Pi L
+
+station CRD Caledonian \n Road KXX,11.0,-11.5
+label NW
+platform 1 NE Pi R
+platform 2 NE Pi L
+
+station RSQ Russell \n Square 26.0,-33.5
+platform 1 N Pi L
+platform 2 N Pi R
+
+station HOL Holborn 26.0,-25.0
+label SE
+label_offset -5,0
+platform 4 N Pi R
+platform 3 N Pi R
+platform 2 E Ce L
+platform 1 E Ce R
+
+station COV Covent Garden 23.5,-20.5
+label SE
+platform 2 NE Pi R
+platform 1 NE Pi L
+
+station HPC Hyde Park \n Corner -8.5,-10.5
+label NW
+platform 1 NE Pi R
+platform 2 NE Pi L
+
+station KNB Knightsbridge -14.0,-5.0
+label NW
+platform 1 NE Pi R
+platform 2 NE Pi L
+
+station BCT Barons \n Court -58.0,-1.0
+label S
+platform 4 E Di R
+platform 3 E Pi L
+platform 2 E Pi R
+platform 1 E Di L
+
+waypoint BCTeast  BCT,8.0,2.0
+platform eb E
+platform wb E
+
+station HMD Hammersmith -64.5,-1.0
+label S
+platform 4 E Di R
+platform 3 E Pi L
+platform 2 E Pi R
+platform 1 E Di L
+
+station RCP Ravenscourt \n Park -71.0,-1.0
+label N
+platform 4 E Di R
+platform 3 E Pi N
+platform 2 E Pi N
+platform 1 E Di L
+
+station STB Stamford \n Brook -77.0,-1.0
+label S
+platform 3 E Di L
+platform ebfast E Pi N
+platform 2 E Pi N
+platform 1 E Di L
+
+station TGR Turnham \n Green -83.5,-1.0
+label N
+platform 4 E Di R
+platform 3 E Pi L
+platform 2 E Pi R
+platform 1 E Di L
+
+station CHP Chiswick \n Park -92.5,-1.0
+label S
+platform 2 E Di L
+platform ebfast E Pi N
+platform wbfast E Pi N
+platform 1 E Di R
+
+station ACT Acton Town -98.0,-1.0
+label N
+platform 4 E DiPi R
+platform 3 E Pi L
+platform 2 E Pi R
+platform 1 E DiPi L
+
+waypoint ACTwest  ACT,-3.0,0.0
+platform 4 E
+platform 3 E
+platform 2 E
+platform 1 E
+
+# Heathrow branch
+
+station SEL South Ealing -106.0,2.0
+label NW
+platform 1 NE Pi R
+platform 2 NE Pi L
+platform 3 NE Pi R
+platform 4 NE Pi L
+
+station NFD Northfields -110.5,6.5
+label NW
+platform 4 NE Pi R
+platform 3 NE Pi L
+platform 2 NE Pi R
+platform 1 NE Pi L
+
+station BOS Boston Manor -115.0,11.0
+label NW
+platform 2 NE Pi L
+platform 1 NE Pi R
+
+station OST Osterley -119.0,15.0
+label NW
+platform 2 NE Pi L
+platform 1 NE Pi R
+
+station HNE Hounslow East -123.0,19.0
+label NW
+platform 2 NE Pi L
+platform 1 NE Pi R
+
+station HNC Hounslow Central -127.0,23.0
+label NW
+platform 2 NE Pi R
+platform 1 NE Pi L
+
+station HNW Hounslow West -131.5,27.5
+label NW
+platform 2 NE Pi R
+platform 1 NE Pi L
+
+station HTX Hatton Cross -136.0,32.0
+label NW
+platform 2 NE Pi R
+platform 1 NE Pi L
+
+station HRC Heathrow \n Terminals 1 2 3 -140.5,36.5
+label NW
+platform 2 NE Pi R
+platform 1 NE Pi L
+
+station HRV Heathrow \n Terminal 5 -145.0,41.0
+label SE
+platform 6 NE Pi R
+platform 5 NE Pi L
+
+station HRF Heathrow \n Terminal 4 -138.0,38.5
+label SE
+platform 1 NE Pi L
+
+# Uxbridge branch
+
+station ECM Ealing Common -108.0,-9.0
+label W
+platform 1 S DiPi R
+platform 2 S DiPi L
+
+station NEL North Ealing -108.0,-25.0
+label W
+platform 1 S Pi R
+platform 2 S Pi L
+
+station PRY Park Royal -108.0,-33.0
+label W
+platform 1 S Pi R
+platform 2 S Pi L
+
+station ALP Alperton -108.0,-44.0
+label E
+platform 1 S Pi R
+platform 2 S Pi L
+
+station STN Sudbury Town -108.0,-53.5
+label W
+platform 1 S Pi R
+platform 2 S Pi L
+
+station SHL Sudbury Hill -108.0,-63.5
+label W
+platform 1 S Pi R
+platform 2 S Pi L
+
+station SHR South Harrow -108.0,-72.5
+label W
+platform 1 S Pi R
+platform 2 S Pi L
+
+station RLN Rayners \n Lane -111.5,-78.5
+label N
+platform 2 E MePi L
+platform 1 E MePi R
+
+station ETE Eastcote -117.0,-78.5
+label S
+platform 2 E MePi L
+platform 1 E MePi R
+
+station RUM Ruislip \n Manor -122.5,-78.5
+label N
+platform 2 E MePi L
+platform 1 E MePi R
+
+station RUI Ruislip -127.5,-78.5
+label S
+platform 2 E MePi L
+platform 1 E MePi R
+
+station ICK Ickenham -135.0,-77.0
+label NW
+platform 2 NE MePi L
+platform 1 NE MePi R
+
+station HDN Hillingdon -139.0,-73.0
+label NW
+platform 2 NE MePi L
+platform 1 NE MePi R
+
+station UXB Uxbridge -144.0,-68.0
+label SE
+platform 4 NE MePi R
+platform 2,3 NE MePi B
+platform 1 NE MePi L
+
+waypoint UXBeast  UXB,1.5,-1.5
+platform eb NE
+platform wb NE
+
+
+#### Central Line stations
+
+# West Ruislip Branch
+
+station WRP West Ruislip -131.0,-81.5
+label N
+platform 1 S Ce L
+platform 2 S Ce R
+
+station RUG Ruislip \n Gardens -131.0,-72.5
+label E
+platform 1 S Ce L
+platform 2 S Ce R
+
+station SRP South Ruislip -131.0,-66.0
+label E
+platform 1 S Ce L
+platform 2 S Ce R
+
+station NHT Northolt -129.5,-58.0
+label SW
+platform 2 SE Ce R
+platform 1 SE Ce L
+
+station GFD Greenford -123.5,-52.0
+label SW
+platform 3 SE Ce R
+platform 1 SE Ce L
+
+station PER Perivale -118.0,-46.5
+label SW
+platform 2 SE Ce R
+platform 1 SE Ce L
+
+station HLN Hanger Lane -111.5,-40.0
+label SW
+platform 2 SE Ce R
+platform 1 SE Ce L
+
+# EBY branch
+
+station EBY Ealing Broadway -115.5,-19.0
+label W
+platform 9 E Di L
+platform 8 E Di R
+platform 7 E Di L
+platform 6 E Ce R
+platform 5 E Ce L
+
+waypoint EBYeast  EBY,2.5,-1.0
+platform eb E
+platform wb E
+
+waypoint EBYeast2  EBY,5.0,-1.0
+platform eb E
+platform wb E
+
+station WAC West Acton -103.5,-17.5
+label S
+platform 2 E Ce L
+platform 1 E Ce R
+
+# Central section
+
+station NAC North \n Acton -92.5,-25.0
+label N
+platform 3 E Ce R
+platform 2 E Ce L
+platform 1 E Ce R
+
+waypoint NACwest  NAC,-2.5,0.0
+platform eb E
+platform wb E
+
+station EAC East Acton -81.5,-25.0
+label S
+platform 2 E Ce L
+platform 1 E Ce R
+
+station WCT White City -70.5,-25.0
+label N
+platform 1 E Ce R
+# Also platform 3
+platform 2 E Ce B
+platform 4 E Ce L
+
+waypoint WCTwest  WCT,-4.0,0.0
+platform wb E
+platform eb E
+
+waypoint WCTeast  WCT,4.0,0.0
+platform wb E
+platform eb E
+
+station SBC Shepherd's \n Bush -52.0,-25.0
+label SW
+label_offset 28,0
+platform 2 E Ce R
+platform 1 E Ce L
+
+station HPK Holland Park -41.5,-25.0
+label S
+platform 2 E Ce R
+platform 1 E Ce L
+
+station NHG Notting \n Hill Gate -34.0,-25.0
+label NE
+platform 2 S CiDi L
+platform 1 S CiDi R
+platform 3 E Ce L
+platform 4 E Ce L
+
+station QWY Queensway -27.0,-25.0
+label S
+platform 2 E Ce R
+platform 1 E Ce L
+
+station LAN Lancaster Gate -19.0,-25.0
+label N
+platform 2 E Ce R
+platform 1 E Ce L
+
+station MAR Marble Arch -11.5,-25.0
+label S
+platform 2 E Ce R
+platform 1 E Ce L
+
+station CYL Chancery \n Lane 32.0,-25.0
+label N
+platform 2 E Ce L
+platform 1 E Ce L
+
+station STP St. Paul's 36.5,-23.5
+label NE
+label_offset -3,3
+platform 2 SE Ce L
+platform 1 SE Ce L
+
+# Liverpool St, Bank in other lines
+
+station BNG Bethnal \n Green 70.0,-31.0
+label N
+platform 2 E Ce R
+platform 1 E Ce L
+
+waypoint BNGeast  BNG,14.0,0.0
+platform eb E
+platform fakeeb E
+platform fakewb E
+platform wb E
+
+station MLE Mile End 85.5,-31.0
+label N
+platform 4 E Ce R
+platform 3 E DiHa L
+platform 2 E DiHa R
+platform 1 E Ce L
+
+station SFD Stratford 105.5,-46.0
+label NW
+label_offset 0,15
+platform 16 NW DLR R
+platform 17 NW DLR L
+platform 15 SE Ju L
+platform 14 SE Ju R
+platform 13 SE Ju L
+
+station SFDne  SFD,-3.5,1.5
+platform 1 SW Ov L
+platform 2 SW Ov R
+platform 6 NE Ce L
+platform 3 NE Ce L
+platform 4B NE DLR R
+platform 4A NE DLR L
+
+waypoint SFDsouth  SFD,1.5,3.0
+platform sb SE
+platform nb SE
+
+waypoint SFDsouth2  SFD,2.0,3.5
+platform sb SE
+platform nb SE
+
+station LEY Leyton 108.5,-56.5
+label E
+platform 2 N Ce L
+platform 1 N Ce R
+
+station LYS Leytonstone 108.5,-64.5
+label W
+platform 3 N Ce L
+platform 2 N Ce R
+platform 1 N Ce L
+
+station SNB Snaresbrook 108.0,-72.5
+label W
+platform 2 N Ce L
+platform 1 N Ce R
+
+station SWF South Woodford 108.0,-80.5
+label W
+platform 2 N Ce L
+platform 1 N Ce R
+
+station WFD Woodford 108.5,-89.0
+label W
+platform 3 N Ce L
+platform 2 N Ce R
+platform 1 N Ce L
+
+station BHL Buckhurst Hill 108.0,-99.0
+label W
+platform 2 N Ce L
+platform 1 N Ce R
+
+station LTN Loughton 111.0,-104.5
+label NW
+platform 4 NE Ce R
+platform 2 NE Ce B
+platform 1 NE Ce L
+
+station DEB Debden 115.0,-108.5
+label NW
+platform 2 NE Ce L
+platform 1 NE Ce R
+
+station THB Theydon Bois 119.0,-112.5
+label NW
+platform 2 NE Ce L
+platform 1 NE Ce R
+
+station EPP Epping 123.0,-116.5
+label NW
+platform 2 NE Ce L
+platform 1 NE Ce R
+
+
+# Hainault Loop
+
+station WAN Wanstead 113.5,-68.5
+label S
+platform 2 E Ce R
+platform 1 E Ce L
+
+station RED Redbridge 120.0,-68.5
+label N
+platform 2 E Ce R
+platform 1 E Ce L
+
+station GHL Gants \n Hill 127.0,-68.5
+label S
+platform 2 E Ce R
+platform 1 E Ce L
+
+station NEP Newbury Park 131.0,-72.5
+label W
+platform 2 N Ce L
+platform 1 N Ce R
+
+station BDE Barkingside 131.0,-78.5
+label W
+platform 2 N Ce L
+platform 1 N Ce R
+
+station FLP Fairlop 131.0,-84.5
+label W
+platform 2 N Ce L
+platform 1 N Ce R
+
+station HAI Hainault 130.5,-90.0
+label W
+platform 3 N Ce R
+platform 2 N Ce L
+platform 1 N Ce R
+
+station GRH Grange Hill 126.0,-96.0
+label S
+platform 2 W Ce R
+platform 1 W Ce L
+
+station CHG Chigwell 119.5,-96.0
+label N
+platform 2 W Ce R
+platform 1 W Ce L
+
+station ROD Roding \n Valley 112.0,-96.0
+label S
+platform 2 W Ce R
+platform 1 W Ce L
+
+### Waterloo and City line (points only)
+
+waypoint BNKwest  BNK,-4.5,1.0
+platform eb E
+platform wb E
+
+### Circle Line stations
+
+station HST High Street \n Kensington -35.0,-15.0
+label E
+platform 4 S Di R
+platform 3 S Di R
+platform 2 S CiDi L
+platform 1 S CiDi R
+
+waypoint HSTsouth  HST,0.0,5.0
+platform 4 S
+platform 3 S
+platform 2 S
+platform 1 S
+
+station BAY Bayswater -34.0,-33.5
+label E
+platform 2 S CiDi L
+platform 1 S CiDi R
+
+station GRD Gloucester Road -29.5,-0.5
+label S
+platform 3 E CiDi R
+platform 2 E Ci L
+platform 1 E Di R
+platform 5 E Pi R
+platform 4 E Pi L
+
+station SKN South \n Kensington -21.5,0.0
+label S
+platform 2 E CiDi R
+platform 1 E CiDi L
+platform 4 E Pi R
+platform 3 E Pi R
+
+station SSQ Sloane Square -9.5,-1.0
+label S
+platform 2 E CiDi L
+platform 1 E CiDi R
+
+station SJP St. James's \n Park 3.0,-1.0
+label N
+platform 2 E CiDi L
+platform 1 E CiDi R
+
+station TEM Temple 27.0,-2.5
+label SE
+platform 2 NE CiDi L
+platform 1 NE CiDi R
+
+station BLF Blackfriars 30.5,-6.0
+label SE
+platform 2 NE CiDi L
+platform 1 NE CiDi R
+
+station MAN Mansion \n House 35.0,-10.0
+label SE
+platform 3 NE CiDi L
+platform 2 NE CiDi R
+platform 1 NE CiDi L
+
+station CST Cannon \n Street 40.5,-11.5
+label N
+label_offset -3,0
+platform 2 E CiDi L
+platform 1 E CiDi R
+
+station MON Monument 48.0,-11.5
+label S
+platform 2 E CiDi L
+platform 1 E CiDi R
+
+station THL Tower \n Hill 53.5,-14.0
+label NW
+platform 3 NE CiDi L
+platform 2 NE CiDi R
+platform 1 NE CiDi L
+
+station ALD Aldgate 56.5,-21.5
+platform 4 N CiMe R
+platform 3 N CiMe L
+platform 2 N CiMe R
+platform 1 N CiMe L
+
+waypoint ALDnorth  ALD,-1.0,-6.0
+platform outer NW
+platform inner NW
+
+station LST Liverpool \nStreet 53.5,-29.5
+label W
+platform 1 NW CiHaMe R
+platform 2 NW CiHaMe L
+platform 4 NE Ce R
+platform 5 NE Ce L
+
+station MGT Moorgate 44.0,-31.5
+label NE
+label_offset -4,2
+platform 1 W CiHaMe R
+platform 2 W CiHaMe L
+platform 3 W CiHaMe R
+platform 4 W CiHaMe L
+platform 7 N No R
+platform 8 N No L
+
+station BAR Barbican 37.5,-34.5
+label SW
+platform 1 NW CiHaMe R
+platform 2 NW CiHaMe L
+#platform 3 NW NR R
+#platform 4 NW NR L
+
+station FAR Farringdon 33.5,-38.5
+label NE
+platform 1 NW CiHaMe R
+platform 2 NW CiHaMe L
+#platform 3 NW NR R
+#platform 4 NW NR L
+
+station ESQ Euston \n Square EUS,0.0,5.0
+label S
+platform 2 W CiHaMe R
+platform 1 W CiHaMe L
+
+station GPS Great \n Portland \n Street 5.0,-43.0
+label N
+platform 2 W CiHaMe R
+platform 1 W CiHaMe L
+
+station BST Baker \n Street -8.0,-44.5
+label N
+platform 4 W Me L
+platform 3 W Me R
+platform 2 W Me L
+platform 1 W Me R
+platform 10 W Ju L
+platform 7 W Ju L
+platform 8 W Ba R
+platform 9 W Ba R
+platform 5 W CiHa R
+platform 6 W CiHa L
+
+waypoint BSTeast  BST,9.0,1.5
+platform outer W
+platform inner W
+
+waypoint BSTwest  BST,-3.0,-3.0
+platform sb W
+platform nb W
+
+waypoint Lords  BST,-5.0,-3.0
+platform sb W
+platform nb W
+
+# No name; named by bakerloo station
+# Edgware Road Circle/District/H&C
+station ERD  -22.5,-39.5
+platform 1 W CiDiHa L
+platform 2 W CiDiHa R
+platform 3 W CiDiHa L
+platform 4 W CiDiHa R
+
+waypoint ERDeast  ERD,3.5,0.0
+platform outer W
+platform inner W
+
+waypoint ERDwest  ERD,-4.0,0.0
+platform outer W
+platform inner W
+
+station ROA Royal Oak -38.0,-40.5
+label S
+platform 2 W CiHa L
+platform 1 W CiHa R
+
+station WBP Westbourne \n Park -46.0,-40.5
+label S
+platform 2 W CiHa R
+platform 1 W CiHa L
+
+station LBG Ladbroke \n Grove -52.5,-40.5
+label N
+platform 1 W CiHa R
+platform 2 W CiHa L
+
+station LRD Latimer \n Road -58.5,-39.0
+label NW
+platform 1 SW CiHa R
+platform 2 SW CiHa L
+
+station WLN Wood \n Lane -64.5,-22.5
+label E
+platform 1 S CiHa R
+platform 2 S CiHa L
+
+station SBM Shepherd's Bush \n Market -64.5,-17.0
+label W
+platform 1 S CiHa R
+platform 2 S CiHa L
+
+station GHR Goldhawk Road -64.5,-11.5
+label W
+platform 1 S CiHa R
+platform 2 S CiHa L
+
+station HMS  -64.5,-4.0
+platform 1 S CiHa R
+platform 2 S CiHa L
+platform 3 S CiHa R
+
+waypoint HMSnorth  HMS,0.0,-3.0
+platform nb S
+platform sb S
+
+## District Line stations
+
+# Upminster Branch
+
+station UPM Upminster 162.5,-70.5
+label NW
+platform 5 NE Di R
+platform 4 NE Di L
+platform 3 NE Di R
+
+waypoint UPMwest  UPM,-1.5,1.5
+platform eb NE
+platform wb NE
+
+station UPB Upminster Bridge 159.0,-67.0
+label NW
+platform 2 NE Di R
+platform 1 NE Di L
+
+station HCH Hornchurch 155.5,-63.5
+label NW
+platform 2 NE Di L
+platform 1 NE Di R
+
+station EPK Elm Park 152.0,-60.0
+label NW
+platform 2 NE Di R
+platform 1 NE Di L
+
+station DGE Dagenham \n East 148.5,-56.5
+label NW
+platform 3 NE Di R
+platform 2 NE Di L
+platform 1 NE Di R
+platform fake NE none N
+
+waypoint DGEwest  DGE,-2.0,2.0
+platform eb NE
+platform wb NE
+
+station DGH Dagenham \n Heathway 145.0,-53.0
+label NW
+platform 2 NE Di R
+platform 1 NE Di L
+
+station BEC Becontree 141.5,-49.5
+label NW
+platform 2 NE Di L
+platform 1 NE Di R
+
+station UPY Upney 139.0,-47.0
+label SE
+platform 2 NE Di R
+platform 1 NE Di L
+
+station BKG Barking 133.5,-44.5
+label N
+platform 1 W Ov N
+platform 1a,2 E DiHa B
+platform 3 E Ha R
+platform 6 E DiHa L
+
+station EHM East Ham 127.5,-41.5
+label SE
+platform 2 NE DiHa L
+platform 1 NE DiHa R
+
+station UPK Upton Park 124.0,-38.0
+label SE
+platform 2 NE DiHa L
+platform 1 NE DiHa R
+
+station PLW Plaistow 119.5,-35.0
+label SE
+platform fake NE none N
+platform 1 NE DiHa R
+platform 2 NE DiHa L
+platform 3 NE DiHa R
+
+waypoint PLWwest  PLW,-2.0,3.5
+platform eb NE
+platform wb NE
+
+station WHM West Ham 110.0,-29.5
+label E
+label_offset -1,3
+platform 6 S Ju R
+platform 5 S Ju L
+platform 4 N DLR R
+platform 3 N DLR L
+
+station WHMdi  WHM,0.0,-1.5
+platform 2 E DiHa R
+platform 1 E DiHa L
+
+station BBB Bromley \n -by-Bow 103.5,-31.0
+label S
+platform 2 E DiHa L
+platform 1 E DiHa R
+
+station BWR Bow Road 93.0,-31.0
+label S
+platform 2 E DiHa L
+platform 1 E DiHa R
+
+# Mile End in Central
+
+station STG Stepney \n Green 78.5,-26.0
+label SE
+platform 2 NE DiHa L
+platform 1 NE DiHa R
+
+station WCL Whitechapel 69.0,-21.5
+label SE
+platform 1 E DiHa R
+platform 2 E DiHa L
+platform 3 E DiHa R
+platform 4 E DiHa L
+
+station ALE Aldgate \n East 63.5,-21.5
+label S
+platform 2 E DiHa L
+platform 1 E DiHa R
+
+# Earls Court
+
+station ECT Earl's Court -42.0,-1.0
+label S
+platform 1 E Di R
+platform 2 E Di L
+platform 3 E Di R
+platform 4 E Di L
+platform 5 E Pi R
+platform 6 E Pi L
+
+waypoint ECTeast  ECT,3.0,-1.0
+platform 1 E
+platform 2 E
+platform 3 E
+platform 4 E
+
+waypoint ECTwest  ECT,-3.0,-1.0
+platform 1 E
+platform 2 E
+platform 3 E
+platform 4 E
+
+station OLY Kensington \n (Olympia) -50.0,-13.5
+platform 1 S Di L
+platform 2 S Ov R
+platform 3 S Ov L
+
+# Wimbledon Branch
+
+station WBT West Brompton -48.5,6.0
+platform 4 S Ov L
+platform 3 S Ov R
+platform 2 N Di L
+platform 1 N Di R
+
+station FBY Fulham Broadway -47.5,13.0
+platform 2 N Di L
+platform 1 N Di R
+
+station PGR Parsons Green -47.5,18.0
+platform 2 N Di L
+platform 1 N Di R
+
+station PUT Putney Bridge -47.5,23.0
+platform 1 N Di L
+platform 2 N Di R
+platform 3 N Di L
+
+station EPY East Putney -47.5,28.0
+platform 1 N Di L
+platform 2 N Di R
+
+station SFS Southfields -47.5,33.0
+platform 1 N Di R
+platform 2 N Di L
+
+station WMP Wimbledon Park -47.5,38.0
+platform 1 N Di R
+platform 2 N Di L
+
+station WDN Wimbledon -47.5,45.0
+platform 1 N Di R
+platform 2 N Di L
+platform 3 N Di R
+platform 4 N Di L
+
+waypoint WDNnorth  WDN,0.0,-3.0
+platform nb N
+platform sb N
+
+# Richmond and Ealing branch
+
+station WKN West \n Kensington -52.5,-2.0
+label NW
+label_offset 27,0
+platform 2 E Di L
+platform 1 E Di R
+
+station GUN Gunnersbury -88.0,4.5
+label E
+platform 2 N Di R
+platform 1 N Di L
+
+station KEW Kew Gardens -88.0,8.5
+label E
+platform 1 N Di L
+platform 2 N Di R
+
+station RMD Richmond -88.0,14.5
+label E
+platform 7 N Di R
+platform 6 N Di L
+platform 5 N Di R
+platform 4 N Di L
+
+waypoint RMDnorth  RMD,0.0,-3.0
+platform nb N
+platform sb N
+
+
+## DLR ##
+
+station TOG Tower \n Gateway 58.0,-10.0
+label N
+platform 1,2 E DLR B
+
+waypoint TOGeast  TOG,2.5,0.5
+platform 1,2 SE
+
+station SHA Shadwell 67.0,-8.5
+label NW
+label_offset 22,0
+platform 1 E DLR R
+platform 2 E DLR L
+
+waypoint SHAwest  SHA,-2.0,0.0
+platform eb E
+platform wb E
+
+station LIM Limehouse 73.5,-8.5
+label S
+platform 3 E DLR L
+platform 4 E DLR R
+
+station WES Westferry 78.5,-8.5
+label N
+label_offset -2,0
+platform 1 E DLR L
+platform 2 E DLR R
+
+station POP Poplar 90.5,-9.5
+label N
+platform 1 E DLR R
+platform 2 E DLR L
+platform 3 E DLR R
+platform 4 E DLR L
+
+waypoint POPwest  POP,-7.0,0.5
+platform becn E
+platform becs E
+platform wcsb1 E
+platform wcsb2 E
+platform wcnb E
+
+waypoint POPeast  POP,3.0,0.0
+platform eb E
+platform nb E
+platform sb E
+platform wb E
+
+waypoint POPeast2  POP,4.5,0.0
+platform eb E
+platform nb E
+platform sb E
+platform wb E
+
+# Stratford International branch
+
+station SFI Stratford \n International 106.0,-52.5
+label NW
+platform 2 NE DLR R
+platform 1 NE DLR L
+
+station SHS Stratford \n High Street 111.0,-40.0
+label E
+platform 2 N DLR L
+platform 1 N DLR R
+
+station ABR Abbey \n Road 111.0,-35.0
+label E
+platform 2 N DLR L
+platform 1 N DLR R
+
+station STL Star Lane 111.0,-21.0
+label E
+platform 2 N DLR R
+platform 1 N DLR L
+
+# Woolwich branch
+
+station WOA Woolwich Arsenal 141.0,8.5
+label S
+platform 4 W DLR L
+platform 3 W DLR R
+
+waypoint WOAnorth  WOA,4.0,-4.0
+platform nb S
+platform sb S
+
+station KGV King \n George V 141.0,2.0
+label N
+platform 1 E DLR R
+platform 2 E DLR L
+
+station LCA London City \n Airport 133.5,2.0
+label S
+platform 1 E DLR R
+platform 2 E DLR L
+
+station PDK Pontoon \n Dock 127.0,2.0
+label N
+platform 1 E DLR L
+platform 2 E DLR R
+
+station WSTdlr West \n Silvertown 120.0,-2.0
+label SW
+platform 1 SE DLR L
+platform 2 SE DLR R
+
+waypoint WSTnorth  WSTdlr,-4.5,-4.5
+platform sb SE
+platform nb SE
+
+# Beckton branch
+
+station BECdlr Beckton 147.0,-16.0
+label N
+platform 1 W DLR L
+platform 2 W DLR R
+
+station GAR Gallions Reach 151.0,-12.0
+label W
+platform 1 N DLR L
+platform 2 N DLR R
+
+station CYP Cyprus 147.5,-6.5
+label S
+platform 1 E DLR L
+platform 2 E DLR R
+
+station BEP Beckton \n Park 142.5,-6.5
+label N
+platform 1 E DLR L
+platform 2 E DLR R
+
+station ROAdlr Royal \n Albert 137.5,-6.5
+label S
+platform 1 E DLR L
+platform 2 E DLR R
+
+station PRR Prince \n Regent 132.5,-6.5
+label N
+platform 1 E DLR R
+platform 2 E DLR L
+
+station CUH Custom \n House 127.5,-6.5
+label S
+platform 3 E DLR R
+platform 4 E DLR L
+
+station ROV Royal \n Victoria 122.5,-6.5
+label N
+platform 1 E DLR L
+platform 2 E DLR R
+
+station CAT Canning Town CNT,2.5,-1.5
+label NE
+platform 1 SE DLR R
+platform 2 SE DLR L
+platform 3 SE DLR R
+platform 4 SE DLR L
+
+waypoint CATsouth  CAT,2.0,3.5
+platform 1 SE
+platform 2 SE
+platform wsb SE
+platform wnb SE
+platform beb SE
+platform bwb SE
+
+station EAI East \n India 105.0,-11.5
+label NW
+platform 1 NE DLR L
+platform 2 NE DLR R
+
+station BLA Blackwall 99.5,-8.5
+label S
+platform 1 E DLR L
+platform 2 E DLR R
+
+# Stratford branch
+
+station ALS All Saints 97.5,-14.5
+platform 1 N DLR L
+platform 2 N DLR R
+
+station LAP Langdon Park 97.5,-20.0
+platform 1 N DLR L
+platform 2 N DLR R
+
+station DER Devons Road 97.5,-25.5
+label E
+platform 1 N DLR L
+platform 2 N DLR R
+
+station BOC Bow Church 97.5,-33.0
+label E
+label_offset 0,-6
+platform 1 N DLR L
+platform 2 N DLR R
+
+waypoint BOCnorth  BOC,0.0,-2.5
+platform nbsb N
+
+station PML Pudding \n Mill Lane 99.5,-39.5
+label SE
+platform 1 NE DLR L
+platform 2 NE DLR R
+
+waypoint PMLsouth  PML,-1.5,1.5
+platform nbsb NE
+
+waypoint PMLnorth  PML,1.5,-1.5
+platform nbsb NE
+
+waypoint SFDwest  SFDne,-0.5,3.0
+platform nbsb NE
+
+# Lewisham branch
+
+station WIQ West India Quay 87.0,1.0
+label E
+platform 4 S DLR L
+platform 3 S DLR R
+platform 2 S DLR L
+platform 1 S DLR R
+
+station CAW Canary Wharf 87.0,7.0
+label NE
+label_offset 0,6
+platform 5,6 S DLR B
+platform 3,4 S DLR B
+platform 1,2 S DLR B
+
+station HEQ Heron Quays 87.0,11.5
+platform 2 S DLR R
+platform 1 S DLR L
+
+station SOQ South Quay 91.0,15.0
+label N
+label_offset 10,0
+platform 1 E DLR L
+platform 2 E DLR R
+
+station CRO Crossharbour 94.5,18.5
+platform 2 S DLR R
+platform 1 S DLR L
+
+station MUD Mudchute 94.0,24.5
+platform 3 S DLR L
+platform 2 S DLR R
+platform 1 S DLR L
+
+waypoint MUDnorth  MUD,0.5,-3.0
+platform nb S
+platform sb S
+
+station ISG Island Gardens 94.5,29.5
+platform 2 S DLR R
+platform 1 S DLR L
+
+station CUS Cutty Sark 94.5,34.5
+platform 2 S DLR R
+platform 1 S DLR L
+
+station GRE Greenwich 91.0,38.0
+label S
+label_offset 10,0
+platform 3 W DLR R
+platform 4 W DLR L
+
+station DEBdlr Deptford Bridge 87.5,41.5
+platform 2 S DLR R
+platform 1 S DLR L
+
+station ELR Elverson Road 87.5,46.5
+platform 2 S DLR R
+platform 1 S DLR L
+
+station LEW Lewisham 87.5,51.5
+platform 6 S DLR R
+platform 5 S DLR L
+
+## Overground
+
+station CLJ Clapham \n Junction -20.5,39.5
+platform 2 S Ov R
+
+station IMW Imperial \n Wharf -33.5,24.0
+label NE
+platform 1 SE Ov L
+platform 2 SE Ov R
+
+station SPB  -49.5,-23.5
+platform 2 S Ov R
+platform 1 S Ov L
+
+waypoint SPBnorth  SPB,-15.5,-17.5
+platform sb SE
+platform nb SE
+
+station SAT South Acton -88.0,-8.5
+platform 2 S Ov R
+platform 1 S Ov L
+
+station ACC Acton Central -88.0,-18.5
+platform 2 S Ov R
+platform 1 S Ov L
+
+waypoint ACCnorth  ACC,0.0,-10.5
+platform nb S
+platform sb S
+
+# Euston branch
+
+station EUSnr  10.0,-50.5
+platform 11 NW Ov L
+platform 10 NW Ov R
+platform 9 NW Ov L
+platform 8 NW Ov R
+
+waypoint EUSnrwest  EUSnr,-4.5,-2.5
+platform eb W
+platform wb W
+
+waypoint EUSnrwest2  EUSnr,-6.0,-2.5
+platform eb W
+platform wb W
+
+station SOH South \n Hampstead -31.0,-53.5
+label S
+platform 1 W Ov R
+platform 2 W Ov L
+
+station KBN Kilburn \n High Road -38.0,-53.5
+label N
+platform 1 W Ov R
+platform 2 W Ov L
+
+# Willesden Junction high level
+station WIJ  -61.5,-58.5
+platform 4 SW Ov L
+platform 5 SW Ov R
+
+station KNR Kensal \n Rise -51.5,-62.0
+label S
+platform 2 W Ov R
+platform 1 W Ov L
+
+waypoint KNRwest  KNR,-4.0,2.0
+platform nbsb SW
+
+waypoint KNRwest2  KNR,-6.0,3.5
+platform nbsb W
+
+station BSP Brondesbury \n Park -46.0,-62.0
+label N
+platform 2 W Ov R
+platform 1 W Ov L
+
+station BSY Brondesbury -40.5,-62.0
+label S
+platform 2 W Ov R
+platform 1 W Ov L
+
+station WHDnr  -31.0,-62.0
+platform 2 W Ov R
+platform 1 W Ov L
+
+station FNY Finsbury Road \n & Frognal -3.5,-69.5
+label NW
+platform 2 SW Ov R
+platform 1 SW Ov L
+
+station HDH Hampstead \n Heath 11.5,-80.0
+label N
+platform 2 W Ov R
+platform 1 W Ov L
+
+station GPO Gospel \n Oak 18.5,-80.5
+label N
+platform 3 W Ov L
+platform 2 W Ov R
+platform 1 W Ov L
+
+waypoint GPOeast  GPO,5.5,-0.5
+platform eb W
+platform wb W
+
+# Stratford Branch
+
+station KTW Kentish Town \n West 23.0,-75.0
+label W
+platform 1 N Ov L
+platform 2 N Ov R
+
+station CMD Camden \n Road 27.0,-59.0
+label SW
+platform 2 NW Ov R
+platform 1 NW Ov L
+
+station CIR Caledonian Road \n & Barnsbury 40.5,-53.5
+label S
+platform 2 W Ov R
+platform 1 W Ov L
+
+station HHY  50.5,-52.5
+platform 8 W Ov R
+platform 7 W Ov L
+platform 2 W Ov R
+platform 1 W Ov L
+
+station CNN Canonbury 57.5,-52.5
+label S
+platform 4 W Ov R
+platform 3 W Ov L
+platform 2 W Ov R
+platform 1 W Ov L
+
+# Stratford branch
+
+station DLK Dalston \n Kingsland 63.5,-53.5
+label N
+platform 2 W Ov R
+platform 1 W Ov L
+
+station HKC Hackney \n Central 74.0,-52.0
+label NE
+platform 2 NW Ov R
+platform 1 NW Ov L
+
+station HMN Homerton 80.5,-45.0
+label SW
+platform 2 NW Ov R
+platform 1 NW Ov L
+
+station HKW Hackney \n Wick 91.0,-43.0
+label N
+platform 2 W Ov R
+platform 1 W Ov L
+
+# East London Line
+
+station DLJ Dalston \n Junction 63.5,-48.0
+label E
+platform 1 N Ov R
+platform 2 N Ov L
+platform 3 N Ov R
+platform 4 N Ov L
+
+waypoint DLJsouth  DLJ,0.0,3.0
+platform nb N Ov
+platform sb N Ov
+
+station HGG Haggerston 63.5,-42.5
+platform 1 N Ov L
+platform 2 N Ov R
+
+station HOX Hoxton 63.5,-38.0
+platform 1 N Ov L
+platform 2 N Ov R
+
+station SDC Shoreditch \n High Street 63.5,-33.5
+platform 1 N Ov L
+platform 2 N Ov R
+
+station ZWL  69.0,-24.0
+platform 5 N Ov L
+platform 6 N Ov R
+
+station SDE  69.0,-9.5
+platform 1 N Ov L
+platform 2 N Ov R
+
+station WPE Wapping 69.0,-3.0
+label E
+platform 1 N Ov L
+platform 2 N Ov R
+
+station ROE Rotherhithe 69.0,2.0
+label E
+platform 1 N Ov L
+platform 2 N Ov R
+
+station ZCW  69.0,7.0
+platform 4 N Ov L
+platform 3 N Ov R
+
+station SQE Surrey Quays 69.0,13.0
+platform 1 N Ov L
+platform 2 N Ov R
+
+station NWX New Cross 69.5,22.0
+label E
+platform D N Ov L
+
+station NXG New Cross \n Gate 65.0,22.0
+label W
+platform 5 N Ov L
+platform 1 N Ov L
+
+station BCY Brockley 65.0,27.0
+label W
+platform 1 N Ov L
+platform 2 N Ov R
+
+station HPA Honor Oak Park 65.0,32.0
+label W
+platform 1 N Ov L
+platform 2 N Ov R
+
+station FOH Forest Hill 65.0,37.0
+label W
+platform 1 N Ov L
+platform 2 N Ov R
+
+station SYD Sydenham 65.0,42.0
+label W
+platform 1 N Ov L
+platform 2 N Ov R
+
+station CYPnr Crystal Palace 60.5,49.5
+label NW
+platform 5 NE Ov L
+platform 3 NE Ov L
+
+waypoint CYPnorth  CYPnr,3.0,-3.0
+platform nb NE
+platform sb NE
+
+station PNW Penge West 65.0,50.5
+label E
+platform 1 N Ov L
+platform 2 N Ov R
+
+station ANZ Anerley 65.0,55.5
+label E
+platform 1 N Ov L
+platform 2 N Ov R
+
+station NWDnr Norwood Junction 65.0,60.5
+label E
+platform 1,2 N Ov B
+platform 5 N Ov L
+
+station WCY West Croydon 65.5,65.5
+label E
+platform 1 N Ov R
+platform 3 N Ov L
+platform 4 N Ov R
+
+# Barking branch
+
+station UHL Upper \n Holloway 34.0,-81.0
+label N
+platform 2 W Ov R
+platform 1 W Ov L
+
+station CRH Crouch \n Hill 45.5,-76.5
+label N
+platform 2 W Ov R
+platform 1 W Ov L
+
+station HRY Harringay \n Green Lanes 56.0,-76.5
+label N
+platform 2 W Ov R
+platform 1 W Ov L
+
+station STO South \n Tottenham 65.0,-76.5
+label S
+platform 2 W Ov R
+platform 1 W Ov L
+
+waypoint STOeast  STO,6.0,0.0
+platform eb W
+platform wb W
+
+station WMW Walthamstow \n Queen's Road 87.0,-74.0
+label SW
+platform 2 NW Ov R
+platform 1 NW Ov L
+
+station LEM Leyton \n Midland Road 102.0,-62.0
+label S
+platform 2 W Ov R
+platform 1 W Ov L
+
+station LER Leytonstone \n High Road 115.0,-60.5
+label NE
+platform 2 NW Ov R
+platform 1 NW Ov L
+
+station WNP Wanstead \n Park 120.0,-55.5
+label NE
+platform 2 NW Ov R
+platform 1 NW Ov L
+
+station WGR Woodgrange \n Park 125.5,-50.0
+label SW
+platform 2 NW Ov R
+platform 1 NW Ov L
+
+
+###### Segments #######
+
+## Bottom/Pre fixes
+
+track BNKdlr-10 SHAwest-wb DLR
+track BNKdlr-9 SHAwest-eb DLR
+
+track WHDnr-2 BSY-2 Ov
+track WHDnr-1 BSY-1 Ov
+
+track SDE-1 ZWL-5 Ov
+track SDE-2 ZWL-6 Ov
+subtrack SDE-1 ZWL-6 Ov
+subtrack SDE-2 ZWL-5 Ov
+
+track WPE-1 SDE-1 Ov
+track WPE-2 SDE-2 Ov
+
+track SAT-1 GUN-1! Ov
+track SAT-2 GUN-2! Ov
+
+track SPBnorth-nb SPB-2 Ov
+track SPBnorth-sb SPB-1 Ov
+
+## Jubilee Line
+
+track CPK-2 STA-2 Ju
+track CPK-1 STA-1 Ju
+subtrack CPK-2 STA-1 Ju
+subtrack CPK-1 STA-2 Ju
+
+track QBY-2 CPK-2 Ju
+track QBY-1 CPK-1 Ju
+
+track KBY-2 QBY-2 Ju
+track KBY-1 QBY-1 Ju
+
+track WPK-4 KBY-2 Ju
+track WPK-3 KBY-1 Ju
+
+track NEA-3 WPK-4 Ju
+track NEA-2 WPK-3 Ju
+
+track DHL-2 NEA-3 Ju
+track DHL-1 NEA-2 Ju
+
+track WLG-3 DHL-2 Ju
+track WLG-2 DHL-1 Ju
+
+track KIL-2 WLG-3 Ju
+track KIL-1 WLG-2 Ju
+
+track WHD-2 KIL-2 Ju
+track WHD-1 KIL-1 Ju
+
+track FRD-3 WHD-2 Ju
+track FRD-2 WHD-1 Ju
+
+track SWC-2 FRD-3 Ju
+track SWC-1 FRD-2 Ju
+
+track SJW-2 SWC-2 Ju
+track SJW-1 SWC-1 Ju
+
+track BST-7 SJW-2 Ju
+track BST-10 SJW-1 Ju
+
+track BDS-4 BST-7 Ju
+track BDS-3 BST-10 Ju
+
+track GPK-6 BDS-4 Ju
+track GPK-5 BDS-3 Ju
+
+track WMS-3 GPK-6 Ju
+track WMS-4 GPK-5 Ju
+
+track WLO-5 WMS-4 Ju
+track WLO-6 WMS-3 Ju
+#subtrack WLO-6 WMS-4 Ju
+
+track SWKwest-wb WLO-5 Ju
+track SWKwest-eb WLO-6 Ju
+
+track SWK-1 SWKwest-wb Ju
+track SWK-2 SWKwest-eb Ju
+
+track LON-4 SWK-2 Ju
+track LON-3 SWK-1 Ju
+
+track BER-2 LON-4 Ju
+track BER-1 LON-3 Ju
+
+track CWR-2 BER-2 Ju
+track CWR-1 BER-1 Ju
+
+track CWF-2 CWR-2 Ju
+track CWF-1 CWR-1 Ju
+subtrack CWF-2 CWR-1 Ju
+subtrack CWF-1 CWR-2 Ju
+
+track NGW-3 CWF-2 Ju
+subtrack NGW-2 CWF-2 Ju
+subtrack NGW-2 CWF-1 Ju
+subtrack NGW-1 CWF-1 Ju
+
+track CNT-6 NGW-3 Ju
+subtrack CNT-6 NGW-2 Ju
+track CNT-5 NGW-1 Ju
+subtrack CNT-5 NGW-2 Ju
+
+track WHM-6 CNT-6 Ju
+track WHM-5 CNT-5 Ju
+
+track SFDsouth2-nb WHM-6 Ju
+track SFDsouth2-sb WHM-5 Ju
+
+subtrack SFDsouth-nb SFDsouth2-nb Ju
+subtrack SFDsouth-nb SFDsouth2-sb Ju
+subtrack SFDsouth-sb SFDsouth2-nb Ju
+subtrack SFDsouth-sb SFDsouth2-sb Ju
+
+subtrack SFD-13 SFDsouth-nb Ju
+subtrack SFD-14 SFDsouth-nb Ju
+subtrack SFD-14 SFDsouth-sb Ju
+subtrack SFD-15 SFDsouth-sb Ju
+
+## Piccadilly Line
+
+track CFSsouth-nb CFS-1 Pi
+track CFSsouth-sb CFS-4 Pi
+subtrack CFSsouth-nb CFS-2 Pi
+subtrack CFSsouth-sb CFS-2 Pi
+
+track OAK-2 CFSsouth-nb Pi
+track OAK-1 CFSsouth-sb Pi
+subtrack OAK-2 CFSsouth-sb Pi
+subtrack OAK-1 CFSsouth-nb Pi
+
+track SGT-1 OAK-2 Pi
+track SGT-2 OAK-1 Pi
+
+track AGR-1 SGT-1 Pi
+track AGR-4 SGT-2 Pi
+subtrack AGR-2 SGT-1 Pi
+subtrack AGR-2 SGT-2 Pi
+
+track BGR-1 AGR-1 Pi
+track BGR-2 AGR-4 Pi
+subtrack BGR-1 AGR-2 Pi
+subtrack BGR-2 AGR-2 Pi
+
+track WGN-1 BGR-1 Pi
+track WGN-2 BGR-2 Pi
+
+track TPL-1 WGN-1 Pi
+track TPL-2 WGN-2 Pi
+
+track MNR-1 TPL-1 Pi
+track MNR-2 TPL-2 Pi
+
+track FPK-1 MNR-1 Pi
+track FPK-3 MNR-2 Pi
+
+track ARL-1 FPK-1 Pi
+track ARL-2 FPK-3 Pi
+
+track HRD-1 ARL-2 Pi
+track HRD-2 ARL-1 Pi
+
+track CRD-1 HRD-2 Pi
+track CRD-2 HRD-1 Pi
+
+track KXX-6 CRD-1 Pi
+track KXX-5 CRD-2 Pi
+
+track RSQ-1 KXX-6 Pi
+track RSQ-2 KXX-5 Pi
+#subtrack RSQ-2 KXX-6 Pi
+
+track HOL-4 RSQ-1 Pi
+track HOL-3 RSQ-2 Pi
+
+track COV-2 HOL-4 Pi
+track COV-1 HOL-3 Pi
+
+track LSQ-2 COV-2 Pi
+track LSQ-1 COV-1 Pi
+
+track PIC-3 LSQ-2 Pi
+track PIC-4 LSQ-1 Pi
+
+track GPK-2 PIC-3 Pi
+track GPK-1 PIC-4 Pi
+
+track HPC-2 GPK-1 Pi
+track HPC-1 GPK-2 Pi
+
+track KNB-1 HPC-1 Pi
+track KNB-2 HPC-2 Pi
+
+track SKN-4 KNB-1 Pi
+track SKN-3 KNB-2 Pi
+
+track GRD-5 SKN-4 Pi
+track GRD-4 SKN-3 Pi
+
+track ECT-5 GRD-5 Pi
+track ECT-6 GRD-4 Pi
+
+track BCTeast-eb ECT-5 Pi
+track BCTeast-wb ECT-6 Pi
+
+track BCT-3 BCTeast-eb Pi
+track BCT-2 BCTeast-wb Pi
+
+track HMD-3 BCT-3 Pi
+track HMD-2 BCT-2 Pi
+
+track RCP-3 HMD-3 Pi
+track RCP-2 HMD-2 Pi
+
+track STB-ebfast RCP-3 Pi
+track STB-2 RCP-2 Pi
+
+track TGR-3 STB-ebfast Pi
+track TGR-2 STB-2 Pi
+
+# ACT to TGR is in district section
+
+track ACTwest-1 ACT-1 DiPi
+track ACTwest-2 ACT-2 DiPi
+track ACTwest-3 ACT-3 DiPi
+track ACTwest-4 ACT-4 DiPi
+subtrack ACTwest-3 ACT-4 DiPi
+subtrack ACTwest-4 ACT-3 DiPi
+
+track SEL-1 ACTwest-4 Pi
+track SEL-2 ACTwest-3 Pi
+track SEL-3 ACTwest-2 Pi
+track ECM-1 ACTwest-1 DiPi
+subtrack ECM-2 ACTwest-4 DiPi
+subtrack SEL-4 ACTwest-1 Pi
+
+# Heathrow branch
+
+track NFD-4 SEL-1 Pi
+track NFD-3 SEL-2 Pi
+track NFD-2 SEL-3 Pi
+track NFD-1 SEL-4 Pi
+
+track BOS-2 NFD-4 Pi
+subtrack BOS-2 NFD-3 Pi
+track BOS-1 NFD-1 Pi
+subtrack BOS-1 NFD-2 Pi
+
+track OST-2 BOS-2 Pi
+track OST-1 BOS-1 Pi
+
+track HNE-2 OST-2 Pi
+track HNE-1 OST-1 Pi
+
+track HNC-2 HNE-2 Pi
+track HNC-1 HNE-1 Pi
+
+track HNW-2 HNC-2 Pi
+track HNW-1 HNC-1 Pi
+
+track HTX-2 HNW-2 Pi
+track HTX-1 HNW-1 Pi
+
+track HRC-2 HTX-2 Pi
+track HRC-1 HTX-1 Pi
+
+subtrack HRC-2 HTX-1 Pi
+subtrack HRC-1 HTX-2 Pi
+subtrack HRV-5 HRC-1 Pi
+subtrack HRF-1 HTX-1 Pi
+track HRF-1! HRC-2 Pi
+subtrack HRF-1! HRC-1 Pi
+subtrack HRV-6 HRC-2 Pi
+
+# Uxbridge branch
+
+track NEL-2 ECM-2 Pi
+track NEL-1 ECM-1 Pi
+
+track PRY-2 NEL-2 Pi
+track PRY-1 NEL-1 Pi
+
+track STN-2 ALP-2 Pi
+track STN-1 ALP-1 Pi
+
+track SHL-2 STN-2 Pi
+track SHL-1 STN-1 Pi
+
+track SHR-2 SHL-2 Pi
+track SHR-1 SHL-1 Pi
+subtrack SHR-2 SHL-1 Pi
+subtrack SHR-1 SHL-2 Pi
+
+track RLN-2 SHR-2 Pi
+track RLN-1 SHR-1 Pi
+subtrack RLN-1 SHR-2 Pi
+
+track ETE-2 RLN-2 MePi
+track ETE-1 RLN-1 MePi
+
+track RUM-2 ETE-2 MePi
+track RUM-1 ETE-1 MePi
+
+track RUI-2 RUM-2 MePi
+track RUI-1 RUM-1 MePi
+
+track ICK-2 RUI-2 MePi
+track ICK-1 RUI-1 MePi
+subtrack ICK-1 RUI-2 MePi
+
+track HDN-2 ICK-2 MePi
+track HDN-1 ICK-1 MePi
+
+track UXBeast-eb HDN-2 MePi
+track UXBeast-wb HDN-1 MePi
+subtrack UXBeast-wb HDN-2 MePi
+subtrack UXBeast-eb HDN-1 MePi
+
+track UXB-4 UXBeast-eb MePi
+subtrack UXB-2,3 UXBeast-eb MePi
+subtrack UXB-2,3 UXBeast-wb MePi
+subtrack UXB-1 UXBeast-wb MePi
+
+##### Victoria line #####
+
+track BHR-1 WAL-1 Vi
+track BHR-2 WAL-2 Vi
+subtrack BHR-1 WAL-2 Vi
+subtrack BHR-2 WAL-1 Vi
+
+track TTH-1 BHR-1 Vi
+track TTH-2 BHR-2 Vi
+
+track SVS-3 TTH-1 Vi
+subtrack SVS-4 TTH-1 Vi
+track SVS-5 TTH-2 Vi
+
+track SVSsouth-nb SVS-3 Vi
+subtrack SVSsouth-nb SVS-4 Vi
+track SVSsouth-sb SVS-5 Vi
+
+track FPK-2 SVSsouth-nb Vi
+track FPK-4 SVSsouth-sb Vi
+
+track HBY-3 FPK-2 Vi
+track HBY-5 FPK-4 Vi
+#subtrack HBY-5 HBYnorth-nb Vi
+
+# Unshown siding
+#track KXXnorth-nb HBY-3 Vi
+#track KXXnorth-sb HBY-5 Vi
+#track KXX-4 KXXnorth-sb Vi
+#track KXX-3 KXXnorth-nb Vi
+#subtrack KXX-4 KXXnorth-si Vi
+#subtrack KXX-3 KXXnorth-si Vi
+
+track KXX-4 HBY-5 Vi
+track KXX-3 HBY-3 Vi
+
+track EUS-5 KXX-4 Vi
+track EUS-4 KXX-3 Vi
+
+track WST-4 EUS-5 Vi
+track WST-3 EUS-4 Vi
+#subtrack WST-4 WSTnorth-nb Vi
+
+track OXC-6 WST-3 Vi
+track OXC-5 WST-4 Vi
+
+track GPK-3 OXC-6 Vi
+track GPK-4 OXC-5 Vi
+
+track VIC-3 GPK-3 Vi
+track VIC-4 GPK-4 Vi
+
+# Not showing sidings
+#subtrack VIC-3 VICnorth-2 Vi
+#track VICcross-1 VIC-3 Vi
+#track VICcross-4 VIC-4 Vi
+#subtrack VICcross-2 VIC-3 Vi
+#subtrack VICcross-2 VIC-4 Vi
+#subtrack VICcross-3 VIC-3 Vi
+#subtrack VICcross-3 VIC-4 Vi
+#track VICsidings-1 VICcross-2 Vi
+#track VICsidings-2 VICcross-3 Vi
+#track PIM-1 VICcross-1 Vi
+#track PIM-1 VICcross-1 Vi
+
+track PIM-2 VIC-4 Vi
+track PIM-1 VIC-3 Vi
+
+track VUX-1 PIM-1 Vi
+track VUX-2 PIM-2 Vi
+
+track STK-1 VUX-1 Vi
+track STK-4 VUX-2 Vi
+
+track BRXcross-1 STK-4 Vi
+track BRXcross-2 STK-1 Vi
+
+track BRX-1 BRXcross-1 Vi
+track BRX-2 BRXcross-2 Vi
+subtrack BRX-2 BRXcross-1 Vi
+subtrack BRX-1 BRXcross-2 Vi
+
+## Northern Line
+
+# High Barnet branch
+
+track HBTsouth-nb HBT-1 No
+subtrack HBTsouth-nb HBT-2 No
+subtrack HBTsouth-sb HBT-2 No
+subtrack HBTsouth-sb HBT-3 No
+
+track TOT-1 HBTsouth-nb No
+track TOT-2 HBTsouth-sb No
+subtrack TOT-1 HBTsouth-sb No
+subtrack TOT-2 HBTsouth-nb No
+
+track WSP-1 TOT-1 No
+track WSP-2 TOT-2 No
+subtrack WSP-2 TOT-1 No
+
+track WFY-1 WSP-1 No
+track WFY-2 WSP-2 No
+
+track FYC-2 WFY-1 No
+track FYC-3 WFY-2 No
+
+track FYC-1 MHE-1 No
+track FYC-2 WFY-1 No
+subtrack FYC-2 MHE-1 No
+subtrack FYC-3 MHE-1 No
+
+track EFYnorth-nb FYC-1 No
+subtrack EFYnorth-nb FYC-2 No
+track EFYnorth-sb FYC-3 No
+
+track EFY-4 EFYnorth-sb No
+subtrack EFY-3 EFYnorth-sb No
+track EFY-1 EFYnorth-nb No
+subtrack EFY-2 EFYnorth-nb No
+
+track HIG-2 EFY-4 No
+track HIG-1 EFY-1 No
+
+track ARC-2 HIG-2 No
+track ARC-1 HIG-1 No
+
+track TPK-2 ARC-2 No
+track TPK-1 ARC-1 No
+
+track KTN-2 TPK-2 No
+track KTN-1 TPK-1 No
+
+track CTN-4 KTN-2 No
+track CTN-3 KTN-1 No
+
+# Edgware branch
+
+track EDGsouth-nb EDG-1 No
+track EDGsouth-sb EDG-3 No
+subtrack EDGsouth-nb EDG-2 No
+subtrack EDGsouth-sb EDG-2 No
+
+track BUR-1 EDGsouth-nb No
+track BUR-2 EDGsouth-sb No
+subtrack BUR-1 EDGsouth-sb No
+subtrack BUR-2 EDGsouth-nb No
+
+track COL-1 BUR-1 No
+track COL-2 BUR-2 No
+
+track HND-1 COL-1 No
+track HND-2 COL-2 No
+
+track BTX-1 HND-1 No
+track BTX-2 HND-2 No
+
+track GGR-1,2 BTX-1 No
+track GGR-3,4 BTX-2 No
+subtrack GGR-3,4 BTX-1 No
+subtrack GGR-5 BTX-2 No
+
+track HMP-1 GGR-1,2 No
+track HMP-2 GGR-3,4 No
+subtrack HMP-1 GGR-3,4 No
+subtrack HMP-2 GGR-5 No
+
+track BPK-1 HMP-1 No
+track BPK-2 HMP-2 No
+
+track CHF-1 BPK-1 No
+track CHF-2 BPK-2 No
+
+track CTN-1 CHF-1 No
+track CTN-2 CHF-2 No
+
+# Middle faffing
+
+subtrack CTNsouth-6 CTN-1 No
+subtrack CTNsouth-5 CTN-1 No
+track CTNsouth-4 CTN-3 No
+track CTNsouth-3 CTN-2 No
+subtrack CTNsouth-2 CTN-4 No
+subtrack CTNsouth-1 CTN-4 No
+
+track CTNsouth2-6 CTNsouth-6 No
+track CTNsouth2-5 CTNsouth-5 No
+track CTNsouth2-4 CTNsouth-4 No
+track CTNsouth2-3 CTNsouth-3 No
+track CTNsouth2-2 CTNsouth-2 No
+track CTNsouth2-1 CTNsouth-1 No
+subtrack CTNsouth2-5 CTNsouth-4 No
+subtrack CTNsouth2-2 CTNsouth-3 No
+
+track MCRnorth-nb CTNsouth2-6 No
+subtrack MCRnorth-nb CTNsouth2-4 No
+track MCRnorth-sb CTNsouth2-1 No
+subtrack MCRnorth-sb CTNsouth2-3 No
+
+track EUSnorth-nb CTNsouth2-5 No
+track EUSnorth-sb CTNsouth2-2 No
+
+track EUS-3! EUSnorth-nb No
+track EUS-6! EUSnorth-sb No
+
+track MCR-2 MCRnorth-nb No
+track MCR-1 MCRnorth-sb No
+#subtrack MCR-1 MCRnorth-nb No
+
+track EUS-1 MCR-2 No
+track EUS-2 MCR-1 No
+
+# Charing X Branch
+
+track WST-1 EUS-1 No
+track WST-2 EUS-2 No
+
+track GST-1 WST-1 No
+track GST-2 WST-2 No
+
+track TCR-3 GST-1 No
+track TCR-4 GST-2 No
+
+track LSQ-4 TCR-3 No
+track LSQ-3 TCR-4 No
+
+track CHX-5 LSQ-4 No
+track CHX-6 LSQ-3 No
+#subtrack CHX-6 LSQ-4 No
+
+track EMB-3 CHX-5 No
+track EMB-4 CHX-6 No
+
+track WLO-1 EMB-3 No
+track WLO-2 EMB-4 No
+
+track KEN-1 WLO-1 No
+track KEN-2 WLO-2 No
+
+# City Branch
+
+track ANG-1 KXX-8 No
+track ANG-2 KXX-7 No
+
+track OLD-1 ANG-2 No
+track OLD-2 ANG-1 No
+
+track MGT-7 OLD-1 No
+track MGT-8 OLD-2 No
+
+track BNKdlr-3 MGT-8 No
+track BNKdlr-4 MGT-7 No
+
+track LON-1 BNKdlr-4 No
+track LON-2 BNKdlr-3 No
+
+track BOR-1 LON-1 No
+track BOR-2 LON-2 No
+
+track ELE-2 BOR-2 No
+track ELE-1 BOR-1 No
+
+track KEN-3 ELE-1 No
+track KEN-4 ELE-2 No
+
+# Morden Branch
+
+track KEN-2! KEN-1 No
+track KENsouth-nb KEN-3 No
+subtrack KENsouth-nb KEN-1 No
+track KENsouth-sb KEN-4 No
+subtrack KENsouth-sb KEN-2 No
+
+#track KENsi-nb KENsouth-nb No
+#track KENsi-sb KENsouth-sb No
+#subtrack KENsi-si KENsouth-nb No
+#subtrack KENsi-si KENsouth-sb No
+
+track OVL-3 KENsouth-nb No
+track OVL-4 KENsouth-sb No
+
+track STK-2 OVL-3 No
+track STK-3 OVL-4 No
+#subtrack STK-3 OVL-3 No
+
+track EUS-6 KXX-8 No
+track EUS-3 KXX-7 No
+
+track CPN-1 STK-2 No
+track CPN-2 STK-3 No
+
+track CPC-1 CPN-1 No
+track CPC-2 CPN-2 No
+
+track CPS-1 CPC-1 No
+track CPS-2 CPC-2 No
+
+track BAL-1 CPS-1 No
+track BAL-2 CPS-2 No
+
+track TBE-1 BAL-1 No
+track TBE-2 BAL-2 No
+
+track TBY-1 TBE-1 No
+track TBY-2 TBE-2 No
+
+track CLW-1 TBY-1 No
+track CLW-2 TBY-2 No
+
+track SWM-1 CLW-1 No
+track SWM-2 CLW-2 No
+
+track MORnorth-nb SWM-1 No
+track MORnorth-sb SWM-2 No
+subtrack MORnorth-nb SWM-2 No
+subtrack MORnorth-sb SWM-1 No
+
+track MOR-2 MORnorth-sb No
+track MOR-3 MORnorth-nb No
+subtrack MOR-3 MORnorth-sb No
+subtrack MOR-5 MORnorth-nb No
+
+## Bakerloo Line
+
+track WFJsouth-nb WFJ-1 Ov
+track WFJsouth-sb WFJ-4 Ov
+subtrack WFJsouth-nb WFJ-2 Ov
+subtrack WFJsouth-sb WFJ-3 Ov
+
+track WFH-2 WFJsouth-nb Ov
+track WFH-1 WFJsouth-sb Ov
+subtrack WFH-2 WFJsouth-sb Ov
+subtrack WFH-1 WFJsouth-nb Ov
+
+track BSH-1 WFH-2 Ov
+track BSH-2 WFH-1 Ov
+
+track CPKnr-2 BSH-1 Ov
+track CPKnr-1 BSH-2 Ov
+
+track HTE-2 CPKnr-2 Ov
+track HTE-1 CPKnr-1 Ov
+
+track HDL-1 HTE-1 Ov
+track HDL-2 HTE-2 Ov
+
+track HAW-1 HDL-2 Ov
+track HAW-2 HDL-1 Ov
+
+track KNT-1 HAW-2 Ba
+track KNT-2 HAW-1 Ba
+subtrack KNT-1 HAW-1 Ba
+
+track SKT-1 KNT-1 Ba
+track SKT-2 KNT-2 Ba
+
+track NWM-1 SKT-1 Ba
+track NWM-2 SKT-2 Ba
+
+track WEM-2 NWM-1 Ba
+track WEM-1 NWM-2 Ba
+subtrack WEM-2 NWM-2 Ba
+
+track SPK-1 WEM-2 Ba
+track SPK-2 WEM-1 Ba
+
+track HSD-1 SPK-1 Ba
+track HSD-2 SPK-2 Ba
+
+track WJN-1 HSD-1 Ba
+track WJN-3 HSD-2 Ba
+subtrack WJN-1 HSD-2 Ba
+
+track WJNsouth-nb WJN-2 Ov
+subtrack WJNsouth-sb WJN-2 Ov
+subtrack WJNsouth-sb WJN-1 Ba
+subtrack WJNsouth-nb WJN-3 Ba
+
+subtrack KNRwest2-nbsb WJNsouth-sb Ov
+subtrack KNRwest2-nbsb WJNsouth-nb Ov
+
+subtrack KGNnorth-sb WJNsouth-sb Ba
+subtrack KGNnorth-nb WJNsouth-nb Ba
+
+track KGN-1 KGNnorth-sb Ba
+track KGN-2 KGNnorth-nb Ba
+subtrack KGN-1 KGNnorth-nb Ba
+
+track QPK-1 KGN-1 Ov
+track QPK-4 KGN-2 Ov
+subtrack QPK-2 KGN-1 Ba
+subtrack QPK-3 KGN-2 Ba
+
+track KPK-2 QPK-2 Ba
+track KPK-1 QPK-3 Ba
+subtrack KPK-2 QPK-3 Ba
+subtrack KPK-1 QPK-2 Ba
+
+track MDV-2 KPK-2 Ba
+track MDV-1 KPK-1 Ba
+
+track WAR-2 MDV-2 Ba
+track WAR-1 MDV-1 Ba
+
+track PAD-4 WAR-2 Ba
+track PAD-3 WAR-1 Ba
+#subtrack PAD-4 WAR-1 Ba
+
+track ERB-2 PAD-4 Ba
+track ERB-1 PAD-3 Ba
+
+track MYB-1 ERB-1 Ba
+track MYB-2 ERB-2 Ba
+
+track BST-9 MYB-1 Ba
+track BST-8 MYB-2 Ba
+
+track RPK-1 BST-9 Ba
+track RPK-2 BST-8 Ba
+
+track OXC-4 RPK-1 Ba
+track OXC-3 RPK-2 Ba
+
+track PIC-1 OXC-4 Ba
+track PIC-2 OXC-3 Ba
+
+track CHX-3 PIC-1 Ba
+track CHX-4 PIC-2 Ba
+
+track EMB-5 CHX-3 Ba
+track EMB-6 CHX-4 Ba
+
+track WLO-3 EMB-5 Ba
+track WLO-4 EMB-6 Ba
+
+track LAM-1 WLO-3 Ba
+track LAM-2 WLO-4 Ba
+
+track ELE-3 LAM-1 Ba
+track ELE-4 LAM-2 Ba
+subtrack ELE-4 LAM-1 Ba
+subtrack ELE-3 LAM-2 Ba
+
+## Waterloo and City
+
+track BNKwest-eb BNK-8 Wa
+track BNKwest-wb BNK-7 Wa
+subtrack BNKwest-eb BNK-7 Wa
+subtrack BNKwest-wb BNK-8 Wa
+
+track WLO-25 BNKwest-eb Wa
+track WLO-26 BNKwest-wb Wa
+
+## Central Line
+
+
+
+
+# Epping Branch
+#
+track THB-1 EPP-1 Ce
+track THB-2 EPP-2 Ce
+subtrack THB-1 EPP-2 Ce
+subtrack THB-2 EPP-1 Ce
+
+track DEB-2 THB-2 Ce
+track DEB-1 THB-1 Ce
+
+track LTN-4 DEB-2 Ce
+track LTN-1 DEB-1 Ce
+
+track BHL-2 LTN-4 Ce
+track BHL-1 LTN-1 Ce
+subtrack BHL-2 LTN-2 Ce
+subtrack BHL-1 LTN-2 Ce
+
+track WFD-2 BHL-1 Ce
+subtrack ROD-1 WFD-2! Ce
+track ROD-2 WFD-3! Ce
+subtrack WFD-3 BHL-2 Ce
+
+
+track SWF-2 WFD-3 Ce
+track SWF-1 WFD-2 Ce
+subtrack SWF-1 WFD-1 Ce
+
+track SNB-2 SWF-2 Ce
+track SNB-1 SWF-1 Ce
+
+track LYS-3 SNB-2 Ce
+track LYS-2 SNB-1 Ce
+subtrack LYS-1 SNB-1 Ce
+
+# Hainault Loop
+
+track CHG-1 ROD-1 Ce
+track CHG-2 ROD-2 Ce
+
+track GRH-1 CHG-1 Ce
+track GRH-2 CHG-2 Ce
+
+track HAI-2 GRH-1 Ce
+track HAI-1 GRH-2 Ce
+subtrack HAI-1 GRH-2 Ce
+subtrack HAI-2 GRH-1 Ce
+
+track FLP-1 HAI-1 Ce
+track FLP-2 HAI-2 Ce
+subtrack FLP-2 HAI-3 Ce
+subtrack FLP-2 HAI-1 Ce
+
+track BDE-1 FLP-1 Ce
+track BDE-2 FLP-2 Ce
+
+track NEP-1 BDE-1 Ce
+track NEP-2 BDE-2 Ce
+
+track GHL-2 NEP-2 Ce
+track GHL-1 NEP-1 Ce
+
+track RED-2 GHL-2 Ce
+track RED-1 GHL-1 Ce
+
+track WAN-1 RED-1 Ce
+track WAN-2 RED-2 Ce
+
+track LYS-3 WAN-2 Ce
+subtrack LYS-1 WAN-1 Ce
+subtrack LYS-2 WAN-1 Ce
+
+# Central Section
+
+track LEY-2 LYS-3 Ce
+track LEY-1 LYS-1 Ce
+subtrack LEY-1 LYS-2 Ce
+subtrack LEY-2 LYS-2 Ce
+
+# SFD to MLE moved to fixes
+
+track BNGeast-eb MLE-4 Ce
+track BNGeast-wb MLE-1 Ce
+
+track BNG-2 BNGeast-eb Ce
+track BNG-1 BNGeast-wb Ce
+
+track LST-4 BNG-2 Ce
+track LST-5 BNG-1 Ce
+
+track BNK-6 LST-4 Ce
+track BNK-5 LST-5 Ce
+
+track STP-2 BNK-6 Ce
+track STP-1 BNK-5 Ce
+
+track CYL-1 STP-1 Ce
+track CYL-2 STP-2 Ce
+
+track HOL-2 CYL-2 Ce
+track HOL-1 CYL-1 Ce
+
+track TCR-2 HOL-2 Ce
+track TCR-1 HOL-1 Ce
+
+track OXC-2 TCR-2 Ce
+track OXC-1 TCR-1 Ce
+
+track BDS-2 OXC-2 Ce
+track BDS-1 OXC-1 Ce
+
+track MAR-1 BDS-1 Ce
+track MAR-2 BDS-2 Ce
+
+track LAN-1 MAR-1 Ce
+track LAN-2 MAR-2 Ce
+
+track QWY-1 LAN-1 Ce
+track QWY-2 LAN-2 Ce
+#subtrack QWY-2 LAN-1 Ce
+
+track NHG-3 QWY-2 Ce
+track NHG-4 QWY-1 Ce
+
+track HPK-2 NHG-3 Ce
+track HPK-1 NHG-4 Ce
+
+track SBC-2 HPK-2 Ce
+track SBC-1 HPK-1 Ce
+
+track WCTeast-eb SBC-2 Ce
+track WCTeast-wb SBC-1 Ce
+
+track WCT-1 WCTeast-wb Ce
+track WCT-4 WCTeast-eb Ce
+subtrack WCT-2 WCTeast-wb Ce
+subtrack WCT-2 WCTeast-eb Ce
+
+track WCTwest-eb WCT-4 Ce
+track WCTwest-wb WCT-1 Ce
+subtrack WCTwest-eb WCT-2 Ce
+subtrack WCTwest-wb WCT-2 Ce
+
+track EAC-2 WCTwest-eb Ce
+track EAC-1 WCTwest-wb Ce
+
+track NAC-1 EAC-1 Ce
+track NAC-3 EAC-2 Ce
+subtrack NAC-2 EAC-1 Ce
+subtrack NAC-2 EAC-2 Ce
+
+track NACwest-eb NAC-3 Ce
+track NACwest-wb NAC-1 Ce
+subtrack NACwest-wb NAC-2 Ce
+
+subtrack HLN-1 NACwest-wb Ce
+track WAC-2 NACwest-eb Ce
+subtrack WAC-1 NACwest-wb Ce
+subtrack HLN-2 NACwest-eb Ce
+
+# Ealing broadway branch
+
+track EBY-6 WAC-2 Ce
+track EBY-5 WAC-1 Ce
+subtrack EBY-6 WAC-1 Ce
+subtrack EBY-5 WAC-2 Ce
+
+# West Ruislip branch
+
+track PER-1 HLN-1 Ce
+track PER-2 HLN-2 Ce
+
+track GFD-1 PER-1 Ce
+track GFD-3 PER-2 Ce
+
+track NHT-1 GFD-1 Ce
+track NHT-2 GFD-3 Ce
+subtrack NHT-1 GFD-3 Ce
+
+track SRP-1 NHT-1 Ce
+track SRP-2 NHT-2 Ce
+
+track RUG-1 SRP-1 Ce
+track RUG-2 SRP-2 Ce
+
+track WRP-1 RUG-1 Ce
+track WRP-2 RUG-2 Ce
+subtrack WRP-1 RUG-2 Ce
+subtrack WRP-2 RUG-1 Ce
+
+
+## Metropolitan Line
+
+# Uxbridge branch
+
+subtrack WHR-2 RLN-2! Me
+subtrack WHR-1 RLN-1! Me
+subtrack WHR-2 RLN-1! Me
+
+track HOHwest-5 WHR-2 Me
+track HOHwest-4 WHR-1 Me
+
+# Amersham branch
+
+
+track CLF-2 AME-3 Me
+track CLF-1 AME-1 Me
+subtrack CLF-2 AME-2 Me
+subtrack CLF-1 AME-2 Me
+
+track CLF-3 CHE-2 Me
+subtrack CLF-1 CHE-2 Me
+subtrack CLF-2 CHE-2 Me
+
+track CWD-2 CLF-2 Me
+track CWD-1 CLF-1 Me
+
+track RKY-2 CWD-2 Me
+track RKY-1 CWD-1 Me
+
+track MPK-2 RKY-2 Me
+track MPK-1 RKY-1 Me
+subtrack MPK-4 RKY-2 Me
+subtrack MPK-3 RKY-1 Me
+
+# Watford branch
+
+track CRX-2 WAT-2 Me
+track CRX-1 WAT-1 Me
+subtrack CRX-2 WAT-1 Me
+subtrack CRX-1 WAT-2 Me
+
+subtrack MPK-4 CRX-2 Me
+subtrack MPK-3 CRX-1 Me
+
+# Towards Amersham
+
+track NWD-2 MPK-4 Me
+track NWD-1 MPK-3 Me
+track NWD-sbfast MPK-2 Me
+track NWD-nbfast MPK-1 Me
+
+track NWH-2 NWD-2 Me
+track NWH-1 NWD-1 Me
+subtrack NWH-2 NWD-1 Me
+track NWH-sbfast NWD-sbfast Me
+track NWH-nbfast NWD-nbfast Me
+
+track PIN-2 NWH-2 Me
+track PIN-1 NWH-1 Me
+track PIN-sbfast NWH-sbfast Me
+track PIN-nbfast NWH-nbfast Me
+
+track NHR-2 PIN-2 Me
+track NHR-1 PIN-1 Me
+track NHR-sbfast PIN-sbfast Me
+track NHR-nbfast PIN-nbfast Me
+
+track HOHwest2-2 NHR-sbfast Me
+subtrack HOHwest-6 NHR-sbfast Me
+track HOHwest2-3 NHR-1 Me
+subtrack HOHwest-6 NHR-2 Me
+track HOHwest2-1 NHR-nbfast Me
+
+track HOHwest-1 HOHwest2-1 Me
+track HOHwest-3 HOHwest2-3 Me
+subtrack HOHwest-3 HOHwest2-1 Me
+track HOHwest-2 HOHwest2-2 Me
+
+track HOH-1 HOHwest-1 Me
+track HOH-2 HOHwest-2 Me
+subtrack HOH-2 HOHwest-1 Me
+track HOH-3 HOHwest-3 Me
+track HOH-4 HOHwest-4 Me
+subtrack HOH-3 HOHwest-4 Me
+subtrack HOH-4 HOHwest-3 Me
+track HOH-5 HOHwest-5 Me
+track HOH-6 HOHwest-6 Me
+subtrack HOH-5 HOHwest-6 Me
+subtrack HOH-6 HOHwest-5 Me
+
+track HOHeast-1 HOH-1 Me
+track HOHeast-3 HOH-3 Me
+track HOHeast-4 HOH-4 Me
+subtrack HOHeast-3 HOH-4 Me
+subtrack HOHeast-4 HOH-3 Me
+track HOHeast-5 HOH-5 Me
+track HOHeast-6 HOH-6 Me
+subtrack HOHeast-5 HOH-6 Me
+subtrack HOHeast-6 HOH-5 Me
+
+# Towards London
+
+track NWP-sbfast HOHeast-6 Me
+track NWP-2 HOHeast-5 Me
+track NWP-1 HOHeast-4 Me
+track NWP-nbfast HOHeast-3 Me
+subtrack NWP-nbfast HOHeast-1 Me
+
+track PRD-sbfast NWP-sbfast Me
+track PRD-2 NWP-2 Me
+track PRD-1 NWP-1 Me
+track PRD-nbfast NWP-nbfast Me
+
+track WPK-6 PRD-sbfast Me
+track WPK-5 PRD-2 Me
+track WPK-2 PRD-1 Me
+track WPK-1 PRD-nbfast Me
+
+track NEA-4 WPK-6 Me
+subtrack NEA-4 WPK-5 Me
+track NEA-1 WPK-1 Me
+subtrack NEA-1 WPK-2 Me
+
+track DHL-msb NEA-4 Me
+track DHL-mnb NEA-1 Me
+
+track WLG-4 DHL-msb Me
+track WLG-1 DHL-mnb Me
+
+track KIL-msb WLG-4 Me
+track KIL-mnb WLG-1 Me
+
+track WHD-msb KIL-msb Me
+track WHD-mnb KIL-mnb Me
+
+track FRD-4 WHD-msb Me
+track FRD-1 WHD-mnb Me
+
+track Lords-sb FRD-4 Me
+track Lords-nb FRD-1 Me
+
+track BSTwest-sb Lords-sb Me
+track BSTwest-nb Lords-nb Me
+subtrack BSTwest-sb Lords-nb Me
+subtrack BSTwest-nb Lords-sb Me
+
+track BST-3 BSTwest-sb Me
+subtrack BST-4 BSTwest-sb Me
+track BST-2 BSTwest-nb Me
+subtrack BST-1 BSTwest-nb Me
+
+subtrack BSTeast-inner BST-2 Me
+subtrack BSTeast-outer BST-3 Me
+
+## District Line
+
+# Curve to DiHa section
+
+subtrack ALDnorth-outer! ALE-2 Ha
+subtrack ALDnorth-inner! ALE-1 Ha
+
+# Upminster Branch
+
+track UPMwest-eb UPM-5 Di
+track UPMwest-wb UPM-3 Di
+subtrack UPMwest-eb UPM-4 Di
+subtrack UPMwest-wb UPM-4 Di
+
+track UPB-2 UPMwest-eb Di
+track UPB-1 UPMwest-wb Di
+subtrack UPB-2 UPMwest-wb Di
+subtrack UPB-1 UPMwest-eb Di
+
+track HCH-2 UPB-2 Di
+track HCH-1 UPB-1 Di
+
+track EPK-2 HCH-2 Di
+track EPK-1 HCH-1 Di
+subtrack EPK-1 HCH-2 Di
+
+track DGE-2 EPK-2 Di
+track DGE-1 EPK-1 Di
+
+track DGEwest-eb DGE-3 Di
+subtrack DGEwest-eb DGE-2 Di
+track DGEwest-wb DGE-1 Di
+
+track DGH-2 DGEwest-eb Di
+track DGH-1 DGEwest-wb Di
+subtrack DGH-1 DGEwest-eb Di
+
+track BEC-2 DGH-2 Di
+track BEC-1 DGH-1 Di
+
+track UPY-2 BEC-2 Di
+track UPY-1 BEC-1 Di
+
+track BKG-1a,2 UPY-2 Di
+track BKG-6 UPY-1 Di
+
+subtrack EHM-2 BKG-3 Ha
+subtrack EHM-1 BKG-3 Ha
+subtrack EHM-2 BKG-1a,2 Di
+subtrack EHM-1 BKG-1a,2 Di
+subtrack EHM-1 BKG-6 Di
+
+track UPK-2 EHM-2 DiHa
+track UPK-1 EHM-1 DiHa
+
+track PLW-2 UPK-2 DiHa
+track PLW-3 UPK-1 DiHa
+
+track PLWwest-eb PLW-1 DiHa
+subtrack PLWwest-eb PLW-2 DiHa
+track PLWwest-wb PLW-3 DiHa
+
+# WHM to MLE moved to fixes section
+
+track STG-2 MLE-3 DiHa
+track STG-1 MLE-2 DiHa
+
+track WCL-1 STG-2 DiHa
+subtrack WCL-2 STG-2 DiHa
+track WCL-3 STG-1 DiHa
+subtrack WCL-4 STG-1 DiHa
+
+track ALE-2 WCL-1 DiHa
+subtrack ALE-2 WCL-2 DiHa
+track ALE-1 WCL-3 DiHa
+subtrack ALE-1 WCL-4 DiHa
+
+subtrack THL-3 ALE-2 Di
+subtrack THL-1 ALE-1 Di
+
+# Earls Court
+
+track HST-4 HSTsouth-4 Di
+track HST-3 HSTsouth-3 Di
+subtrack HST-4 HSTsouth-3 Di
+subtrack HST-3 HSTsouth-4 Di
+
+track ECT-1 ECTeast-1 Di
+track ECT-2 ECTeast-2 Di
+subtrack ECT-1 ECTeast-2 Di
+subtrack ECT-2 ECTeast-1 Di
+
+track ECT-3 ECTeast-3 Di
+track ECT-4 ECTeast-4 Di
+
+subtrack ECT-4 ECTeast-3 Di
+subtrack ECTeast-1 HSTsouth-4! Di
+subtrack ECTeast-1 HSTsouth-2! Di
+
+track ECTeast-4 HSTsouth-3! Di
+subtrack ECTeast-4 HSTsouth-1! Di
+track ECTeast-2 GRD-3 Di
+track ECTeast-3 GRD-1 Di
+
+# West of ECT faffing
+
+track ECTwest-1 ECT-1 Di
+track ECTwest-2 ECT-2 Di
+track ECTwest-3 ECT-3 Di
+subtrack ECTwest-1 ECT-2 Di
+subtrack ECTwest-3 ECT-4 Di
+
+track WBT-1 ECTwest-3 Di
+subtrack OLY-1 ECTwest-3 Di
+
+track WKN-2 ECTwest-1 Di
+subtrack WKN-1 ECTwest-3 Di
+subtrack OLY-1 ECTwest-1 Di
+track WBT-2 ECTwest-2 Di
+
+# Winbledon branch
+
+track FBY-2 WBT-2 Di
+track FBY-1 WBT-1 Di
+
+track PGR-2 FBY-2 Di
+track PGR-1 FBY-1 Di
+
+track PUT-1 PGR-2 Di
+track PUT-3 PGR-1 Di
+subtrack PUT-2 PGR-1 Di
+subtrack PUT-2 PGR-2 Di
+
+track EPY-1 PUT-1 Di
+track EPY-2 PUT-3 Di
+
+track SFS-1 EPY-1 Di
+track SFS-2 EPY-2 Di
+
+track WMP-1 SFS-1 Di
+track WMP-2 SFS-2 Di
+
+track WDNnorth-nb WMP-1 Di
+track WDNnorth-sb WMP-2 Di
+subtrack WDNnorth-nb WMP-2 Di
+subtrack WDNnorth-sb WMP-1 Di
+
+track WDN-1 WDNnorth-nb Di
+track WDN-4 WDNnorth-sb Di
+subtrack WDN-2 WDNnorth-nb Di
+subtrack WDN-3 WDNnorth-sb Di
+
+# Richmond + Ealing branch
+
+track BCT-4 WKN-2 Di
+track BCT-1 WKN-1 Di
+
+track HMD-4 BCT-4 Di
+track HMD-1 BCT-1 Di
+
+track RCP-4 HMD-4 Di
+track RCP-1 HMD-1 Di
+
+track STB-3 RCP-4 Di
+track STB-1 RCP-1 Di
+
+track TGR-4 STB-3 Di
+track TGR-1 STB-1 Di
+
+track CHP-2 TGR-4 Di
+subtrack GUN-2 TGR-4 Di
+track CHP-1 TGR-1 Di
+subtrack GUN-1 TGR-1 Di
+
+# Pic fix
+track CHP-ebfast TGR-3 Pi
+track CHP-wbfast TGR-2 Pi
+
+# Richmond branch
+
+track KEW-1 GUN-2 Di
+track KEW-2 GUN-1 Di
+
+track RMDnorth-nb KEW-1 Di
+track RMDnorth-sb KEW-2 Di
+subtrack RMDnorth-nb KEW-2 Di
+subtrack RMDnorth-sb KEW-1 Di
+
+track RMD-7 RMDnorth-nb Di
+track RMD-4 RMDnorth-sb Di
+subtrack RMD-6 RMDnorth-nb Di
+subtrack RMD-5 RMDnorth-sb Di
+
+# Ealing branch
+
+track ACT-4 CHP-2 Di
+track ACT-1 CHP-1 Di
+track ACT-3 CHP-ebfast Pi
+track ACT-2 CHP-wbfast Pi
+subtrack ACT-4 CHP-ebfast Pi
+subtrack ACT-1 CHP-wbfast Pi
+
+track EBYeast2-eb ECM-2 Di
+track EBYeast2-wb ECM-1 Di
+
+track EBYeast-eb EBYeast2-eb Di
+track EBYeast-wb EBYeast2-wb Di
+subtrack EBYeast-eb EBYeast2-wb Di
+subtrack EBYeast-wb EBYeast2-eb Di
+
+track EBY-9 EBYeast-eb Di
+subtrack EBY-8 EBYeast-eb Di
+subtrack EBY-8 EBYeast-wb Di
+subtrack EBY-7 EBYeast-wb Di
+
+## Circle Line (clockwise from Hammersmith)
+
+track HMSnorth-nb HMS-1 CiHa
+track HMSnorth-sb HMS-3 CiHa
+subtrack HMSnorth-nb HMS-2 CiHa
+subtrack HMSnorth-sb HMS-2 CiHa
+
+track GHR-1 HMSnorth-nb CiHa
+track GHR-2 HMSnorth-sb CiHa
+subtrack GHR-1 HMSnorth-sb CiHa
+subtrack GHR-2 HMSnorth-nb CiHa
+
+track SBM-2 GHR-2 CiHa
+track SBM-1 GHR-1 CiHa
+
+track WLN-1 SBM-1 CiHa
+track WLN-2 SBM-2 CiHa
+
+track LRD-1 WLN-1 CiHa
+track LRD-2 WLN-2 CiHa
+
+track LBG-1 LRD-1 CiHa
+track LBG-2 LRD-2 CiHa
+
+track WBP-1 LBG-2 CiHa
+track WBP-2 LBG-1 CiHa
+
+track ROA-1 WBP-1 CiHa
+track ROA-2 WBP-2 CiHa
+
+track PAD-15 ROA-1 CiHa
+track PAD-16 ROA-2 CiHa
+
+track ERDwest-outer PAD-16 CiHa
+subtrack ERDwest-outer PAD-2 CiDi
+track ERDwest-inner PAD-15 CiHa
+subtrack ERDwest-inner PAD-1 CiDi
+
+track ERD-2 ERDwest-outer CiDiHa
+track ERD-3 ERDwest-inner CiDiHa
+subtrack ERD-1 ERDwest-outer CiDiHa
+subtrack ERD-3 ERDwest-outer CiDiHa
+subtrack ERD-2 ERDwest-inner CiDiHa
+subtrack ERD-4 ERDwest-inner CiDiHa
+
+track ERDeast-outer ERD-2 CiHa
+track ERDeast-inner ERD-3 CiHa
+subtrack ERDeast-outer ERD-1 CiHa
+subtrack ERDeast-inner ERD-4 CiHa
+#subtrack ERDeast-outer ERD-3 CiHa
+
+track BST-5 ERDeast-outer CiHa
+track BST-6 ERDeast-inner CiHa
+
+subtrack BSTeast-inner BST-6 CiHa
+subtrack BSTeast-outer BST-5 CiHa
+
+track GPS-1 BSTeast-inner CiHa
+track GPS-2 BSTeast-outer CiHa
+subtrack GPS-2 BSTeast-inner CiHa
+
+track ESQ-1 GPS-1 CiHaMe
+track ESQ-2 GPS-2 CiHaMe
+
+track KXX-1 ESQ-1 CiHaMe
+track KXX-2 ESQ-2 CiHaMe
+
+track FAR-1 KXX-2 CiHaMe
+track FAR-2 KXX-1 CiHaMe
+
+track BAR-1 FAR-1 CiHaMe
+track BAR-2 FAR-2 CiHaMe
+
+track MGT-1 BAR-1 CiHaMe
+subtrack MGT-3 BAR-1 CiHaMe
+subtrack MGT-4 BAR-1 CiHaMe
+track MGT-2 BAR-2 CiHaMe
+subtrack MGT-3 BAR-2 CiHaMe
+
+track LST-1 MGT-1 CiHaMe
+track LST-2 MGT-2 CiHaMe
+
+track ALDnorth-outer LST-1 CiHaMe
+track ALDnorth-inner LST-2 CiHaMe
+
+subtrack ALD-1 ALDnorth-outer CiMe
+subtrack ALD-2 ALDnorth-outer CiMe
+subtrack ALD-2 ALDnorth-inner CiMe
+subtrack ALD-3 ALDnorth-outer CiMe
+subtrack ALD-3 ALDnorth-inner CiMe
+subtrack ALD-4 ALDnorth-inner CiMe
+
+# Rest of circle line
+
+subtrack THL-3 ALD-4 Ci
+subtrack THL-1 ALD-1 Ci
+
+track MON-2 THL-3 CiDi
+track MON-1 THL-1 CiDi
+subtrack MON-2 THL-2 CiDi
+subtrack MON-1 THL-2 CiDi
+
+track CST-1 MON-1 CiDi
+track CST-2 MON-2 CiDi
+
+track MAN-1 CST-1 CiDi
+track MAN-3 CST-2 CiDi
+
+track BLF-2 MAN-3 CiDi
+track BLF-1 MAN-1 CiDi
+subtrack BLF-2 MAN-2 CiDi
+subtrack BLF-1 MAN-2 CiDi
+
+track TEM-1 BLF-1 CiDi
+track TEM-2 BLF-2 CiDi
+
+track EMBcnc-1 TEM-1 CiDi
+track EMBcnc-2 TEM-2 CiDi
+
+track WMS-1 EMBcnc-1 CiDi
+track WMS-2 EMBcnc-2 CiDi
+
+track SJP-1 WMS-1 CiDi
+track SJP-2 WMS-2 CiDi
+
+track VIC-1 SJP-1 CiDi
+track VIC-2 SJP-2 CiDi
+
+track SSQ-1 VIC-1 CiDi
+track SSQ-2 VIC-2 CiDi
+
+track SKN-1 SSQ-1 CiDi
+track SKN-2 SSQ-2 CiDi
+
+track GRD-3 SKN-2 CiDi
+track GRD-1 SKN-1 Di
+subtrack GRD-2 SKN-1 Ci
+
+track HST-1 HSTsouth-1 CiDi
+track HST-2 HSTsouth-2 Ci
+
+subtrack HSTsouth-1 GRD-3 Ci
+subtrack HSTsouth-2 GRD-2 Ci
+
+track NHG-1 HST-1 CiDi
+track NHG-2 HST-2 CiDi
+
+track BAY-1 NHG-1 CiDi
+track BAY-2 NHG-2 CiDi
+
+track PAD-1 BAY-1 CiDi
+track PAD-2 BAY-2 CiDi
+
+# DLR
+
+# Woolwich branch
+
+track WOAnorth-sb WOA-3 DLR
+track WOAnorth-nb WOA-4 DLR
+subtrack WOAnorth-sb WOA-4 DLR
+subtrack WOAnorth-nb WOA-3 DLR
+
+track KGV-1 WOAnorth-sb DLR
+track KGV-2 WOAnorth-nb DLR
+
+track LCA-1 KGV-1 DLR
+track LCA-2 KGV-2 DLR
+subtrack LCA-2 KGV-1 DLR
+subtrack LCA-1 KGV-2 DLR
+
+track PDK-1 LCA-1 DLR
+track PDK-2 LCA-2 DLR
+subtrack PDK-2 LCA-1 DLR
+
+track WSTdlr-1 PDK-1 DLR
+track WSTdlr-2 PDK-2 DLR
+subtrack WSTdlr-1 PDK-2 DLR
+
+# Stratford International branch
+
+track SFD-16 SFI-1 DLR
+track SFD-17 SFI-2 DLR
+subtrack SFD-16 SFI-2 DLR
+subtrack SFD-17 SFI-1 DLR
+
+track SHS-1 SFD-16 DLR
+track SHS-2 SFD-17 DLR
+subtrack SHS-1 SFD-17 DLR
+subtrack SHS-2 SFD-16 DLR
+
+track ABR-1 SHS-1 DLR
+track ABR-2 SHS-2 DLR
+
+track WHM-3 ABR-1 DLR
+track WHM-4 ABR-2 DLR
+
+track STL-1 WHM-3 DLR
+track STL-2 WHM-4 DLR
+subtrack STL-1 WHM-4 DLR
+
+track CAT-1! STL-1 DLR
+track CAT-2! STL-2 DLR
+
+# Beckton branch
+
+track GAR-1 BECdlr-2 DLR
+track GAR-2 BECdlr-1 DLR
+
+track CYP-1 GAR-1 DLR
+track CYP-2 GAR-2 DLR
+
+track BEP-1 CYP-1 DLR
+track BEP-2 CYP-2 DLR
+
+track ROAdlr-1 BEP-1 DLR
+track ROAdlr-2 BEP-2 DLR
+
+track PRR-1 ROAdlr-1 DLR
+track PRR-2 ROAdlr-2 DLR
+subtrack PRR-1 ROAdlr-2 DLR
+
+track CUH-3 PRR-1 DLR
+track CUH-4 PRR-2 DLR
+
+track ROV-1 CUH-3 DLR
+track ROV-2 CUH-4 DLR
+subtrack ROV-2 CUH-3 DLR
+
+# Canning town faffing
+
+track WSTnorth-nb WSTdlr-2 DLR
+track WSTnorth-sb WSTdlr-1 DLR
+
+subtrack CATsouth-2 WSTnorth-nb DLR
+
+track CATsouth-wsb WSTnorth-sb DLR
+subtrack CATsouth-1 WSTnorth-sb DLR
+subtrack CATsouth-wnb WSTnorth-nb DLR
+
+track CAT-1 CATsouth-1 DLR
+track CAT-2 CATsouth-2 DLR
+subtrack CAT-4 CATsouth-wnb DLR
+track CAT-3 CATsouth-beb DLR
+subtrack CAT-3 CATsouth-wsb DLR
+subtrack CAT-4 CATsouth-bwb DLR
+
+track CATsouth-bwb ROV-2 DLR
+subtrack CATsouth-2 ROV-2 DLR
+track CATsouth-beb ROV-1 DLR
+subtrack CATsouth-1 ROV-1 DLR
+subtrack CAT-2 CATsouth-1 DLR
+
+
+# Canning town branch
+
+track EAI-1 CAT-3 DLR
+track EAI-2 CAT-4 DLR
+
+track BLA-1 EAI-1 DLR
+track BLA-2 EAI-2 DLR
+
+# Stratford branch
+
+track SFDwest-nbsb SFDne-4B DLR
+subtrack SFDwest-nbsb SFDne-4A DLR
+
+track PMLnorth-nbsb SFDwest-nbsb DLR
+
+track PML-1 PMLnorth-nbsb DLR
+subtrack PML-2 PMLnorth-nbsb DLR
+
+track PMLsouth-nbsb PML-1 DLR
+subtrack PMLsouth-nbsb PML-2 DLR
+
+track BOCnorth-nbsb PMLsouth-nbsb DLR
+
+track BOC-1 BOCnorth-nbsb DLR
+subtrack BOC-2 BOCnorth-nbsb DLR
+
+track DER-1 BOC-1 DLR
+track DER-2 BOC-2 DLR
+subtrack DER-2 BOC-1 DLR
+
+track LAP-1 DER-1 DLR
+track LAP-2 DER-2 DLR
+
+track ALS-1 LAP-1 DLR
+track ALS-2 LAP-2 DLR
+
+track POPeast2-nb ALS-1 DLR
+track POPeast2-sb ALS-2 DLR
+
+# Lewisham branch
+
+track ELR-1 LEW-5 DLR
+track ELR-2 LEW-6 DLR
+subtrack ELR-1 LEW-6 DLR
+subtrack ELR-2 LEW-5 DLR
+
+track DEBdlr-1 ELR-1 DLR
+track DEBdlr-2 ELR-2 DLR
+
+track GRE-4 DEBdlr-1 DLR
+track GRE-3 DEBdlr-2 DLR
+
+track CUS-1 GRE-4 DLR
+track CUS-2 GRE-3 DLR
+
+track ISG-1 CUS-1 DLR
+track ISG-2 CUS-2 DLR
+
+track MUD-1 ISG-1 DLR
+track MUD-2 ISG-2 DLR
+
+track MUDnorth-sb MUD-1 DLR
+track MUDnorth-nb MUD-3 DLR
+subtrack MUDnorth-nb MUD-2 DLR
+
+track CRO-1 MUDnorth-sb DLR
+track CRO-2 MUDnorth-nb DLR
+subtrack CRO-1 MUDnorth-nb DLR
+subtrack CRO-2 MUDnorth-sb DLR
+
+track SOQ-1 CRO-1 DLR
+track SOQ-2 CRO-2 DLR
+
+track HEQ-1 SOQ-1 DLR
+track HEQ-2 SOQ-2 DLR
+
+track CAW-5,6 HEQ-2 DLR
+subtrack CAW-3,4 HEQ-2 DLR
+subtrack CAW-3,4 HEQ-1 DLR
+subtrack CAW-1,2 HEQ-1 DLR
+
+track WIQ-1 CAW-1,2 DLR
+subtrack WIQ-2 CAW-1,2 DLR
+subtrack WIQ-2 CAW-3,4 DLR
+subtrack WIQ-3 CAW-3,4 DLR
+subtrack WIQ-3 CAW-5,6 DLR
+subtrack WIQ-4 CAW-5,6 DLR
+
+# Poplar Interchange
+
+track POPeast-eb POPeast2-eb DLR
+subtrack POPeast-nb POPeast2-nb DLR
+subtrack POPeast-nb POPeast2-sb DLR
+subtrack POPeast-sb POPeast2-nb DLR
+subtrack POPeast-sb POPeast2-sb DLR
+subtrack POPeast-wb POPeast2-wb DLR
+
+track POP-1 POPeast-eb DLR
+track POP-2 POPeast-nb DLR
+subtrack POP-1 POPeast-nb DLR
+subtrack POP-2 POPeast-eb DLR
+track POP-3 POPeast-sb DLR
+track POP-4 POPeast-wb DLR
+subtrack POP-4 POPeast-sb DLR
+
+track POPwest-becn POP-1 DLR
+track POPwest-becs POP-4 DLR
+track WES-1 POPwest-wcsb1 DLR
+subtrack WES-1 POPwest-wcsb2 DLR
+subtrack WES-1 POPwest-becn DLR
+track WES-2 POPwest-becs DLR
+subtrack WES-2 POPwest-wcnb DLR
+track POPwest-wcnb WIQ-4 DLR
+track POPwest-wcsb1 WIQ-1 DLR
+track POP-3! WIQ-2 DLR
+subtrack POPwest-wcsb2 WIQ-2 DLR
+track POP-2! WIQ-3 DLR
+subtrack POPwest-wcnb WIQ-3 DLR
+
+track POPeast2-eb BLA-1 DLR
+track POPeast2-wb BLA-2 DLR
+subtrack POPeast2-sb BLA-2 DLR
+subtrack POPeast2-sb BLA-1 DLR
+subtrack POPeast2-wb BLA-1 DLR
+
+# City branch
+
+track LIM-3 WES-1 DLR
+track LIM-4 WES-2 DLR
+
+track SHA-1 LIM-3 DLR
+track SHA-2 LIM-4 DLR
+
+track SHAwest-eb SHA-1 DLR
+subtrack SHAwest-wb SHA-2 DLR
+
+# BNK to SHAwest in pre-fixes
+
+subtrack TOGeast-1,2 SHAwest-eb DLR
+subtrack TOGeast-1,2 SHAwest-wb DLR
+
+track TOG-1,2 TOGeast-1,2 DLR
+
+## Overground
+
+# Euston branch
+
+track KBN-1 QPK-1 Ov
+track KBN-2 QPK-4 Ov
+
+track SOH-1 KBN-1 Ov
+track SOH-2 KBN-2 Ov
+
+track EUSnrwest2-eb SOH-1 Ov
+track EUSnrwest2-wb SOH-2 Ov
+
+track EUSnrwest-eb EUSnrwest2-eb Ov
+track EUSnrwest-wb EUSnrwest2-wb Ov
+subtrack EUSnrwest-eb EUSnrwest2-wb Ov
+subtrack EUSnrwest-wb EUSnrwest2-eb Ov
+
+track EUSnr-11 EUSnrwest-eb Ov
+subtrack EUSnr-10 EUSnrwest-eb Ov
+track EUSnr-9 EUSnrwest-wb Ov
+subtrack EUSnr-8 EUSnrwest-wb Ov
+
+# Clapham junction branch
+
+track IMW-1 CLJ-2 Ov
+subtrack IMW-2 CLJ-2 Ov
+
+track WBT-3 IMW-1 Ov
+track WBT-4 IMW-2 Ov
+
+track OLY-3 WBT-3 Ov
+track OLY-2 WBT-4 Ov
+
+track SPB-1 OLY-3 Ov
+track SPB-2 OLY-2 Ov
+
+# SPBnorth to SPB in pre-fixes
+
+# Richmond branch
+
+# SAT to GUN in pre-fixes
+
+track ACC-1 SAT-1 Ov
+track ACC-2 SAT-2 Ov
+
+track ACCnorth-sb ACC-1 Ov
+track ACCnorth-nb ACC-2 Ov
+
+# WIJ faffing
+
+track WIJ-5 SPBnorth-sb Ov
+subtrack WIJ-5 ACCnorth-sb Ov
+track WIJ-4 SPBnorth-nb Ov
+subtrack WIJ-4 ACCnorth-nb Ov
+
+# East of WLJ
+
+track KNR-2 WIJ-4 Ov
+track KNR-1 WIJ-5 Ov
+
+track KNRwest-nbsb KNRwest2-nbsb Ov
+
+subtrack KNR-1 KNRwest-nbsb Ov
+subtrack KNR-2 KNRwest-nbsb Ov
+
+track BSP-2 KNR-2 Ov
+track BSP-1 KNR-1 Ov
+
+track BSY-2 BSP-2 Ov
+track BSY-1 BSP-1 Ov
+
+# WHDnr to BSY in pre-fixes
+
+track FNY-2 WHDnr-2 Ov
+track FNY-1 WHDnr-1 Ov
+
+track HDH-2 FNY-2 Ov
+track HDH-1 FNY-1 Ov
+
+track GPO-2 HDH-2 Ov
+track GPO-1 HDH-1 Ov
+subtrack GPO-2 HDH-1 Ov
+
+track KTW-2 GPO-2 Ov
+track KTW-1 GPO-1 Ov
+
+track CMD-2 KTW-2 Ov
+track CMD-1 KTW-1 Ov
+subtrack CMD-2 KTW-1 Ov
+
+track CIR-2 CMD-2 Ov
+track CIR-1 CMD-1 Ov
+subtrack CIR-1 CMD-2 Ov
+
+track HHY-8 CIR-2 Ov
+track HHY-7 CIR-1 Ov
+
+track CNN-4 HHY-8 Ov
+track CNN-3 HHY-7 Ov
+subtrack CNN-3 HHY-8 Ov
+
+track DLK-2 CNN-4 Ov
+track DLK-1 CNN-3 Ov
+
+track HKC-2 DLK-2 Ov
+track HKC-1 DLK-1 Ov
+subtrack HKC-1 DLK-2 Ov
+
+track HMN-2 HKC-2 Ov
+track HMN-1 HKC-1 Ov
+
+track HKW-2 HMN-2 Ov
+track HKW-1 HMN-1 Ov
+subtrack HKW-1 HMN-2 Ov
+
+track SFDne-1 HKW-2 Ov
+track SFDne-2 HKW-1 Ov
+subtrack SFDne-1 HKW-1 Ov
+subtrack SFDne-2 HKW-2 Ov
+
+# East London Line
+
+track CNN-1 HHY-1 Ov
+track CNN-2 HHY-2 Ov
+
+track DLJ-1 CNN-1 Ov
+track DLJ-4 CNN-2 Ov
+
+track DLJsouth-nb DLJ-1 Ov
+track DLJsouth-sb DLJ-4 Ov
+subtrack DLJsouth-nb DLJ-2 Ov
+subtrack DLJsouth-sb DLJ-3 Ov
+
+track HGG-1 DLJsouth-nb Ov
+track HGG-2 DLJsouth-sb Ov
+subtrack HGG-1 DLJsouth-sb Ov
+subtrack HGG-2 DLJsouth-nb Ov
+
+track HOX-1 HGG-1 Ov
+track HOX-2 HGG-2 Ov
+
+track SDC-1 HOX-1 Ov
+track SDC-2 HOX-2 Ov
+
+track ZWL-5 SDC-1 Ov
+track ZWL-6 SDC-2 Ov
+
+# WPE to ZWL in pre-fixes
+
+track ROE-1 WPE-1 Ov
+track ROE-2 WPE-2 Ov
+
+track ZCW-4 ROE-1 Ov
+track ZCW-3 ROE-2 Ov
+
+track SQE-1 ZCW-4 Ov
+track SQE-2 ZCW-3 Ov
+subtrack SQE-2 ZCW-4 Ov
+subtrack SQE-1 ZCW-3 Ov
+
+subtrack NXG-1 SQE-2 Ov
+track NWX-D SQE-1 Ov
+subtrack NWX-D SQE-2 Ov
+subtrack NXG-5 SQE-1 Ov
+
+track BCY-1 NXG-5 Ov
+subtrack BCY-2 NXG-1 Ov
+
+track HPA-1 BCY-1 Ov
+track HPA-2 BCY-2 Ov
+
+track FOH-1 HPA-1 Ov
+track FOH-2 HPA-2 Ov
+
+track SYD-1 FOH-1 Ov
+track SYD-2 FOH-2 Ov
+
+track CYPnorth-nb SYD-1 Ov
+subtrack PNW-1 SYD-1 Ov
+track CYPnorth-sb SYD-2 Ov
+subtrack PNW-2 SYD-2 Ov
+
+track CYPnr-5 CYPnorth-nb Ov
+track CYPnr-3 CYPnorth-sb Ov
+subtrack CYPnr-5 CYPnorth-sb Ov
+subtrack CYPnr-3 CYPnorth-nb Ov
+
+track ANZ-1 PNW-1 Ov
+track ANZ-2 PNW-2 Ov
+
+track NWDnr-1,2 ANZ-1 Ov
+track NWDnr-5 ANZ-2 Ov
+
+track WCY-3 NWDnr-1,2 Ov
+track WCY-4 NWDnr-5 Ov
+subtrack WCY-1 NWDnr-1,2 Ov
+subtrack WCY-1 NWDnr-5 Ov
+
+# Barking branch
+
+track GPOeast-eb GPO-3 Ov
+subtrack GPOeast-wb GPO-3 Ov
+
+track UHL-2 GPOeast-eb Ov
+track UHL-1 GPOeast-wb Ov
+
+track CRH-2 UHL-2 Ov
+track CRH-1 UHL-1 Ov
+
+track HRY-2 CRH-2 Ov
+track HRY-1 CRH-1 Ov
+
+track STO-2 HRY-2 Ov
+track STO-1 HRY-1 Ov
+subtrack STO-1 HRY-2 Ov
+
+track STOeast-eb STO-2 Ov
+track STOeast-wb STO-1 Ov
+subtrack STOeast-eb STO-1 Ov
+
+track BHR-2nr STOeast-eb Ov
+track BHR-1nr STOeast-wb Ov
+
+track WMW-2 BHR-2nr Ov
+track WMW-1 BHR-1nr Ov
+
+track LEM-2 WMW-2 Ov
+track LEM-1 WMW-1 Ov
+
+track LER-2 LEM-2 Ov
+track LER-1 LEM-1 Ov
+
+track WNP-2 LER-2 Ov
+track WNP-1 LER-1 Ov
+
+track WGR-2 WNP-2 Ov
+track WGR-1 WNP-1 Ov
+subtrack WGR-1 WNP-2 Ov
+
+track BKG-1 WGR-2 Ov
+subtrack BKG-1 WGR-1 Ov
+
+## Fixes
+
+# Pic fixes
+subtrack NEL-1 ECM-1 Pi
+subtrack NEL-2 ECM-2 Pi
+
+track ALP-2 PRY-2 Pi
+track ALP-1 PRY-1 Pi
+
+# District fixes
+
+track WHMdi-2 PLWwest-eb DiHa
+track WHMdi-1 PLWwest-wb DiHa
+subtrack WHMdi-1 PLWwest-eb DiHa
+
+track BBB-2 WHMdi-2 DiHa
+track BBB-1 WHMdi-1 DiHa
+
+track BWR-2 BBB-2 DiHa
+track BWR-1 BBB-1 DiHa
+subtrack BWR-1 BBB-2 DiHa
+
+track SFDne-6 LEY-2 Ce
+track SFDne-3 LEY-1 Ce
+
+track MLE-4 SFDne-6 Ce
+track MLE-1 SFDne-3 Ce
+
+track MLE-3 BWR-2 DiHa
+track MLE-2 BWR-1 DiHa
