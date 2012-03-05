@@ -1,5 +1,5 @@
 import cairo
-from django.utils.datastructures import SortedDict
+from datastructures import SortedDict
 from draw import Segment, Direction
 from platform import Platform, PointsPlatform
 from vector import Vector

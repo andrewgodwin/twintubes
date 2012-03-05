@@ -2,7 +2,7 @@ import cairo
 import os
 from vector import Vector
 from draw import Direction, Segment
-from django.utils.datastructures import SortedDict
+from datastructures import SortedDict
 from station import Station, Points
 
 
