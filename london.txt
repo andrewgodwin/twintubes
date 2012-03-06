@@ -3281,7 +3281,7 @@ track WAR-1 MDV-1 Ba
 
 track PAD-4 WAR-2 Ba
 track PAD-3 WAR-1 Ba
-#subtrack PAD-4 WAR-1 Ba
+subtrack PAD-4 WAR-1 Ba
 
 track ERB-2 PAD-4 Ba
 track ERB-1 PAD-3 Ba
@@ -3300,6 +3300,7 @@ track OXC-3 RPK-2 Ba
 
 track PIC-1 OXC-4 Ba
 track PIC-2 OXC-3 Ba
+subtrack PIC-2 OXC-4 Ba
 
 track CHX-3 PIC-1 Ba
 track CHX-4 PIC-2 Ba
