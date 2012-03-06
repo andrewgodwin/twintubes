@@ -1885,19 +1885,19 @@ platform 1 N Di L
 platform 2 N Di R
 platform 3 N Di L
 
-station EPY East Putney -47.5,28.0
+station EPY East Putney -48.0,28.0
 platform 1 N Di L
 platform 2 N Di R
 
-station SFS Southfields -47.5,33.0
+station SFS Southfields -48.0,33.0
 platform 1 N Di R
 platform 2 N Di L
 
-station WMP Wimbledon Park -47.5,38.0
+station WMP Wimbledon Park -48.0,38.0
 platform 1 N Di R
 platform 2 N Di L
 
-station WDN Wimbledon -47.5,45.0
+station WDN Wimbledon -48.0,45.0
 platform 1 N Di R
 platform 2 N Di L
 platform 3 N Di R
@@ -3812,6 +3812,7 @@ subtrack PUT-2 PGR-2 Di
 
 track EPY-1 PUT-1 Di
 track EPY-2 PUT-3 Di
+subtrack EPY-2 PUT-1 Di
 
 track SFS-1 EPY-1 Di
 track SFS-2 EPY-2 Di
