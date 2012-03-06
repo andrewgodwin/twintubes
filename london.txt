@@ -1828,8 +1828,6 @@ station WCL Whitechapel 69.0,-21.5
 label SE
 platform 1 E DiHa R
 platform 2 E DiHa L
-platform 3 E DiHa R
-platform 4 E DiHa L
 
 station ALE Aldgate \n East 63.5,-21.5
 label S
@@ -3746,14 +3744,10 @@ track STG-2 MLE-3 DiHa
 track STG-1 MLE-2 DiHa
 
 track WCL-1 STG-2 DiHa
-subtrack WCL-2 STG-2 DiHa
-track WCL-3 STG-1 DiHa
-subtrack WCL-4 STG-1 DiHa
+track WCL-2 STG-1 DiHa
 
 track ALE-2 WCL-1 DiHa
-subtrack ALE-2 WCL-2 DiHa
-track ALE-1 WCL-3 DiHa
-subtrack ALE-1 WCL-4 DiHa
+track ALE-1 WCL-2 DiHa
 
 subtrack THL-3 ALE-2 Di
 subtrack THL-1 ALE-1 Di
