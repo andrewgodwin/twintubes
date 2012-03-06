@@ -2234,7 +2234,11 @@ station SPB  -49.5,-23.5
 platform 2 S Ov R
 platform 1 S Ov L
 
-waypoint SPBnorth  SPB,-15.5,-17.5
+waypoint SPBnorth  SPB,-12.5,-14.5
+platform sb SE
+platform nb SE
+
+waypoint SPBnorth2  SPB,-15.5,-17.5
 platform sb SE
 platform nb SE
 
@@ -2252,11 +2256,9 @@ platform sb S
 
 # Euston branch
 
-station EUSnr  10.0,-50.5
-platform 11 NW Ov L
+station EUSnr  11.0,-51.0
 platform 10 NW Ov R
 platform 9 NW Ov L
-platform 8 NW Ov R
 
 waypoint EUSnrwest  EUSnr,-4.5,-2.5
 platform eb W
@@ -4304,10 +4306,10 @@ track EUSnrwest-wb EUSnrwest2-wb Ov
 subtrack EUSnrwest-eb EUSnrwest2-wb Ov
 subtrack EUSnrwest-wb EUSnrwest2-eb Ov
 
-track EUSnr-11 EUSnrwest-eb Ov
-subtrack EUSnr-10 EUSnrwest-eb Ov
+#track EUSnr-11 EUSnrwest-eb Ov
+track EUSnr-10 EUSnrwest-eb Ov
 track EUSnr-9 EUSnrwest-wb Ov
-subtrack EUSnr-8 EUSnrwest-wb Ov
+#subtrack EUSnr-8 EUSnrwest-wb Ov
 
 # Clapham junction branch
 
@@ -4319,11 +4321,18 @@ track WBT-4 IMW-2 Ov
 
 track OLY-3 WBT-3 Ov
 track OLY-2 WBT-4 Ov
+subtrack OLY-3 WBT-4 Ov
 
 track SPB-1 OLY-3 Ov
 track SPB-2 OLY-2 Ov
+subtrack SPB-1 OLY-2 Ov
 
 # SPBnorth to SPB in pre-fixes
+
+track SPBnorth2-nb SPBnorth-nb Ov
+track SPBnorth2-sb SPBnorth-sb Ov
+subtrack SPBnorth2-sb SPBnorth-nb Ov
+subtrack SPBnorth2-nb SPBnorth-sb Ov
 
 # Richmond branch
 
@@ -4337,9 +4346,9 @@ track ACCnorth-nb ACC-2 Ov
 
 # WIJ faffing
 
-track WIJ-5 SPBnorth-sb Ov
+track WIJ-5 SPBnorth2-sb Ov
 subtrack WIJ-5 ACCnorth-sb Ov
-track WIJ-4 SPBnorth-nb Ov
+track WIJ-4 SPBnorth2-nb Ov
 subtrack WIJ-4 ACCnorth-nb Ov
 
 # East of WLJ
