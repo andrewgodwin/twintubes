@@ -1373,7 +1373,7 @@ station SFDne  SFD,-3.5,1.5
 platform 1 SW Ov L
 platform 2 SW Ov R
 platform 6 NE Ce L
-platform 3,3a NE Ce B
+platform 3 NE Ce B
 platform 4B NE DLR R
 platform 4A NE DLR L
 
