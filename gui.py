@@ -14,6 +14,7 @@ class Gui(object):
         self.map = Map()
         self.map.load(self.filename)
         self.aa = True
+        self.markings = True
 
     def make_window(self):
         self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
@@ -45,6 +46,10 @@ class Gui(object):
         self.aa_item.connect("activate", self.aa_toggle)
         menu.append(self.aa_item)
         
+        self.markings_item = gtk.MenuItem("Markings Off")
+        self.markings_item.connect("activate", self.markings_toggle)
+        menu.append(self.markings_item)
+        
         save_item = gtk.MenuItem("Reload")
         save_item.connect("activate", self.reload)
         menu.append(save_item)
@@ -68,6 +73,15 @@ class Gui(object):
             self.aa_item.get_child().set_text("Antialiasing Off")
         else:
             self.aa_item.get_child().set_text("Antialiasing On")
+        self.renderer.queue_draw()
+
+    def markings_toggle(self, *args):
+        "Callback to turn markings on and off."
+        self.markings = not self.markings
+        if self.markings:
+            self.markings_item.get_child().set_text("Markings Off")
+        else:
+            self.markings_item.get_child().set_text("Markings On")
         self.renderer.queue_draw()
 
     def reload(self, *args, **kwds):
@@ -259,7 +273,8 @@ class Renderer(gtk.DrawingArea):
         cr.scale(unit, unit)
         cr.translate(-self.x, -self.y)
         self.gui.map.draw(cr)
-        self.gui.map.draw_debug(cr, set(self.selected))
+        if self.gui.markings:
+            self.gui.map.draw_debug(cr, set(self.selected))
         cr.restore()
 
 
