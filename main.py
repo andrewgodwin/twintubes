@@ -61,14 +61,18 @@ class Map(object):
                             finishes_end = True
                             dest_number = dest_number[:-1]
                         # Add it
-                        self.add_outbound(
-                            station.platforms[platform_number],
-                            self.stations[dest_code].platforms[dest_number],
-                            self.lines[parts[2]],
-                            leaves_start = leaves_start,
-                            finishes_end = finishes_end,
-                            subtrack = (type == "subtrack"),
-                        )
+                        try:
+                            self.add_outbound(
+                                station.platforms[platform_number],
+                                self.stations[dest_code].platforms[dest_number],
+                                self.lines[parts[2]],
+                                leaves_start = leaves_start,
+                                finishes_end = finishes_end,
+                                subtrack = (type == "subtrack"),
+                            )
+                        except:
+                            print "Error context: %s, %s" % (station, parts)
+                            raise
 
                     # Station/waypoint record
                     elif type in ("station", "waypoint"):
