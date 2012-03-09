@@ -373,9 +373,11 @@ station EMBcnc  EMB,-0.5,3.0
 platform 2 E CiDi L
 platform 1 E CiDi R
 
-station WLO Waterloo 20.5,6.5
-platform 5 N Ju R
-platform 6 N Ju L
+station WLO Waterloo 21.5,5.5
+label SW
+label_offset 0,-4
+platform 6 W Ju R
+platform 5 W Ju L
 platform 1 N No R
 platform 2 N No L
 platform 3 N Ba R
@@ -748,7 +750,19 @@ platform 1 E Ce L
 platform 3 N Ju R
 platform 4 N Ju L
 
-station WMS Westminster 12.0,-1.0
+waypoint GPKsouth  GPK,4.0,4.0
+platform sb NW
+platform nb NW
+
+waypoint GPKsi  GPK,10.0,6.0
+platform 1 W
+platform 2 W
+
+waypoint GPKsi2  GPK,14.0,6.0
+platform 1 W
+platform 2 W
+
+station WMS Westminster 11.5,-1.0
 label SW
 label_offset 20,2
 platform 3 NW Ju R
@@ -761,7 +775,7 @@ label NW
 platform 2 SW Ju L
 platform 1 SW Ju R
 
-waypoint SWKwest  SWK,-8.5,6.0
+waypoint SWKwest  SWK,-5.5,1.5
 platform eb W
 platform wb W
 
@@ -2685,12 +2699,22 @@ track BDS-3 BST-10 Ju
 track GPK-6 BDS-4 Ju
 track GPK-5 BDS-3 Ju
 
-track WMS-3 GPK-6 Ju
-track WMS-4 GPK-5 Ju
+track GPKsouth-sb GPK-6 Ju
+track GPKsouth-nb GPK-5 Ju
+
+track WMS-3 GPKsouth-sb Ju
+subtrack GPKsi-1 GPKsouth-sb Ju
+track GPKsi-2 GPKsouth-nb Ju
+subtrack WMS-4 GPKsouth-nb Ju
+
+track GPKsi2-1 GPKsi-1 Ju
+track GPKsi2-2 GPKsi-2 Ju
+subtrack GPKsi2-1 GPKsi-2 Ju
+subtrack GPKsi2-2 GPKsi-1 Ju
 
 track WLO-5 WMS-4 Ju
 track WLO-6 WMS-3 Ju
-#subtrack WLO-6 WMS-4 Ju
+subtrack WLO-6 WMS-4 Ju
 
 track SWKwest-wb WLO-5 Ju
 track SWKwest-eb WLO-6 Ju
@@ -2700,6 +2724,7 @@ track SWK-2 SWKwest-eb Ju
 
 track LON-4 SWK-2 Ju
 track LON-3 SWK-1 Ju
+subtrack LON-3 SWK-2 Ju
 
 track BER-2 LON-4 Ju
 track BER-1 LON-3 Ju
