@@ -385,6 +385,10 @@ platform 4 N Ba R
 platform 25 N Wa L
 platform 26 N Wa R
 
+depot WLOdepot Waterloo \n Depot 23.5,9.0
+label E
+platform road N Wa
+
 # City branch
 
 station ANG Angel 36.0,-45.0
@@ -398,20 +402,20 @@ platform 1 N No R
 platform 2 N No L
 
 station BNK Bank 45.0,-21.5
-label E
-label_offset 0,10
+label SW
+label_offset -5,5
 platform 6 E Ce R
 platform 5 E Ce L
 platform 8 E Wa R
 platform 7 E Wa L
 
-station BNKdlr  BNK,0.0,3.0
+station BNKdlr  BNK,0.0,5.0
 platform 3 N No R
 platform 4 N No L
-platform 10 S DLR R
-platform 9 S DLR L
+platform 10 S DLR L
+platform 9 S DLR R
 
-waypoint BNKdlrsi  BNK,1.0,0.0
+waypoint BNKdlrsi  BNK,1.0,2.0
 platform si S DLR
 
 station LON London Bridge 44.0,-2.5
@@ -422,12 +426,12 @@ platform 1 N No L
 platform 4 W Ju L
 platform 3 W Ju R
 
-station BOR Borough 41.0,9.5
+station BOR Borough 40.5,9.5
 label SE
 platform 2 NE No L
 platform 1 NE No L
 
-station ELE Elephant & Castle 31.5,19.0
+station ELE Elephant & Castle 31.0,19.0
 draw last
 label E
 platform 1 NE No L
@@ -670,12 +674,12 @@ platform 1 W Ba L
 platform 3 E Pi R
 platform 4 E Pi L
 
-station LAM Lambeth \n North 25.0,12.5
+station LAM Lambeth \n North 26.5,14.5
 label NE
 platform 2 NW Ba R
 platform 1 NW Ba L
 
-waypoint LAMnorth  LAM,-3.5,-4.0
+waypoint LAMnorth  LAM,-5.0,-6.0
 platform nb N
 platform sb N
 
@@ -3575,6 +3579,9 @@ subtrack BNKwest-wb BNK-8 Wa
 
 track WLO-25 BNKwest-eb Wa
 track WLO-26 BNKwest-wb Wa
+
+track WLOdepot-road WLO-26 Wa
+subtrack WLOdepot-road WLO-25 Wa
 
 ## Central Line
 
