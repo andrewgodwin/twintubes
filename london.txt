@@ -787,10 +787,28 @@ platform 3 SW Ju R
 platform 2 SW Ju L
 platform 1 SW Ju R
 
+# Canning town, Jub platforms
 station CNT  109.0,-10.5
 label NE
 platform 6 S Ju L
 platform 5 S Ju R
+
+station WHM West Ham 110.0,-29.5
+label E
+label_offset -1,3
+platform 6 S Ju R
+platform 5 S Ju L
+platform 4 N DLR R
+platform 3 N DLR L
+
+waypoint WHMnorth  WHM,-1.0,-5.0
+platform nb S
+platform sb S
+
+depot SFDdepot Stratford \n Depot 107.5,-39.0
+label W
+label_offset 3,-4
+platform road S Ju
 
 ### Metropolitan Line stations ###
 
@@ -1798,14 +1816,6 @@ waypoint PLWwest  PLW,-2.0,3.5
 platform eb NE
 platform wb NE
 
-station WHM West Ham 110.0,-29.5
-label E
-label_offset -1,3
-platform 6 S Ju R
-platform 5 S Ju L
-platform 4 N DLR R
-platform 3 N DLR L
-
 station WHMdi  WHM,0.0,-1.5
 platform 2 E DiHa R
 platform 1 E DiHa L
@@ -1977,14 +1987,14 @@ platform 2 E
 waypoint WESeast2  WES,3.5,-1.5
 platform eb E
 
-station POP Poplar 90.5,-9.5
+station POP Poplar 90.0,-9.5
 label N
 platform 1 E DLR R
 platform 2 E DLR L
 platform 3 E DLR R
 platform 4 E DLR L
 
-waypoint POPwest  POP,-7.0,0.5
+waypoint POPwest  POP,-6.5,0.5
 platform becn E
 platform becs E
 platform wcsb1 E
@@ -2157,7 +2167,7 @@ platform 2 E DLR R
 
 # Stratford branch
 
-station ALS All Saints 97.5,-17.5
+station ALS All Saints 97.0,-17.5
 label E
 platform 1 N DLR L
 platform 2 N DLR R
@@ -2166,16 +2176,16 @@ waypoint ALSsouth  ALS,0.0,3.0
 platform nb N
 platform sb N
 
-station LAP Langdon Park 97.5,-21.5
+station LAP Langdon Park 97.0,-21.5
 platform 1 N DLR L
 platform 2 N DLR R
 
-station DER Devons Road 97.5,-25.5
+station DER Devons Road 97.0,-25.5
 label E
 platform 1 N DLR L
 platform 2 N DLR R
 
-station BOC Bow Church 97.5,-33.0
+station BOC Bow Church 97.0,-33.0
 label E
 label_offset 0,-6
 platform 1 N DLR L
@@ -2184,8 +2194,9 @@ platform 2 N DLR R
 waypoint BOCnorth  BOC,0.0,-2.5
 platform nbsb N
 
-station PML Pudding \n Mill Lane 99.5,-39.5
+station PML Pudding \n Mill Lane 99.0,-39.0
 label SE
+label_offset -4,3
 platform 1 NE DLR R
 platform 2 NE DLR L
 
@@ -2200,21 +2211,21 @@ platform nbsb NE
 
 # Lewisham branch
 
-station WIQ West India Quay 87.0,1.0
+station WIQ West India Quay 86.5,1.0
 label E
 platform 4 S DLR L
 platform 3 S DLR R
 platform 2 S DLR L
 platform 1 S DLR N
 
-station CAW Canary Wharf 87.0,7.0
+station CAW Canary Wharf 86.5,7.0
 label NE
 label_offset 0,6
 platform 5,6 S DLR B
 platform 3,4 S DLR B
 platform 1,2 S DLR B
 
-station HEQ Heron Quays 87.0,11.5
+station HEQ Heron Quays 86.0,11.5
 platform 2 S DLR R
 platform 1 S DLR L
 
@@ -2714,8 +2725,15 @@ subtrack CNT-5 NGW-2 Ju
 track WHM-6 CNT-6 Ju
 track WHM-5 CNT-5 Ju
 
-track SFDsouth2-nb WHM-6 Ju
-track SFDsouth2-sb WHM-5 Ju
+track WHMnorth-nb WHM-6 Ju
+track WHMnorth-sb WHM-5 Ju
+subtrack WHMnorth-nb WHM-5 Ju
+
+track SFDsouth2-nb WHMnorth-nb Ju
+track SFDsouth2-sb WHMnorth-sb Ju
+
+subtrack SFDdepot-road WHMnorth-nb Ju
+subtrack SFDsouth2-nb SFDdepot-road Ju
 
 subtrack SFDsouth-nb SFDsouth2-nb Ju
 subtrack SFDsouth-nb SFDsouth2-sb Ju
