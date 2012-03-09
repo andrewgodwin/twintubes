@@ -36,35 +36,51 @@ line NR cccccc
 
 # Victoria line stations, south to north
 
-station WAL Walthamstow \n Central 88.5,-81.5
+station WAL Walthamstow \n Central 91.0,-82.5
 label N
 platform 1 E Vi R
 platform 2 E Vi L
 
-station BHR Blackhorse \n Road 78.5,-80.5
+sidings WALeast WAL,2,0
+platform 1 E Vi
+platform 2 E Vi
+
+station BHR Blackhorse \n Road 81.0,-81.5
 label N
 platform 1 E Vi R
 platform 2 E Vi L
 platform 2nr W Ov R
 platform 1nr W Ov L
 
-station TTH Tottenham \n Hale 70.0,-81.5
+station TTH Tottenham \n Hale 72.5,-82.5
 label N
 platform 1 E Vi R
 platform 2 E Vi L
 
-station SVS Seven \n Sisters 64.0,-80.0
+station SVS Seven \n Sisters 62.5,-79.5
 label NW
 platform 3 NE Vi R
 platform 4 NE Vi L
 platform 5 NE Vi L
+
+depot SVSdepot Northumberland \n Park Depot 68.5,-88.5
+label W
+platform nb N Vi
+platform sb N Vi
+
+waypoint SVSnorth  SVS,3.0,-1.5
+platform nb NE
+platform dpnb NE
+platform dpsb NE
+platform sb NE
+platform fake NE
 
 waypoint SVSsouth  SVS,-2.0,2.0
 platform nb NE
 platform mid NE
 platform sb NE
 
-station FPK Finsbury Park 50.0,-66.5
+station FPK Finsbury Park 50.0,-67.5
 label NW
 # nb
 platform 1 NE Pi R
@@ -75,12 +91,12 @@ platform 4 NE Vi L
 
 station HBY Highbury & \n Islington 48.5,-56.0
 label E
-# vic northbound
 platform 3 N Vi R
-#platform 4 N NR L
-# vic southbound
 platform 5 N Vi R
-#platform 6 N NR L
+
+waypoint HBYnorth  HBY,0.0,-3.0
+platform nb N
+platform sb N
 
 station KXX King's Cross \n St Pancras 27.5,-45.0
 label NW
@@ -97,6 +113,9 @@ platform 5 NE Pi L
 # circ/met/ham
 platform 2 W CiHaMe L
 platform 1 W CiHaMe R
+
+sidings KXXeast KXX,3,0
+platform mid E Vi
 
 station EUS Euston 15.0,-48.0
 label N
@@ -152,6 +171,9 @@ platform 4 N Vi L
 platform 2 E CiDi L
 platform 1 E CiDi R
 
+sidings VICsouth VIC,0,3
+platform mid N Vi
+
 station PIM Pimlico -2.0,12.0
 platform 1 N Vi R
 platform 2 N Vi L
@@ -173,6 +195,10 @@ platform 1 NW Vi L
 platform 2 NW Vi R
 
 waypoint BRXcross  BRX,-3.0,-3.0
+platform 1 NW Vi
+platform 2 NW Vi
+
+sidings BRXsouth BRX,2,2
 platform 1 NW Vi
 platform 2 NW Vi
 
@@ -1108,17 +1134,17 @@ station MNR Manor House 51.0,-73.0
 platform 1 N Pi R
 platform 2 N Pi L
 
-station ARL Arsenal KXX,18.5,-19.0
+station ARL Arsenal KXX,17.5,-17.5
 label NW
 platform 1 NE Pi R
 platform 2 NE Pi L
 
-station HRD Holloway Road KXX,15.0,-15.5
+station HRD Holloway Road KXX,14.0,-14.0
 label NW
 platform 2 NE Pi R
 platform 1 NE Pi L
 
-station CRD Caledonian \n Road KXX,11.0,-11.5
+station CRD Caledonian \n Road KXX,10.0,-10.0
 label NW
 platform 1 NE Pi R
 platform 2 NE Pi L
@@ -1541,50 +1567,50 @@ label E
 platform 2 N Ce L
 platform 1 N Ce R
 
-station LYS Leytonstone 108.5,-64.5
+station LYS Leytonstone 108.5,-66.0
 label W
 platform 3 N Ce L
 platform 2 N Ce R
 platform 1 N Ce L
 
-station SNB Snaresbrook 108.0,-72.5
+station SNB Snaresbrook 108.0,-74.0
 label W
 platform 2 N Ce L
 platform 1 N Ce R
 
-station SWF South Woodford 108.0,-80.5
+station SWF South Woodford 108.0,-82.0
 label W
 platform 2 N Ce L
 platform 1 N Ce R
 
-station WFD Woodford 108.5,-89.0
+station WFD Woodford 108.5,-90.5
 label W
 platform 3 N Ce L
 platform 2 N Ce R
 platform 1 N Ce L
 
-station BHL Buckhurst Hill 108.0,-99.0
+station BHL Buckhurst Hill 108.0,-100.5
 label W
 platform 2 N Ce L
 platform 1 N Ce R
 
-station LTN Loughton 111.0,-104.5
+station LTN Loughton 111.0,-106.0
 label NW
 platform 4 NE Ce R
 platform 2 NE Ce B
 platform 1 NE Ce L
 
-station DEB Debden 115.0,-108.5
+station DEB Debden 115.0,-110.0
 label NW
 platform 2 NE Ce L
 platform 1 NE Ce R
 
-station THB Theydon Bois 119.0,-112.5
+station THB Theydon Bois 119.0,-114.0
 label NW
 platform 2 NE Ce L
 platform 1 NE Ce R
 
-station EPP Epping 123.0,-116.5
+station EPP Epping 123.0,-118.0
 label NW
 platform 2 NE Ce L
 platform 1 NE Ce R
@@ -1592,53 +1618,53 @@ platform 1 NE Ce R
 
 # Hainault Loop
 
-station WAN Wanstead 113.5,-68.5
+station WAN Wanstead 113.5,-70.0
 label S
 platform 2 E Ce R
 platform 1 E Ce L
 
-station RED Redbridge 120.0,-68.5
+station RED Redbridge 120.0,-70.0
 label N
 platform 2 E Ce R
 platform 1 E Ce L
 
-station GHL Gants \n Hill 127.0,-68.5
+station GHL Gants \n Hill 127.0,-70.0
 label S
 platform 2 E Ce R
 platform 1 E Ce L
 
-station NEP Newbury Park 131.0,-72.5
+station NEP Newbury Park 131.0,-74.0
 label W
 platform 2 N Ce L
 platform 1 N Ce R
 
-station BDE Barkingside 131.0,-78.5
+station BDE Barkingside 131.0,-80.0
 label W
 platform 2 N Ce L
 platform 1 N Ce R
 
-station FLP Fairlop 131.0,-84.5
+station FLP Fairlop 131.0,-86.0
 label W
 platform 2 N Ce L
 platform 1 N Ce R
 
-station HAI Hainault 130.5,-90.0
+station HAI Hainault 130.5,-91.5
 label W
 platform 3 N Ce R
 platform 2 N Ce L
 platform 1 N Ce R
 
-station GRH Grange Hill 126.0,-96.0
+station GRH Grange Hill 126.0,-97.5
 label S
 platform 2 W Ce R
 platform 1 W Ce L
 
-station CHG Chigwell 119.5,-96.0
+station CHG Chigwell 119.5,-97.5
 label N
 platform 2 W Ce R
 platform 1 W Ce L
 
-station ROD Roding \n Valley 112.0,-96.0
+station ROD Roding \n Valley 112.0,-97.5
 label S
 platform 2 W Ce R
 platform 1 W Ce L
@@ -2697,7 +2723,7 @@ label N
 platform 2 W Ov R
 platform 1 W Ov L
 
-station HRY Harringay \n Green Lanes 56.0,-76.5
+station HRY Harringay \n Green Lanes 55.5,-76.5
 label N
 platform 2 W Ov R
 platform 1 W Ov L
@@ -2711,27 +2737,27 @@ waypoint STOeast  STO,6.0,0.0
 platform eb W
 platform wb W
 
-station WMW Walthamstow \n Queen's Road 87.0,-74.0
+station WMW Walthamstow \n Queen's Road 90.5,-73.0
 label SW
 platform 2 NW Ov R
 platform 1 NW Ov L
 
-station LEM Leyton \n Midland Road 102.0,-62.0
+station LEM Leyton \n Midland Road 102.0,-63.5
 label S
 platform 2 W Ov R
 platform 1 W Ov L
 
-station LER Leytonstone \n High Road 115.0,-60.5
+station LER Leytonstone \n High Road 115.0,-60.0
 label NE
 platform 2 NW Ov R
 platform 1 NW Ov L
 
-station WNP Wanstead \n Park 120.0,-55.5
+station WNP Wanstead \n Park 120.0,-55.0
 label NE
 platform 2 NW Ov R
 platform 1 NW Ov L
 
-station WGR Woodgrange \n Park 125.5,-50.0
+station WGR Woodgrange \n Park 125.5,-49.5
 label SW
 platform 2 NW Ov R
 platform 1 NW Ov L
@@ -3106,6 +3132,9 @@ subtrack UXB-1 UXBeast-wb MePi
 
 ##### Victoria line #####
 
+track WAL-1 WALeast-1 Vi
+track WAL-2 WALeast-2 Vi
+
 track BHR-1 WAL-1 Vi
 track BHR-2 WAL-2 Vi
 subtrack BHR-1 WAL-2 Vi
@@ -3114,9 +3143,18 @@ subtrack BHR-2 WAL-1 Vi
 track TTH-1 BHR-1 Vi
 track TTH-2 BHR-2 Vi
 
-track SVS-3 TTH-1 Vi
-subtrack SVS-4 TTH-1 Vi
-track SVS-5 TTH-2 Vi
+track SVSnorth-nb TTH-1 Vi
+track SVSnorth-sb TTH-2 Vi
+track SVSnorth-dpnb SVSdepot-nb Vi
+track SVSnorth-dpsb SVSdepot-sb Vi
+
+track SVS-3 SVSnorth-nb Vi
+subtrack SVS-4 SVSnorth-nb Vi
+subtrack SVS-4 SVSnorth-dpnb Vi
+subtrack SVS-4 SVSnorth-dpsb Vi
+track SVS-5 SVSnorth-sb Vi
+subtrack SVS-5 SVSnorth-dpsb Vi
+subtrack SVS-5 SVSnorth-dpnb Vi
 
 track SVSsouth-nb SVS-3 Vi
 subtrack SVSsouth-nb SVS-4 Vi
@@ -3125,27 +3163,28 @@ track SVSsouth-sb SVS-5 Vi
 track FPK-2 SVSsouth-nb Vi
 track FPK-4 SVSsouth-sb Vi
 
-track HBY-3 FPK-2 Vi
-track HBY-5 FPK-4 Vi
-#subtrack HBY-5 HBYnorth-nb Vi
+track HBYnorth-sb FPK-4 Vi
+subtrack ARL-2 FPK-4 Vi
+subtrack ARL-2 FPK-3 Pi
+track HBYnorth-nb FPK-2 Vi
+subtrack ARL-1 FPK-2 Vi
+subtrack ARL-1 FPK-1 Pi
 
-# Unshown siding
-#track KXXnorth-nb HBY-3 Vi
-#track KXXnorth-sb HBY-5 Vi
-#track KXX-4 KXXnorth-sb Vi
-#track KXX-3 KXXnorth-nb Vi
-#subtrack KXX-4 KXXnorth-si Vi
-#subtrack KXX-3 KXXnorth-si Vi
+track HBY-3 HBYnorth-nb Vi
+track HBY-5 HBYnorth-sb Vi
+subtrack HBY-5 HBYnorth-nb Vi
 
 track KXX-4 HBY-5 Vi
 track KXX-3 HBY-3 Vi
+subtrack KXX-4 KXXeast-mid Vi
+subtrack KXX-3 KXXeast-mid Vi
 
 track EUS-5 KXX-4 Vi
 track EUS-4 KXX-3 Vi
 
 track WST-4 EUS-5 Vi
 track WST-3 EUS-4 Vi
-#subtrack WST-4 WSTnorth-nb Vi
+subtrack WST-4 EUS-4 Vi
 
 track OXC-6 WST-3 Vi
 track OXC-5 WST-4 Vi
@@ -3155,22 +3194,13 @@ track GPK-4 OXC-5 Vi
 
 track VIC-3 GPK-3 Vi
 track VIC-4 GPK-4 Vi
+subtrack VIC-4 GPK-3 Vi
 
-# Not showing sidings
-#subtrack VIC-3 VICnorth-2 Vi
-#track VICcross-1 VIC-3 Vi
-#track VICcross-4 VIC-4 Vi
-#subtrack VICcross-2 VIC-3 Vi
-#subtrack VICcross-2 VIC-4 Vi
-#subtrack VICcross-3 VIC-3 Vi
-#subtrack VICcross-3 VIC-4 Vi
-#track VICsidings-1 VICcross-2 Vi
-#track VICsidings-2 VICcross-3 Vi
-#track PIM-1 VICcross-1 Vi
-#track PIM-1 VICcross-1 Vi
+track VICsouth-mid VIC-3 Vi
+subtrack VICsouth-mid VIC-4 Vi
 
-track PIM-2 VIC-4 Vi
-track PIM-1 VIC-3 Vi
+subtrack PIM-2 VIC-4 Vi
+subtrack PIM-1 VIC-3 Vi
 
 track VUX-1 PIM-1 Vi
 track VUX-2 PIM-2 Vi
@@ -3185,6 +3215,9 @@ track BRX-1 BRXcross-1 Vi
 track BRX-2 BRXcross-2 Vi
 subtrack BRX-2 BRXcross-1 Vi
 subtrack BRX-1 BRXcross-2 Vi
+
+track BRXsouth-1 BRX-1 Vi
+track BRXsouth-2 BRX-2 Vi
 
 ## Northern Line
 
