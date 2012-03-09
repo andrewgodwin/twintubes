@@ -4,6 +4,7 @@ from draw import Segment
 class Platform(object):
 
     length = 22
+    color = (0.5, 0.5, 0.5)
 
     def __init__(self, station, number, direction, offset, platform_side, line):
         self.station = station
@@ -42,6 +43,7 @@ class Platform(object):
                 self.direction,
                 self.line.colors,
                 platform = self.platform_side,
+                platform_color = self.color,
             ).draw(ctx)
         self.drawn = True
 
@@ -80,3 +82,9 @@ class SidingsPlatform(DepotPlatform):
     "Short dashed line for sidings."
 
     length = 6
+
+
+class DisusedPlatform(Platform):
+    "A platform that is no longer in use"
+
+    color = (0.8, 0.8, 0.8)

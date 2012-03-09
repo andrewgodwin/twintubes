@@ -1,8 +1,9 @@
 import cairo
 from datastructures import SortedDict
 from draw import Segment, Direction
-from platform import Platform, PointsPlatform, DepotPlatform, SidingsPlatform
+from platform import Platform, PointsPlatform, DepotPlatform, SidingsPlatform, DisusedPlatform
 from vector import Vector
+
 
 class Station(object):
     """
@@ -11,7 +12,7 @@ class Station(object):
 
     station_gap = 10
     platform_class = Platform
-    label_color = (0, 51/255.0, 102/255.0)
+    label_color = (0, 51 / 255.0, 102 / 255.0)
     label_size = 12
     label_distance = Vector(6, 4)
 
@@ -263,3 +264,13 @@ class Sidings(Station):
     label_color = (170 / 255.0, 170 / 255.0, 200 / 255.0)
 
     platform_class = SidingsPlatform
+
+
+class DisusedStation(Station):
+    """
+    A disused station
+    """
+
+    label_color = (170 / 255.0, 170 / 255.0, 200 / 255.0)
+
+    platform_class = DisusedPlatform

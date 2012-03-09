@@ -89,7 +89,7 @@ class Segment(object):
     PLATFORM_RIGHT = 2
     PLATFORM_BOTH = 3
 
-    def __init__(self, start_point, start_dir, end_point, end_dir, colors=None, platform=0, subtrack=False, dashed=False):
+    def __init__(self, start_point, start_dir, end_point, end_dir, colors=None, platform=0, subtrack=False, dashed=False, platform_color=(0, 0, 0)):
         self.start_point = start_point
         self.start_dir = start_dir
         self.end_point = end_point
@@ -98,6 +98,7 @@ class Segment(object):
         self.platform = platform
         self.subtrack = subtrack
         self.dashed = dashed
+        self.platform_color = platform_color
 
     def draw(self, ctx):
         "Draws the actual line on the given Cairo context"
@@ -265,7 +266,7 @@ class Segment(object):
             ctx.set_source_rgb(1, 1, 1)
             ctx.set_line_width(self.platform_back_width)
         elif platform:
-            ctx.set_source_rgb(0.5, 0.5, 0.5)
+            ctx.set_source_rgb(*self.platform_color)
             ctx.set_line_width(self.platform_width)
         elif back:
             ctx.set_source_rgb(1, 1, 1)
