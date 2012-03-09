@@ -2228,7 +2228,16 @@ station CRO Crossharbour 94.5,18.5
 platform 2 S DLR R
 platform 1 S DLR L
 
-station MUD Mudchute 94.0,24.5
+waypoint CROsouth  CRO,0.0,3.0
+platform nb S
+platform mid S
+platform sb S
+
+waypoint CROsouth2  CRO,0.0,4.5
+platform nb S
+platform sb S
+
+station MUD Mudchute 94.0,27.5
 platform 3 S DLR L
 platform 2 S DLR R
 platform 1 S DLR L
@@ -2237,7 +2246,7 @@ waypoint MUDnorth  MUD,0.5,-3.0
 platform nb S
 platform sb S
 
-station ISG Island Gardens 94.5,29.5
+station ISG Island Gardens 94.5,30.5
 platform 2 S DLR L
 platform 1 S DLR R
 
@@ -4272,6 +4281,8 @@ track DEBdlr-2 ELR-2 DLR
 
 track GRE-4 DEBdlr-1 DLR
 track GRE-3 DEBdlr-2 DLR
+subtrack GRE-4 DEBdlr-2 DLR
+subtrack GRE-3 DEBdlr-1 DLR
 
 track CUS-1 GRE-4 DLR
 track CUS-2 GRE-3 DLR
@@ -4286,10 +4297,18 @@ track MUDnorth-sb MUD-1 DLR
 track MUDnorth-nb MUD-3 DLR
 subtrack MUDnorth-nb MUD-2 DLR
 
-track CRO-1 MUDnorth-sb DLR
-track CRO-2 MUDnorth-nb DLR
-subtrack CRO-1 MUDnorth-nb DLR
-subtrack CRO-2 MUDnorth-sb DLR
+track CROsouth2-sb MUDnorth-sb DLR
+track CROsouth2-nb MUDnorth-nb DLR
+subtrack CROsouth2-sb MUDnorth-nb DLR
+subtrack CROsouth2-nb MUDnorth-sb DLR
+
+track CROsouth-sb CROsouth2-sb DLR
+track CROsouth-nb CROsouth2-nb DLR
+
+track CRO-1 CROsouth-sb DLR
+track CRO-2 CROsouth-nb DLR
+subtrack CRO-2 CROsouth-mid DLR
+subtrack CRO-1 CROsouth-mid DLR
 
 track SOQ-1 CRO-1 DLR
 track SOQ-2 CRO-2 DLR
