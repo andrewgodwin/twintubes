@@ -2205,7 +2205,7 @@ label E
 platform 4 S DLR L
 platform 3 S DLR R
 platform 2 S DLR L
-platform 1 S DLR R
+platform 1 S DLR N
 
 station CAW Canary Wharf 87.0,7.0
 label NE
@@ -2246,29 +2246,29 @@ waypoint MUDnorth  MUD,0.5,-3.0
 platform nb S
 platform sb S
 
-station ISG Island Gardens 94.5,30.5
+station ISG Island Gardens 94.5,32.5
 platform 2 S DLR L
 platform 1 S DLR R
 
-station CUS Cutty Sark 94.5,34.5
+station CUS Cutty Sark 94.5,37.5
 platform 2 S DLR L
 platform 1 S DLR R
 
-station GRE Greenwich 91.0,38.0
+station GRE Greenwich 91.0,41.0
 label S
 label_offset 10,0
 platform 3 W DLR R
 platform 4 W DLR L
 
-station DEBdlr Deptford Bridge 87.5,41.5
+station DEBdlr Deptford Bridge 87.5,44.5
 platform 2 S DLR R
 platform 1 S DLR L
 
-station ELR Elverson Road 87.5,46.5
+station ELR Elverson Road 87.5,49.5
 platform 2 S DLR R
 platform 1 S DLR L
 
-station LEW Lewisham 87.5,51.5
+station LEW Lewisham 87.5,54.5
 platform 6 S DLR L
 platform 5 S DLR R
 
