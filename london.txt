@@ -641,7 +641,7 @@ label N
 platform 2 W Ba R
 platform 1 W Ba L
 
-station RPK Regent's \n Park 1.0,-35.5
+station RPK Regent's \n Park 1.0,-36.0
 label NE
 platform 2 NW Ba L
 platform 1 NW Ba L
@@ -3392,6 +3392,8 @@ track BST-8 MYB-2 Ba
 
 track RPK-1 BST-9 Ba
 track RPK-2 BST-8 Ba
+subtrack RPK-2 BST-7 Ju
+subtrack RPK-2 BST-8 Ba
 
 track OXC-4 RPK-1 Ba
 track OXC-3 RPK-2 Ba
