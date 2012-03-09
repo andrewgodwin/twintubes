@@ -661,22 +661,22 @@ platform 2 N Ba L
 
 ### Jubilee line stations
 
-station STA Stanmore -59.0,-107.5
+station STA Stanmore -61.5,-114.5
 label E
 platform 1 N Ju R
 platform 2 N Ju L
 
-station CPK Canons Park -59.0,-102.5
+station CPK Canons Park -61.5,-109.5
 label E
 platform 1 N Ju L
 platform 2 N Ju R
 
-station QBY Queensbury -59.0,-97.5
+station QBY Queensbury -61.5,-104.5
 label E
 platform 1 N Ju L
 platform 2 N Ju R
 
-station KBY Kingsbury -59.0,-92.5
+station KBY Kingsbury -61.5,-99.5
 label E
 platform 1 N Ju L
 platform 2 N Ju R
@@ -689,6 +689,9 @@ platform 4 NW Ju R
 platform 3 NW Ju L
 platform 2 NW Me R
 platform 1 NW Me L
+
+waypoint WPKnorth  WPK,-3.0,-3.0
+platform mid NW
 
 waypoint WPKsouth  WPK,2.0,2.0
 platform 6 NW
@@ -855,40 +858,73 @@ platform road S Ju
 
 # Amersham branch
 
-station CHE Chesham -144.5,-113.5
+station CHE Chesham -145.5,-113.0
 label NE
 platform 2 NW Me L
 
-station AME Amersham -146.0,-106.5
+station AME Amersham -147.0,-106.0
 label S
 platform 3 W Me R
 platform 2 W Me L
 platform 1 W Me R
 
-station CLF Chalfont & \n Latimer -135.5,-107.0
+waypoint AMEwest  AME,-3.5,0.0
+platform 3 W
+platform 2 W
+platform 1 W
+
+waypoint AMEeast  AME,3.0,0.0
+platform eb W
+platform wb W
+
+station CLF Chalfont & \n Latimer -136.5,-106.5
 label S
 platform 3 W Me L
 platform 2 W Me R
 platform 1 W Me L
 
-station CWD Chorleywood -126.5,-106.5
+waypoint CLFwest  CLF,-5.5,0.0
+platform si W
+platform eb W
+platform wb W
+
+station CWD Chorleywood -130.5,-106.0
 label N
 platform 2 W Me R
 platform 1 W Me L
 
-station RKY Rickmansworth -118.5,-106.5
+station RKY Rickmansworth -122.0,-106.5
 label S
+label_offset 0,5
+platform 3 W Me L
 platform 2 W Me R
 platform 1 W Me L
 
+waypoint RKYeast  RKY,3.0,1.0
+platform eb W
+platform wb W
+platform si W
+
+waypoint RKYeast2  RKY,5.5,0.5
+platform eb W
+platform wb W
+
+depot RKYsi Rickmansworth \n South Sidings -115.5,-107.5
+label NW
+label_offset 20,3
+platform road W Me
+
+sidings RKYwest  RKY,-3.5,-1.0
+platform si W Me
+
 # Watford branch
 
-station WAT Watford -111.0,-114.5
+station WAT Watford -112.0,-118.0
 label E
 platform 1 N Me R
 platform 2 N Me L
 
-station CRX Croxley -111.0,-109.5
+station CRX Croxley -112.0,-113.0
 label E
 platform 1 N Me L
 platform 2 N Me R
@@ -902,19 +938,27 @@ platform 3 NW Me R
 platform 2 NW Me L
 platform 1 NW Me R
 
-station NWD Northwood -106.0,-100.0
+station NWD Northwood -106.5,-100.5
 label NE
 platform 2 NW Me R
 platform 1 NW Me L
 platform sbfast NW Me N
 platform nbfast NW Me N
 
+waypoint NWDsouth  NWD,2.0,2.0
+platform 2 NW
+platform 1 NW
+platform sbfast NW
+platform nbfast NW
+
 station NWH Northwood \n Hills -102.5,-96.5
 label NE
+platform si NW none N
 platform 2 NW Me R
 platform 1 NW Me L
 platform sbfast NW Me N
 platform nbfast NW Me N
+platform fake NW none N
 
 station PIN Pinner -99.0,-93.0
 label NE
@@ -935,8 +979,11 @@ platform nbfast NW Me N
 station WHR West Harrow -95.5,-80.0
 label SE
 platform 2 SW Me L
-
 platform 1 SW Me R
+
+waypoint WHReast  WHR,3.0,-3.0
+platform eb SW Me
+platform wb SW Me
 
 # Into London
 
@@ -962,6 +1009,9 @@ platform 3 W
 platform 2 W
 platform 1 W
 
+waypoint HOHwest3  HOH,-3.0,-1.0
+platform mid W
+
 waypoint HOHeast  HOH,3.0,0.0
 platform 6 W
 platform 5 W
@@ -984,6 +1034,10 @@ platform sbfast W Me N
 platform 2 W Me L
 platform 1 W Me R
 platform nbfast W Me N
+
+depot WPKsi Wembley Park \n Sidings WPK,-1.5,-5.0
+label NE
+platform road NW Me
 
 # Piccadilly Line stations
 
@@ -1228,6 +1282,9 @@ label N
 platform 2 E MePi L
 platform 1 E MePi R
 
+waypoint RLNeast  RLN,-3.0,0.0
+platform mid E
+
 station ETE Eastcote -117.0,-78.5
 label S
 platform 2 E MePi L
@@ -1253,7 +1310,7 @@ label NW
 platform 2 NE MePi L
 platform 1 NE MePi R
 
-station UXB Uxbridge -144.0,-68.0
+station UXB Uxbridge -144.5,-67.5
 label SE
 platform 4 NE MePi R
 platform 2,3 NE MePi B
@@ -1263,6 +1320,9 @@ waypoint UXBeast  UXB,1.5,-1.5
 platform eb NE
 platform wb NE
 
+depot UXBsi Uxbridge \n Sidings -145.0,-71.5
+label W
+platform road E MePi
 
 #### Central Line stations
 
@@ -2693,6 +2753,8 @@ track KBY-1 QBY-1 Ju
 
 track WPK-4 KBY-2 Ju
 track WPK-3 KBY-1 Ju
+subtrack WPK-4 WPKnorth-mid Ju
+subtrack WPK-3 WPKnorth-mid Ju
 
 # NEA to WPK in met section
 
@@ -2982,6 +3044,8 @@ subtrack RLN-1 SHR-2 Pi
 
 track ETE-2 RLN-2 MePi
 track ETE-1 RLN-1 MePi
+subtrack RLNeast-mid RLN-1 MePi
+subtrack RLNeast-mid RLN-2 MePi
 
 track RUM-2 ETE-2 MePi
 track RUM-1 ETE-1 MePi
@@ -3000,6 +3064,10 @@ track UXBeast-eb HDN-2 MePi
 track UXBeast-wb HDN-1 MePi
 subtrack UXBeast-wb HDN-2 MePi
 subtrack UXBeast-eb HDN-1 MePi
+
+subtrack UXBsi-road HDN-2 MePi
+subtrack UXBsi-road HDN-1 MePi
+subtrack UXBsi-road UXBeast-eb! MePi
 
 track UXB-4 UXBeast-eb MePi
 subtrack UXB-2,3 UXBeast-eb MePi
@@ -3667,16 +3735,34 @@ subtrack WHR-2 RLN-2! Me
 subtrack WHR-1 RLN-1! Me
 subtrack WHR-2 RLN-1! Me
 
-track HOHwest-5 WHR-2 Me
-track HOHwest-4 WHR-1 Me
+track WHReast-eb WHR-2 Me
+track WHReast-wb WHR-1 Me
+subtrack WHReast-eb WHR-1 Me
+
+track HOHwest-5 WHReast-eb Me
+track HOHwest-4 WHReast-wb Me
 
 # Amersham branch
 
+track AME-1 AMEwest-1 Me
+track AME-2 AMEwest-2 Me
+track AME-3 AMEwest-3 Me
+subtrack AME-2 AMEwest-3 Me
+subtrack AME-2 AMEwest-1 Me
+subtrack AME-3 AMEwest-2 Me
 
-track CLF-2 AME-3 Me
-track CLF-1 AME-1 Me
-subtrack CLF-2 AME-2 Me
-subtrack CLF-1 AME-2 Me
+track AMEeast-eb AME-3 Me
+track AMEeast-wb AME-1 Me
+subtrack AMEeast-eb AME-2 Me
+subtrack AMEeast-wb AME-2 Me
+
+track CLFwest-eb AMEeast-eb Me
+track CLFwest-wb AMEeast-wb Me
+subtrack CLFwest-si AMEeast-eb Me
+
+track CLF-2 CLFwest-eb Me
+track CLF-1 CLFwest-wb Me
+subtrack CLF-2 CLFwest-wb Me
 
 track CLF-3 CHE-2 Me
 subtrack CLF-1 CHE-2 Me
@@ -3687,11 +3773,18 @@ track CWD-1 CLF-1 Me
 
 track RKY-2 CWD-2 Me
 track RKY-1 CWD-1 Me
+subtrack RKY-2 RKYwest-si Me
 
-track MPK-2 RKY-2 Me
-track MPK-1 RKY-1 Me
-subtrack MPK-4 RKY-2 Me
-subtrack MPK-3 RKY-1 Me
+track RKYeast-eb RKY-2 Me
+track RKYeast-wb RKY-1 Me
+subtrack RKYeast-eb RKY-1 Me
+subtrack RKYeast-si RKY-1 Me
+
+track RKYeast2-eb RKYeast-eb Me
+track RKYeast2-wb RKYeast-wb Me
+subtrack RKYeast2-wb RKYeast-eb Me
+subtrack RKYsi-road RKYeast-eb Me
+subtrack RKYsi-road RKY-3 Me
 
 # Watford branch
 
@@ -3700,8 +3793,17 @@ track CRX-1 WAT-1 Me
 subtrack CRX-2 WAT-1 Me
 subtrack CRX-1 WAT-2 Me
 
-subtrack MPK-4 CRX-2 Me
+# Moor Park junction
+
 subtrack MPK-3 CRX-1 Me
+track MPK-4 RKYeast2-eb Me
+subtrack MPK-2 RKYeast2-eb Me
+subtrack MPK-3 RKYeast2-wb Me
+subtrack MPK-4 CRX-2 Me
+subtrack MPK-1 RKYeast2-wb Me
+
+subtrack RKYeast2-eb! CRX-1 Me
+subtrack RKYeast2-wb! CRX-2 Me
 
 # Towards Amersham
 
@@ -3710,11 +3812,17 @@ track NWD-1 MPK-3 Me
 track NWD-sbfast MPK-2 Me
 track NWD-nbfast MPK-1 Me
 
-track NWH-2 NWD-2 Me
-track NWH-1 NWD-1 Me
-subtrack NWH-2 NWD-1 Me
-track NWH-sbfast NWD-sbfast Me
-track NWH-nbfast NWD-nbfast Me
+track NWDsouth-1 NWD-1 Me
+track NWDsouth-2 NWD-2 Me
+subtrack NWDsouth-2 NWD-1 Me
+track NWDsouth-sbfast NWD-sbfast Me
+track NWDsouth-nbfast NWD-nbfast Me
+
+track NWH-2 NWDsouth-2 Me
+track NWH-1 NWDsouth-1 Me
+subtrack NWH-si NWDsouth-2 Me
+track NWH-sbfast NWDsouth-sbfast Me
+track NWH-nbfast NWDsouth-nbfast Me
 
 track PIN-2 NWH-2 Me
 track PIN-1 NWH-1 Me
@@ -3748,6 +3856,8 @@ track HOH-5 HOHwest-5 Me
 track HOH-6 HOHwest-6 Me
 subtrack HOH-5 HOHwest-6 Me
 subtrack HOH-6 HOHwest-5 Me
+subtrack HOH-4 HOHwest3-mid Me
+subtrack HOH-5 HOHwest3-mid Me
 
 track HOHeast-1 HOH-1 Me
 track HOHeast-3 HOH-3 Me
@@ -3776,6 +3886,7 @@ track WPK-6 PRD-sbfast Me
 track WPK-5 PRD-2 Me
 track WPK-2 PRD-1 Me
 track WPK-1 PRD-nbfast Me
+subtrack WPK-6 WPKsi-road Me
 
 track WPKsouth-5 WPK-6 Me
 subtrack WPKsouth-5 WPK-4 Ju
