@@ -79,4 +79,4 @@ class DepotPlatform(Platform):
 class SidingsPlatform(DepotPlatform):
     "Short dashed line for sidings."
 
-    length = 8
+    length = 6
