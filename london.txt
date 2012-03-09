@@ -631,13 +631,13 @@ platform 15 W CiHa R
 platform 2 W CiHa R
 platform 1 W CiHa L
 
-station ERB Edgware \n Road -22.5,-42.5
-label N
+station ERB -22.5,-42.5
 platform 2 W Ba R
 platform 1 W Ba L
 
 station MYB Marylebone -15.5,-42.5
 label N
+label_offset -18,2
 platform 2 W Ba R
 platform 1 W Ba L
 
@@ -1689,7 +1689,8 @@ platform nb W
 
 # No name; named by bakerloo station
 # Edgware Road Circle/District/H&C
-station ERD  -22.5,-39.5
+station ERD Edgware \n Road -22.5,-39.5
+label S
 platform 1 W CiDiHa L
 platform 2 W CiDiHa R
 platform 3 W CiDiHa L
@@ -3389,6 +3390,9 @@ track MYB-2 ERB-2 Ba
 
 track BST-9 MYB-1 Ba
 track BST-8 MYB-2 Ba
+track BST-9 SJW-1 Ju
+subtrack BST-9 MYB-1 Ba
+subtrack BST-10 SJW-1 Ju
 
 track RPK-1 BST-9 Ba
 track RPK-2 BST-8 Ba
