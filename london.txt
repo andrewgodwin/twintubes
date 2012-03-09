@@ -422,18 +422,22 @@ platform 1 N No L
 platform 4 W Ju L
 platform 3 W Ju R
 
-station BOR Borough 36.5,7.0
+station BOR Borough 41.0,9.5
 label SE
 platform 2 NE No L
 platform 1 NE No L
 
-station ELE Elephant & Castle 25.0,18.5
+station ELE Elephant & Castle 31.5,19.0
 draw last
 label E
 platform 1 NE No L
 platform 2 NE No R
 platform 4 NW Ba L
 platform 3 NW Ba R
+
+sidings ELEsouth ELE,3,3
+platform 4 NW Ba
+platform 3 NW Ba
 
 # Morden branch
 
@@ -510,7 +514,7 @@ platform sb NE
 
 # Bakerloo line stations
 
-station WFJ Watford \n Junction -88.5,-117.0
+station WFJ Watford \n Junction -88.5,-118.0
 label W
 platform 4 NW Ov L
 platform 3 NW Ov R
@@ -521,27 +525,27 @@ waypoint WFJsouth  WFJ,2.0,2.0
 platform sb NW
 platform nb NW
 
-station WFH Watford \n High Street -84.5,-113.0
+station WFH Watford \n High Street -84.5,-114.0
 label NE
 platform 1 NW Ov R
 platform 2 NW Ov L
 
-station BSH Bushey -81.0,-109.5
+station BSH Bushey -81.0,-110.5
 label NE
 platform 2 NW Ov R
 platform 1 NW Ov L
 
-station CPKnr Carpenders \n Park -77.5,-106.0
+station CPKnr Carpenders \n Park -77.5,-107.0
 label NE
 platform 1 NW Ov R
 platform 2 NW Ov L
 
-station HTE Hatch \n End -74.0,-102.5
+station HTE Hatch \n End -74.0,-103.5
 label NE
 platform 1 NW Ov R
 platform 2 NW Ov L
 
-station HDL Headstone \n Lane -70.5,-99.0
+station HDL Headstone \n Lane -70.5,-100.0
 label NE
 platform 1 NW Ov R
 platform 2 NW Ov L
@@ -550,6 +554,9 @@ station HAW Harrow & \n Wealdstone -69.0,-95.0
 label W
 platform 1 N Ba R
 platform 2 N Ba L
+
+waypoint HAWnorth  HAW,0.0,-3.0
+platform mid N
 
 station KNT Kenton -69.0,-91.0
 label E
@@ -561,15 +568,19 @@ label W
 platform 2 N Ba R
 platform 1 N Ba L
 
-station NWM North Wembley -69.0,-78.5
+station NWM North Wembley -69.0,-79.0
 label W
 platform 2 N Ba L
 platform 1 N Ba R
 
-station WEM Wembley Central -69.0,-73.5
+station WEM Wembley Central -69.0,-74.5
 label W
 platform 1 N Ba L
 platform 2 N Ba R
+
+depot SPKdepot Stonebridge \n Park Depot -66.5,-74.0
+label E
+platform road NE Ba
 
 station SPK Stonebridge Park -69.0,-69.5
 label W
@@ -606,6 +617,12 @@ platform 1 W Ov L
 platform 2 W Ba R
 platform 3 W Ba L
 platform 4 W Ov R
+
+sidings QPKwest  QPK,-3.0,0.0
+platform road W Ba
+
+sidings QPKeast  QPK,3.0,-1.0
+platform road W Ba
 
 station KPK Kilburn Park -42.5,-51.0
 label SW
@@ -653,11 +670,19 @@ platform 1 W Ba L
 platform 3 E Pi R
 platform 4 E Pi L
 
-station LAM Lambeth \n North 21.5,12.5
-# TODO: siding
-label E
-platform 1 N Ba R
-platform 2 N Ba L
+station LAM Lambeth \n North 25.0,12.5
+label NE
+platform 2 NW Ba R
+platform 1 NW Ba L
+
+waypoint LAMnorth  LAM,-3.5,-4.0
+platform nb N
+platform sb N
+
+depot LAMdepot London Road \n Depot 25.5,16.5
+label SW
+label_offset 32,3
+platform road NW Ba
 
 ### Jubilee line stations
 
@@ -2453,11 +2478,12 @@ label S
 platform 2 W Ov R
 platform 1 W Ov L
 
-waypoint KNRwest  KNR,-4.0,2.0
+waypoint KNRwest  KNR,-3.5,1.0
 platform nbsb SW
 
-waypoint KNRwest2  KNR,-6.0,3.5
-platform nbsb W
+waypoint KNRwest2  KNR,-5.0,2.5
+platform nb SW
+platform sb SW
 
 station BSP Brondesbury \n Park -46.0,-62.0
 label N
@@ -3421,6 +3447,8 @@ track HDL-2 HTE-2 Ov
 
 track HAW-1 HDL-2 Ov
 track HAW-2 HDL-1 Ov
+subtrack HAW-2 HAWnorth-mid Ba
+subtrack HAW-1 HAWnorth-mid Ba
 
 track KNT-1 HAW-2 Ba
 track KNT-2 HAW-1 Ba
@@ -3438,6 +3466,8 @@ subtrack WEM-2 NWM-2 Ba
 
 track SPK-1 WEM-2 Ba
 track SPK-2 WEM-1 Ba
+subtrack SPK-1 SPKdepot-road Ba
+subtrack SPK-2 SPKdepot-road Ba
 
 track HSD-1 SPK-1 Ba
 track HSD-2 SPK-2 Ba
@@ -3451,13 +3481,13 @@ subtrack WJNsouth-sb WJN-2 Ov
 subtrack WJNsouth-sb WJN-1 Ba
 subtrack WJNsouth-nb WJN-3 Ba
 
-subtrack KNRwest2-nbsb WJNsouth-sb Ov
-subtrack KNRwest2-nbsb WJNsouth-nb Ov
+subtrack KNRwest2-nb WJNsouth-sb Ov
+subtrack KNRwest2-sb WJNsouth-nb Ov
 
 subtrack KGNnorth-sb WJNsouth-sb Ba
 subtrack KGNnorth-nb WJNsouth-nb Ba
 
-track KGN-1 KGNnorth-sb Ba
+subtrack KGN-1 KGNnorth-sb Ba
 track KGN-2 KGNnorth-nb Ba
 subtrack KGN-1 KGNnorth-nb Ba
 
@@ -3465,11 +3495,14 @@ track QPK-1 KGN-1 Ov
 track QPK-4 KGN-2 Ov
 subtrack QPK-2 KGN-1 Ba
 subtrack QPK-3 KGN-2 Ba
+subtrack QPK-2 QPKwest-road Ba
+subtrack QPK-3 QPKwest-road Ba
 
 track KPK-2 QPK-2 Ba
 track KPK-1 QPK-3 Ba
 subtrack KPK-2 QPK-3 Ba
 subtrack KPK-1 QPK-2 Ba
+subtrack QPKeast-road QPK-2 Ba
 
 track MDV-2 KPK-2 Ba
 track MDV-1 KPK-1 Ba
@@ -3514,13 +3547,24 @@ track EMB-6 CHX-4 Ba
 track WLO-3 EMB-5 Ba
 track WLO-4 EMB-6 Ba
 
-track LAM-1 WLO-3 Ba
-track LAM-2 WLO-4 Ba
+track LAMnorth-nb WLO-3 Ba
+track LAMnorth-sb WLO-4 Ba
+subtrack LAMnorth-sb WLO-3 Ba
+subtrack LAMnorth-nb WLO-4 Ba
+
+track LAM-1 LAMnorth-nb Ba
+track LAM-2 LAMnorth-sb Ba
+
+subtrack LAMdepot-road LAMnorth-nb Ba
 
 track ELE-3 LAM-1 Ba
 track ELE-4 LAM-2 Ba
 subtrack ELE-4 LAM-1 Ba
 subtrack ELE-3 LAM-2 Ba
+
+track ELEsouth-3 ELE-3 Ba
+track ELEsouth-4 ELE-4 Ba
+subtrack ELEsouth-4 ELE-3 Ba
 
 ## Waterloo and City
 
@@ -4678,7 +4722,8 @@ subtrack WIJ-4 ACCnorth-nb Ov
 track KNR-2 WIJ-4 Ov
 track KNR-1 WIJ-5 Ov
 
-track KNRwest-nbsb KNRwest2-nbsb Ov
+track KNRwest-nbsb KNRwest2-nb Ov
+subtrack KNRwest-nbsb KNRwest2-sb Ov
 
 subtrack KNR-1 KNRwest-nbsb Ov
 subtrack KNR-2 KNRwest-nbsb Ov
