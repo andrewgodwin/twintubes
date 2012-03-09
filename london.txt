@@ -510,7 +510,7 @@ platform sb NE
 
 # Bakerloo line stations
 
-station WFJ Watford \n Junction -85.5,-115.5
+station WFJ Watford \n Junction -88.5,-117.0
 label W
 platform 4 NW Ov L
 platform 3 NW Ov R
@@ -521,62 +521,62 @@ waypoint WFJsouth  WFJ,2.0,2.0
 platform sb NW
 platform nb NW
 
-station WFH Watford \n High Street -81.5,-111.5
+station WFH Watford \n High Street -84.5,-113.0
 label NE
 platform 1 NW Ov R
 platform 2 NW Ov L
 
-station BSH Bushey -78.0,-108.0
+station BSH Bushey -81.0,-109.5
 label NE
 platform 2 NW Ov R
 platform 1 NW Ov L
 
-station CPKnr Carpenders \n Park -74.5,-104.5
+station CPKnr Carpenders \n Park -77.5,-106.0
 label NE
 platform 1 NW Ov R
 platform 2 NW Ov L
 
-station HTE Hatch \n End -71.0,-101.0
+station HTE Hatch \n End -74.0,-102.5
 label NE
 platform 1 NW Ov R
 platform 2 NW Ov L
 
-station HDL Headstone \n Lane -67.5,-97.5
+station HDL Headstone \n Lane -70.5,-99.0
 label NE
 platform 1 NW Ov R
 platform 2 NW Ov L
 
-station HAW Harrow & \n Wealdstone -66.0,-93.5
+station HAW Harrow & \n Wealdstone -69.0,-95.0
 label W
 platform 1 N Ba R
 platform 2 N Ba L
 
-station KNT Kenton -66.0,-89.5
+station KNT Kenton -69.0,-91.0
 label E
 platform 2 N Ba L
 platform 1 N Ba R
 
-station SKT South Kenton -66.0,-83.5
+station SKT South Kenton -69.0,-83.0
 label W
 platform 2 N Ba R
 platform 1 N Ba L
 
-station NWM North Wembley -66.0,-79.0
+station NWM North Wembley -69.0,-78.5
 label W
 platform 2 N Ba L
 platform 1 N Ba R
 
-station WEM Wembley Central -66.0,-74.0
+station WEM Wembley Central -69.0,-73.5
 label W
 platform 1 N Ba L
 platform 2 N Ba R
 
-station SPK Stonebridge Park -66.0,-69.5
+station SPK Stonebridge Park -69.0,-69.5
 label W
 platform 2 N Ba L
 platform 1 N Ba R
 
-station HSD Harlesden -64.0,-65.0
+station HSD Harlesden -64.5,-64.5
 label NE
 platform 1 NW Ba R
 platform 2 NW Ba L
@@ -631,7 +631,7 @@ platform 15 W CiHa R
 platform 2 W CiHa R
 platform 1 W CiHa L
 
-station ERB -22.5,-42.5
+station ERB  -22.5,-42.5
 platform 2 W Ba R
 platform 1 W Ba L
 
@@ -661,27 +661,27 @@ platform 2 N Ba L
 
 ### Jubilee line stations
 
-station STA Stanmore -55.5,-105.0
+station STA Stanmore -59.0,-107.5
 label E
 platform 1 N Ju R
 platform 2 N Ju L
 
-station CPK Canons Park -55.5,-100.0
+station CPK Canons Park -59.0,-102.5
 label E
 platform 1 N Ju L
 platform 2 N Ju R
 
-station QBY Queensbury -55.5,-95.0
+station QBY Queensbury -59.0,-97.5
 label E
 platform 1 N Ju L
 platform 2 N Ju R
 
-station KBY Kingsbury -55.5,-90.0
+station KBY Kingsbury -59.0,-92.5
 label E
 platform 1 N Ju L
 platform 2 N Ju R
 
-station WPK Wembley Park -54.5,-82.5
+station WPK Wembley Park -58.0,-86.0
 label NE
 platform 6 NW Me R
 platform 5 NW Me L
@@ -690,26 +690,50 @@ platform 3 NW Ju L
 platform 2 NW Me R
 platform 1 NW Me L
 
-station NEA Neasden -50.5,-78.5
+waypoint WPKsouth  WPK,2.0,2.0
+platform 6 NW
+platform 5 NW
+platform 4 NW
+platform 3 NW
+platform 2 NW
+platform 1 NW
+
+waypoint WPKsouth2  WPK,3.5,3.5
+platform 2 W
+
+depot NEAdepot Neasden \n Depot -50.5,-81.5
 label NE
+platform road NW Me
+
+station NEA Neasden -48.0,-76.0
+label SW
 platform 4 NW Me N
 platform 3 NW Ju L
 platform 2 NW Ju R
 platform 1 NW Me N
 
-station DHL Dollis Hill -46.5,-74.5
+waypoint NEAnorth  NEA,-2.5,-2.5
+platform 4 NW
+platform 3 NW
+platform 2 NW
+platform 1 NW
+
+station DHL Dollis Hill -45.0,-73.0
 label NE
 platform msb NW Me N
 platform 2 NW Ju L
 platform 1 NW Ju R
 platform mnb NW Me N
 
-station WLG Willesden Green -42.5,-70.5
+station WLG Willesden Green -41.0,-69.0
 label NE
 platform 4 NW Me N
 platform 3 NW Ju L
 platform 2 NW Ju R
 platform 1 NW Me N
+
+waypoint WLGnorth  WLG,-2.5,-2.5
+platform mid NW
 
 station KIL Kilburn -38.0,-66.0
 label NE
@@ -724,6 +748,9 @@ platform msb NW Me N
 platform 2 NW Ju L
 platform 1 NW Ju R
 platform mnb NW Me N
+
+waypoint WHDnorth  WHD,-2.5,-2.5
+platform mid NW
 
 station FRD Finchley Road -29.5,-57.5
 label NE
@@ -905,7 +932,7 @@ platform nbfast NW Me N
 
 # Uxbridge branch
 
-station WHR West Harrow -100.5,-81.5
+station WHR West Harrow -95.5,-80.0
 label SE
 platform 2 SW Me L
 
@@ -913,7 +940,7 @@ platform 1 SW Me R
 
 # Into London
 
-station HOH Harrow- \n on-the-Hill -84.0,-85.0
+station HOH Harrow- \n on-the-Hill -84.0,-86.5
 label S
 platform 6 W Me L
 platform 5 W Me R
@@ -943,14 +970,14 @@ platform 3 W
 platform 2 W
 platform 1 W
 
-station NWP Northwick \n Park -74.0,-86.0
+station NWP Northwick \n Park -75.0,-87.5
 label N
 platform sbfast W Me N
 platform 2 W Me L
 platform 1 W Me R
 platform nbfast W Me N
 
-station PRD Preston \n Road -62.0,-86.0
+station PRD Preston \n Road -64.5,-87.5
 label S
 label_offset 0,2
 platform sbfast W Me N
@@ -2667,23 +2694,27 @@ track KBY-1 QBY-1 Ju
 track WPK-4 KBY-2 Ju
 track WPK-3 KBY-1 Ju
 
-track NEA-3 WPK-4 Ju
-track NEA-2 WPK-3 Ju
+# NEA to WPK in met section
 
 track DHL-2 NEA-3 Ju
 track DHL-1 NEA-2 Ju
 
 track WLG-3 DHL-2 Ju
 track WLG-2 DHL-1 Ju
+subtrack WLG-2 WLGnorth-mid Ju
+subtrack WLG-3 WLGnorth-mid Ju
 
 track KIL-2 WLG-3 Ju
 track KIL-1 WLG-2 Ju
 
 track WHD-2 KIL-2 Ju
 track WHD-1 KIL-1 Ju
+subtrack WHD-1 WHDnorth-mid Ju
+subtrack WHD-2 WHDnorth-mid Ju
 
 track FRD-3 WHD-2 Ju
 track FRD-2 WHD-1 Ju
+subtrack FRD-3 WHD-1 Ju
 
 track SWC-2 FRD-3 Ju
 track SWC-1 FRD-2 Ju
@@ -3746,10 +3777,37 @@ track WPK-5 PRD-2 Me
 track WPK-2 PRD-1 Me
 track WPK-1 PRD-nbfast Me
 
-track NEA-4 WPK-6 Me
-subtrack NEA-4 WPK-5 Me
-track NEA-1 WPK-1 Me
-subtrack NEA-1 WPK-2 Me
+track WPKsouth-5 WPK-6 Me
+subtrack WPKsouth-5 WPK-4 Ju
+subtrack WPKsouth-5 WPK-5 Me
+subtrack WPKsouth-4 WPK-4 Ju
+subtrack WPKsouth-3 WPK-3 Ju
+subtrack WPKsouth-2 WPK-4 Ju
+subtrack WPKsouth-2 WPK-3 Ju
+subtrack WPKsouth-2 WPK-2 Me
+subtrack WPKsouth-2 WPK-1 Me
+subtrack WPKsouth-1 WPK-2 Me
+subtrack WPKsouth-1 WPK-1 Me
+
+subtrack NEAdepot-road WPKsouth2-2 Me
+subtrack WPKsouth2-2  WPKsouth-2 Me
+
+track NEAnorth-4 WPKsouth-5 Me
+track NEAnorth-3 WPKsouth-4 Ju
+track NEAnorth-2 WPKsouth-3 Ju
+subtrack NEAnorth-2 WPKsouth-1 Ju
+subtrack NEAnorth-1 WPKsouth-1 Me
+
+track NEA-4 NEAnorth-4 Me
+track NEA-3 NEAnorth-3 Ju
+track NEA-2 NEAnorth-2 Ju
+subtrack NEA-2 NEAnorth-3 Ju
+subtrack NEA-2 NEAnorth-4 Ju
+subtrack NEA-3 NEAnorth-2 Ju
+track NEA-1 NEAnorth-1 Me
+
+subtrack NEAnorth-4 NEAdepot-road Me
+subtrack NEAdepot-road WPKsouth-5 Me
 
 track DHL-msb NEA-4 Me
 track DHL-mnb NEA-1 Me
