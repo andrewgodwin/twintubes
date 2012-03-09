@@ -41,7 +41,7 @@ label N
 platform 1 E Vi R
 platform 2 E Vi L
 
-sidings WALeast WAL,2,0
+sidings WALeast  WAL,2.0,0.0
 platform 1 E Vi
 platform 2 E Vi
 
@@ -114,7 +114,7 @@ platform 5 NE Pi L
 platform 2 W CiHaMe L
 platform 1 W CiHaMe R
 
-sidings KXXeast KXX,3,0
+sidings KXXeast  KXX,6.5,-2.0
 platform mid E Vi
 
 station EUS Euston 15.0,-48.0
@@ -171,7 +171,7 @@ platform 4 N Vi L
 platform 2 E CiDi L
 platform 1 E CiDi R
 
-sidings VICsouth VIC,0,3
+sidings VICsouth  VIC,0.0,3.0
 platform mid N Vi
 
 station PIM Pimlico -2.0,12.0
@@ -198,7 +198,7 @@ waypoint BRXcross  BRX,-3.0,-3.0
 platform 1 NW Vi
 platform 2 NW Vi
 
-sidings BRXsouth BRX,2,2
+sidings BRXsouth  BRX,2.0,2.0
 platform 1 NW Vi
 platform 2 NW Vi
 
@@ -465,7 +465,7 @@ platform 2 NE No R
 platform 4 NW Ba L
 platform 3 NW Ba R
 
-sidings ELEsouth ELE,3,3
+sidings ELEsouth  ELE,3.0,3.0
 platform 4 NW Ba
 platform 3 NW Ba
 
@@ -1096,7 +1096,8 @@ platform road NW Me
 
 # Piccadilly Line stations
 
-station CFS Cockfosters 51.0,-112.5
+station CFS Cockfosters 51.0,-122.5
+label E
 platform 1 N Pi R
 platform 2 N Pi B
 platform 4 N Pi L
@@ -1105,26 +1106,58 @@ waypoint CFSsouth  CFS,0.0,2.5
 platform nb N
 platform sb N
 
-station OAK Oakwood 51.0,-107.0
+waypoint CFSsouth2  CFS,0.0,5.0
+platform nb N
+platform sb N
+
+depot CFSdepot Cockfosters \n Depot 49.5,-115.0
+label W
+platform road N Pi
+
+station OAK Oakwood 50.5,-109.0
+label E
+platform si N none N
 platform 2 N Pi R
 platform 1 N Pi L
 
-station SGT Southgate 51.0,-102.5
+waypoint OAKnorth  OAK,0.5,-3.5
+platform nb N
+platform sb N
+
+station SGT Southgate 51.0,-104.5
+label E
 platform 1 N Pi R
 platform 2 N Pi L
 
-station AGR Arnos Grove 51.0,-97.5
+station AGR Arnos Grove 51.0,-100.5
+label E
 platform 1 N Pi R
 platform 2 N Pi B
 platform 4 N Pi L
 
+waypoint AGRsouth  AGR,0.0,3.0
+platform 1 N
+platform 2 N
+platform 4 N
+
+waypoint AGRsouth2  AGR,0.0,4.0
+platform nb N
+platform sb N
+
+depot AGRsi Arnos Grove \n Sidings 49.0,-94.5
+platform road NE Pi
+
 station BGR Bounds Green 51.0,-92.5
+label E
 platform 1 N Pi R
 platform 2 N Pi L
 
 station WGN Wood Green 51.0,-87.5
 platform 1 N Pi R
 platform 2 N Pi L
+
+sidings WGNnorth  WGN,0.0,-3.0
+platform mid N Pi
 
 station TPL Turnpike Lane 51.0,-82.5
 platform 1 N Pi R
@@ -1149,29 +1182,57 @@ label NW
 platform 1 NE Pi R
 platform 2 NE Pi L
 
-station RSQ Russell \n Square 26.0,-33.5
-platform 1 N Pi L
-platform 2 N Pi R
-
-station HOL Holborn 26.0,-25.0
-label SE
-label_offset -5,0
-platform 4 N Pi R
-platform 3 N Pi R
-platform 2 E Ce L
-platform 1 E Ce R
-
-station COV Covent Garden 23.5,-20.5
-label SE
-platform 2 NE Pi R
-platform 1 NE Pi L
-
-station HPC Hyde Park \n Corner -8.5,-10.5
+disstation YRD York \n Road KXX,5.0,-5.0
 label NW
 platform 1 NE Pi R
 platform 2 NE Pi L
 
-station KNB Knightsbridge -14.0,-5.0
+station RSQ Russell \n Square 26.0,-33.5
+platform 1 N Pi L
+platform 2 N Pi R
+
+station HOL Holborn 26.5,-25.0
+label SE
+label_offset -5,0
+platform 4 N Pi R
+platform 5 N Pi R
+platform 3 N Pi R
+platform 2 E Ce L
+platform 1 E Ce R
+
+disstation ALW Aldwych 31.0,-18.5
+label NE
+platform 1 NW Pi L
+
+station COV Covent \n Garden 23.5,-20.5
+label SE
+platform 2 NE Pi R
+platform 1 NE Pi L
+
+disstation DST Down \n Street -6.0,-13.0
+label NW
+label_offset -5,10
+platform 1 NE Pi R
+platform 2 NE Pi L
+
+sidings DSTsi  DST,-2.0,2.0
+platform mid NE Pi
+
+waypoint DSTsouth  DST,-2.0,2.0
+platform nb NE Pi
+platform sb NE Pi
+
+station HPC Hyde Park \n Corner -10.0,-9.0
+label NW
+platform 1 NE Pi R
+platform 2 NE Pi L
+
+station KNB Knightsbridge -13.0,-6.0
+label NW
+platform 1 NE Pi R
+platform 2 NE Pi L
+
+disstation BRD Brompton Road -16.0,-3.0
 label NW
 platform 1 NE Pi R
 platform 2 NE Pi L
@@ -2927,26 +2988,50 @@ track CFSsouth-sb CFS-4 Pi
 subtrack CFSsouth-nb CFS-2 Pi
 subtrack CFSsouth-sb CFS-2 Pi
 
-track OAK-2 CFSsouth-nb Pi
-track OAK-1 CFSsouth-sb Pi
-subtrack OAK-2 CFSsouth-sb Pi
-subtrack OAK-1 CFSsouth-nb Pi
+track CFSsouth2-nb CFSsouth-nb Pi
+track CFSsouth2-sb CFSsouth-sb Pi
+subtrack CFSsouth2-nb CFSsouth-sb Pi
+subtrack CFSsouth2-sb CFSsouth-nb Pi
+
+track OAKnorth-nb CFSsouth2-nb Pi
+track OAKnorth-sb CFSsouth2-sb Pi
+subtrack CFSdepot-road CFSsouth2-nb Pi
+subtrack OAKnorth-nb CFSdepot-road Pi
+
+track OAK-2 OAKnorth-nb Pi
+track OAK-1 OAKnorth-sb Pi
+subtrack OAK-1 OAKnorth-nb Pi
+subtrack OAK-si OAKnorth-nb Pi
 
 track SGT-1 OAK-2 Pi
 track SGT-2 OAK-1 Pi
+subtrack SGT-2 OAK-2 Pi
 
 track AGR-1 SGT-1 Pi
 track AGR-4 SGT-2 Pi
 subtrack AGR-2 SGT-1 Pi
 subtrack AGR-2 SGT-2 Pi
 
-track BGR-1 AGR-1 Pi
-track BGR-2 AGR-4 Pi
-subtrack BGR-1 AGR-2 Pi
-subtrack BGR-2 AGR-2 Pi
+track AGRsouth-1 AGR-1 Pi
+track AGRsouth-2 AGR-2 Pi
+track AGRsouth-4 AGR-4 Pi
+subtrack AGRsouth-2 AGR-4 Pi
+subtrack AGRsouth-4 AGR-2 Pi
+
+track AGRsouth2-nb AGRsouth-1 Pi
+track AGRsouth2-sb AGRsouth-4 Pi
+subtrack AGRsouth2-nb AGRsouth-2 Pi
+subtrack AGRsouth2-sb AGRsouth-2 Pi
+
+track BGR-1 AGRsouth2-nb Pi
+track BGR-2 AGRsouth2-sb Pi
+subtrack BGR-2 AGRsouth2-nb Pi
+subtrack AGRsi-road AGRsouth2-nb Pi
 
 track WGN-1 BGR-1 Pi
 track WGN-2 BGR-2 Pi
+subtrack WGN-1 WGNnorth-mid Pi
+subtrack WGN-2 WGNnorth-mid Pi
 
 track TPL-1 WGN-1 Pi
 track TPL-2 WGN-2 Pi
@@ -2966,8 +3051,11 @@ track HRD-2 ARL-1 Pi
 track CRD-1 HRD-2 Pi
 track CRD-2 HRD-1 Pi
 
-track KXX-6 CRD-1 Pi
-track KXX-5 CRD-2 Pi
+track YRD-1 CRD-1 Pi
+track YRD-2 CRD-2 Pi
+
+track KXX-6 YRD-1 Pi
+track KXX-5 YRD-2 Pi
 
 track RSQ-1 KXX-6 Pi
 track RSQ-2 KXX-5 Pi
@@ -2975,9 +3063,11 @@ track RSQ-2 KXX-5 Pi
 
 track HOL-4 RSQ-1 Pi
 track HOL-3 RSQ-2 Pi
+subtrack HOL-5 RSQ-1 Pi
 
 track COV-2 HOL-4 Pi
 track COV-1 HOL-3 Pi
+track ALW-1 HOL-5 Pi
 
 track LSQ-2 COV-2 Pi
 track LSQ-1 COV-1 Pi
@@ -2988,14 +3078,26 @@ track PIC-4 LSQ-1 Pi
 track GPK-2 PIC-3 Pi
 track GPK-1 PIC-4 Pi
 
-track HPC-2 GPK-1 Pi
-track HPC-1 GPK-2 Pi
+track DST-2 GPK-1 Pi
+track DST-1 GPK-2 Pi
+
+track DSTsouth-nb DST-1 Pi
+track DSTsouth-sb DST-2 Pi
+subtrack DSTsi-mid DST-1 Pi
+subtrack DSTsi-mid DST-2 Pi
+
+track HPC-2 DSTsouth-sb Pi
+track HPC-1 DSTsouth-nb Pi
+subtrack HPC-2 DSTsouth-nb Pi
 
 track KNB-1 HPC-1 Pi
 track KNB-2 HPC-2 Pi
 
-track SKN-4 KNB-1 Pi
-track SKN-3 KNB-2 Pi
+track BRD-1 KNB-1 Pi
+track BRD-2 KNB-2 Pi
+
+track SKN-4 BRD-1 Pi
+track SKN-3 BRD-2 Pi
 
 track GRD-5 SKN-4 Pi
 track GRD-4 SKN-3 Pi
