@@ -1,7 +1,7 @@
 import cairo
 from datastructures import SortedDict
 from draw import Segment, Direction
-from platform import Platform, PointsPlatform, DepotPlatform
+from platform import Platform, PointsPlatform, DepotPlatform, SidingsPlatform
 from vector import Vector
 
 class Station(object):
@@ -247,9 +247,19 @@ class Points(Station):
 
 class Depot(Station):
     """
-    A depot (drawn differently).
+    A depot or large sidings.
     """
 
-    label_color = (170/255.0, 170/255.0, 200/255.0)
+    label_color = (170 / 255.0, 170 / 255.0, 200 / 255.0)
 
     platform_class = DepotPlatform
+
+
+class Sidings(Station):
+    """
+    Smaller sidings (drawn differently).
+    """
+
+    label_color = (170 / 255.0, 170 / 255.0, 200 / 255.0)
+
+    platform_class = SidingsPlatform

@@ -1,5 +1,6 @@
 from draw import Segment
 
+
 class Platform(object):
 
     length = 22
@@ -56,7 +57,7 @@ class PointsPlatform(Platform):
 
 
 class DepotPlatform(Platform):
-    "Zero-length platform used for points."
+    "Long dashed platform for depots."
 
     length = 14
 
@@ -73,3 +74,9 @@ class DepotPlatform(Platform):
                 dashed = True,
             ).draw(ctx)
         self.drawn = True
+
+
+class SidingsPlatform(DepotPlatform):
+    "Short dashed line for sidings."
+
+    length = 8
