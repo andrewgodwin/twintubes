@@ -409,6 +409,9 @@ platform 4 N No L
 platform 10 S DLR R
 platform 9 S DLR L
 
+waypoint BNKdlrsi  BNK,1.0,0.0
+platform si S DLR
+
 station LON London Bridge 44.0,-2.5
 label NE
 label_offset -3,3
@@ -1937,20 +1940,22 @@ platform sb N
 
 ## DLR ##
 
-station TOG Tower \n Gateway 58.0,-10.0
+station TOG Tower \n Gateway 58.0,-10.5
 label N
+platform si E none N
 platform 1,2 E DLR B
 
 waypoint TOGeast  TOG,2.5,0.5
+platform si SE
 platform 1,2 SE
 
-station SHA Shadwell 67.0,-8.5
+station SHA Shadwell 69.0,-8.5
 label NW
-label_offset 22,0
+label_offset 2,0
 platform 1 E DLR R
 platform 2 E DLR L
 
-waypoint SHAwest  SHA,-2.0,0.0
+waypoint SHAwest  SHA,-3.0,0.0
 platform eb E
 platform wb E
 
@@ -1964,6 +1969,13 @@ label N
 label_offset -2,0
 platform 1 E DLR L
 platform 2 E DLR R
+
+waypoint WESeast  WES,2.0,0.0
+platform 1 E
+platform 2 E
+
+waypoint WESeast2  WES,3.5,-1.5
+platform eb E
 
 station POP Poplar 90.5,-9.5
 label N
@@ -1991,6 +2003,11 @@ platform nb E
 platform sb E
 platform wb E
 
+depot POPdepot Poplar \n Depot 94.0,-13.5
+label NW
+label_offset 5,5
+platform road SE DLR
+
 # Stratford International branch
 
 station SFI Stratford \n International 106.0,-52.5
@@ -2002,6 +2019,11 @@ station SHS Stratford \n High Street 111.0,-40.0
 label E
 platform 2 N DLR L
 platform 1 N DLR R
+
+waypoint SHSnorth  SHS,-1.0,-3.5
+platform nb NW
+platform mid NW
+platform sb NW
 
 station ABR Abbey \n Road 111.0,-35.0
 label E
@@ -2015,7 +2037,7 @@ platform 1 N DLR L
 
 # Woolwich branch
 
-station WOA Woolwich Arsenal 141.0,8.5
+station WOA Woolwich Arsenal 143.5,10.0
 label S
 platform 4 W DLR L
 platform 3 W DLR R
@@ -2024,71 +2046,88 @@ waypoint WOAnorth  WOA,4.0,-4.0
 platform nb S
 platform sb S
 
-station KGV King \n George V 141.0,2.0
+station KGV King \n George V 143.5,3.5
 label N
 platform 1 E DLR R
 platform 2 E DLR L
 
-station LCA London City \n Airport 133.5,2.0
+station LCA London City \n Airport 136.0,3.5
 label S
 platform 1 E DLR R
 platform 2 E DLR L
 
-station PDK Pontoon \n Dock 127.0,2.0
+station PDK Pontoon \n Dock 129.5,3.5
 label N
 platform 1 E DLR L
 platform 2 E DLR R
 
-station WSTdlr West \n Silvertown 120.0,-2.0
+station WSTdlr West \n Silvertown 123.5,1.0
 label SW
 platform 1 SE DLR L
 platform 2 SE DLR R
 
-waypoint WSTnorth  WSTdlr,-4.5,-4.5
+waypoint WSTnorth  WSTdlr,-5.5,-5.5
 platform sb SE
 platform nb SE
 
 # Beckton branch
 
-station BECdlr Beckton 147.0,-16.0
+station BECdlr Beckton 149.0,-19.0
 label N
 platform 1 W DLR L
 platform 2 W DLR R
 
-station GAR Gallions Reach 151.0,-12.0
+depot BECdepot Beckton \n Depot 157.5,-13.0
+label N
+platform road E DLR
+
+station GAR Gallions \n Reach 153.0,-8.5
 label W
 platform 1 N DLR L
 platform 2 N DLR R
 
-station CYP Cyprus 147.5,-6.5
+waypoint GARnorth  GAR,0.0,-2.5
+platform nb N
+platform sb N
+
+waypoint GARnorth2  GAR,0.0,-6.5
+platform nb N
+platform sb N
+
+station CYP Cyprus 149.5,-4.5
 label S
 platform 1 E DLR L
 platform 2 E DLR R
 
-station BEP Beckton \n Park 142.5,-6.5
+station BEP Beckton \n Park 144.5,-4.5
 label N
 platform 1 E DLR L
 platform 2 E DLR R
 
-station ROAdlr Royal \n Albert 137.5,-6.5
+station ROAdlr Royal \n Albert 139.5,-4.5
 label S
 platform 1 E DLR L
 platform 2 E DLR R
 
-station PRR Prince \n Regent 132.5,-6.5
+station PRR Prince \n Regent 134.5,-4.5
 label N
 platform 1 E DLR R
 platform 2 E DLR L
 
-station CUH Custom \n House 127.5,-6.5
+station CUH Custom \n House 129.5,-4.5
 label S
 platform 3 E DLR R
 platform 4 E DLR L
 
-station ROV Royal \n Victoria 122.5,-6.5
+station ROV Royal \n Victoria 125.5,-5.0
 label N
+platform si E none N
 platform 1 E DLR L
 platform 2 E DLR R
+
+waypoint ROVwest  ROV,-4.0,0.5
+platform eb E
+platform wb E
 
 station CAT Canning Town CNT,2.5,-1.5
 label NE
@@ -2097,10 +2136,11 @@ platform 2 SE DLR L
 platform 3 SE DLR R
 platform 4 SE DLR L
 
-waypoint CATsouth  CAT,2.0,3.5
+waypoint CATsouth  CAT,2.5,4.5
 platform 1 SE
 platform 2 SE
 platform wsb SE
+platform wmid SE
 platform wnb SE
 platform beb SE
 platform bwb SE
@@ -2117,11 +2157,16 @@ platform 2 E DLR R
 
 # Stratford branch
 
-station ALS All Saints 97.5,-14.5
+station ALS All Saints 97.5,-17.5
+label E
 platform 1 N DLR L
 platform 2 N DLR R
 
-station LAP Langdon Park 97.5,-20.0
+waypoint ALSsouth  ALS,0.0,3.0
+platform nb N
+platform sb N
+
+station LAP Langdon Park 97.5,-21.5
 platform 1 N DLR L
 platform 2 N DLR R
 
@@ -2543,6 +2588,9 @@ platform 1 NW Ov L
 ###### Segments #######
 
 ## Bottom/Pre fixes
+
+track BNKdlrsi-si BNKdlr-10 DLR
+subtrack BNKdlrsi-si BNKdlr-9 DLR
 
 track BNKdlr-10 SHAwest-wb DLR
 track BNKdlr-9 SHAwest-eb DLR
@@ -4073,10 +4121,15 @@ track SFD-17 SFI-2 DLR
 subtrack SFD-16 SFI-2 DLR
 subtrack SFD-17 SFI-1 DLR
 
-track SHS-1 SFD-16 DLR
-track SHS-2 SFD-17 DLR
-subtrack SHS-1 SFD-17 DLR
-subtrack SHS-2 SFD-16 DLR
+track SHSnorth-nb SFD-16 DLR
+track SHSnorth-sb SFD-17 DLR
+subtrack SHSnorth-mid SFD-16 DLR
+subtrack SHSnorth-mid SFD-17 DLR
+
+track SHS-1 SHSnorth-nb DLR
+track SHS-2 SHSnorth-sb DLR
+subtrack SHS-1 SHSnorth-mid DLR
+subtrack SHS-2 SHSnorth-mid DLR
 
 track ABR-1 SHS-1 DLR
 track ABR-2 SHS-2 DLR
@@ -4093,8 +4146,20 @@ track CAT-2! STL-2 DLR
 
 # Beckton branch
 
-track GAR-1 BECdlr-2 DLR
-track GAR-2 BECdlr-1 DLR
+track GARnorth2-nb BECdlr-2 DLR
+track GARnorth2-sb BECdlr-1 DLR
+subtrack GARnorth2-nb BECdlr-1 DLR
+subtrack GARnorth2-sb BECdlr-2 DLR
+
+subtrack GARnorth-sb BECdepot-road DLR
+subtrack BECdepot-road! GARnorth2-sb DLR
+
+subtrack GARnorth-nb GARnorth2-nb DLR
+subtrack GARnorth-sb GARnorth2-sb DLR
+
+track GAR-1 GARnorth-nb DLR
+track GAR-2 GARnorth-sb DLR
+subtrack GAR-1 GARnorth-sb DLR
 
 track CYP-1 GAR-1 DLR
 track CYP-2 GAR-2 DLR
@@ -4111,10 +4176,16 @@ subtrack PRR-1 ROAdlr-2 DLR
 
 track CUH-3 PRR-1 DLR
 track CUH-4 PRR-2 DLR
+subtrack CUH-3 PRR-2 DLR
+subtrack CUH-4 PRR-1 DLR
 
 track ROV-1 CUH-3 DLR
 track ROV-2 CUH-4 DLR
 subtrack ROV-2 CUH-3 DLR
+
+track ROVwest-eb ROV-1 DLR
+track ROVwest-wb ROV-2 DLR
+subtrack ROVwest-eb ROV-si DLR
 
 # Canning town faffing
 
@@ -4123,7 +4194,8 @@ track WSTnorth-sb WSTdlr-1 DLR
 
 subtrack CATsouth-2 WSTnorth-nb DLR
 
-track CATsouth-wsb WSTnorth-sb DLR
+subtrack CATsouth-wsb WSTnorth-sb DLR
+subtrack CATsouth-wmid WSTnorth-nb DLR
 subtrack CATsouth-1 WSTnorth-sb DLR
 subtrack CATsouth-wnb WSTnorth-nb DLR
 
@@ -4132,12 +4204,14 @@ track CAT-2 CATsouth-2 DLR
 subtrack CAT-4 CATsouth-wnb DLR
 track CAT-3 CATsouth-beb DLR
 subtrack CAT-3 CATsouth-wsb DLR
+subtrack CAT-3 CATsouth-wmid DLR
 subtrack CAT-4 CATsouth-bwb DLR
 
-track CATsouth-bwb ROV-2 DLR
-subtrack CATsouth-2 ROV-2 DLR
-track CATsouth-beb ROV-1 DLR
-subtrack CATsouth-1 ROV-1 DLR
+track CATsouth-bwb ROVwest-wb DLR
+subtrack CATsouth-2 ROVwest-wb DLR
+track CATsouth-beb ROVwest-eb DLR
+subtrack CATsouth-bwb ROVwest-eb DLR
+subtrack CATsouth-1 ROVwest-eb DLR
 subtrack CAT-2 CATsouth-1 DLR
 
 
@@ -4177,8 +4251,14 @@ track LAP-2 DER-2 DLR
 track ALS-1 LAP-1 DLR
 track ALS-2 LAP-2 DLR
 
-track POPeast2-nb ALS-1 DLR
-track POPeast2-sb ALS-2 DLR
+track ALSsouth-nb ALS-1 DLR
+track ALSsouth-sb ALS-2 DLR
+subtrack ALSsouth-nb ALS-2 DLR
+
+track POPeast2-nb ALSsouth-nb DLR
+track POPeast2-sb ALSsouth-sb DLR
+subtrack POPdepot-road ALSsouth-nb DLR
+subtrack POPeast2-nb POPdepot-road! DLR
 
 # Lewisham branch
 
@@ -4248,16 +4328,17 @@ subtrack POP-4 POPeast-sb DLR
 
 track POPwest-becn POP-1 DLR
 track POPwest-becs POP-4 DLR
-track WES-1 POPwest-wcsb1 DLR
-subtrack WES-1 POPwest-wcsb2 DLR
-subtrack WES-1 POPwest-becn DLR
-track WES-2 POPwest-becs DLR
-subtrack WES-2 POPwest-wcnb DLR
+track WESeast-1 POPwest-wcsb1 DLR
+subtrack WESeast-1 POPwest-wcsb2 DLR
+subtrack WESeast-1 POPwest-becn DLR
+track WESeast-2 POPwest-becs DLR
+subtrack WESeast2-eb POPwest-becs DLR
+subtrack WESeast-2 POPwest-wcnb DLR
 track POPwest-wcnb WIQ-4 DLR
 track POPwest-wcsb1 WIQ-1 DLR
 track POP-3! WIQ-2 DLR
-subtrack POPwest-wcsb2 WIQ-2 DLR
 track POP-2! WIQ-3 DLR
+subtrack POPwest-wcsb2 WIQ-2 DLR
 subtrack POPwest-wcnb WIQ-3 DLR
 
 track POPeast2-eb BLA-1 DLR
@@ -4268,6 +4349,10 @@ subtrack POPeast2-wb BLA-1 DLR
 
 # City branch
 
+track WES-1 WESeast-1 DLR
+track WES-2 WESeast-2 DLR
+subtrack WES-2 WESeast-1 DLR
+
 track LIM-3 WES-1 DLR
 track LIM-4 WES-2 DLR
 
@@ -4275,14 +4360,18 @@ track SHA-1 LIM-3 DLR
 track SHA-2 LIM-4 DLR
 
 track SHAwest-eb SHA-1 DLR
-subtrack SHAwest-wb SHA-2 DLR
+track SHAwest-wb SHA-2 DLR
+subtrack SHAwest-wb SHA-1 DLR
 
 # BNK to SHAwest in pre-fixes
 
 subtrack TOGeast-1,2 SHAwest-eb DLR
 subtrack TOGeast-1,2 SHAwest-wb DLR
+subtrack TOGeast-si SHAwest-eb DLR
+subtrack TOGeast-si SHAwest-wb DLR
 
 track TOG-1,2 TOGeast-1,2 DLR
+track TOG-si TOGeast-si DLR
 
 ## Overground
 
