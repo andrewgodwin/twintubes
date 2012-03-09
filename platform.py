@@ -53,3 +53,23 @@ class PointsPlatform(Platform):
     def draw(self, ctx):
         "Draws this platform on the map"
         pass
+
+
+class DepotPlatform(Platform):
+    "Zero-length platform used for points."
+
+    length = 14
+
+    def draw(self, ctx):
+        "Draws this platform on the map"
+        if self.line.code != "none":
+            Segment(
+                self.start_point,
+                self.direction,
+                self.end_point,
+                self.direction,
+                self.line.colors,
+                platform = 0,
+                dashed = True,
+            ).draw(ctx)
+        self.drawn = True

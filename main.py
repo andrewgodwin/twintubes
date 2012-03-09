@@ -3,7 +3,7 @@ import os
 from vector import Vector
 from draw import Direction, Segment
 from datastructures import SortedDict
-from station import Station, Points
+from station import Station, Points, Depot
 
 
 class Line(object):
@@ -75,7 +75,7 @@ class Map(object):
                             raise
 
                     # Station/waypoint record
-                    elif type in ("station", "waypoint"):
+                    elif type in ("station", "waypoint", "depot"):
                         # It's a station or points definition
                         code = parts[0]
                         index = 1
@@ -89,7 +89,12 @@ class Map(object):
                             relative_to =self.stations[coord_parts[0]]
                         else:
                             relative_to = None
-                        station_class = Station if type == "station" else Points
+                        if type == "station":
+                            station_class = Station
+                        elif type == "depot":
+                            station_class = Depot
+                        else:
+                            station_class = Points
                         last_station = self.stations[code] = station_class(
                             code,
                             name,
@@ -156,7 +161,7 @@ class Map(object):
                     parts = line.split()
                     type = parts[0] if parts else None
                     # What kind of line is it?
-                    if type in ("station", "waypoint"):
+                    if type in ("station", "waypoint", "depot"):
                         # Get the code
                         code = parts[1]
                         # Get the real station
