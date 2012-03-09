@@ -1974,7 +1974,7 @@ label S
 platform 3 E DLR L
 platform 4 E DLR R
 
-station WES Westferry 78.5,-8.5
+station WES Westferry 78.0,-8.5
 label N
 label_offset -2,0
 platform 1 E DLR L
@@ -1994,7 +1994,7 @@ platform 2 E DLR L
 platform 3 E DLR R
 platform 4 E DLR L
 
-waypoint POPwest  POP,-6.5,0.5
+waypoint POPwest  POP,-7.0,0.5
 platform becn E
 platform becs E
 platform wcsb1 E
