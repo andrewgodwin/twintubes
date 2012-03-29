@@ -1,5 +1,6 @@
 import math
 
+
 class Vector(object):
     
     """
@@ -19,13 +20,13 @@ class Vector(object):
             self.y = y
     
     def __add__(self, other):
-        return Vector(self.x+other.x, self.y+other.y)
+        return Vector(self.x + other.x, self.y + other.y)
     
     def __sub__(self, other):
-        return Vector(self.x-other.x, self.y-other.y)
+        return Vector(self.x - other.x, self.y - other.y)
     
     def __mul__(self, num):
-        return Vector(self.x*num, self.y*num)
+        return Vector(self.x * num, self.y * num)
     
     def __div__(self, num):
         return self * (1.0 / num)
@@ -35,7 +36,7 @@ class Vector(object):
     
     def __abs__(self):
         "Cartesian distance of this vector"
-        return (self.x**2 + self.y**2) ** 0.5
+        return (self.x ** 2 + self.y ** 2) ** 0.5
     
     def __hash__(self):
         return hash((self.x, self.y))
@@ -70,4 +71,3 @@ class Vector(object):
 
     def flip(self):
         return self * -1
-    

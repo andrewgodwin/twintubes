@@ -255,13 +255,13 @@ class Map(object):
                 start_point = platform.start_point
                 start_dir = platform.direction.left.left.left.left
             else:
-                start_point = platform.end_point 
+                start_point = platform.end_point
                 start_dir = platform.direction
             if finishes_end:
                 end_point = destination.end_point
                 end_dir = destination.direction.left.left.left.left
             else:
-                end_point = destination.start_point 
+                end_point = destination.start_point
                 end_dir = destination.direction
             # Draw!
             Segment(
@@ -290,4 +290,3 @@ if __name__ == "__main__":
     m = Map()
     m.load("london.txt")
     m.to_pdf("london.pdf")
-

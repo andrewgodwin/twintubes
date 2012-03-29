@@ -6,6 +6,7 @@ pygtk.require('2.0')
 import gtk
 import cairo
 
+
 class Gui(object):
 
     def __init__(self, filename):
@@ -36,7 +37,7 @@ class Gui(object):
 
         self.window.add(self.vbox)
         self.window.show_all()
-	
+
     def create_map_menu(self):
         "Makes the 'map' menu."
         menu = gtk.Menu()
@@ -107,12 +108,12 @@ class Renderer(gtk.DrawingArea):
     CLICK_FUZZY = 10
 
     # Draw in response to an expose-event
-    __gsignals__ = { "expose-event": "override" }
+    __gsignals__ = {"expose-event": "override"}
 
     def __init__(self, gui):
         gtk.DrawingArea.__init__(self)
         self.gui = gui
-        self.set_size_request(800,400)
+        self.set_size_request(800, 400)
         self.add_events(gtk.gdk.ALL_EVENTS_MASK)
 
         # Set initial scale and position
@@ -236,7 +237,7 @@ class Renderer(gtk.DrawingArea):
             factor = self.zoomstep
         elif event.direction == gtk.gdk.SCROLL_UP:
             factor = 1.0 / self.zoomstep
-            if self.scale < 0.2: # Don't go down too far!
+            if self.scale < 0.2:  # Don't go down too far!
                 factor = 1
         # Move by orig - (orig / scale)
         self.scale *= factor
@@ -278,6 +279,5 @@ class Renderer(gtk.DrawingArea):
         cr.restore()
 
 
-
 if __name__ == "__main__":
-	Gui("london.txt").main()
+    Gui("london.txt").main()

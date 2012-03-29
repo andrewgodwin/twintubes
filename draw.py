@@ -6,6 +6,7 @@ import cairo
 import math
 from vector import Vector
 
+
 class Direction(object):
 
     VECS = {
@@ -240,21 +241,21 @@ class Segment(object):
             out_vector = (dir.vector + next_dir.vector.flip()).normalize().flip()
             dir_delta = dir.delta(next_dir)
             center_point = corner + (out_vector * (self.radius / math.cos(dir_delta * math.pi * 0.125)))
-            if dir_delta  > 0:
+            if dir_delta > 0:
                 ctx.arc(
                     center_point.x,
                     center_point.y,
                     self.radius,
-                    (next_dir.angle + (math.pi * 0.75)) % (math.pi*2),
-                    (dir.angle - (math.pi * 0.75)) % (math.pi*2),
+                    (next_dir.angle + (math.pi * 0.75)) % (math.pi * 2),
+                    (dir.angle - (math.pi * 0.75)) % (math.pi * 2),
                 )
             else:
                 ctx.arc_negative(
                     center_point.x,
                     center_point.y,
                     self.radius,
-                    (next_dir.angle + (math.pi * 0.25)) % (math.pi*2),
-                    (dir.angle - (math.pi * 0.25)) % (math.pi*2),
+                    (next_dir.angle + (math.pi * 0.25)) % (math.pi * 2),
+                    (dir.angle - (math.pi * 0.25)) % (math.pi * 2),
                 )
         # Overshoot slightly to stop artifacts, if this isn't the white bit
         if not back:
@@ -291,5 +292,3 @@ class Segment(object):
             ctx.set_source_rgb(1, 0, 1)
             ctx.set_line_width(0.5)
             ctx.stroke()
-
-
