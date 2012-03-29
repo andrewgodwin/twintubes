@@ -78,7 +78,7 @@ class Segment(object):
 
     width = 3
     radius = 7
-    min_length = 15
+    min_length = 10
     platform_distance = 3.5
     platform_width = 2
     back_width = 5

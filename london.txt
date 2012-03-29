@@ -1248,6 +1248,15 @@ waypoint BCTeast  BCT,8.0,2.0
 platform eb E
 platform wb E
 
+waypoint BCTwestsi  BCT,-3.0,0.0
+platform mid E
+
+waypoint BCTwest  BCT,-3.0,0.0
+platform 4 E
+platform 3 E
+platform 2 E
+platform 1 E
+
 station HMD Hammersmith -64.5,-1.0
 label S
 platform 4 E Di R
@@ -1276,19 +1285,37 @@ platform 3 E Pi L
 platform 2 E Pi R
 platform 1 E Di L
 
-station CHP Chiswick \n Park -92.5,-1.0
+station CHP Chiswick \n Park -91.5,-1.0
 label S
 platform 2 E Di L
 platform ebfast E Pi N
 platform wbfast E Pi N
 platform 1 E Di R
 
-station ACT Acton Town -98.0,-1.0
+station ACT Acton \n Town -100.5,-1.0
 label N
 platform 4 E DiPi R
 platform 3 E Pi L
 platform 2 E Pi R
 platform 1 E DiPi L
+
+waypoint ACTeast  ACT,4.0,0.0
+platform 4 E
+platform 3 E
+platform 2 E
+platform 1 E
+
+waypoint ACTeast2  ACT,5.5,0.0
+platform 4 E
+platform 3 E
+platform 2 E
+platform 1 E
+
+sidings ACTeastsi  ACT,7.0,0.0
+platform mid E Pi
+
+depot ACTdepot Acton \n Works -98.0,3.5
+platform road N DiPi
 
 waypoint ACTwest  ACT,-3.0,0.0
 platform 4 E
@@ -1298,102 +1325,120 @@ platform 1 E
 
 # Heathrow branch
 
-station SEL South Ealing -106.0,2.0
+station SEL South Ealing -107.0,2.0
 label NW
 platform 1 NE Pi R
 platform 2 NE Pi L
 platform 3 NE Pi R
 platform 4 NE Pi L
 
-station NFD Northfields -110.5,6.5
+station NFD Northfields -111.5,6.5
 label NW
 platform 4 NE Pi R
 platform 3 NE Pi L
 platform 2 NE Pi R
 platform 1 NE Pi L
 
-station BOS Boston Manor -115.0,11.0
+station BOS Boston Manor -116.0,11.0
 label NW
 platform 2 NE Pi L
 platform 1 NE Pi R
 
-station OST Osterley -119.0,15.0
+station OST Osterley -120.0,15.0
 label NW
 platform 2 NE Pi L
 platform 1 NE Pi R
 
-station HNE Hounslow East -123.0,19.0
+station HNE Hounslow East -124.0,19.0
 label NW
 platform 2 NE Pi L
 platform 1 NE Pi R
 
-station HNC Hounslow Central -127.0,23.0
+station HNC Hounslow Central -128.0,23.0
 label NW
 platform 2 NE Pi R
 platform 1 NE Pi L
 
-station HNW Hounslow West -131.5,27.5
+station HNW Hounslow West -132.5,27.5
 label NW
 platform 2 NE Pi R
 platform 1 NE Pi L
 
-station HTX Hatton Cross -136.0,32.0
+station HTX Hatton Cross -137.0,32.0
 label NW
 platform 2 NE Pi R
 platform 1 NE Pi L
 
-station HRC Heathrow \n Terminals 1 2 3 -140.5,36.5
+station HRC Heathrow \n Terminals 1 2 3 -141.5,36.5
 label NW
 platform 2 NE Pi R
 platform 1 NE Pi L
 
-station HRV Heathrow \n Terminal 5 -145.0,41.0
+station HRV Heathrow \n Terminal 5 -146.0,41.0
 label SE
 platform 6 NE Pi R
 platform 5 NE Pi L
 
-station HRF Heathrow \n Terminal 4 -138.0,38.5
+station HRF Heathrow \n Terminal 4 -139.0,38.5
 label SE
 platform 1 NE Pi L
 
 # Uxbridge branch
 
-station ECM Ealing Common -108.0,-9.0
+station ECM Ealing Common -109.0,-11.0
 label W
 platform 1 S DiPi R
 platform 2 S DiPi L
 
-station NEL North Ealing -108.0,-25.0
+depot ECMdepot Ealing Common \n Depot -107.0,-6.5
+label NE
+label_offset -3,3
+platform road SE Di
+
+station NEL North Ealing -109.0,-25.0
 label W
 platform 1 S Pi R
 platform 2 S Pi L
 
-station PRY Park Royal -108.0,-33.0
+station PRY Park Royal -109.0,-32.5
 label W
 platform 1 S Pi R
 platform 2 S Pi L
 
-station ALP Alperton -108.0,-44.0
+disstation PRT Park Royal & \n Twyford Abbey -109.0,-42.0
 label E
 platform 1 S Pi R
 platform 2 S Pi L
 
-station STN Sudbury Town -108.0,-53.5
+station ALP Alperton -109.0,-48.5
+label E
+platform 1 S Pi R
+platform 2 S Pi L
+
+station STN Sudbury Town -109.0,-55.0
 label W
 platform 1 S Pi R
 platform 2 S Pi L
 
-station SHL Sudbury Hill -108.0,-63.5
+station SHL Sudbury Hill -109.0,-62.5
 label W
 platform 1 S Pi R
 platform 2 S Pi L
 
-station SHR South Harrow -108.0,-72.5
+station SHR South Harrow -109.0,-72.5
 label W
 platform 1 S Pi R
 platform 2 S Pi L
 
-station RLN Rayners \n Lane -111.5,-78.5
+waypoint SHRsouth  SHR,0.0,3.0
+platform nb S
+platform sb S
+
+depot SHRsi South Harrow \n Sidings -107.5,-67.0
+label E
+platform road S Pi
+
+station RLN Rayners \n Lane -112.0,-78.5
 label N
 platform 2 E MePi L
 platform 1 E MePi R
@@ -1401,12 +1446,12 @@ platform 1 E MePi R
 waypoint RLNeast  RLN,-3.0,0.0
 platform mid E
 
-station ETE Eastcote -117.0,-78.5
+station ETE Eastcote -117.5,-78.5
 label S
 platform 2 E MePi L
 platform 1 E MePi R
 
-station RUM Ruislip \n Manor -122.5,-78.5
+station RUM Ruislip \n Manor -123.0,-78.5
 label N
 platform 2 E MePi L
 platform 1 E MePi R
@@ -1481,7 +1526,7 @@ platform 1 SE Ce L
 
 # EBY branch
 
-station EBY Ealing Broadway -115.5,-19.0
+station EBY Ealing Broadway -117.5,-19.0
 label W
 platform 9 E Di L
 platform 8 E Di R
@@ -1497,7 +1542,10 @@ waypoint EBYeast2  EBY,5.0,-1.0
 platform eb E
 platform wb E
 
-station WAC West Acton -103.5,-17.5
+sidings EBYsi  EBY,4.0,0.0
+platform road E Di
+
+station WAC West Acton -104.5,-17.5
 label S
 platform 2 E Ce L
 platform 1 E Ce R
@@ -2144,17 +2192,21 @@ label_offset 27,0
 platform 2 E Di L
 platform 1 E Di R
 
-station GUN Gunnersbury -88.0,4.5
+station GUN Gunnersbury -88.0,6.0
 label E
 platform 2 N Di R
 platform 1 N Di L
 
-station KEW Kew Gardens -88.0,8.5
+waypoint GUNnorth  GUN,0.0,-3.0
+platform nb N
+platform sb N
+
+station KEW Kew Gardens -88.0,11.0
 label E
 platform 1 N Di L
 platform 2 N Di R
 
-station RMD Richmond -88.0,14.5
+station RMD Richmond -88.0,17.0
 label E
 platform 7 N Di R
 platform 6 N Di L
@@ -2458,9 +2510,7 @@ platform 2 S DLR R
 platform 1 S DLR L
 
 waypoint CROsouth  CRO,0.0,3.0
-platform nb S
 platform mid S
-platform sb S
 
 waypoint CROsouth2  CRO,0.0,4.5
 platform nb S
@@ -2845,8 +2895,8 @@ subtrack SDE-2 ZWL-5 Ov
 track WPE-1 SDE-1 Ov
 track WPE-2 SDE-2 Ov
 
-track SAT-1 GUN-1! Ov
-track SAT-2 GUN-2! Ov
+track SAT-1 GUNnorth-sb! Ov
+track SAT-2 GUNnorth-nb! Ov
 
 track SBC-2 HPK-2 Ce
 track SBC-1 HPK-1 Ce
@@ -3113,6 +3163,14 @@ track BCT-2 BCTeast-wb Pi
 
 track HMD-3 BCT-3 Pi
 track HMD-2 BCT-2 Pi
+subtrack HMD-3 BCTwestsi-mid Pi
+subtrack HMD-2 BCTwestsi-mid Pi
+subtrack BCTwestsi-mid BCT-3 Pi
+subtrack BCTwestsi-mid BCT-2 Pi
+subtrack BCTwest-4 BCT-3 Pi
+subtrack HMD-3 BCTwest-4 Pi
+subtrack HMD-1 BCTwest-2 Pi
+subtrack BCTwest-2 BCT-1 Pi
 
 track RCP-3 HMD-3 Pi
 track RCP-2 HMD-2 Pi
@@ -3136,6 +3194,11 @@ track SEL-1 ACTwest-4 Pi
 track SEL-2 ACTwest-3 Pi
 track SEL-3 ACTwest-2 Pi
 track ECM-1 ACTwest-1 DiPi
+subtrack ECM-2 ACTwest-4 DiPi
+subtrack ECM-1 ECMdepot-road Di
+subtrack ECM-2 ECMdepot-road Di
+subtrack ECMdepot-road ACTwest-4 Di
+subtrack ECM-1 ACTwest-1 DiPi
 subtrack ECM-2 ACTwest-4 DiPi
 subtrack SEL-4 ACTwest-1 Pi
 
@@ -3185,16 +3248,25 @@ track NEL-1 ECM-1 Pi
 track PRY-2 NEL-2 Pi
 track PRY-1 NEL-1 Pi
 
+# PRT to PRY in post-fixes
+
+track ALP-2 PRT-2 Pi
+track ALP-1 PRT-1 Pi
+
 track STN-2 ALP-2 Pi
 track STN-1 ALP-1 Pi
 
 track SHL-2 STN-2 Pi
 track SHL-1 STN-1 Pi
 
-track SHR-2 SHL-2 Pi
-track SHR-1 SHL-1 Pi
-subtrack SHR-2 SHL-1 Pi
-subtrack SHR-1 SHL-2 Pi
+track SHR-2 SHRsouth-sb Pi
+track SHR-1 SHRsouth-nb Pi
+subtrack SHR-2 SHRsouth-nb Pi
+subtrack SHR-1 SHRsouth-sb Pi
+
+track SHRsouth-nb SHL-1 Pi
+track SHRsouth-sb SHL-2 Pi
+subtrack SHRsouth-sb SHRsi-road Pi
 
 track RLN-2 SHR-2 Pi
 track RLN-1 SHR-1 Pi
@@ -4291,8 +4363,8 @@ subtrack WDN-3 WDNnorth-sb Di
 track BCT-4 WKN-2 Di
 track BCT-1 WKN-1 Di
 
-track HMD-4 BCT-4 Di
-track HMD-1 BCT-1 Di
+subtrack HMD-4 BCT-4 Di
+subtrack HMD-1 BCT-1 Di
 
 track RCP-4 HMD-4 Di
 track RCP-1 HMD-1 Di
@@ -4304,15 +4376,18 @@ track TGR-4 STB-3 Di
 track TGR-1 STB-1 Di
 
 track CHP-2 TGR-4 Di
-subtrack GUN-2 TGR-4 Di
+subtrack GUNnorth-nb TGR-4 Di
 track CHP-1 TGR-1 Di
-subtrack GUN-1 TGR-1 Di
+subtrack GUNnorth-sb TGR-1 Di
 
 # Pic fix
 track CHP-ebfast TGR-3 Pi
 track CHP-wbfast TGR-2 Pi
 
 # Richmond branch
+track GUN-2 GUNnorth-nb Di
+track GUN-1 GUNnorth-sb Di
+subtrack GUN-1 GUNnorth-nb Di
 
 track KEW-1 GUN-2 Di
 track KEW-2 GUN-1 Di
@@ -4329,12 +4404,26 @@ subtrack RMD-5 RMDnorth-sb Di
 
 # Ealing branch
 
-track ACT-4 CHP-2 Di
-track ACT-1 CHP-1 Di
-track ACT-3 CHP-ebfast Pi
-track ACT-2 CHP-wbfast Pi
-subtrack ACT-4 CHP-ebfast Pi
-subtrack ACT-1 CHP-wbfast Pi
+track ACTeast2-4 CHP-2 Di
+track ACTeast2-1 CHP-1 Di
+track ACTeast2-3 CHP-ebfast Pi
+track ACTeast2-2 CHP-wbfast Pi
+subtrack ACTeast2-2 ACTeastsi-mid Pi
+subtrack ACTeast2-3 ACTeastsi-mid Pi
+
+track ACTeast-1 ACTeast2-1 Di
+track ACTeast-2 ACTeast2-2 Pi
+track ACTeast-3 ACTeast2-3 Pi
+track ACTeast-4 ACTeast2-4 Di
+subtrack ACTeast-4 ACTeast2-3 Pi
+subtrack ACTeast-1 ACTeast2-2 Pi
+
+track ACT-1 ACTeast-1 DiPi
+track ACT-2 ACTeast-2 Pi
+track ACT-3 ACTeast-3 Pi
+track ACT-4 ACTeast-4 DiPi
+subtrack ACTdepot-road ACTeast-1 DiPi
+subtrack ACTdepot-road ACT-1! DiPi
 
 track EBYeast2-eb ECM-2 Di
 track EBYeast2-wb ECM-1 Di
@@ -4343,6 +4432,7 @@ track EBYeast-eb EBYeast2-eb Di
 track EBYeast-wb EBYeast2-wb Di
 subtrack EBYeast-eb EBYeast2-wb Di
 subtrack EBYeast-wb EBYeast2-eb Di
+subtrack EBYeast-wb EBYsi-road Di
 
 track EBY-9 EBYeast-eb Di
 subtrack EBY-8 EBYeast-eb Di
@@ -4706,11 +4796,8 @@ track CROsouth2-nb MUDnorth-nb DLR
 subtrack CROsouth2-sb MUDnorth-nb DLR
 subtrack CROsouth2-nb MUDnorth-sb DLR
 
-track CROsouth-sb CROsouth2-sb DLR
-track CROsouth-nb CROsouth2-nb DLR
-
-track CRO-1 CROsouth-sb DLR
-track CRO-2 CROsouth-nb DLR
+track CRO-1 CROsouth2-sb DLR
+track CRO-2 CROsouth2-nb DLR
 subtrack CRO-2 CROsouth-mid DLR
 subtrack CRO-1 CROsouth-mid DLR
 
@@ -5053,8 +5140,8 @@ subtrack BKG-1 WGR-1 Ov
 subtrack NEL-1 ECM-1 Pi
 subtrack NEL-2 ECM-2 Pi
 
-track ALP-2 PRY-2 Pi
-track ALP-1 PRY-1 Pi
+track PRT-2 PRY-2 Pi
+track PRT-1 PRY-1 Pi
 
 # District fixes
 
