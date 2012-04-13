@@ -512,7 +512,7 @@ platform 5 E Ce L
 platform 8 E Wa R
 platform 7 E Wa L
 
-station BNKdlr  BNK,0.0,5.0
+station BNKdlr  BNK,0.0,4.0
 platform 3 N No R
 platform 4 N No L
 platform 10 S DLR L
@@ -520,6 +520,10 @@ platform 9 S DLR R
 
 waypoint BNKdlrsi  BNK,1.0,2.0
 platform si S DLR
+
+waypoint BNKdlrsouth  BNK,3.5,8.0
+platform eb SE DLR
+platform wb SE DLR
 
 station LON London Bridge 43.5,-2.5
 label NE
@@ -1052,9 +1056,9 @@ waypoint RKYeast2  RKY,5.5,0.5
 platform eb W
 platform wb W
 
-depot RKYsi Rickmansworth \n South Sidings -115.5,-107.5
+depot RKYsi Rickmansworth \n South Sidings -116.0,-107.5
 label NW
-label_offset 20,3
+label_offset 20,0
 platform road W Me
 
 sidings RKYwest  RKY,-3.5,-1.0
@@ -1181,6 +1185,22 @@ platform nbfast W Me N
 depot WPKsi Wembley Park \n Sidings WPK,-1.5,-5.0
 label NE
 platform road NW Me
+
+disstation XSC  -24.0,-53.5
+platform 1 NW Me R
+platform 2 NW Me L
+
+disstation XMR Marlborough \n Road -20.5,-50.0
+label SW
+label_offset 3,-2
+platform 1 NW Me R
+platform 2 NW Me L
+
+disstation XLO Lord's -16.5,-47.5
+label S
+label_offset -10,0
+platform 1 W Me R
+platform 2 W Me L
 
 # Piccadilly Line stations
 
@@ -1430,12 +1450,22 @@ platform 3 NE Pi L
 platform 2 NE Pi R
 platform 1 NE Pi L
 
-station BOS Boston Manor -116.0,11.0
+waypoint NFDwest  NFD,-2.0,2.0
+platform 4 NE Pi
+platform 3 NE Pi
+platform 2 NE Pi
+platform 1 NE Pi
+
+depot NFDdepot Northfields \n Depot -115.0,12.0
+label SE
+platform road NE Pi
+
+station BOS Boston Manor -117.0,12.0
 label NW
 platform 2 NE Pi L
 platform 1 NE Pi R
 
-station OST Osterley -120.0,15.0
+station OST Osterley -120.5,15.5
 label NW
 platform 2 NE Pi L
 platform 1 NE Pi R
@@ -1445,32 +1475,36 @@ label NW
 platform 2 NE Pi L
 platform 1 NE Pi R
 
-station HNC Hounslow Central -128.0,23.0
+station HNC Hounslow Central -127.5,22.5
 label NW
 platform 2 NE Pi R
 platform 1 NE Pi L
 
-station HNW Hounslow West -132.5,27.5
+station HNW Hounslow West -131.0,26.0
 label NW
 platform 2 NE Pi R
 platform 1 NE Pi L
 
-station HTX Hatton Cross -137.0,32.0
+station HTX Hatton Cross -134.5,29.5
 label NW
 platform 2 NE Pi R
 platform 1 NE Pi L
 
-station HRC Heathrow \n Terminals 1 2 3 -141.5,36.5
+station HRC Heathrow \n Terminals 1 2 3 -138.5,33.5
 label NW
 platform 2 NE Pi R
 platform 1 NE Pi L
 
-station HRV Heathrow \n Terminal 5 -146.0,41.0
+station HRV Heathrow \n Terminal 5 -143.0,38.0
 label SE
 platform 6 NE Pi R
 platform 5 NE Pi L
 
-station HRF Heathrow \n Terminal 4 -139.0,38.5
+sidings HRVsi  HRV,-3.0,3.0
+platform 6 NE Pi
+platform 5 NE Pi
+
+station HRF Heathrow \n Terminal 4 -136.0,35.5
 label SE
 platform 1 NE Pi L
 
@@ -1686,7 +1720,7 @@ platform mid E Ce
 
 depot WCTdepot White City \n Sidings WCT,8.0,0.0
 label NE
-label_offset -23,0
+label_offset -23,-3
 platform road E Ce
 
 waypoint WCTeast  WCT,4.0,0.0
@@ -1864,23 +1898,23 @@ label NW
 platform 2 NE Ce L
 platform 1 NE Ce R
 
-disstation XNW North \n Weald 127.5,-121.0
-label NW
-platform 2 NE Ce L
-platform 1 NE Ce R
+disstation XNW North \n Weald 129.0,-119.0
+label S
+platform 2 E Ce L
+platform 1 E Ce R
 
-waypoint XNWsouth  XNW,-2.0,2.0
-platform 1 NE Ce
+waypoint XNWsouth  XNW,-2.5,0.0
+platform 1 E Ce
 
-waypoint XNWnorth  XNW,1.5,-1.5
-platform 1 NE Ce
+waypoint XNWnorth  XNW,2.0,0.0
+platform 1 E Ce
 
-disstation XBH Blake \n Hall 131.5,-123.5
+disstation XBH Blake \n Hall 133.0,-119.0
 label N
 platform 1 E Ce L
 
-disstation XON Ongar 136.5,-123.5
-label N
+disstation XON Ongar 138.0,-119.0
+label S
 platform 3 E Ce R
 platform 2 E Ce R
 platform 1 E Ce L
@@ -2028,7 +2062,7 @@ label_offset -3,0
 platform 2 E CiDi L
 platform 1 E CiDi R
 
-station MON Monument 48.0,-11.5
+station MON Monument 47.5,-11.5
 label S
 platform 2 E CiDi L
 platform 1 E CiDi R
@@ -2112,10 +2146,6 @@ waypoint BSTwest  BST,-3.0,-3.0
 platform sb W
 platform nb W
 
-waypoint Lords  BST,-5.0,-3.0
-platform sb W
-platform nb W
-
 # No name; named by bakerloo station
 # Edgware Road Circle/District/H&C
 station ERD Edgware \n Road -22.5,-39.5
@@ -2196,7 +2226,7 @@ platform 5 NE Di R
 platform 4 NE Di L
 platform 3 NE Di R
 
-depot UPMdepot Upminster Depot 168.5,-72.5
+depot UPMdepot Upminster \n Depot 168.5,-72.5
 label SE
 platform 5 NE Di
 platform 4 NE Di
@@ -2748,8 +2778,8 @@ station CRO Crossharbour 96.0,18.5
 platform 2 S DLR R
 platform 1 S DLR L
 
-waypoint CROsouth  CRO,0.0,3.0
-platform mid S
+sidings CROsouth  CRO,0.0,3.0
+platform mid S DLR
 
 waypoint CROsouth2  CRO,0.0,4.5
 platform nb S
@@ -2976,10 +3006,6 @@ station SDC Shoreditch \n High Street 63.5,-33.5
 platform 1 N Ov L
 platform 2 N Ov R
 
-disstation XSD Shoreditch 60.5,-29.5
-label S
-platform 1 W Ov L
-
 station ZWL  70.5,-22.5
 platform 5 N Ov L
 platform 6 N Ov R
@@ -3124,8 +3150,10 @@ platform 1 NW Ov L
 track BNKdlrsi-si BNKdlr-10 DLR
 subtrack BNKdlrsi-si BNKdlr-9 DLR
 
-track BNKdlr-10 SHAwest-wb DLR
-track BNKdlr-9 SHAwest-eb DLR
+track BNKdlr-10 BNKdlrsouth-wb DLR
+track BNKdlr-9 BNKdlrsouth-eb DLR
+track BNKdlrsouth-wb SHAwest-wb DLR
+track BNKdlrsouth-eb SHAwest-eb DLR
 
 track WHDnr-2 BSY-2 Ov
 track WHDnr-1 BSY-1 Ov
@@ -3457,25 +3485,39 @@ track NFD-3 SEL-2 Pi
 track NFD-2 SEL-3 Pi
 track NFD-1 SEL-4 Pi
 
-track BOS-2 NFD-4 Pi
-subtrack BOS-2 NFD-3 Pi
-track BOS-1 NFD-1 Pi
-subtrack BOS-1 NFD-2 Pi
+track NFDwest-1 NFD-1 Pi
+track NFDwest-2 NFD-2 Pi
+track NFDwest-3 NFD-3 Pi
+track NFDwest-4 NFD-4 Pi
+subtrack NFDwest-4 NFD-3 Pi
+subtrack NFDwest-3 NFD-4 Pi
+subtrack NFDwest-3 NFD-2 Pi
+
+track BOS-2 NFDwest-4 Pi
+track BOS-1 NFDwest-1 Pi
+subtrack BOS-1 NFDwest-2 Pi
+track NFDdepot-road NFDwest-3 Pi
+subtrack NFDdepot-road NFDwest-1 Pi
 
 track OST-2 BOS-2 Pi
 track OST-1 BOS-1 Pi
+subtrack OST-2 BOS-1 Pi
+subtrack OST-1 NFDdepot-road Pi
 
 track HNE-2 OST-2 Pi
 track HNE-1 OST-1 Pi
 
 track HNC-2 HNE-2 Pi
 track HNC-1 HNE-1 Pi
+subtrack HNC-1 HNE-2 Pi
 
 track HNW-2 HNC-2 Pi
 track HNW-1 HNC-1 Pi
 
 track HTX-2 HNW-2 Pi
 track HTX-1 HNW-1 Pi
+subtrack HTX-2 HNW-1 Pi
+subtrack HTX-1 HNW-2 Pi
 
 track HRC-2 HTX-2 Pi
 track HRC-1 HTX-1 Pi
@@ -3487,6 +3529,11 @@ subtrack HRF-1 HTX-1 Pi
 track HRF-1! HRC-2 Pi
 subtrack HRF-1! HRC-1 Pi
 subtrack HRV-6 HRC-2 Pi
+
+track HRVsi-5 HRV-5 Pi
+track HRVsi-6 HRV-6 Pi
+subtrack HRVsi-6 HRV-5 Pi
+subtrack HRVsi-5 HRV-6 Pi
 
 # Uxbridge branch
 
@@ -4558,13 +4605,19 @@ track WHD-mnb KIL-mnb Me
 track FRD-4 WHD-msb Me
 track FRD-1 WHD-mnb Me
 
-track Lords-sb FRD-4 Me
-track Lords-nb FRD-1 Me
+track XSC-1 FRD-4 Me
+track XSC-2 FRD-1 Me
 
-track BSTwest-sb Lords-sb Me
-track BSTwest-nb Lords-nb Me
-subtrack BSTwest-sb Lords-nb Me
-subtrack BSTwest-nb Lords-sb Me
+track XMR-1 XSC-1 Me
+track XMR-2 XSC-2 Me
+
+track XLO-1 XMR-1 Me
+track XLO-2 XMR-2 Me
+
+track BSTwest-sb XLO-1 Me
+track BSTwest-nb XLO-2 Me
+subtrack BSTwest-sb XLO-2 Me
+subtrack BSTwest-nb XLO-1 Me
 
 track BST-3 BSTwest-sb Me
 subtrack BST-4 BSTwest-sb Me
@@ -5457,7 +5510,6 @@ track SDC-2 HOX-2 Ov
 
 track ZWL-5 SDC-1 Ov
 track ZWL-6 SDC-2 Ov
-subtrack ZWL-6 XSD-1 Ov
 
 # WPE to ZWL in pre-fixes
 
