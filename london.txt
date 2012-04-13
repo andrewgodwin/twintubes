@@ -2897,6 +2897,10 @@ station SDC Shoreditch \n High Street 63.5,-33.5
 platform 1 N Ov L
 platform 2 N Ov R
 
+disstation XSD Shoreditch 60.5,-29.5
+label S
+platform 1 W Ov L
+
 station ZWL  70.5,-22.5
 platform 5 N Ov L
 platform 6 N Ov R
@@ -5261,7 +5265,9 @@ track CIR-1 CMD-1 Ov
 subtrack CIR-1 CMD-2 Ov
 
 track HHY-8 CIR-2 Ov
+track HHY-2 CIR-2 Ov
 track HHY-7 CIR-1 Ov
+subtrack HHY-8 CIR-2 Ov
 
 track CNN-4 HHY-8 Ov
 track CNN-3 HHY-7 Ov
@@ -5312,6 +5318,7 @@ track SDC-2 HOX-2 Ov
 
 track ZWL-5 SDC-1 Ov
 track ZWL-6 SDC-2 Ov
+subtrack ZWL-6 XSD-1 Ov
 
 # WPE to ZWL in pre-fixes
 
