@@ -1,4 +1,3 @@
-
 ### Lines ###
 
 line error ff00ff
@@ -425,7 +424,7 @@ label SW
 platform 2 NW No L
 platform 1 NW No R
 
-station TCR Tottenham \n Court Road 20.5,-25.0
+station TCR Tottenham \n Court Road 16.5,-25.0
 label SW
 label_offset 3,-2
 platform 3 N No R
@@ -1282,7 +1281,7 @@ platform 2 N Pi R
 
 station HOL Holborn 26.5,-25.0
 label SE
-label_offset -5,0
+label_offset -2,0
 platform 4 N Pi R
 platform 5 N Pi R
 platform 3 N Pi R
@@ -1553,17 +1552,17 @@ label S
 platform 2 E MePi L
 platform 1 E MePi R
 
-station ICK Ickenham -135.0,-77.0
+station ICK Ickenham -136.0,-78.5
+label NW
+platform 2 E MePi L
+platform 1 E MePi R
+
+station HDN Hillingdon -140.5,-76.0
 label NW
 platform 2 NE MePi L
 platform 1 NE MePi R
 
-station HDN Hillingdon -139.0,-73.0
-label NW
-platform 2 NE MePi L
-platform 1 NE MePi R
-
-station UXB Uxbridge -144.5,-67.5
+station UXB Uxbridge -146.0,-70.5
 label SE
 platform 4 NE MePi R
 platform 2,3 NE MePi B
@@ -1573,7 +1572,7 @@ waypoint UXBeast  UXB,1.5,-1.5
 platform eb NE
 platform wb NE
 
-depot UXBsi Uxbridge \n Sidings -145.0,-71.5
+depot UXBsi Uxbridge \n Sidings -146.5,-74.5
 label W
 platform road E MePi
 
@@ -1581,25 +1580,37 @@ platform road E MePi
 
 # West Ruislip Branch
 
-station WRP West Ruislip -131.0,-81.5
+station WRP West Ruislip -131.5,-82.0
 label N
+platform si S Ce N
 platform 1 S Ce L
 platform 2 S Ce R
 
-station RUG Ruislip \n Gardens -131.0,-72.5
+waypoint WRPsouth  WRP,0.5,3.0
+platform nb S
+platform sb S
+
+depot WRPdepot Ruislip \n Depot -132.0,-75.0
+label W
+platform road S Ce
+
+station RUG Ruislip \n Gardens -131.0,-71.0
 label E
 platform 1 S Ce L
 platform 2 S Ce R
 
-station SRP South Ruislip -131.0,-66.0
+station SRP South Ruislip -131.0,-64.5
 label E
 platform 1 S Ce L
 platform 2 S Ce R
 
-station NHT Northolt -129.5,-58.0
+station NHT Northolt -128.5,-57.0
 label SW
 platform 2 SE Ce R
 platform 1 SE Ce L
+
+sidings NHTsi  NHT,-2.0,-2.0
+platform mid SE Ce
 
 station GFD Greenford -123.5,-52.0
 label SW
@@ -1637,7 +1648,7 @@ platform wb E
 sidings EBYsi  EBY,4.0,0.0
 platform road E Di
 
-station WAC West Acton -104.5,-17.5
+station WAC West \n Acton -104.5,-17.5
 label S
 platform 2 E Ce L
 platform 1 E Ce R
@@ -1669,6 +1680,14 @@ platform 4 E Ce L
 waypoint WCTwest  WCT,-4.0,0.0
 platform wb E
 platform eb E
+
+sidings WCTsi  WCT,-5.5,0.0
+platform mid E Ce
+
+depot WCTdepot White City \n Sidings WCT,8.0,0.0
+label NE
+label_offset -23,0
+platform road E Ce
 
 waypoint WCTeast  WCT,4.0,0.0
 platform wb E
@@ -1707,6 +1726,17 @@ label S
 platform 2 E Ce R
 platform 1 E Ce L
 
+sidings MARsi  MAR,-3.0,0.0
+platform mid E Ce
+
+disstation XBM British \n Museum 22.0,-25.0
+label N
+platform 2 E Ce R
+platform 1 E Ce L
+
+sidings XBMsi  XBM,-3.0,0.0
+platform mid E Ce
+
 station CYL Chancery \n Lane 32.0,-25.0
 label N
 platform 2 E Ce L
@@ -1719,6 +1749,9 @@ platform 2 SE Ce L
 platform 1 SE Ce L
 
 # Liverpool St, Bank in other lines
+
+sidings LSTsi  54.0,-30.5
+platform mid NE Ce
 
 station BNG Bethnal \n Green 70.0,-31.0
 label N
@@ -1774,7 +1807,16 @@ platform 3 N Ce L
 platform 2 N Ce R
 platform 1 N Ce L
 
-station SNB Snaresbrook 109.5,-74.0
+waypoint LYSnorth  LYS,0.0,-3.0
+platform 3 N Ce
+platform 2 N Ce
+platform 1 N Ce
+
+waypoint LYSsouth  LYS,0.0,4.0
+platform nb N Ce
+platform sb N Ce
+
+station SNB Snaresbrook 109.5,-75.5
 label W
 platform 2 N Ce L
 platform 1 N Ce R
@@ -1789,6 +1831,9 @@ label W
 platform 3 N Ce L
 platform 2 N Ce R
 platform 1 N Ce L
+
+sidings WFDsi  WFD,2.0,0.0
+platform road N Ce
 
 station BHL Buckhurst Hill 109.5,-100.5
 label W
@@ -1806,57 +1851,91 @@ label NW
 platform 2 NE Ce L
 platform 1 NE Ce R
 
+waypoint DEBsi  DEB,2.0,-2.0
+platform mid NE Ce
+
 station THB Theydon Bois 120.5,-114.0
 label NW
 platform 2 NE Ce L
 platform 1 NE Ce R
 
-station EPP Epping 124.5,-118.0
+station EPP Epping 124.0,-117.5
 label NW
 platform 2 NE Ce L
 platform 1 NE Ce R
 
+disstation XNW North \n Weald 127.5,-121.0
+label NW
+platform 2 NE Ce L
+platform 1 NE Ce R
+
+waypoint XNWsouth  XNW,-2.0,2.0
+platform 1 NE Ce
+
+waypoint XNWnorth  XNW,1.5,-1.5
+platform 1 NE Ce
+
+disstation XBH Blake \n Hall 131.5,-123.5
+label N
+platform 1 E Ce L
+
+disstation XON Ongar 136.5,-123.5
+label N
+platform 3 E Ce R
+platform 2 E Ce R
+platform 1 E Ce L
+
+waypoint XONwest  XON,-3.0,0.0
+platform 1 E
+
 
 # Hainault Loop
 
-station WAN Wanstead 115.0,-70.0
+station WAN Wanstead 115.0,-71.0
 label S
 platform 2 E Ce R
 platform 1 E Ce L
 
-station RED Redbridge 121.5,-70.0
+station RED Redbridge 121.5,-71.0
 label N
 platform 2 E Ce R
 platform 1 E Ce L
 
-station GHL Gants \n Hill 128.5,-70.0
+station GHL Gants \n Hill 128.5,-71.0
 label S
 platform 2 E Ce R
 platform 1 E Ce L
 
-station NEP Newbury Park 132.5,-74.0
+station NEP Newbury \n Park 132.5,-74.5
+label E
+platform 2 N Ce L
+platform 1 N Ce R
+
+waypoint NEPsi  NEP,0.0,-3.0
+platform mid N Ce
+
+station BDE Barkingside 132.5,-79.5
 label W
 platform 2 N Ce L
 platform 1 N Ce R
 
-station BDE Barkingside 132.5,-80.0
+station FLP Fairlop 132.5,-83.5
 label W
 platform 2 N Ce L
 platform 1 N Ce R
 
-station FLP Fairlop 132.5,-86.0
-label W
-platform 2 N Ce L
-platform 1 N Ce R
-
-station HAI Hainault 132.0,-91.5
+station HAI Hainault 132.0,-88.5
 label W
 platform 3 N Ce R
 platform 2 N Ce L
 platform 1 N Ce R
 
-station GRH Grange Hill 127.5,-97.5
-label S
+depot HAIdepot Hainault \n Depot 131.0,-93.5
+label W
+platform road N Ce
+
+station GRH Grange \n Hill 127.5,-97.5
+label N
 platform 2 W Ce R
 platform 1 W Ce L
 
@@ -1960,17 +2039,17 @@ platform 3 NE CiDi L
 platform 2 NE CiDi R
 platform 1 NE CiDi L
 
-station ALD Aldgate 56.0,-21.5
+station ALD Aldgate 55.0,-21.5
 platform 4 N CiMe R
 platform 3 N CiMe L
 platform 2 N CiMe R
 platform 1 N CiMe L
 
-waypoint ALDnorth  ALD,-1.0,-6.0
+waypoint ALDnorth  ALD,-1.0,-5.0
 platform outer NW
 platform inner NW
 
-station LST Liverpool \nStreet 53.0,-29.5
+station LST Liverpool \nStreet 52.0,-28.5
 label W
 platform 1 NW CiHaMe R
 platform 2 NW CiHaMe L
@@ -2074,7 +2153,7 @@ label NW
 platform 1 SW CiHa R
 platform 2 SW CiHa L
 
-station WLN Wood \n Lane -65.0,-27.0
+station WLN Wood \n Lane -65.0,-30.5
 label E
 platform 1 S CiHa R
 platform 2 S CiHa L
@@ -4022,7 +4101,23 @@ subtrack WLOdepot-road WLO-25 Wa
 
 
 # Epping Branch
-#
+
+track XONwest-1 XON-1 Ce
+subtrack XONwest-1 XON-2 Ce
+subtrack XONwest-1 XON-3 Ce
+
+track XBH-1 XONwest-1 Ce
+
+track XNWnorth-1 XBH-1 Ce
+
+track XNW-1 XNWnorth-1 Ce
+subtrack XNW-2 XNWnorth-1 Ce
+
+track XNWsouth-1 XNW-1 Ce
+subtrack XNWsouth-1 XNW-2 Ce
+
+track EPP-1 XNWsouth-1 Ce
+
 track THB-1 EPP-1 Ce
 track THB-2 EPP-2 Ce
 subtrack THB-1 EPP-2 Ce
@@ -4030,6 +4125,9 @@ subtrack THB-2 EPP-1 Ce
 
 track DEB-2 THB-2 Ce
 track DEB-1 THB-1 Ce
+subtrack DEB-1 DEBsi-mid Ce
+subtrack DEB-2 DEBsi-mid Ce
+subtrack DEBsi-mid THB-2 Ce
 
 track LTN-4 DEB-2 Ce
 track LTN-1 DEB-1 Ce
@@ -4041,20 +4139,16 @@ subtrack BHL-1 LTN-2 Ce
 
 track WFD-2 BHL-1 Ce
 subtrack ROD-1 WFD-2! Ce
-track ROD-2 WFD-3! Ce
+subtrack ROD-2 WFD-3! Ce
 subtrack WFD-3 BHL-2 Ce
-
 
 track SWF-2 WFD-3 Ce
 track SWF-1 WFD-2 Ce
 subtrack SWF-1 WFD-1 Ce
+subtrack SWF-1 WFDsi-road Ce
 
 track SNB-2 SWF-2 Ce
 track SNB-1 SWF-1 Ce
-
-track LYS-3 SNB-2 Ce
-track LYS-2 SNB-1 Ce
-subtrack LYS-1 SNB-1 Ce
 
 # Hainault Loop
 
@@ -4069,6 +4163,10 @@ track HAI-1 GRH-2 Ce
 subtrack HAI-1 GRH-2 Ce
 subtrack HAI-2 GRH-1 Ce
 
+subtrack HAI-3 HAIdepot-road Ce
+subtrack HAI-1 HAIdepot-road Ce
+subtrack HAIdepot-road GRH-2 Ce
+
 track FLP-1 HAI-1 Ce
 track FLP-2 HAI-2 Ce
 subtrack FLP-2 HAI-3 Ce
@@ -4079,6 +4177,9 @@ track BDE-2 FLP-2 Ce
 
 track NEP-1 BDE-1 Ce
 track NEP-2 BDE-2 Ce
+subtrack NEP-1 NEPsi-mid Ce
+subtrack NEP-2 NEPsi-mid Ce
+subtrack NEPsi-mid BDE-2 Ce
 
 track GHL-2 NEP-2 Ce
 track GHL-1 NEP-1 Ce
@@ -4089,16 +4190,32 @@ track RED-1 GHL-1 Ce
 track WAN-1 RED-1 Ce
 track WAN-2 RED-2 Ce
 
-track LYS-3 WAN-2 Ce
-subtrack LYS-1 WAN-1 Ce
-subtrack LYS-2 WAN-1 Ce
+# Leytonstone
+
+track LYS-3 LYSnorth-3 Ce
+track LYS-2 LYSnorth-2 Ce
+track LYS-1 LYSnorth-1 Ce
+subtrack LYS-2 LYSnorth-1 Ce
+subtrack LYS-1 LYSnorth-2 Ce
+
+track LYSnorth-3 WAN-2 Ce
+track LYSnorth-1 WAN-1 Ce
+
+subtrack LYSnorth-3 SNB-2 Ce
+track LYSnorth-2 SNB-1 Ce
+subtrack LYSnorth-2 SNB-2 Ce
 
 # Central Section
 
-track LEY-2 LYS-3 Ce
-track LEY-1 LYS-1 Ce
-subtrack LEY-1 LYS-2 Ce
-subtrack LEY-2 LYS-2 Ce
+track LYSsouth-nb LYS-3 Ce
+track LYSsouth-sb LYS-1 Ce
+subtrack LYSsouth-sb LYS-2 Ce
+subtrack LYSsouth-nb LYS-2 Ce
+
+track LEY-2 LYSsouth-nb Ce
+track LEY-1 LYSsouth-sb Ce
+subtrack LEY-1 LYSsouth-nb Ce
+subtrack LEY-2 LYSsouth-sb Ce
 
 # SFD to MLE moved to fixes
 
@@ -4110,6 +4227,9 @@ track BNG-1 BNGeast-wb Ce
 
 track LST-4 BNG-2 Ce
 track LST-5 BNG-1 Ce
+subtrack LST-4 LSTsi-mid Ce
+subtrack LST-5 LSTsi-mid Ce
+subtrack LST-5 BNG-2 Ce
 
 track BNK-6 LST-4 Ce
 track BNK-5 LST-5 Ce
@@ -4123,8 +4243,13 @@ track CYL-2 STP-2 Ce
 track HOL-2 CYL-2 Ce
 track HOL-1 CYL-1 Ce
 
-track TCR-2 HOL-2 Ce
-track TCR-1 HOL-1 Ce
+track XBM-2 HOL-2 Ce
+track XBM-1 HOL-1 Ce
+
+track TCR-2 XBM-2 Ce
+track TCR-1 XBM-1 Ce
+subtrack XBMsi-mid XBM-2 Ce
+subtrack XBMsi-mid XBM-1 Ce
 
 track OXC-2 TCR-2 Ce
 track OXC-1 TCR-1 Ce
@@ -4137,10 +4262,12 @@ track MAR-2 BDS-2 Ce
 
 track LAN-1 MAR-1 Ce
 track LAN-2 MAR-2 Ce
+subtrack MARsi-mid MAR-1 Ce
+subtrack MARsi-mid MAR-2 Ce
 
 track QWY-1 LAN-1 Ce
 track QWY-2 LAN-2 Ce
-#subtrack QWY-2 LAN-1 Ce
+subtrack QWY-2 LAN-1 Ce
 
 track NHG-3 QWY-2 Ce
 track NHG-4 QWY-1 Ce
@@ -4152,6 +4279,8 @@ track HPK-1 NHG-4 Ce
 
 track WCTeast-eb SBC-2 Ce
 track WCTeast-wb SBC-1 Ce
+subtrack WCTeast-wb WCTdepot-road Ce
+subtrack WCTeast-eb WCTdepot-road Ce
 
 track WCT-1 WCTeast-wb Ce
 track WCT-4 WCTeast-eb Ce
@@ -4165,6 +4294,8 @@ subtrack WCTwest-wb WCT-2 Ce
 
 track EAC-2 WCTwest-eb Ce
 track EAC-1 WCTwest-wb Ce
+subtrack WCTsi-mid WCTwest-wb Ce
+subtrack WCTsi-mid WCTwest-eb Ce
 
 track NAC-1 EAC-1 Ce
 track NAC-3 EAC-2 Ce
@@ -4174,6 +4305,7 @@ subtrack NAC-2 EAC-2 Ce
 track NACwest-eb NAC-3 Ce
 track NACwest-wb NAC-1 Ce
 subtrack NACwest-wb NAC-2 Ce
+subtrack NACwest-eb NAC-2 Ce
 
 subtrack HLN-1 NACwest-wb Ce
 track WAC-2 NACwest-eb Ce
@@ -4201,15 +4333,22 @@ subtrack NHT-1 GFD-3 Ce
 
 track SRP-1 NHT-1 Ce
 track SRP-2 NHT-2 Ce
+subtrack NHTsi-mid NHT-1 Ce
+subtrack NHTsi-mid NHT-2 Ce
 
 track RUG-1 SRP-1 Ce
 track RUG-2 SRP-2 Ce
 
-track WRP-1 RUG-1 Ce
-track WRP-2 RUG-2 Ce
-subtrack WRP-1 RUG-2 Ce
-subtrack WRP-2 RUG-1 Ce
+track WRPsouth-nb RUG-1 Ce
+track WRPsouth-sb RUG-2 Ce
+subtrack WRPsouth-nb WRPdepot-road Ce
+subtrack WRPdepot-road RUG-1 Ce
 
+track WRP-1 WRPsouth-nb Ce
+track WRP-2 WRPsouth-sb Ce
+subtrack WRP-1 WRPsouth-sb Ce
+subtrack WRP-2 WRPsouth-nb Ce
+subtrack WRP-si WRPsouth-nb Ce
 
 ## Metropolitan Line
 
