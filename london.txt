@@ -36,7 +36,7 @@ line NR cccccc
 
 # Victoria line stations, south to north
 
-station WAL Walthamstow \n Central 91.0,-82.5
+station WAL Walthamstow \n Central 92.5,-82.5
 label N
 platform 1 E Vi R
 platform 2 E Vi L
@@ -45,7 +45,7 @@ sidings WALeast  WAL,2.0,0.0
 platform 1 E Vi
 platform 2 E Vi
 
-station BHR Blackhorse \n Road 81.0,-81.5
+station BHR Blackhorse \n Road 82.5,-81.5
 label N
 platform 1 E Vi R
 platform 2 E Vi L
@@ -500,12 +500,12 @@ label NE
 platform 2 NW No L
 platform 1 NW No R
 
-station OLD Old Street 44.0,-40.0
+station OLD Old Street 43.5,-39.5
 label E
 platform 1 N No R
 platform 2 N No L
 
-station BNK Bank 45.0,-21.5
+station BNK Bank 44.5,-21.5
 label SW
 label_offset -5,5
 platform 6 E Ce R
@@ -522,7 +522,7 @@ platform 9 S DLR R
 waypoint BNKdlrsi  BNK,1.0,2.0
 platform si S DLR
 
-station LON London Bridge 44.0,-2.5
+station LON London Bridge 43.5,-2.5
 label NE
 label_offset -3,3
 platform 2 N No R
@@ -958,30 +958,30 @@ label SW
 platform 2 NW Ju L
 platform 1 NW Ju R
 
-station CWR Canada \n Water 70.5,7.0
+station CWR Canada \n Water 72.0,7.0
 label SW
 label_offset -13,2
 platform 2 W Ju L
 platform 1 W Ju R
 
-station CWF  89.5,7.0
+station CWF  91.0,7.0
 label NE
 platform 2 W Ju L
 platform 1 W Ju R
 
-station NGW North \n Greenwich 104.5,2.5
+station NGW North \n Greenwich 106.0,2.5
 label SE
 platform 3 SW Ju R
 platform 2 SW Ju L
 platform 1 SW Ju R
 
 # Canning town, Jub platforms
-station CNT  109.0,-10.5
+station CNT  110.5,-10.5
 label NE
 platform 6 S Ju L
 platform 5 S Ju R
 
-station WHM West Ham 110.0,-29.5
+station WHM West Ham 111.5,-29.5
 label E
 label_offset -1,3
 platform 6 S Ju R
@@ -993,7 +993,7 @@ waypoint WHMnorth  WHM,-1.0,-5.0
 platform nb S
 platform sb S
 
-depot SFDdepot Stratford \n Depot 107.5,-39.0
+depot SFDdepot Stratford \n Depot 109.0,-39.0
 label W
 label_offset 3,-4
 platform road S Ju
@@ -1326,7 +1326,7 @@ label NW
 platform 1 NE Pi R
 platform 2 NE Pi L
 
-station BCT Barons \n Court -58.0,-1.0
+station BCT Barons \n Court -59.0,-1.0
 label S
 platform 4 E Di R
 platform 3 E Pi L
@@ -1337,6 +1337,9 @@ waypoint BCTeast  BCT,8.0,2.0
 platform eb E
 platform wb E
 
+waypoint BCTeast2  BCT,3.0,0.0
+platform wb NE
+
 waypoint BCTwestsi  BCT,-3.0,0.0
 platform mid E
 
@@ -1346,14 +1349,14 @@ platform 3 E
 platform 2 E
 platform 1 E
 
-station HMD Hammersmith -64.5,-1.0
+station HMD Hammersmith -66.0,-1.0
 label S
 platform 4 E Di R
 platform 3 E Pi L
 platform 2 E Pi R
 platform 1 E Di L
 
-station RCP Ravenscourt \n Park -71.0,-1.0
+station RCP Ravenscourt \n Park -71.5,-1.0
 label N
 platform 4 E Di R
 platform 3 E Pi N
@@ -1728,14 +1731,14 @@ platform fakeeb E
 platform fakewb E
 platform wb E
 
-station MLE Mile End 85.5,-31.0
+station MLE Mile End 87.0,-31.0
 label N
 platform 4 E Ce R
 platform 3 E DiHa L
 platform 2 E DiHa R
 platform 1 E Ce L
 
-station SFD Stratford 105.5,-46.0
+station SFD Stratford 107.0,-46.0
 label NW
 label_offset 0,15
 platform 16 NW DLR R
@@ -1760,55 +1763,55 @@ waypoint SFDsouth2  SFD,2.0,3.5
 platform sb SE
 platform nb SE
 
-station LEY Leyton 108.5,-56.5
+station LEY Leyton 110.0,-56.5
 label E
 platform 2 N Ce L
 platform 1 N Ce R
 
-station LYS Leytonstone 108.5,-66.0
+station LYS Leytonstone 110.0,-66.0
 label W
 platform 3 N Ce L
 platform 2 N Ce R
 platform 1 N Ce L
 
-station SNB Snaresbrook 108.0,-74.0
+station SNB Snaresbrook 109.5,-74.0
 label W
 platform 2 N Ce L
 platform 1 N Ce R
 
-station SWF South Woodford 108.0,-82.0
+station SWF South Woodford 109.5,-82.0
 label W
 platform 2 N Ce L
 platform 1 N Ce R
 
-station WFD Woodford 108.5,-90.5
+station WFD Woodford 110.0,-90.5
 label W
 platform 3 N Ce L
 platform 2 N Ce R
 platform 1 N Ce L
 
-station BHL Buckhurst Hill 108.0,-100.5
+station BHL Buckhurst Hill 109.5,-100.5
 label W
 platform 2 N Ce L
 platform 1 N Ce R
 
-station LTN Loughton 111.0,-106.0
+station LTN Loughton 112.5,-106.0
 label NW
 platform 4 NE Ce R
 platform 2 NE Ce B
 platform 1 NE Ce L
 
-station DEB Debden 115.0,-110.0
+station DEB Debden 116.5,-110.0
 label NW
 platform 2 NE Ce L
 platform 1 NE Ce R
 
-station THB Theydon Bois 119.0,-114.0
+station THB Theydon Bois 120.5,-114.0
 label NW
 platform 2 NE Ce L
 platform 1 NE Ce R
 
-station EPP Epping 123.0,-118.0
+station EPP Epping 124.5,-118.0
 label NW
 platform 2 NE Ce L
 platform 1 NE Ce R
@@ -1816,53 +1819,53 @@ platform 1 NE Ce R
 
 # Hainault Loop
 
-station WAN Wanstead 113.5,-70.0
+station WAN Wanstead 115.0,-70.0
 label S
 platform 2 E Ce R
 platform 1 E Ce L
 
-station RED Redbridge 120.0,-70.0
+station RED Redbridge 121.5,-70.0
 label N
 platform 2 E Ce R
 platform 1 E Ce L
 
-station GHL Gants \n Hill 127.0,-70.0
+station GHL Gants \n Hill 128.5,-70.0
 label S
 platform 2 E Ce R
 platform 1 E Ce L
 
-station NEP Newbury Park 131.0,-74.0
+station NEP Newbury Park 132.5,-74.0
 label W
 platform 2 N Ce L
 platform 1 N Ce R
 
-station BDE Barkingside 131.0,-80.0
+station BDE Barkingside 132.5,-80.0
 label W
 platform 2 N Ce L
 platform 1 N Ce R
 
-station FLP Fairlop 131.0,-86.0
+station FLP Fairlop 132.5,-86.0
 label W
 platform 2 N Ce L
 platform 1 N Ce R
 
-station HAI Hainault 130.5,-91.5
+station HAI Hainault 132.0,-91.5
 label W
 platform 3 N Ce R
 platform 2 N Ce L
 platform 1 N Ce R
 
-station GRH Grange Hill 126.0,-97.5
+station GRH Grange Hill 127.5,-97.5
 label S
 platform 2 W Ce R
 platform 1 W Ce L
 
-station CHG Chigwell 119.5,-97.5
+station CHG Chigwell 121.0,-97.5
 label N
 platform 2 W Ce R
 platform 1 W Ce L
 
-station ROD Roding \n Valley 112.0,-97.5
+station ROD Roding \n Valley 113.5,-97.5
 label S
 platform 2 W Ce R
 platform 1 W Ce L
@@ -1887,6 +1890,12 @@ platform 4 S
 platform 3 S
 platform 2 S
 platform 1 S
+
+sidings HSTsi  -38.0,-5.0
+platform road W Di
+
+sidings HSTsi2  -35.5,-2.0
+platform road S Di
 
 station BAY Bayswater -34.0,-33.5
 label E
@@ -1945,13 +1954,13 @@ label S
 platform 2 E CiDi L
 platform 1 E CiDi R
 
-station THL Tower \n Hill 53.5,-14.0
+station THL Tower \n Hill 53.0,-14.0
 label NW
 platform 3 NE CiDi L
 platform 2 NE CiDi R
 platform 1 NE CiDi L
 
-station ALD Aldgate 56.5,-21.5
+station ALD Aldgate 56.0,-21.5
 platform 4 N CiMe R
 platform 3 N CiMe L
 platform 2 N CiMe R
@@ -1961,14 +1970,14 @@ waypoint ALDnorth  ALD,-1.0,-6.0
 platform outer NW
 platform inner NW
 
-station LST Liverpool \nStreet 53.5,-29.5
+station LST Liverpool \nStreet 53.0,-29.5
 label W
 platform 1 NW CiHaMe R
 platform 2 NW CiHaMe L
 platform 4 NE Ce R
 platform 5 NE Ce L
 
-station MGT Moorgate 44.0,-31.5
+station MGT Moorgate 43.5,-31.5
 label NE
 label_offset -4,2
 platform 1 W CiHaMe R
@@ -2064,27 +2073,27 @@ label NW
 platform 1 SW CiHa R
 platform 2 SW CiHa L
 
-station WLN Wood \n Lane -64.5,-22.5
+station WLN Wood \n Lane -65.0,-22.5
 label E
 platform 1 S CiHa R
 platform 2 S CiHa L
 
-station SBM Shepherd's Bush \n Market -64.5,-17.0
+station SBM Shepherd's Bush \n Market -65.0,-17.0
 label W
 platform 1 S CiHa R
 platform 2 S CiHa L
 
-station GHR Goldhawk Road -64.5,-11.5
+station GHR Goldhawk Road -65.0,-11.5
 label W
 platform 1 S CiHa R
 platform 2 S CiHa L
 
-station HMS  -64.5,-4.0
+station HMS  -65.5,-4.0
 platform 1 S CiHa R
 platform 2 S CiHa L
 platform 3 S CiHa R
 
-waypoint HMSnorth  HMS,0.0,-3.0
+waypoint HMSnorth  HMS,0.5,-3.0
 platform nb S
 platform sb S
 
@@ -2092,32 +2101,38 @@ platform sb S
 
 # Upminster Branch
 
-station UPM Upminster 162.5,-70.5
+station UPM Upminster 166.5,-70.5
 label NW
 platform 5 NE Di R
 platform 4 NE Di L
 platform 3 NE Di R
 
+depot UPMdepot Upminster Depot 168.5,-72.5
+label SE
+platform 5 NE Di
+platform 4 NE Di
+platform 3 NE Di
+
 waypoint UPMwest  UPM,-1.5,1.5
 platform eb NE
 platform wb NE
 
-station UPB Upminster Bridge 159.0,-67.0
+station UPB Upminster Bridge 163.0,-67.0
 label NW
 platform 2 NE Di R
 platform 1 NE Di L
 
-station HCH Hornchurch 155.5,-63.5
+station HCH Hornchurch 159.5,-63.5
 label NW
 platform 2 NE Di L
 platform 1 NE Di R
 
-station EPK Elm Park 152.0,-60.0
+station EPK Elm Park 156.0,-60.0
 label NW
 platform 2 NE Di R
 platform 1 NE Di L
 
-station DGE Dagenham \n East 148.5,-56.5
+station DGE Dagenham East 152.5,-56.5
 label NW
 platform 3 NE Di R
 platform 2 NE Di L
@@ -2128,39 +2143,44 @@ waypoint DGEwest  DGE,-2.0,2.0
 platform eb NE
 platform wb NE
 
-station DGH Dagenham \n Heathway 145.0,-53.0
+station DGH Dagenham \n Heathway 149.0,-53.0
 label NW
 platform 2 NE Di R
 platform 1 NE Di L
 
-station BEC Becontree 141.5,-49.5
+station BEC Becontree 145.5,-49.5
 label NW
 platform 2 NE Di L
 platform 1 NE Di R
 
-station UPY Upney 139.0,-47.0
+station UPY Upney 142.0,-46.0
 label SE
 platform 2 NE Di R
 platform 1 NE Di L
 
-station BKG Barking 133.5,-44.5
+station BKG Barking 135.0,-44.5
 label N
-platform 1 W Ov N
+platform 1 W Ov L
 platform 1a,2 E DiHa B
-platform 3 E Ha R
+platform 3 E DiHa R
 platform 6 E DiHa L
 
-station EHM East Ham 127.5,-41.5
+depot BKGsi Barking \n Sidings 138.5,-44.0
+label S
+label_offset 0,7
+platform road E DiHa
+
+station EHM East Ham 129.0,-41.5
 label SE
 platform 2 NE DiHa L
 platform 1 NE DiHa R
 
-station UPK Upton Park 124.0,-38.0
+station UPK Upton Park 125.5,-38.0
 label SE
 platform 2 NE DiHa L
 platform 1 NE DiHa R
 
-station PLW Plaistow 119.5,-35.0
+station PLW Plaistow 121.0,-35.0
 label SE
 platform fake NE none N
 platform 1 NE DiHa R
@@ -2175,30 +2195,44 @@ station WHMdi  WHM,0.0,-1.5
 platform 2 E DiHa R
 platform 1 E DiHa L
 
-station BBB Bromley \n -by-Bow 103.5,-31.0
+waypoint WHMdisi  WHMdi,3.5,0.0
+platform mid E DiHa
+
+waypoint WHMdieast  WHMdi,5.5,0.0
+platform eb E
+platform wb E
+
+station BBB Bromley \n -by-Bow 105.0,-31.0
 label S
 platform 2 E DiHa L
 platform 1 E DiHa R
 
-station BWR Bow Road 93.0,-31.0
+station BWR Bow Road 94.5,-31.0
 label S
 platform 2 E DiHa L
 platform 1 E DiHa R
 
 # Mile End in Central
 
-station STG Stepney \n Green 78.5,-26.0
+station STG Stepney \n Green 80.0,-26.0
 label SE
 platform 2 NE DiHa L
 platform 1 NE DiHa R
 
-station WCL Whitechapel 69.0,-21.5
+station WCL Whitechapel 71.5,-21.5
 label SE
+label_offset -15,0
 platform 1 E DiHa R
 platform 2 E DiHa L
 
-station ALE Aldgate \n East 63.5,-21.5
+disstation STM St \n Mary's 67.5,-21.5
 label S
+label_offset 0,2
+platform 1 E DiHa R
+platform 2 E DiHa L
+
+station ALE Aldgate \n East 63.0,-21.5
+label N
 platform 2 E DiHa L
 platform 1 E DiHa R
 
@@ -2230,26 +2264,53 @@ platform 1 S Di L
 platform 2 S Ov R
 platform 3 S Ov L
 
+depot ECTdepot Lillie Bridge \n Depot -51.0,5.0
+platform road S Di
+
+waypoint ECTdepotway  ECTdepot,0.0,-6.0
+platform road S Di
+
 # Wimbledon Branch
 
 station WBT West Brompton -48.5,6.0
+label E
 platform 4 S Ov L
 platform 3 S Ov R
 platform 2 N Di L
 platform 1 N Di R
 
-station FBY Fulham Broadway -47.5,13.0
+station FBY Fulham Broadway -47.5,12.5
 platform 2 N Di L
 platform 1 N Di R
 
-station PGR Parsons Green -47.5,18.0
+station PGR Parsons Green -47.5,17.5
 platform 2 N Di L
 platform 1 N Di R
 
-station PUT Putney Bridge -47.5,23.0
+waypoint PGRsouth  PGR,0.0,2.5
+platform nb N
+platform sb N
+
+sidings PGRsi  PGR,-1.0,4.0
+platform road N Di
+
+sidings PGRsi2  PGR,1.0,4.0
+platform road N Di
+
+sidings PGRsi3  PGR,-1.0,-2.5
+platform road N Di
+
+sidings PGRsi4  PGR,1.0,-2.5
+platform road N Di
+
+station PUT Putney Bridge -47.5,24.0
 platform 1 N Di L
 platform 2 N Di R
 platform 3 N Di L
+
+waypoint PUTnorth  PUT,0.0,-2.0
+platform nb N
+platform sb N
 
 station EPY East Putney -48.0,28.0
 platform 1 N Di L
@@ -2275,9 +2336,9 @@ platform sb N
 
 # Richmond and Ealing branch
 
-station WKN West \n Kensington -52.5,-2.0
+station WKN West \n Kensington -53.5,-2.0
 label NW
-label_offset 27,0
+label_offset 34,0
 platform 2 E Di L
 platform 1 E Di R
 
@@ -2318,7 +2379,7 @@ waypoint TOGeast  TOG,2.5,0.5
 platform si SE
 platform 1,2 SE
 
-station SHA Shadwell 69.0,-8.5
+station SHA Shadwell 70.5,-8.5
 label NW
 label_offset 2,0
 platform 1 E DLR R
@@ -2328,12 +2389,12 @@ waypoint SHAwest  SHA,-3.0,0.0
 platform eb E
 platform wb E
 
-station LIM Limehouse 73.5,-8.5
+station LIM Limehouse 75.0,-8.5
 label S
 platform 3 E DLR L
 platform 4 E DLR R
 
-station WES Westferry 78.0,-8.5
+station WES Westferry 79.5,-8.5
 label N
 label_offset -2,0
 platform 1 E DLR L
@@ -2346,7 +2407,7 @@ platform 2 E
 waypoint WESeast2  WES,3.5,-1.5
 platform eb E
 
-station POP Poplar 90.0,-9.5
+station POP Poplar 91.5,-9.5
 label N
 platform 1 E DLR R
 platform 2 E DLR L
@@ -2372,19 +2433,19 @@ platform nb E
 platform sb E
 platform wb E
 
-depot POPdepot Poplar \n Depot 94.0,-13.5
+depot POPdepot Poplar \n Depot 95.5,-13.5
 label NW
 label_offset 5,5
 platform road SE DLR
 
 # Stratford International branch
 
-station SFI Stratford \n International 106.0,-52.5
+station SFI Stratford \n International 107.5,-52.5
 label NW
 platform 2 NE DLR R
 platform 1 NE DLR L
 
-station SHS Stratford \n High Street 111.0,-40.0
+station SHS Stratford \n High Street 112.5,-40.0
 label E
 platform 2 N DLR L
 platform 1 N DLR R
@@ -2394,19 +2455,19 @@ platform nb NW
 platform mid NW
 platform sb NW
 
-station ABR Abbey \n Road 111.0,-35.0
+station ABR Abbey \n Road 112.5,-35.0
 label E
 platform 2 N DLR L
 platform 1 N DLR R
 
-station STL Star Lane 111.0,-21.0
+station STL Star Lane 112.5,-21.0
 label E
 platform 2 N DLR R
 platform 1 N DLR L
 
 # Woolwich branch
 
-station WOA Woolwich Arsenal 143.5,10.0
+station WOA Woolwich Arsenal 145.0,10.0
 label S
 platform 4 W DLR L
 platform 3 W DLR R
@@ -2415,22 +2476,22 @@ waypoint WOAnorth  WOA,4.0,-4.0
 platform nb S
 platform sb S
 
-station KGV King \n George V 143.5,3.5
+station KGV King \n George V 145.0,3.5
 label N
 platform 1 E DLR R
 platform 2 E DLR L
 
-station LCA London City \n Airport 136.0,3.5
+station LCA London City \n Airport 137.5,3.5
 label S
 platform 1 E DLR R
 platform 2 E DLR L
 
-station PDK Pontoon \n Dock 129.5,3.5
+station PDK Pontoon \n Dock 131.0,3.5
 label N
 platform 1 E DLR L
 platform 2 E DLR R
 
-station WSTdlr West \n Silvertown 123.5,1.0
+station WSTdlr West \n Silvertown 125.0,1.0
 label SW
 platform 1 SE DLR L
 platform 2 SE DLR R
@@ -2441,16 +2502,16 @@ platform nb SE
 
 # Beckton branch
 
-station BECdlr Beckton 149.0,-19.0
+station BECdlr Beckton 150.5,-19.0
 label N
 platform 1 W DLR L
 platform 2 W DLR R
 
-depot BECdepot Beckton \n Depot 157.5,-13.0
+depot BECdepot Beckton \n Depot 159.0,-13.0
 label N
 platform road E DLR
 
-station GAR Gallions \n Reach 153.0,-8.5
+station GAR Gallions \n Reach 154.5,-8.5
 label W
 platform 1 N DLR L
 platform 2 N DLR R
@@ -2463,32 +2524,32 @@ waypoint GARnorth2  GAR,0.0,-6.5
 platform nb N
 platform sb N
 
-station CYP Cyprus 149.5,-4.5
+station CYP Cyprus 151.0,-4.5
 label S
 platform 1 E DLR L
 platform 2 E DLR R
 
-station BEP Beckton \n Park 144.5,-4.5
+station BEP Beckton \n Park 146.0,-4.5
 label N
 platform 1 E DLR L
 platform 2 E DLR R
 
-station ROAdlr Royal \n Albert 139.5,-4.5
+station ROAdlr Royal \n Albert 141.0,-4.5
 label S
 platform 1 E DLR L
 platform 2 E DLR R
 
-station PRR Prince \n Regent 134.5,-4.5
+station PRR Prince \n Regent 136.0,-4.5
 label N
 platform 1 E DLR R
 platform 2 E DLR L
 
-station CUH Custom \n House 129.5,-4.5
+station CUH Custom \n House 131.0,-4.5
 label S
 platform 3 E DLR R
 platform 4 E DLR L
 
-station ROV Royal \n Victoria 125.5,-5.0
+station ROV Royal \n Victoria 127.0,-5.0
 label N
 platform si E none N
 platform 1 E DLR L
@@ -2514,19 +2575,19 @@ platform wnb SE
 platform beb SE
 platform bwb SE
 
-station EAI East \n India 105.0,-11.5
+station EAI East \n India 106.5,-11.5
 label NW
 platform 1 NE DLR L
 platform 2 NE DLR R
 
-station BLA Blackwall 99.5,-8.5
+station BLA Blackwall 101.0,-8.5
 label S
 platform 1 E DLR L
 platform 2 E DLR R
 
 # Stratford branch
 
-station ALS All Saints 97.0,-17.5
+station ALS All Saints 98.5,-17.5
 label E
 platform 1 N DLR L
 platform 2 N DLR R
@@ -2535,16 +2596,16 @@ waypoint ALSsouth  ALS,0.0,3.0
 platform nb N
 platform sb N
 
-station LAP Langdon Park 97.0,-21.5
+station LAP Langdon Park 98.5,-21.5
 platform 1 N DLR L
 platform 2 N DLR R
 
-station DER Devons Road 97.0,-25.5
+station DER Devons Road 98.5,-25.5
 label E
 platform 1 N DLR L
 platform 2 N DLR R
 
-station BOC Bow Church 97.0,-33.0
+station BOC Bow Church 98.5,-33.0
 label E
 label_offset 0,-6
 platform 1 N DLR L
@@ -2553,7 +2614,7 @@ platform 2 N DLR R
 waypoint BOCnorth  BOC,0.0,-2.5
 platform nbsb N
 
-station PML Pudding \n Mill Lane 99.0,-39.0
+station PML Pudding \n Mill Lane 100.5,-39.0
 label SE
 label_offset -4,3
 platform 1 NE DLR R
@@ -2570,31 +2631,31 @@ platform nbsb NE
 
 # Lewisham branch
 
-station WIQ West India Quay 86.5,1.0
+station WIQ West India Quay 88.0,1.0
 label E
 platform 4 S DLR L
 platform 3 S DLR R
 platform 2 S DLR L
 platform 1 S DLR N
 
-station CAW Canary Wharf 86.5,7.0
+station CAW Canary Wharf 88.0,7.0
 label NE
 label_offset 0,6
 platform 5,6 S DLR B
 platform 3,4 S DLR B
 platform 1,2 S DLR B
 
-station HEQ Heron Quays 86.0,11.5
+station HEQ Heron Quays 87.5,11.5
 platform 2 S DLR R
 platform 1 S DLR L
 
-station SOQ South Quay 91.0,15.0
+station SOQ South Quay 92.5,15.0
 label N
 label_offset 10,0
 platform 1 E DLR L
 platform 2 E DLR R
 
-station CRO Crossharbour 94.5,18.5
+station CRO Crossharbour 96.0,18.5
 platform 2 S DLR R
 platform 1 S DLR L
 
@@ -2605,7 +2666,7 @@ waypoint CROsouth2  CRO,0.0,4.5
 platform nb S
 platform sb S
 
-station MUD Mudchute 94.0,27.5
+station MUD Mudchute 95.5,27.5
 platform 3 S DLR L
 platform 2 S DLR R
 platform 1 S DLR L
@@ -2614,29 +2675,29 @@ waypoint MUDnorth  MUD,0.5,-3.0
 platform nb S
 platform sb S
 
-station ISG Island Gardens 94.5,32.5
+station ISG Island Gardens 96.0,32.5
 platform 2 S DLR L
 platform 1 S DLR R
 
-station CUS Cutty Sark 94.5,37.5
+station CUS Cutty Sark 96.0,37.5
 platform 2 S DLR L
 platform 1 S DLR R
 
-station GRE Greenwich 91.0,41.0
+station GRE Greenwich 92.5,41.0
 label S
 label_offset 10,0
 platform 3 W DLR R
 platform 4 W DLR L
 
-station DEBdlr Deptford Bridge 87.5,44.5
+station DEBdlr Deptford Bridge 89.0,44.5
 platform 2 S DLR R
 platform 1 S DLR L
 
-station ELR Elverson Road 87.5,49.5
+station ELR Elverson Road 89.0,49.5
 platform 2 S DLR R
 platform 1 S DLR L
 
-station LEW Lewisham 87.5,54.5
+station LEW Lewisham 89.0,54.5
 platform 6 S DLR L
 platform 5 S DLR R
 
@@ -2786,17 +2847,17 @@ label N
 platform 2 W Ov R
 platform 1 W Ov L
 
-station HKC Hackney \n Central 74.0,-52.0
+station HKC Hackney \n Central 75.5,-52.0
 label NE
 platform 2 NW Ov R
 platform 1 NW Ov L
 
-station HMN Homerton 80.5,-45.0
+station HMN Homerton 82.0,-45.0
 label SW
 platform 2 NW Ov R
 platform 1 NW Ov L
 
-station HKW Hackney \n Wick 91.0,-43.0
+station HKW Hackney \n Wick 92.5,-43.0
 label N
 platform 2 W Ov R
 platform 1 W Ov L
@@ -2826,33 +2887,33 @@ station SDC Shoreditch \n High Street 63.5,-33.5
 platform 1 N Ov L
 platform 2 N Ov R
 
-station ZWL  69.0,-24.0
+station ZWL  70.5,-22.5
 platform 5 N Ov L
 platform 6 N Ov R
 
-station SDE  69.0,-9.5
+station SDE  70.5,-9.5
 platform 1 N Ov L
 platform 2 N Ov R
 
-station WPE Wapping 69.0,-3.0
+station WPE Wapping 70.5,-3.0
 label E
 platform 1 N Ov L
 platform 2 N Ov R
 
-station ROE Rotherhithe 69.0,2.0
+station ROE Rotherhithe 70.5,2.0
 label E
 platform 1 N Ov L
 platform 2 N Ov R
 
-station ZCW  69.0,7.0
+station ZCW  70.5,7.0
 platform 4 N Ov L
 platform 3 N Ov R
 
-station SQE Surrey Quays 69.0,13.0
+station SQE Surrey Quays 70.5,13.0
 platform 1 N Ov L
 platform 2 N Ov R
 
-station NWX New Cross 69.5,22.0
+station NWX New Cross 71.0,22.0
 label E
 platform D N Ov L
 
@@ -2937,27 +2998,27 @@ waypoint STOeast  STO,6.0,0.0
 platform eb W
 platform wb W
 
-station WMW Walthamstow \n Queen's Road 90.5,-73.0
+station WMW Walthamstow \n Queen's Road 92.0,-73.0
 label SW
 platform 2 NW Ov R
 platform 1 NW Ov L
 
-station LEM Leyton \n Midland Road 102.0,-63.5
+station LEM Leyton \n Midland Road 103.5,-63.5
 label S
 platform 2 W Ov R
 platform 1 W Ov L
 
-station LER Leytonstone \n High Road 115.0,-60.0
+station LER Leytonstone \n High Road 116.5,-60.0
 label NE
 platform 2 NW Ov R
 platform 1 NW Ov L
 
-station WNP Wanstead \n Park 120.0,-55.0
+station WNP Wanstead \n Park 121.5,-55.0
 label NE
 platform 2 NW Ov R
 platform 1 NW Ov L
 
-station WGR Woodgrange \n Park 125.5,-49.5
+station WGR Woodgrange \n Park 127.0,-49.5
 label SW
 platform 2 NW Ov R
 platform 1 NW Ov L
@@ -4369,6 +4430,10 @@ subtrack ALDnorth-inner! ALE-1 Ha
 
 # Upminster Branch
 
+track UPM-5 UPMdepot-5 Di
+track UPM-4 UPMdepot-4 Di
+track UPM-3 UPMdepot-3 Di
+
 track UPMwest-eb UPM-5 Di
 track UPMwest-wb UPM-3 Di
 subtrack UPMwest-eb UPM-4 Di
@@ -4405,9 +4470,13 @@ track UPY-1 BEC-1 Di
 
 track BKG-1a,2 UPY-2 Di
 track BKG-6 UPY-1 Di
+subtrack BKG-1a,2 BKGsi-road Di
+subtrack BKG-6 BKGsi-road Di
+subtrack BKGsi-road UPY-2 Di
+subtrack BKGsi-road UPY-1 Di
 
-subtrack EHM-2 BKG-3 Ha
-subtrack EHM-1 BKG-3 Ha
+subtrack EHM-2 BKG-3 DiHa
+subtrack EHM-1 BKG-3 DiHa
 subtrack EHM-2 BKG-1a,2 Di
 subtrack EHM-1 BKG-1a,2 Di
 subtrack EHM-1 BKG-6 Di
@@ -4429,9 +4498,15 @@ track STG-1 MLE-2 DiHa
 
 track WCL-1 STG-2 DiHa
 track WCL-2 STG-1 DiHa
+subtrack WCL-2 STG-2 DiHa
 
-track ALE-2 WCL-1 DiHa
-track ALE-1 WCL-2 DiHa
+track STM-1 WCL-1 DiHa
+track STM-2 WCL-2 DiHa
+subtrack STM-2 WCL-1 DiHa
+
+track ALE-2 STM-1 DiHa
+track ALE-1 STM-2 DiHa
+subtrack ALE-1 STM-1 DiHa
 
 subtrack THL-3 ALE-2 Di
 subtrack THL-1 ALE-1 Di
@@ -4442,6 +4517,8 @@ track HST-4 HSTsouth-4 Di
 track HST-3 HSTsouth-3 Di
 subtrack HST-4 HSTsouth-3 Di
 subtrack HST-3 HSTsouth-4 Di
+
+subtrack HSTsouth-4 HSTsi-road Di
 
 track ECT-1 ECTeast-1 Di
 track ECT-2 ECTeast-2 Di
@@ -4455,10 +4532,14 @@ subtrack ECT-4 ECTeast-3 Di
 subtrack ECTeast-1 HSTsouth-4! Di
 subtrack ECTeast-1 HSTsouth-2! Di
 
-track ECTeast-4 HSTsouth-3! Di
+subtrack ECTeast-4 HSTsouth-3! Di
 subtrack ECTeast-4 HSTsouth-1! Di
+
+subtrack HSTsouth-3 HSTsi2-road Di
+
 track ECTeast-2 GRD-3 Di
 track ECTeast-3 GRD-1 Di
+
 
 # West of ECT faffing
 
@@ -4476,6 +4557,11 @@ subtrack WKN-1 ECTwest-3 Di
 subtrack OLY-1 ECTwest-1 Di
 track WBT-2 ECTwest-2 Di
 
+subtrack WKN-2 ECTdepotway-road Di
+subtrack OLY-1 ECTdepotway-road Di
+
+track ECTdepotway-road ECTdepot-road Di
+
 # Winbledon branch
 
 track FBY-2 WBT-2 Di
@@ -4483,11 +4569,23 @@ track FBY-1 WBT-1 Di
 
 track PGR-2 FBY-2 Di
 track PGR-1 FBY-1 Di
+subtrack PGR-2 PGRsi3-road Di
+subtrack PGR-1 PGRsi4-road Di
 
-track PUT-1 PGR-2 Di
-track PUT-3 PGR-1 Di
-subtrack PUT-2 PGR-1 Di
-subtrack PUT-2 PGR-2 Di
+track PGRsouth-nb PGR-2 Di
+track PGRsouth-sb PGR-1 Di
+subtrack PGRsouth-nb PGR-1 Di
+subtrack PGRsouth-sb PGR-2 Di
+
+track PUTnorth-nb PGRsouth-nb Di
+track PUTnorth-sb PGRsouth-sb Di
+subtrack PGRsi-road PGRsouth-nb Di
+subtrack PGRsi2-road PGRsouth-sb Di
+
+track PUT-1 PUTnorth-nb Di
+track PUT-3 PUTnorth-sb Di
+subtrack PUT-2 PUTnorth-sb Di
+subtrack PUT-2 PUTnorth-nb Di
 
 track EPY-1 PUT-1 Di
 track EPY-2 PUT-3 Di
@@ -4495,6 +4593,7 @@ subtrack EPY-2 PUT-1 Di
 
 track SFS-1 EPY-1 Di
 track SFS-2 EPY-2 Di
+subtrack SFS-2 EPY-1 Di
 
 track WMP-1 SFS-1 Di
 track WMP-2 SFS-2 Di
@@ -4512,7 +4611,10 @@ subtrack WDN-3 WDNnorth-sb Di
 # Richmond + Ealing branch
 
 track BCT-4 WKN-2 Di
-track BCT-1 WKN-1 Di
+track BCTeast2-wb WKN-1 Di
+subtrack BCTeast2-wb WKN-2 Di
+
+track BCT-1 BCTeast2-wb Di
 
 subtrack HMD-4 BCT-4 Di
 subtrack HMD-1 BCT-1 Di
@@ -4723,6 +4825,7 @@ track SSQ-2 VIC-2 CiDi
 
 track SKN-1 SSQ-1 CiDi
 track SKN-2 SSQ-2 CiDi
+subtrack SKN-1 SSQ-2 CiDi
 
 track GRD-3 SKN-2 CiDi
 track GRD-1 SKN-1 Di
@@ -4733,6 +4836,7 @@ track HST-2 HSTsouth-2 Ci
 
 subtrack HSTsouth-1 GRD-3 Ci
 subtrack HSTsouth-2 GRD-2 Ci
+subtrack HSTsouth-2 GRD-3 Ci
 
 track NHG-1 HST-1 CiDi
 track NHG-2 HST-2 CiDi
@@ -5296,9 +5400,16 @@ track PRT-1 PRY-1 Pi
 
 # District fixes
 
-track WHMdi-2 PLWwest-eb DiHa
-track WHMdi-1 PLWwest-wb DiHa
-subtrack WHMdi-1 PLWwest-eb DiHa
+track WHMdieast-eb PLWwest-eb DiHa
+track WHMdieast-wb PLWwest-wb DiHa
+subtrack WHMdieast-wb PLWwest-eb DiHa
+
+track WHMdi-2 WHMdieast-eb DiHa
+track WHMdi-1 WHMdieast-wb DiHa
+subtrack WHMdi-2 WHMdisi-mid DiHa
+subtrack WHMdi-1 WHMdisi-mid DiHa
+subtrack WHMdisi-mid WHMdieast-eb DiHa
+subtrack WHMdisi-mid WHMdieast-wb DiHa
 
 track BBB-2 WHMdi-2 DiHa
 track BBB-1 WHMdi-1 DiHa
