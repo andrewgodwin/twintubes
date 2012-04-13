@@ -105,8 +105,8 @@ label_offset 20,0
 platform 4 E Vi R
 platform 3 E Vi L
 # southbound on top
-platform 8 E No R
-platform 7 E No L
+platform 8 W No R
+platform 7 W No L
 # pic
 platform 6 NE Pi R
 platform 5 NE Pi L
@@ -123,10 +123,10 @@ label N
 platform 1 E No R
 platform 2 E No L
 # City branch and Victoria
-platform 6 E No R
+platform 6 W No L
 platform 5 E Vi L
 platform 4 E Vi R
-platform 3 E No L
+platform 3 W No R
 
 waypoint EUSnorth  EUS,-4.5,-2.5
 platform nb N
@@ -207,39 +207,58 @@ platform 2 NW Vi
 
 # High Barnet branch
 
-station HBT High Barnet 27.5,-118.5
-label E
+station HBT High Barnet 27.5,-125.0
+label W
 platform 1 N No L
 platform 2 N No R
 platform 3 N No L
 
-waypoint HBTsouth  HBT,0.0,2.0
+depot HBTdepot High Barnet \n Sidings 30.5,-122.5
+label E
+platform road E No
+
+waypoint HBTsouth  HBT,0.0,4.0
 label E
 platform nb N
 platform sb N
 
-station TOT Totteridge & \n Whetstone 27.5,-113.5
+station TOT Totteridge & \n Whetstone 27.5,-118.0
 label E
 platform 1 N No L
 platform 2 N No R
 
-station WSP Woodside Park 27.5,-108.5
+station WSP Woodside Park 27.5,-113.5
 label E
 platform 1 N No L
 platform 2 N No R
 
-station WFY West Finchley 27.5,-103.5
+station WFY West Finchley 27.5,-109.5
 label E
 platform 1 N No L
 platform 2 N No R
 
-station MHE Mill Hill East 23.0,-104.0
+station MHE Mill Hill East 23.5,-109.5
 platform 1 NW No R
 
-station FYC Finchley Central 27.0,-98.5
+station FYC Finchley Central 27.0,-101.0
 platform 1 N No R
 platform 2 N No L
 platform 3 N No R
+
+sidings FYCsi  FYC,0.5,2.5
+platform mid N No
+
+sidings FYCsi2  FYC,-0.5,-4.5
+platform mid N No
+
+waypoint FYCsouth  FYC,0.5,3.5
+platform nb N
+platform sb N
+
+waypoint FYCnorth  FYC,0.0,-3.0
+platform 1 N
+platform 2 N
+platform 3 N
 
 station EFY East Finchley 27.5,-92.5
 platform 1 N No R
@@ -247,11 +266,18 @@ platform 2 N No L
 platform 3 N No R
 platform 4 N No L
 
+sidings EFYsi  EFY,0.0,-3.0
+platform mid N No
+
 waypoint EFYnorth  EFY,0.0,-3.0
 platform nb N
 platform sb N
 
-station HIG Highgate 27.5,-87.5
+depot HIGsi Highgate \n Sidings EFY,1.5,4.5
+label E
+platform road N No
+
+station HIG Highgate 27.5,-88.0
 platform 1 N No R
 platform 2 N No L
 
@@ -260,15 +286,24 @@ label W
 platform 1 N No R
 platform 2 N No L
 
+sidings ARCsi  ARC,0.0,-3.0
+platform mid N No
+
 station TPK Tuffnell \n Park 27.5,-78.0
 label E
 platform 1 N No R
 platform 2 N No R
 
-station KTN Kentish Town 25.0,-72.5
+station KTN Kentish Town 25.5,-72.5
 label SE
 platform 2 NE No R
 platform 1 NE No R
+
+disstation SKW South \n Kentish Town 22.5,-69.5
+label SE
+label_offset 5,0
+platform 1 NE No R
+platform 2 NE No R
 
 # Edgware branch
 
@@ -325,7 +360,7 @@ platform 1 NW No R
 
 # Main bit
 
-station CTN Camden Town 18.5,-66.0
+station CTN Camden Town 18.5,-65.0
 # Edgware branch
 platform 1 N No R
 platform 2 N No R
@@ -365,7 +400,7 @@ label SW
 platform 2 NW No L
 platform 1 NW No R
 
-station TCR Tottenham \n Court Road 19.5,-25.0
+station TCR Tottenham \n Court Road 20.5,-25.0
 label SW
 label_offset 3,-2
 platform 3 N No R
@@ -373,7 +408,7 @@ platform 4 N No L
 platform 2 E Ce R
 platform 1 E Ce L
 
-station LSQ Leicester Square 19.5,-16.5
+station LSQ Leicester Square 20.5,-16.0
 label E
 label_offset -4,4
 platform 4 N No R
@@ -381,46 +416,64 @@ platform 3 N No L
 platform 2 NE Pi R
 platform 1 NE Pi L
 
-station CHX Charing \n Cross 20.5,-9.0
-platform 5 N No R
-platform 6 N No L
+station CHX Charing \n Cross 19.5,-9.5
+label W
+label_offset 0,-4
 platform 3 N Ba R
 platform 4 N Ba L
+platform 5 N No R
+platform 6 N No L
 
-station EMB Embankment 20.5,-4.0
+station EMB Embankment 19.5,-3.5
 label W
-label_offset 3,0
-platform 3 N No L
-platform 4 N No L
+label_offset 1,-7
 platform 5 N Ba L
 platform 6 N Ba R
+platform 3 N No L
+platform 4 N No L
 
-station EMBcnc  EMB,-0.5,3.0
+station EMBcnc  EMB,-0.5,2.5
 platform 2 E CiDi L
 platform 1 E CiDi R
 
-station WLO Waterloo 21.5,5.5
+station WLO Waterloo 20.5,4.5
 label SW
 label_offset 0,-4
 platform 6 W Ju R
 platform 5 W Ju L
-platform 1 N No R
-platform 2 N No L
 platform 3 N Ba R
 platform 4 N Ba R
+platform 1 N No R
+platform 2 N No L
 platform 25 N Wa L
 platform 26 N Wa R
 
-depot WLOdepot Waterloo \n Depot 23.5,9.0
+depot WLOdepot Waterloo Depot 22.5,7.5
 label E
 platform road N Wa
 
 # City branch
 
+waypoint KXXwest  KXX,-4.0,0.0
+platform eb W
+platform wb W
+
+waypoint KXXwest2  KXX,-6.0,0.0
+platform eb W
+platform wb W
+
+waypoint KXXcross  KXX,-3.0,1.0
+platform road W
+
 station ANG Angel 36.0,-45.0
 label S
 platform 1 W No L
 platform 2 W No R
+
+disstation CTR City Road 42.5,-43.5
+label NE
+platform 2 NW No L
+platform 1 NW No R
 
 station OLD Old Street 44.0,-40.0
 label E
@@ -452,12 +505,12 @@ platform 1 N No L
 platform 4 W Ju L
 platform 3 W Ju R
 
-station BOR Borough 40.5,9.5
+station BOR Borough 40.5,12.0
 label SE
 platform 2 NE No L
 platform 1 NE No L
 
-station ELE Elephant & Castle 31.0,19.0
+station ELE Elephant & Castle 32.0,20.0
 draw last
 label E
 platform 1 NE No L
@@ -482,13 +535,11 @@ waypoint KENsouth  KEN,-2.0,2.0
 platform nb NE
 platform sb NE
 
-waypoint KENsi  KEN,3.0,4.5
-platform nb NE
-platform si NE
-platform sb NE
+waypoint KENsi  KEN,-3.0,3.0
+platform mid NE
 
-station OVL Oval STK,2.5,-5.0
-label NW
+station OVL Oval STK,2.0,-4.5
+label SE
 platform 3 NE No L
 platform 4 NE No L
 
@@ -522,6 +573,9 @@ label NW
 platform 1 NE No R
 platform 2 NE No L
 
+sidings TBYsi  TBY,-2.0,2.0
+platform mid NE No
+
 station CLW Colliers Wood -12.5,57.0
 label NW
 platform 1 NE No R
@@ -541,6 +595,11 @@ platform 2 NE No B
 waypoint MORnorth  MOR,1.5,-1.5
 platform nb NE
 platform sb NE
+
+depot MORdepot Morden Depot -22.5,67.5
+label NW
+platform road1 NE No
+platform road2 NE No
 
 # Bakerloo line stations
 
@@ -700,18 +759,19 @@ platform 1 W Ba L
 platform 3 E Pi R
 platform 4 E Pi L
 
-station LAM Lambeth \n North 26.5,14.5
+station LAM Lambeth North 24.0,12.0
 label NE
+label_offset -2,2
 platform 2 NW Ba R
 platform 1 NW Ba L
 
-waypoint LAMnorth  LAM,-5.0,-6.0
-platform nb N
-platform sb N
+waypoint LAMnorth  LAM,-4.0,-4.0
+platform sb NW
+platform nb NW
 
-depot LAMdepot London Road \n Depot 25.5,16.5
-label SW
-label_offset 32,3
+depot LAMdepot London Road \n Depot 25.0,17.0
+label S
+label_offset 0,-2
 platform road NW Ba
 
 ### Jubilee line stations
@@ -839,13 +899,17 @@ waypoint GPKsouth  GPK,4.0,4.0
 platform sb NW
 platform nb NW
 
-waypoint GPKsi  GPK,10.0,6.0
+waypoint GPKsi  GPK,12.5,6.5
 platform 1 W
 platform 2 W
 
-waypoint GPKsi2  GPK,14.0,6.0
-platform 1 W
-platform 2 W
+disstation GPKsi2  GPK,22.5,6.5
+platform 1 W Ju L
+platform 2 W Ju R
+
+sidings GPKsi3  GPK,24.5,6.5
+platform 1 W Ju
+platform 2 W Ju
 
 station WMS Westminster 11.5,-1.0
 label SW
@@ -855,7 +919,7 @@ platform 4 NW Ju R
 platform 2 E CiDi L
 platform 1 E CiDi R
 
-station SWK Southwark 32.5,4.0
+station SWK Southwark 32.5,3.0
 label NW
 platform 2 SW Ju L
 platform 1 SW Ju R
@@ -1204,7 +1268,7 @@ disstation ALW Aldwych 31.0,-18.5
 label NE
 platform 1 NW Pi L
 
-station COV Covent \n Garden 23.5,-20.5
+station COV Covent \n Garden 24.0,-19.5
 label SE
 platform 2 NE Pi R
 platform 1 NE Pi L
@@ -2904,6 +2968,8 @@ track SBC-1 HPK-1 Ce
 track SPBnorth-nb SPB-2 Ov
 track SPBnorth-sb SPB-1 Ov
 
+track KXX-6! KXXcross-road No
+
 
 ## Jubilee Line
 
@@ -2972,6 +3038,9 @@ track GPKsi2-1 GPKsi-1 Ju
 track GPKsi2-2 GPKsi-2 Ju
 subtrack GPKsi2-1 GPKsi-2 Ju
 subtrack GPKsi2-2 GPKsi-1 Ju
+
+track GPKsi3-1 GPKsi2-1 Ju
+track GPKsi3-2 GPKsi2-2 Ju
 
 track WLO-5 WMS-4 Ju
 track WLO-6 WMS-3 Ju
@@ -3107,7 +3176,7 @@ track YRD-2 CRD-2 Pi
 track KXX-6 YRD-1 Pi
 track KXX-5 YRD-2 Pi
 
-track RSQ-1 KXX-6 Pi
+subtrack RSQ-1 KXX-6 Pi
 track RSQ-2 KXX-5 Pi
 #subtrack RSQ-2 KXX-6 Pi
 
@@ -3401,6 +3470,8 @@ track HBTsouth-nb HBT-1 No
 subtrack HBTsouth-nb HBT-2 No
 subtrack HBTsouth-sb HBT-2 No
 subtrack HBTsouth-sb HBT-3 No
+subtrack HBTsouth-sb HBTdepot-road No
+subtrack HBT-3! HBTdepot-road No
 
 track TOT-1 HBTsouth-nb No
 track TOT-2 HBTsouth-sb No
@@ -3414,28 +3485,45 @@ subtrack WSP-2 TOT-1 No
 track WFY-1 WSP-1 No
 track WFY-2 WSP-2 No
 
-track FYC-2 WFY-1 No
-track FYC-3 WFY-2 No
+subtrack FYCnorth-1 MHE-1 No
+subtrack FYCnorth-2 MHE-1 No
+subtrack FYCnorth-2 WFY-1 No
+subtrack FYCnorth-3 WFY-2 No
+subtrack FYCnorth-1 FYCsi2-mid No
+subtrack FYCnorth-2 FYCsi2-mid No
 
-track FYC-1 MHE-1 No
-track FYC-2 WFY-1 No
-subtrack FYC-2 MHE-1 No
-subtrack FYC-3 MHE-1 No
+track FYC-1 FYCnorth-1 No
+track FYC-2 FYCnorth-2 No
+track FYC-3 FYCnorth-3 No
+subtrack FYC-2 FYCnorth-1 No
+subtrack FYC-3 FYCnorth-2 No
 
-track EFYnorth-nb FYC-1 No
-subtrack EFYnorth-nb FYC-2 No
-track EFYnorth-sb FYC-3 No
+track FYCsouth-nb FYC-1 No
+subtrack FYCsouth-nb FYC-2 No
+track FYCsouth-sb FYC-3 No
+subtrack FYCsi-mid FYC-2 No
+subtrack FYCsi-mid FYC-3 No
+
+track EFYnorth-nb FYCsouth-nb No
+track EFYnorth-sb FYCsouth-sb No
+subtrack EFYnorth-sb FYCsouth-nb No
 
 track EFY-4 EFYnorth-sb No
 subtrack EFY-3 EFYnorth-sb No
 track EFY-1 EFYnorth-nb No
 subtrack EFY-2 EFYnorth-nb No
+subtrack EFY-2 EFYsi-mid No
+subtrack EFY-3 EFYsi-mid No
 
+subtrack HIGsi-road EFY-2 No
+subtrack HIGsi-road EFY-3 No
 track HIG-2 EFY-4 No
 track HIG-1 EFY-1 No
 
 track ARC-2 HIG-2 No
 track ARC-1 HIG-1 No
+subtrack ARC-1 ARCsi-mid No
+subtrack ARC-2 ARCsi-mid No
 
 track TPK-2 ARC-2 No
 track TPK-1 ARC-1 No
@@ -3443,8 +3531,11 @@ track TPK-1 ARC-1 No
 track KTN-2 TPK-2 No
 track KTN-1 TPK-1 No
 
-track CTN-4 KTN-2 No
-track CTN-3 KTN-1 No
+track SKW-2 KTN-2 No
+track SKW-1 KTN-1 No
+
+track CTN-4 SKW-2 No
+track CTN-3 SKW-1 No
 
 # Edgware branch
 
@@ -3512,8 +3603,8 @@ subtrack MCRnorth-sb CTNsouth2-3 No
 track EUSnorth-nb CTNsouth2-5 No
 track EUSnorth-sb CTNsouth2-2 No
 
-track EUS-3! EUSnorth-nb No
-track EUS-6! EUSnorth-sb No
+track EUS-3 EUSnorth-nb No
+track EUS-6 EUSnorth-sb No
 
 track MCR-2 MCRnorth-nb No
 track MCR-1 MCRnorth-sb No
@@ -3538,7 +3629,7 @@ track LSQ-3 TCR-4 No
 
 track CHX-5 LSQ-4 No
 track CHX-6 LSQ-3 No
-#subtrack CHX-6 LSQ-4 No
+subtrack CHX-6 LSQ-4 No
 
 track EMB-3 CHX-5 No
 track EMB-4 CHX-6 No
@@ -3551,14 +3642,30 @@ track KEN-2 WLO-2 No
 
 # City Branch
 
+track KXXwest2-eb EUS-6 No
+track KXXwest2-wb EUS-3 No
+
+track KXXwest-eb KXXwest2-eb No
+track KXXwest-wb KXXwest2-wb No
+subtrack KXXwest-wb KXXwest2-eb No
+
+track KXX-8 KXXwest-eb No
+track KXX-7 KXXwest-wb No
+subtrack KXXcross-road KXXwest-wb No
+# Pic link in pre-fixes
+
 track ANG-1 KXX-8 No
 track ANG-2 KXX-7 No
 
-track OLD-1 ANG-2 No
-track OLD-2 ANG-1 No
+track CTR-1 ANG-2 No
+track CTR-2 ANG-1 No
+
+track OLD-1 CTR-1 No
+track OLD-2 CTR-2 No
 
 track MGT-7 OLD-1 No
 track MGT-8 OLD-2 No
+subtrack MGT-8 OLD-1 No
 
 track BNKdlr-3 MGT-8 No
 track BNKdlr-4 MGT-7 No
@@ -3583,20 +3690,16 @@ subtrack KENsouth-nb KEN-1 No
 track KENsouth-sb KEN-4 No
 subtrack KENsouth-sb KEN-2 No
 
-#track KENsi-nb KENsouth-nb No
-#track KENsi-sb KENsouth-sb No
-#subtrack KENsi-si KENsouth-nb No
-#subtrack KENsi-si KENsouth-sb No
-
 track OVL-3 KENsouth-nb No
 track OVL-4 KENsouth-sb No
+subtrack KENsi-mid KENsouth-nb No
+subtrack KENsi-mid KENsouth-sb No
 
 track STK-2 OVL-3 No
 track STK-3 OVL-4 No
-#subtrack STK-3 OVL-3 No
-
-track EUS-6 KXX-8 No
-track EUS-3 KXX-7 No
+track STK-3 OVL-3 No
+subtrack STK-3 OVL-4 No
+subtrack STK-2 OVL-3 No
 
 track CPN-1 STK-2 No
 track CPN-2 STK-3 No
@@ -3618,6 +3721,8 @@ track TBY-2 TBE-2 No
 
 track CLW-1 TBY-1 No
 track CLW-2 TBY-2 No
+subtrack TBYsi-mid TBY-1 No
+subtrack TBYsi-mid TBY-2 No
 
 track SWM-1 CLW-1 No
 track SWM-2 CLW-2 No
@@ -3631,6 +3736,10 @@ track MOR-2 MORnorth-sb No
 track MOR-3 MORnorth-nb No
 subtrack MOR-3 MORnorth-sb No
 subtrack MOR-5 MORnorth-nb No
+
+track MORdepot-road1 MOR-3 No
+track MORdepot-road2 MOR-2 No
+subtrack MORdepot-road1 MOR-5 No
 
 ## Bakerloo Line
 
