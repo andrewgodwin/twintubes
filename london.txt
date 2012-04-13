@@ -307,17 +307,22 @@ platform 2 NE No R
 
 # Edgware branch
 
-station EDG Edgware -24.5,-112.0
+station EDG Edgware -24.0,-111.0
 label SW
 platform 3 NW No L
 platform 2 NW No R
 platform 1 NW No L
 
-waypoint EDGsouth  EDG,3.0,3.0
+depot EDGsi Edgware \n Sidings EDG,5.5,2.5
+label NE
+platform road NW No
+
+waypoint EDGsouth  EDG,2.5,2.5
 platform sb NW
 platform nb NW
+platform si NW none
 
-station BUR Burnt Oak -19.5,-107.0
+station BUR Burnt Oak -18.0,-105.5
 label SW
 platform 2 NW No L
 platform 1 NW No R
@@ -327,23 +332,43 @@ label SW
 platform 2 NW No L
 platform 1 NW No R
 
-station HND Hendon Central -9.5,-97.0
+sidings COLsi  COL,-2.0,-2.0
+platform mid NW No
+
+station HND Hendon Central -11.0,-98.5
 label SW
 platform 2 NW No L
 platform 1 NW No R
 
-station BTX Brent Cross -4.5,-92.0
+station BTX Brent Cross -8.0,-95.5
 label SW
 platform 2 NW No L
 platform 1 NW No R
 
-station GGR Golders Green 0.5,-87.0
+station GGR Golders Green -4.5,-92.0
 label SW
 platform 5 NW No L
 platform 3,4 NW No B
 platform 1,2 NW No B
 
-station HMP Hampstead 5.5,-82.0
+waypoint GGRsouth  GGR,2.0,2.0
+platform sb NW
+platform mid NW
+platform nb NW
+
+sidings GGRsi  GGR,3.0,3.0
+platform mid NW No
+
+depot GGRdepot Golders Green \n Depot 1.0,-89.0
+label NE
+platform road NW No
+
+disstation BBS Bull & Bush 3.0,-84.5
+label SW
+platform 2 NW No L
+platform 1 NW No R
+
+station HMP Hampstead 6.0,-81.5
 label SW
 platform 2 NW No L
 platform 1 NW No R
@@ -3543,14 +3568,18 @@ track EDGsouth-nb EDG-1 No
 track EDGsouth-sb EDG-3 No
 subtrack EDGsouth-nb EDG-2 No
 subtrack EDGsouth-sb EDG-2 No
+subtrack EDGsouth-nb EDG-3 No
+subtrack EDGsouth-si EDG-1 No
 
 track BUR-1 EDGsouth-nb No
 track BUR-2 EDGsouth-sb No
-subtrack BUR-1 EDGsouth-sb No
 subtrack BUR-2 EDGsouth-nb No
+subtrack EDGsi-road EDGsouth-sb No
 
 track COL-1 BUR-1 No
 track COL-2 BUR-2 No
+subtrack COL-1 COLsi-mid No
+subtrack COL-2 COLsi-mid No
 
 track HND-1 COL-1 No
 track HND-2 COL-2 No
@@ -3563,10 +3592,23 @@ track GGR-3,4 BTX-2 No
 subtrack GGR-3,4 BTX-1 No
 subtrack GGR-5 BTX-2 No
 
-track HMP-1 GGR-1,2 No
-track HMP-2 GGR-3,4 No
-subtrack HMP-1 GGR-3,4 No
-subtrack HMP-2 GGR-5 No
+track GGRsouth-nb GGR-1,2 No
+track GGRsouth-mid GGR-3,4 No
+track GGRsouth-sb GGR-5 No
+subtrack GGRsouth-nb GGR-3,4 No
+subtrack GGRsouth-mid GGR-1,2 No
+subtrack GGRsouth-sb GGR-3,4 No
+
+track BBS-1 GGRsouth-nb No
+track BBS-2 GGRsouth-sb No
+track GGRsi-mid GGRsouth-mid No
+subtrack BBS-1 GGRdepot-road No
+subtrack GGRdepot-road GGRsouth-mid No
+subtrack GGRdepot-road GGR-5 No
+
+track HMP-1 BBS-1 No
+track HMP-2 BBS-2 No
+subtrack HMP-2 BBS-1 No
 
 track BPK-1 HMP-1 No
 track BPK-2 HMP-2 No
