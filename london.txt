@@ -1977,7 +1977,7 @@ platform 2 NW CiHaMe L
 platform 4 NE Ce R
 platform 5 NE Ce L
 
-station MGT Moorgate 43.5,-31.5
+station MGT Moorgate 43.5,-32.0
 label NE
 label_offset -4,2
 platform 1 W CiHaMe R
@@ -1998,8 +1998,9 @@ station FAR Farringdon 33.5,-38.5
 label NE
 platform 1 NW CiHaMe R
 platform 2 NW CiHaMe L
-#platform 3 NW NR R
-#platform 4 NW NR L
+
+sidings FARsi  FAR,1.5,3.0
+platform road NW CiHaMe
 
 station ESQ Euston \n Square EUS,0.0,5.0
 label S
@@ -2073,17 +2074,22 @@ label NW
 platform 1 SW CiHa R
 platform 2 SW CiHa L
 
-station WLN Wood \n Lane -65.0,-22.5
+station WLN Wood \n Lane -65.0,-27.0
 label E
 platform 1 S CiHa R
 platform 2 S CiHa L
 
-station SBM Shepherd's Bush \n Market -65.0,-17.0
+station SBM Shepherd's Bush \n Market -65.0,-22.0
 label W
 platform 1 S CiHa R
 platform 2 S CiHa L
 
-station GHR Goldhawk Road -65.0,-11.5
+disstation XSB Shepherd's Bush -65.0,-17.5
+label W
+platform 1 S CiHa R
+platform 2 S CiHa L
+
+station GHR Goldhawk Road -65.0,-13.0
 label W
 platform 1 S CiHa R
 platform 2 S CiHa L
@@ -2096,6 +2102,10 @@ platform 3 S CiHa R
 waypoint HMSnorth  HMS,0.5,-3.0
 platform nb S
 platform sb S
+
+depot HMSdepot Hammersmith \n Depot -63.5,-9.5
+label E
+platform road S CiHa
 
 ## District Line stations
 
@@ -2711,7 +2721,7 @@ label NE
 platform 1 SE Ov L
 platform 2 SE Ov R
 
-station SPB  -49.5,-23.5
+station SPB  -49.5,-23.0
 platform 2 S Ov R
 platform 1 S Ov L
 
@@ -4703,9 +4713,14 @@ track GHR-1 HMSnorth-nb CiHa
 track GHR-2 HMSnorth-sb CiHa
 subtrack GHR-1 HMSnorth-sb CiHa
 subtrack GHR-2 HMSnorth-nb CiHa
+subtrack HMSdepot-road HMSnorth-sb CiHa
+subtrack HMSdepot-road HMS-1 CiHa
 
-track SBM-2 GHR-2 CiHa
-track SBM-1 GHR-1 CiHa
+track XSB-2 GHR-2 CiHa
+track XSB-1 GHR-1 CiHa
+
+track SBM-2 XSB-2 CiHa
+track SBM-1 XSB-1 CiHa
 
 track WLN-1 SBM-1 CiHa
 track WLN-2 SBM-2 CiHa
@@ -4721,6 +4736,7 @@ track WBP-2 LBG-1 CiHa
 
 track ROA-1 WBP-1 CiHa
 track ROA-2 WBP-2 CiHa
+subtrack ROA-2 WBP-1 CiHa
 
 track PAD-15 ROA-1 CiHa
 track PAD-16 ROA-2 CiHa
@@ -4741,7 +4757,7 @@ track ERDeast-outer ERD-2 CiHa
 track ERDeast-inner ERD-3 CiHa
 subtrack ERDeast-outer ERD-1 CiHa
 subtrack ERDeast-inner ERD-4 CiHa
-#subtrack ERDeast-outer ERD-3 CiHa
+subtrack ERDeast-outer ERD-3 CiHa
 
 track BST-5 ERDeast-outer CiHa
 track BST-6 ERDeast-inner CiHa
@@ -4761,18 +4777,21 @@ track KXX-2 ESQ-2 CiHaMe
 
 track FAR-1 KXX-2 CiHaMe
 track FAR-2 KXX-1 CiHaMe
+subtrack FAR-1 KXX-1 CiHaMe
 
 track BAR-1 FAR-1 CiHaMe
 track BAR-2 FAR-2 CiHaMe
+subtrack FARsi-road FAR-2 CiHaMe
 
 track MGT-1 BAR-1 CiHaMe
 subtrack MGT-3 BAR-1 CiHaMe
 subtrack MGT-4 BAR-1 CiHaMe
-track MGT-2 BAR-2 CiHaMe
+subtrack MGT-2 BAR-2 CiHaMe
 subtrack MGT-3 BAR-2 CiHaMe
 
 track LST-1 MGT-1 CiHaMe
 track LST-2 MGT-2 CiHaMe
+subtrack LST-1 MGT-2 CiHaMe
 
 track ALDnorth-outer LST-1 CiHaMe
 track ALDnorth-inner LST-2 CiHaMe
