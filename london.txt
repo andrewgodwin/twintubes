@@ -721,8 +721,8 @@ platform nb NW
 
 station KGN Kensal \n Green -56.5,-56.0
 label SW
-platform 1 NW Ba L
-platform 2 NW Ba R
+platform 1 NW Ba R
+platform 2 NW Ba L
 
 waypoint KGNnorth  KGN,-2.0,-2.0
 platform sb NW
