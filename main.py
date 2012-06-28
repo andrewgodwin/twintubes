@@ -1,5 +1,6 @@
 import cairo
 import os
+import sys
 from vector import Vector
 from draw import Direction, Segment
 from datastructures import SortedDict
@@ -287,6 +288,13 @@ class Map(object):
 
 
 if __name__ == "__main__":
+    originalFileName = "london.txt"
+    destinationFileName = "london.pdf"
+
+    if (len(sys.argv) == 3):
+        originalFileName = sys.argv[1]
+        destinationFileName = sys.argv[2]
+    
     m = Map()
-    m.load("london.txt")
-    m.to_pdf("london.pdf")
+    m.load(originalFileName)
+    m.to_pdf(destinationFileName)
