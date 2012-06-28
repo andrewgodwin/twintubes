@@ -288,7 +288,7 @@ platform 2 N No L
 sidings ARCsi  ARC,0.0,-3.0
 platform mid N No
 
-station TPK Tuffnell \n Park 27.5,-78.0
+station TPK Tufnell \n Park 27.5,-78.0
 label E
 platform 1 N No R
 platform 2 N No R
