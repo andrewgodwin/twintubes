@@ -2378,10 +2378,19 @@ platform 2 E
 platform 3 E
 platform 4 E
 
-station OLY Kensington \n (Olympia) -50.0,-13.5
+station OLY Kensington \n (Olympia) -49.0,-13.5
 platform 1 S Di L
 platform 2 S Ov R
+platform mid S Ov N
 platform 3 S Ov L
+
+waypoint OLYnorth  OLY,0.0,-3.5
+platform nb S Ov
+platform sb S Ov
+
+waypoint OLYsouth  OLY,0.0,4.5
+platform nb S Ov
+platform sb S Ov
 
 depot ECTdepot Lillie Bridge \n Depot -51.0,5.0
 platform road S Di
@@ -3091,7 +3100,7 @@ platform 1 N Ov R
 platform 3 N Ov L
 platform 4 N Ov R
 
-waypoint WCYsouth WCY,1,3
+waypoint WCYsouth  WCY,1.0,3.0
 platform si N Ov N
 
 # Barking branch
@@ -5387,13 +5396,22 @@ subtrack IMW-2 CLJ-2 Ov
 track WBT-3 IMW-1 Ov
 track WBT-4 IMW-2 Ov
 
-track OLY-3 WBT-3 Ov
-track OLY-2 WBT-4 Ov
-subtrack OLY-3 WBT-4 Ov
+track OLYsouth-sb WBT-3 Ov
+track OLYsouth-nb WBT-4 Ov
+subtrack OLYsouth-sb WBT-4 Ov
+subtrack OLYsouth-nb WBT-3 Ov
 
-track SPB-1 OLY-3 Ov
-track SPB-2 OLY-2 Ov
-subtrack SPB-1 OLY-2 Ov
+track OLY-2 OLYsouth-nb Ov
+track OLY-3 OLYsouth-sb Ov
+subtrack OLY-mid OLYsouth-nb Ov
+
+track OLYnorth-sb OLY-3 Ov
+track OLYnorth-nb OLY-2 Ov
+subtrack OLYnorth-nb OLY-mid Ov
+
+track SPB-1 OLYnorth-sb Ov
+track SPB-2 OLYnorth-nb Ov
+subtrack SPB-1 OLYnorth-nb Ov
 
 # SPBnorth to SPB in pre-fixes
 
