@@ -2393,8 +2393,8 @@ platform road S Di
 
 station WBT West Brompton -48.5,6.0
 label E
-platform 4 S Ov L
-platform 3 S Ov R
+platform 4 S Ov R
+platform 3 S Ov L
 platform 2 N Di L
 platform 1 N Di R
 
