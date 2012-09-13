@@ -644,8 +644,8 @@ platform nb NW
 
 station WFH Watford \n High Street -84.5,-114.0
 label NE
-platform 1 NW Ov R
-platform 2 NW Ov L
+platform 1 NW Ov L
+platform 2 NW Ov R
 
 station BSH Bushey -81.0,-110.5
 label NE
@@ -654,8 +654,8 @@ platform 1 NW Ov L
 
 station CPKnr Carpenders \n Park -77.5,-107.0
 label NE
-platform 1 NW Ov R
-platform 2 NW Ov L
+platform 1 NW Ov L
+platform 2 NW Ov R
 
 station HTE Hatch \n End -74.0,-103.5
 label NE
@@ -4766,8 +4766,10 @@ track ECTwest-2 ECT-2 Di
 track ECTwest-3 ECT-3 Di
 subtrack ECTwest-1 ECT-2 Di
 subtrack ECTwest-3 ECT-4 Di
+subtrack ECTwest-4 ECT-4 Di
 
 track WBT-1 ECTwest-3 Di
+subtrack WBT-1 ECTwest-4 Di
 subtrack OLY-1 ECTwest-3 Di
 
 track WKN-2 ECTwest-1 Di
