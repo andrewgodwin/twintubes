@@ -11,33 +11,35 @@ line Mo 018752
 line Nj 01529A
 line Tt D21245
 line Fm CB7F34
+line Un 777777
 
 # Multiplexed lines
-line Su 252525
+line SuMkt 91278D
+line SuTwi 91278D
 
 ### Stations and other features ###
 
 # Market Street Subway stations, south to north
 
-station WPO West Portal -10.0,10.0
-label NW
-platform out NE Su L
-platform in NE Su R
+station WPO West Portal -31.5,31.5
+label SE
+platform out NE SuTwi L
+platform in NE SuTwi R
 
-station FOH Forest Hill -5.0,5.0
-label NW
-platform out NE Su L
-platform in NE Su R
+station FOH Forest Hill -29.0,29.0
+label SE
+platform out NE SuTwi L
+platform in NE SuTwi R
 
-station CAS Castro 0.0,0.0
-label NW
-platform out NE Su L
-platform in NE Su R
+station CAS Castro -22.5,22.5
+label SE
+platform out NE SuTwi L
+platform in NE SuTwi R
 
-station CHU Church 5.0,-5.0
-label NW
-platform out NE Su L
-platform in NE Su R
+station CHU Church -5.0,5.0
+label SE
+platform out NE SuTwi L
+platform in NE SuTwi R
 
 waypoint VANwest  10.0,-10.0
 platform out NE
@@ -48,33 +50,33 @@ platform out E
 platform in E
 
 station VAN Van Ness 15.0,-15.0
-label NW
-platform out NE Su R
-platform in NE Su L
+label SE
+platform out NE SuMkt R
+platform in NE SuMkt L
 
 station CVC Civic Center 20.0,-20.0
-label NW
-platform out NE Su R
-platform in NE Su L
+label SE
+platform out NE SuMkt R
+platform in NE SuMkt L
 
 station POW Powell 25.0,-25.0
-label NW
-platform out NE Su R
-platform in NE Su L
+label SE
+platform out NE SuMkt R
+platform in NE SuMkt L
 
 station MON Montgomery 30.0,-30.0
-label NW
-platform out NE Su R
-platform in NE Su L
+label SE
+platform out NE SuMkt R
+platform in NE SuMkt L
 
 station EMB Embarcadero 35.0,-35.0
-label NW
-platform out NE Su R
-platform in NE Su L
+label SE
+platform out NE SuMkt R
+platform in NE SuMkt L
 
 # N Judah, west to east
 
-station OCB Ocean \n Beach -52.0,-9.0
+station OCB Ocean \n Beach -53.0,0.0
 label S
 platform out E Nj L
 platform in E Nj R
@@ -91,7 +93,7 @@ waypoint OCBeast  OCB,3.5,0.0
 platform out E
 platform in E
 
-station JSU Judah & \n Sunset -45.0,-9.0
+station JSU Judah & \n Sunset -46.0,0.0
 label N
 platform out E Nj L
 platform in E Nj R
@@ -99,8 +101,8 @@ platform in E Nj R
 sidings JSUsi  JSU,3.5,-2.5
 platform si S Nj
 
-station JNT Judah & \n 19th Av -37.0,-9.0
-label S
+station JNT Judah & \n 19th Av -38.0,0.0
+label N
 platform out E Nj L
 platform in E Nj R
 
@@ -108,30 +110,120 @@ waypoint JNTwest  JNT,-3.0,0.0
 platform out E
 platform in E
 
-station JNI Judah & \n 9th Av -30.5,-9.0
-label N
-platform out E Nj L
-platform in E Nj R
-
-station UPA UCSF \n Parnassus -23.0,-9.0
+station JNI Judah & \n 9th Av -32.5,0.0
 label S
 platform out E Nj L
 platform in E Nj R
 
-station CCO Carl & \n Cole -15.5,-9.0
+waypoint JNIeast  JNI,3.5,-2.5
+platform out N
+platform in N
+
+station UCP UCSF \n Parnassus -25.5,-5.0
 label N
 platform out E Nj L
 platform in E Nj R
 
-station DNO Duboce & \n Noe -8.5,-9.0
+waypoint UCPeast  UCP,4.5,-1.0
+platform out E
+platform in E
+
+station CCO Carl & \n Cole -17.0,-7.5
+label NW
+platform out NE Nj L
+platform in NE Nj R
+
+waypoint CCOwest  CCO,-2.5,1.5
+platform out E
+platform in E
+
+station DNO Duboce & \n Noe -11.0,-9.0
 label S
 platform out E Nj L
 platform in E Nj R
 
-station DCH Duboce & \n Church -1.5,-9.0
-label N
+station DCH Duboce & \n Church 0.0,-9.0
+label NW
+label_offset 26,0
 platform out E Nj L
 platform in E Nj R
+
+waypoint DCHwest  DCH,-6.0,0.0
+platform out E
+platform in E
+
+waypoint DCHsouth  DCH,-3.5,2.5
+platform out N
+platform in N
+
+sidings DCHsi  DCH,5.0,-3.0
+platform out E Un
+platform in E Un
+
+# J Church (south to north)
+
+waypoint J16  1.0,1.0
+platform out N J
+platform in N J
+
+waypoint J16north  J16,-2.0,-3.0
+platform in NW J
+platform out NW J
+
+waypoint J16south  J16,0.0,3.0
+platform out N J
+platform in N J
+
+# F stations (market/embarcadero)
+
+waypoint CMPortal  -24.0,20.5
+platform out NE
+platform in NE
+
+station M17C 17th & Castro -19.0,20.0
+label SE
+label_offset -13,5
+platform out W Un N
+platform in W Fm R
+
+waypoint M17Cnorth  M17C,4.5,-2.5
+platform out N
+
+waypoint M17Cwest  M17C,-2.5,0.0
+platform in NW
+
+waypoint M17Ceast  M17C,3.0,0.0
+platform out W
+platform in W
+
+waypoint M17Ceast2  M17C,7.0,0.0
+platform out E
+platform in E
+
+station M16N 16th & \n Noe -12.5,8.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
+
+station M15S 15th & \n Sanchez -9.5,5.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
+
+station M14C 14th & \n Church -6.5,2.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
+
+station MDD Dolores & \n Duboce 9.5,-14.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
+
+waypoint MDDsouth  MDD,-3.0,3.0
+platform out NE Fm
+platform in NE Fm
+
 
 
 ###### Segments #######
@@ -141,40 +233,41 @@ platform in E Nj R
 
 ## Market Street Subway
 
-track WPO-out FOH-out Su
-track WPO-in FOH-in Su
+track WPO-out FOH-out SuTwi
+track WPO-in FOH-in SuTwi
 
-track FOH-out CAS-out Su
-track FOH-in CAS-in Su
+track FOH-out CAS-out SuTwi
+track FOH-in CAS-in SuTwi
 
-track CAS-out CHU-out Su
-track CAS-in CHU-in Su
-subtrack CAS-out CHU-in Su
-subtrack CAS-in CHU-out Su
+track CAS-out CHU-out SuTwi
+track CAS-in CHU-in SuTwi
+subtrack CAS-out CHU-in SuTwi
+subtrack CAS-in CHU-out SuTwi
 
-track VANport-in VANwest-in Su
-subtrack CHU-in VANwest-in Su
-track CHU-out VANwest-out Su
-subtrack VANport-out VANwest-out Su
+subtrack VANport-in VANwest-in Nj
+subtrack CHU-in VANwest-in SuTwi
+track CHU-out VANwest-out SuTwi
+subtrack VANport-out VANwest-out Nj
+subtrack CHU-out VANwest-out SuTwi
 
-track VANwest-in VAN-in Su
-track VANwest-out VAN-out Su
-subtrack VANwest-in VAN-out Su
-subtrack VANwest-out VAN-in Su
+track VANwest-in VAN-in SuMkt
+track VANwest-out VAN-out SuMkt
+subtrack VANwest-in VAN-out SuMkt
+subtrack VANwest-out VAN-in SuMkt
 
-track VAN-out CVC-out Su
-track VAN-in CVC-in Su
+track VAN-out CVC-out SuMkt
+track VAN-in CVC-in SuMkt
 
-track CVC-out POW-out Su
-track CVC-in POW-in Su
+track CVC-out POW-out SuMkt
+track CVC-in POW-in SuMkt
 
-track POW-out MON-out Su
-track POW-in MON-in Su
+track POW-out MON-out SuMkt
+track POW-in MON-in SuMkt
 
-track MON-out EMB-out Su
-track MON-in EMB-in Su
-subtrack MON-out EMB-in Su
-subtrack MON-in EMB-out Su
+track MON-out EMB-out SuMkt
+track MON-in EMB-in SuMkt
+subtrack MON-out EMB-in SuMkt
+subtrack MON-in EMB-out SuMkt
 
 ## N Judah
 
@@ -201,3 +294,89 @@ subtrack JSUsi-si JNTwest-in Nj
 track JNTwest-out JNT-out Nj
 track JNTwest-in JNT-in Nj
 subtrack JNTwest-out JNT-in Nj
+
+track JNT-out JNI-out Nj
+track JNT-in JNI-in Nj
+
+track JNI-out JNIeast-out Nj
+track JNI-in JNIeast-in Nj
+
+track JNIeast-out UCP-out Nj
+track JNIeast-in UCP-in Nj
+
+track UCP-out UCPeast-out Nj
+track UCP-in UCPeast-in Nj
+
+track UCPeast-out CCOwest-out Nj
+track UCPeast-in CCOwest-in Nj
+subtrack UCPeast-out CCOwest-in Nj
+
+track CCOwest-out CCO-out Nj
+track CCOwest-in CCO-in Nj
+
+track CCO-out DNO-out Nj
+track CCO-in DNO-in Nj
+
+track DNO-out DCHwest-out Nj
+track DNO-in DCHwest-in Nj
+subtrack DNO-out DCHwest-in Nj
+
+subtrack DCHwest-out DCHsouth-in! Un
+subtrack DCHwest-in DCHsouth-out! Un
+subtrack DCHsouth-out DCH-out Jc
+subtrack DCHsouth-in DCH-in Jc
+subtrack DCHwest-out DCH-out Nj
+subtrack DCHwest-in DCH-in Nj
+
+subtrack DCH-out DCHsi-out Un
+subtrack DCH-in DCHsi-in Un
+subtrack DCH-in VANport-in Nj
+subtrack DCH-out VANport-out Nj
+
+# J Church
+
+track J16south-in J16-in Jc
+track J16south-out J16-out Jc
+
+track J16-in J16north-in Jc
+track J16-out J16north-out Jc
+
+track J16north-in DCHsouth-in Jc
+track J16north-out DCHsouth-out Jc
+
+
+# Castro/Market portal
+
+track CMPortal-out M17C-out! Un
+track CMPortal-in M17C-in! Un
+
+
+# F Market & Wharves
+
+track M17Ceast-in! M17Ceast2-in Un
+track M17Ceast-out! M17Ceast2-out Un
+
+track M17Cnorth-out M16N-out Fm
+subtrack M17Ceast2-in! M17Cnorth-out Un
+subtrack M17Ceast-out! M17Cnorth-out Fm
+
+track M17Ceast-out M17C-out Un
+track M17Ceast-in M17C-in Un
+subtrack M17Ceast-out M17C-in Fm
+
+subtrack M17Cwest-in M16N-in Fm
+subtrack M17C-in M17Cwest-in Fm
+
+track M16N-in M15S-in Fm
+track M16N-out M15S-out Fm
+
+track M15S-in M14C-in Fm
+track M15S-out M14C-out Fm
+
+track M14C-in MDDsouth-in Fm
+track M14C-out MDDsouth-out Fm
+
+subtrack DCHsi-in MDD-in Un
+subtrack DCHsi-out MDD-out Un
+subtrack MDDsouth-in MDD-in Fm
+subtrack MDDsouth-out MDD-out Fm
