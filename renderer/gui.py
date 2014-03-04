@@ -1,6 +1,7 @@
 from main import Map
 from vector import Vector
 
+import sys
 import pygtk
 pygtk.require('2.0')
 import gtk
@@ -42,29 +43,29 @@ class Gui(object):
         "Makes the 'map' menu."
         menu = gtk.Menu()
         main_item = gtk.MenuItem("Map")
-        
+
         self.aa_item = gtk.MenuItem("Antialiasing Off")
         self.aa_item.connect("activate", self.aa_toggle)
         menu.append(self.aa_item)
-        
+
         self.markings_item = gtk.MenuItem("Markings Off")
         self.markings_item.connect("activate", self.markings_toggle)
         menu.append(self.markings_item)
-        
+
         save_item = gtk.MenuItem("Reload")
         save_item.connect("activate", self.reload)
         menu.append(save_item)
-        
+
         save_item = gtk.MenuItem("Save")
         save_item.connect("activate", self.save)
         menu.append(save_item)
-        
+
         quit_item = gtk.MenuItem("Quit")
         quit_item.connect("activate", self.quit)
         menu.append(quit_item)
-        
+
         main_item.set_submenu(menu)
-        
+
         self.menubar.append(main_item)
 
     def aa_toggle(self, *args):
@@ -136,17 +137,17 @@ class Renderer(gtk.DrawingArea):
 
         # Create the cairo context
         cr = self.window.cairo_create()
-        
+
         # Turn antialiasing off if needed
         if self.gui.aa:
             cr.set_antialias(cairo.ANTIALIAS_GRAY)
         else:
             cr.set_antialias(cairo.ANTIALIAS_NONE)
-        
+
         # Restrict Cairo to the exposed area; avoid extra work
         cr.rectangle(event.area.x, event.area.y, event.area.width, event.area.height)
         cr.clip()
-        
+
         self.draw(cr, *self.window.get_size())
 
     def mouse_pressed(self, widget, event):
@@ -261,7 +262,7 @@ class Renderer(gtk.DrawingArea):
         return sx, sy
 
     def draw(self, cr, width, height):
-        
+
         # Work out the current scale
         unit = self.unit_from_window(self.window)
 
@@ -280,4 +281,9 @@ class Renderer(gtk.DrawingArea):
 
 
 if __name__ == "__main__":
-    Gui("london.txt").main()
+    try:
+        filename = sys.argv[1]
+    except IndexError:
+        print "You must supply a file to work from."
+        sys.exit(1)
+    Gui(filename).main()

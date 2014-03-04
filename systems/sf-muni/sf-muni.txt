@@ -1,0 +1,203 @@
+### Lines ###
+
+line error ff00ff
+line none ff00ff
+
+# Single lines
+line Jc FAA635
+line Ki 539CBE
+line Lt 91278D
+line Mo 018752
+line Nj 01529A
+line Tt D21245
+line Fm CB7F34
+
+# Multiplexed lines
+line Su 252525
+
+### Stations and other features ###
+
+# Market Street Subway stations, south to north
+
+station WPO West Portal -10.0,10.0
+label NW
+platform out NE Su L
+platform in NE Su R
+
+station FOH Forest Hill -5.0,5.0
+label NW
+platform out NE Su L
+platform in NE Su R
+
+station CAS Castro 0.0,0.0
+label NW
+platform out NE Su L
+platform in NE Su R
+
+station CHU Church 5.0,-5.0
+label NW
+platform out NE Su L
+platform in NE Su R
+
+waypoint VANwest  10.0,-10.0
+platform out NE
+platform in NE
+
+waypoint VANport  5.0,-9.0
+platform out E
+platform in E
+
+station VAN Van Ness 15.0,-15.0
+label NW
+platform out NE Su R
+platform in NE Su L
+
+station CVC Civic Center 20.0,-20.0
+label NW
+platform out NE Su R
+platform in NE Su L
+
+station POW Powell 25.0,-25.0
+label NW
+platform out NE Su R
+platform in NE Su L
+
+station MON Montgomery 30.0,-30.0
+label NW
+platform out NE Su R
+platform in NE Su L
+
+station EMB Embarcadero 35.0,-35.0
+label NW
+platform out NE Su R
+platform in NE Su L
+
+# N Judah, west to east
+
+station OCB Ocean \n Beach -52.0,-9.0
+label S
+platform out E Nj L
+platform in E Nj R
+
+waypoint OCBwest  OCB,-4.5,-0.5
+platform out E
+platform si E
+platform in E
+
+sidings OCBsi  OCB,-5.0,-0.5
+platform si E Nj
+
+waypoint OCBeast  OCB,3.5,0.0
+platform out E
+platform in E
+
+station JSU Judah & \n Sunset -45.0,-9.0
+label N
+platform out E Nj L
+platform in E Nj R
+
+sidings JSUsi  JSU,3.5,-2.5
+platform si S Nj
+
+station JNT Judah & \n 19th Av -37.0,-9.0
+label S
+platform out E Nj L
+platform in E Nj R
+
+waypoint JNTwest  JNT,-3.0,0.0
+platform out E
+platform in E
+
+station JNI Judah & \n 9th Av -30.5,-9.0
+label N
+platform out E Nj L
+platform in E Nj R
+
+station UPA UCSF \n Parnassus -23.0,-9.0
+label S
+platform out E Nj L
+platform in E Nj R
+
+station CCO Carl & \n Cole -15.5,-9.0
+label N
+platform out E Nj L
+platform in E Nj R
+
+station DNO Duboce & \n Noe -8.5,-9.0
+label S
+platform out E Nj L
+platform in E Nj R
+
+station DCH Duboce & \n Church -1.5,-9.0
+label N
+platform out E Nj L
+platform in E Nj R
+
+
+###### Segments #######
+
+## Bottom/Pre fixes
+
+
+## Market Street Subway
+
+track WPO-out FOH-out Su
+track WPO-in FOH-in Su
+
+track FOH-out CAS-out Su
+track FOH-in CAS-in Su
+
+track CAS-out CHU-out Su
+track CAS-in CHU-in Su
+subtrack CAS-out CHU-in Su
+subtrack CAS-in CHU-out Su
+
+track VANport-in VANwest-in Su
+subtrack CHU-in VANwest-in Su
+track CHU-out VANwest-out Su
+subtrack VANport-out VANwest-out Su
+
+track VANwest-in VAN-in Su
+track VANwest-out VAN-out Su
+subtrack VANwest-in VAN-out Su
+subtrack VANwest-out VAN-in Su
+
+track VAN-out CVC-out Su
+track VAN-in CVC-in Su
+
+track CVC-out POW-out Su
+track CVC-in POW-in Su
+
+track POW-out MON-out Su
+track POW-in MON-in Su
+
+track MON-out EMB-out Su
+track MON-in EMB-in Su
+subtrack MON-out EMB-in Su
+subtrack MON-in EMB-out Su
+
+## N Judah
+
+track OCBwest-out! OCBwest-in Nj
+track OCBsi-si OCBwest-si Nj
+
+track OCBwest-out OCB-out Nj
+track OCBwest-in OCB-in Nj
+subtrack OCBwest-si OCB-out Nj
+
+track OCB-out OCBeast-out Nj
+track OCB-in OCBeast-in Nj
+subtrack OCB-out OCBeast-in Nj
+
+track OCBeast-out JSU-out Nj
+track OCBeast-in JSU-in Nj
+subtrack OCBeast-out JSU-in Nj
+
+track JSU-out JNTwest-out Nj
+track JSU-in JNTwest-in Nj
+subtrack JSUsi-si JSU-out! Nj
+subtrack JSUsi-si JNTwest-in Nj
+
+track JNTwest-out JNT-out Nj
+track JNTwest-in JNT-in Nj
+subtrack JNTwest-out JNT-in Nj
