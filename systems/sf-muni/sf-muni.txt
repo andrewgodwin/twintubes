@@ -3,7 +3,7 @@
 line error ff00ff
 line none ff00ff
 
-# Single lines
+# Single Muni lines
 line Jc FAA635
 line Ki 539CBE
 line Lt 91278D
@@ -13,11 +13,41 @@ line Tt D21245
 line Fm CB7F34
 line Un 777777
 
-# Multiplexed lines
+# Multiplexed Muni lines
 line SuMkt 91278D
 line SuTwi 91278D
 
+# Single BART lines (by color)
+line By D5BF2D
+line Bb 2AABE2
+line Bo F9A11D
+
+# Multiplexed BART lines
+line BbBy D5BF2D
+
 ### Stations and other features ###
+
+# BART Milbrae -> Oakland
+
+station BPA Balboa \n Park -9.5,62.0
+label S
+label_offset 24,-7
+platform 1 NE By R
+platform 2 NE By L
+
+station GPK  2.5,50.0
+platform 1 NE By R
+platform 2 NE By L
+
+station 24M 24th St \n Mission 12.5,35.0
+label E
+platform 1 N By R
+platform 2 N By L
+
+station 16M 16th St \n Mission 12.5,26.5
+label E
+platform 1 N By R
+platform 2 N By L
 
 # Market Street Subway stations, south to north
 
@@ -49,30 +79,40 @@ waypoint VANport  5.0,-9.0
 platform out E
 platform in E
 
-station VAN Van Ness 15.0,-15.0
+station VAN Van Ness 16.0,-14.5
 label SE
 platform out NE SuMkt R
 platform in NE SuMkt L
+platform 1 NE BbBy N
+platform 2 NE BbBy N
 
-station CVC Civic Center 20.0,-20.0
+station CVC Civic Center 20.5,-19.0
 label SE
 platform out NE SuMkt R
 platform in NE SuMkt L
+platform 1 NE BbBy R
+platform 2 NE BbBy L
 
-station POW Powell 25.0,-25.0
+station POW Powell 25.5,-24.0
 label SE
 platform out NE SuMkt R
 platform in NE SuMkt L
+platform 1 NE BbBy R
+platform 2 NE BbBy L
 
-station MON Montgomery 30.0,-30.0
+station MON Montgomery 30.5,-29.0
 label SE
 platform out NE SuMkt R
 platform in NE SuMkt L
+platform 1 NE BbBy R
+platform 2 NE BbBy L
 
-station EMB Embarcadero 35.0,-35.0
+station EMB Embarcadero 35.5,-34.0
 label SE
 platform out NE SuMkt R
 platform in NE SuMkt L
+platform 1 NE BbBy R
+platform 2 NE BbBy L
 
 # N Judah, west to east
 
@@ -163,16 +203,101 @@ platform in E Un
 # J Church (south to north)
 
 waypoint J16  1.0,1.0
-platform out N J
-platform in N J
+platform out N
+platform in N
 
-waypoint J16north  J16,-2.0,-3.0
-platform in NW J
-platform out NW J
+waypoint J16north  J16,-1.0,-2.0
+platform in NW
+platform out NW
 
-waypoint J16south  J16,0.0,3.0
-platform out N J
-platform in N J
+waypoint J16south  J16,0.0,16.5
+platform out N
+platform in N
+
+waypoint J17  1.0,22.5
+platform out N
+platform in N
+
+station J18 Church & \n 18th Street 1.0,26.5
+platform out N Jc L
+platform in N Jc R
+
+waypoint J18south  J18,1.0,3.0
+platform out N
+platform in N
+
+station J24 Church & \n 24th Street 1.0,35.0
+platform out N Jc L
+platform in N Jc R
+
+waypoint J24north  J24,0.0,-3.5
+platform out N
+platform in N
+
+station J30 Church & \n 30th Street 1.0,39.0
+platform out N Jc L
+platform in N Jc R
+
+waypoint J30east  J30,3.0,3.0
+platform in W
+platform out W
+
+sidings J30west  J30,-3.5,3.5
+platform si E Un
+
+station JSR San Jose & \n Randall 6.5,45.5
+platform out N Jc L
+platform in N Jc R
+
+station JGP Glen Park 4.0,51.5
+label SE
+platform out NE Jc L
+platform in NE Jc R
+
+
+# Balboa park complex
+
+waypoint BPJ  2.0,53.5
+platform out NE
+platform in NE
+
+waypoint BPJwest  -3.0,54.5
+platform out E
+platform in E
+platform si E
+
+waypoint BPJsouth  1.0,57.5
+platform si N
+platform out N
+platform in N
+
+waypoint BPJsouth2  1.0,60.5
+platform si N
+platform out N
+platform in N
+
+waypoint BPK  -7.5,54.0
+platform in W
+platform out W
+
+station BPAmuni  -4.5,62.0
+platform si SE Un N
+platform in SE Jc R
+
+waypoint BPAmuninorth  BPAmuni,-1.0,-4.5
+platform in S
+platform si S
+
+waypoint BPAmunisouth  BPAmuni,3.0,1.5
+platform in E
+
+waypoint BPM  1.5,66.0
+platform in S
+platform out S
+
+sidings BPAsi  -3.5,61.0
+platform si SE Un
+
 
 # F stations (market/embarcadero)
 
@@ -196,7 +321,7 @@ waypoint M17Ceast  M17C,3.0,0.0
 platform out W
 platform in W
 
-waypoint M17Ceast2  M17C,7.0,0.0
+waypoint M17Ceast2  M17C,17.0,0.0
 platform out E
 platform in E
 
@@ -220,7 +345,11 @@ label NW
 platform out NE Fm L
 platform in NE Fm R
 
-waypoint MDDsouth  MDD,-3.0,3.0
+waypoint MDDsouth  MDD,-3.5,3.5
+platform out NE Fm
+platform in NE Fm
+
+waypoint MDDsouth2  MDD,-9.5,9.5
 platform out NE Fm
 platform in NE Fm
 
@@ -229,6 +358,30 @@ platform in NE Fm
 ###### Segments #######
 
 ## Bottom/Pre fixes
+
+
+## Bart Milbrae -> Oakland
+
+track BPA-1 GPK-1 By
+track BPA-2 GPK-2 By
+
+track GPK-1 24M-1 By
+track GPK-2 24M-2 By
+
+track 24M-1 16M-1 By
+track 24M-2 16M-2 By
+
+track 16M-1 CVC-1 By
+track 16M-2 CVC-2 By
+
+track CVC-1 POW-1 By
+track CVC-2 POW-2 By
+
+track POW-1 MON-1 By
+track POW-2 MON-2 By
+
+track MON-1 EMB-1 By
+track MON-2 EMB-2 By
 
 
 ## Market Street Subway
@@ -333,16 +486,99 @@ subtrack DCH-in DCHsi-in Un
 subtrack DCH-in VANport-in Nj
 subtrack DCH-out VANport-out Nj
 
-# J Church
+## J Church
+
+subtrack BPJsouth-in BPJwest-out! Un
+subtrack BPJsouth-out BPJwest-in! Un
+subtrack BPJwest-in BPJ-in Un
+subtrack BPJsouth-out BPJ-out Un
+subtrack BPJwest-out BPJ-out Jc
+subtrack BPJsouth-in BPJ-in Jc
+
+track BPJ-in JGP-in Jc
+track BPJ-out JGP-out Jc
+
+track JGP-in JSR-in Jc
+track JGP-out JSR-out Jc
+subtrack JGP-out JSR-in Jc
+
+track JSR-in J30east-in Jc
+track JSR-out J30east-out Jc
+
+subtrack J30west-si J30east-out! Un
+subtrack J30west-si J30-in Un
+subtrack J30west-si J30-out Un
+subtrack J30east-in J30-in Jc
+subtrack J30east-out J30-out Jc
+
+track J30-in J24-in Jc
+track J30-out J24-out Jc
+subtrack J30-out J24-in Jc
+
+track J24-in J24north-in Jc
+track J24-out J24north-out Jc
+subtrack J24-out J24north-in Jc
+
+track J24north-in J18south-in Jc
+track J24north-out J18south-out Jc
+
+track J18south-in J18-in Jc
+track J18south-out J18-out Jc
+
+track J18-in J17-in Jc
+track J18-out J17-out Jc
+
+subtrack M17Ceast2-out J16south-out Un
+subtrack M17Ceast2-in J16south-in Un
+subtrack M17Ceast2-out J17-in! Un
+subtrack M17Ceast2-in J17-out! Un
+subtrack J17-in J16south-in Jc
+subtrack J17-out J16south-out Jc
 
 track J16south-in J16-in Jc
 track J16south-out J16-out Jc
+subtrack J16south-out J16-in Jc
 
 track J16-in J16north-in Jc
 track J16-out J16north-out Jc
 
-track J16north-in DCHsouth-in Jc
 track J16north-out DCHsouth-out Jc
+subtrack J16north-in MDDsouth2-in Un
+subtrack J16north-in DCHsouth-in Jc
+
+## Balboa Park Muni
+
+
+track BPK-out! BPJwest-in Un
+subtrack BPK-in! BPJwest-out Un
+subtrack BPAmuninorth-si! BPJwest-si Un
+track BPJsouth-si BPJwest-si! Ki
+subtrack BPAmuninorth-in! BPJwest-si Mo
+subtrack BPK-in! BPJwest-si Ki
+subtrack BPAmuninorth-in! BPK-out Ki
+subtrack BPAmuninorth-in! BPJwest-out Jc
+
+track BPAmuninorth-in BPAsi-si Un
+subtrack BPAmuninorth-si BPAsi-si Un
+subtrack BPAsi-si BPJsouth2-si Un
+
+track BPAmuninorth-in BPAmuni-si Un
+subtrack BPAmuninorth-in BPAmuni-in Jc
+
+subtrack BPAmuni-si BPAmunisouth-in Un
+subtrack BPAmuni-in BPAmunisouth-in Jc
+
+track BPJsouth2-out! BPM-in Un
+subtrack BPJsouth2-in! BPM-out Mo
+
+subtrack BPAmunisouth-in BPM-in Mo
+subtrack BPAmunisouth-in BPJsouth2-si Jc
+
+subtrack BPJsouth2-out BPJsouth-out Un
+subtrack BPJsouth2-in BPJsouth-in Un
+subtrack BPJsouth2-in BPJsouth-si Mo
+subtrack BPJsouth2-si BPJsouth-si Ki
+subtrack BPJsouth2-si BPJsouth-in Jc
 
 
 # Castro/Market portal
@@ -373,10 +609,17 @@ track M16N-out M15S-out Fm
 track M15S-in M14C-in Fm
 track M15S-out M14C-out Fm
 
-track M14C-in MDDsouth-in Fm
-track M14C-out MDDsouth-out Fm
+subtrack M14C-in MDDsouth2-in Fm
+subtrack M14C-out MDDsouth2-out Fm
+
+track MDDsouth2-in MDDsouth-in Fm
+track MDDsouth2-out MDDsouth-out Fm
 
 subtrack DCHsi-in MDD-in Un
 subtrack DCHsi-out MDD-out Un
 subtrack MDDsouth-in MDD-in Fm
 subtrack MDDsouth-out MDD-out Fm
+
+
+# Post fixes
+
