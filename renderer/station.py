@@ -90,6 +90,16 @@ class Station(object):
         ctx.line_to(-5, 5)
         ctx.set_line_width(2)
         ctx.stroke()
+        # Draw the name of the station/waypoint
+        ctx.select_font_face(
+            "LondonTwo",
+            cairo.FONT_SLANT_NORMAL,
+            cairo.FONT_WEIGHT_NORMAL,
+        )
+        ctx.set_font_size(3)
+        ctx.move_to(6, -3)
+        ctx.show_text(self.code)
+        ctx.fill()
         # Draw a dot on each platform
         for platform in self.platforms.values():
             ctx.save()

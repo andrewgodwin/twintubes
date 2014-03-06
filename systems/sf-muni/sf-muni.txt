@@ -29,44 +29,53 @@ line BbBy D5BF2D
 
 # BART Milbrae -> Oakland
 
-station BPA Balboa \n Park -9.5,62.0
+station BPA Balboa \n Park -9.5,57.0
 label S
 label_offset 24,-7
 platform 1 NE By R
 platform 2 NE By L
 
-station GPK  2.5,50.0
+station GPK  2.5,45.0
 platform 1 NE By R
 platform 2 NE By L
 
-station 24M 24th St \n Mission 12.5,35.0
+station 24M 24th St \n Mission 15.0,30.0
 label E
 platform 1 N By R
 platform 2 N By L
 
-station 16M 16th St \n Mission 12.5,26.5
+station 16M 16th St \n Mission 15.0,21.5
 label E
 platform 1 N By R
 platform 2 N By L
 
 # Market Street Subway stations, south to north
 
-station WPO West Portal -31.5,31.5
+station WPO West Portal -30.5,30.5
 label SE
 platform out NE SuTwi L
 platform in NE SuTwi R
 
-station FOH Forest Hill -29.0,29.0
+waypoint WPOsouth  WPO,-4.5,4.5
+platform out NE
+platform in NE
+
+waypoint WPOwest  WPO,-5.5,1.5
+platform out E
+platform in E
+
+
+station FOH Forest Hill -25.5,25.5
 label SE
 platform out NE SuTwi L
 platform in NE SuTwi R
 
-station CAS Castro -22.5,22.5
+station CAS Castro -19.5,19.5
 label SE
 platform out NE SuTwi L
 platform in NE SuTwi R
 
-station CHU Church -5.0,5.0
+station CHU Church 1.0,-1.0
 label SE
 platform out NE SuTwi L
 platform in NE SuTwi R
@@ -210,15 +219,15 @@ waypoint J16north  J16,-1.0,-2.0
 platform in NW
 platform out NW
 
-waypoint J16south  J16,0.0,16.5
+waypoint J16south  J16,0.0,12.0
 platform out N
 platform in N
 
-waypoint J17  1.0,22.5
+waypoint J17  1.0,19.5
 platform out N
 platform in N
 
-station J18 Church & \n 18th Street 1.0,26.5
+station J18 Church & \n 18th Street 1.0,21.5
 platform out N Jc L
 platform in N Jc R
 
@@ -226,7 +235,7 @@ waypoint J18south  J18,1.0,3.0
 platform out N
 platform in N
 
-station J24 Church & \n 24th Street 1.0,35.0
+station J24 Church & \n 24th Street 1.0,30.0
 platform out N Jc L
 platform in N Jc R
 
@@ -234,7 +243,7 @@ waypoint J24north  J24,0.0,-3.5
 platform out N
 platform in N
 
-station J30 Church & \n 30th Street 1.0,39.0
+station J30 Church & \n 30th Street 1.0,34.0
 platform out N Jc L
 platform in N Jc R
 
@@ -245,42 +254,86 @@ platform out W
 sidings J30west  J30,-3.5,3.5
 platform si E Un
 
-station JSR San Jose & \n Randall 6.5,45.5
+station JSR San Jose & \n Randall 6.5,40.5
 platform out N Jc L
 platform in N Jc R
 
-station JGP Glen Park 4.0,51.5
+station JGP Glen Park 4.0,46.5
 label SE
 platform out NE Jc L
 platform in NE Jc R
 
 
+# K Ingleside (south to north)
+
+station KCC City \n College -12.5,49.0
+label N
+platform in W Ki L
+platform out W Ki R
+
+station KOL Ocean & \n Lee -19.5,49.0
+label S
+platform in W Ki L
+platform out W Ki R
+
+station KOJ Ocean & \n Jules -27.0,49.0
+label S
+platform in W Ki L
+platform out W Ki R
+
+station KJS Junipero Serra \n & Ocean -34.0,44.5
+label E
+platform out N Ki R
+platform in N Ki L
+
+station SFC St Francis \n Circle -35.5,38.5
+label W
+platform out N Ki R
+platform in N Ki L
+
+waypoint SFCsouthk  SFC,1.5,3.0
+platform out N
+platform in N
+
+
+# M Ocean View (south to north)
+
+waypoint SFCsouthm  SFC,-1.5,3.0
+platform out N
+platform in N
+
+
+# L Taraval (west to east)
+
+
+
+
 # Balboa park complex
 
-waypoint BPJ  2.0,53.5
+waypoint BPJ  2.0,48.5
 platform out NE
 platform in NE
 
-waypoint BPJwest  -3.0,54.5
+waypoint BPJwest  -3.0,49.5
 platform out E
 platform in E
 platform si E
 
-waypoint BPJsouth  1.0,57.5
+waypoint BPJsouth  1.0,52.5
 platform si N
 platform out N
 platform in N
 
-waypoint BPJsouth2  1.0,60.5
+waypoint BPJsouth2  1.0,55.5
 platform si N
 platform out N
 platform in N
 
-waypoint BPK  -7.5,54.0
+waypoint BPK  -7.5,49.0
 platform in W
 platform out W
 
-station BPAmuni  -4.5,62.0
+station BPAmuni  -4.5,57.0
 platform si SE Un N
 platform in SE Jc R
 
@@ -291,21 +344,39 @@ platform si S
 waypoint BPAmunisouth  BPAmuni,3.0,1.5
 platform in E
 
-waypoint BPM  1.5,66.0
+waypoint BPM  1.5,65.0
 platform in S
 platform out S
 
-sidings BPAsi  -3.5,61.0
+waypoint BPMnorth  BPM,0.0,-4.5
+platform in S
+platform out S
+
+waypoint BPMsouth  BPM,0.0,4.0
+platform in S
+platform out S
+
+sidings BPAsi  -3.5,56.0
 platform si SE Un
+
+sidings BPMsi Geneva \n Rail Yard 6.0,64.5
+label E
+platform si N Un
+
+waypoint BPMsinorth  BPMsi,-2.0,-2.5
+platform si W
+
+waypoint BPMsisouth  BPMsi,-2.0,2.5
+platform si E
 
 
 # F stations (market/embarcadero)
 
-waypoint CMPortal  -24.0,20.5
+waypoint CMPortal  -21.0,17.5
 platform out NE
 platform in NE
 
-station M17C 17th & Castro -19.0,20.0
+station M17C 17th & Castro -16.0,17.0
 label SE
 label_offset -13,5
 platform out W Un N
@@ -321,21 +392,21 @@ waypoint M17Ceast  M17C,3.0,0.0
 platform out W
 platform in W
 
-waypoint M17Ceast2  M17C,17.0,0.0
+waypoint M17Ceast2  M17C,14.5,0.0
 platform out E
 platform in E
 
-station M16N 16th & \n Noe -12.5,8.0
+station M16N 16th & \n Noe -9.5,5.0
 label NW
 platform out NE Fm L
 platform in NE Fm R
 
-station M15S 15th & \n Sanchez -9.5,5.0
+station M15S 15th & \n Sanchez -6.5,2.0
 label NW
 platform out NE Fm L
 platform in NE Fm R
 
-station M14C 14th & \n Church -6.5,2.0
+station M14C 14th & \n Church -3.5,-1.0
 label NW
 platform out NE Fm L
 platform in NE Fm R
@@ -546,6 +617,52 @@ track J16north-out DCHsouth-out Jc
 subtrack J16north-in MDDsouth2-in Un
 subtrack J16north-in DCHsouth-in Jc
 
+## K Ingleside
+
+track BPK-out KCC-out Ki
+track BPK-in KCC-in Ki
+
+track KCC-out KOL-out Ki
+track KCC-in KOL-in Ki
+
+track KOL-out KOJ-out Ki
+track KOL-in KOJ-in Ki
+
+track KOJ-out KJS-out Ki
+track KOJ-in KJS-in Ki
+
+track KJS-out SFCsouthk-out Ki
+track KJS-in SFCsouthk-in Ki
+subtrack KJS-out SFCsouthk-in Ki
+subtrack KJS-in SFCsouthk-out Ki
+
+track SFCsouthm-out SFC-out Mo
+subtrack SFCsouthm-in SFC-in Mo
+subtrack SFCsouthk-out SFC-out Ki
+subtrack SFCsouthk-in SFC-in Ki
+
+track SFC-out WPOsouth-out Ki
+track SFC-in WPOsouth-in Ki
+subtrack SFC-out WPOsouth-in Ki
+
+subtrack WPOwest-out WPOsouth-in! Un
+subtrack WPOwest-in WPOsouth-out! Un
+subtrack WPOsouth-out WPO-out Ki
+subtrack WPOsouth-in WPO-in Ki
+
+## M Ocean View
+
+
+
+
+## L Taraval
+
+
+subtrack WPOwest-out WPO-out Lt
+subtrack WPOwest-in WPO-in Lt
+
+
+
 ## Balboa Park Muni
 
 
@@ -568,20 +685,42 @@ subtrack BPAmuninorth-in BPAmuni-in Jc
 subtrack BPAmuni-si BPAmunisouth-in Un
 subtrack BPAmuni-in BPAmunisouth-in Jc
 
-track BPJsouth2-out! BPM-in Un
-subtrack BPJsouth2-in! BPM-out Mo
+track BPJsouth2-out! BPMnorth-in Un
+subtrack BPJsouth2-in! BPMnorth-out Un
 
-subtrack BPAmunisouth-in BPM-in Mo
+subtrack BPAmunisouth-in BPM-in Un
 subtrack BPAmunisouth-in BPJsouth2-si Jc
 
 subtrack BPJsouth2-out BPJsouth-out Un
 subtrack BPJsouth2-in BPJsouth-in Un
-subtrack BPJsouth2-in BPJsouth-si Mo
+subtrack BPJsouth2-in BPJsouth-si Un
 subtrack BPJsouth2-si BPJsouth-si Ki
 subtrack BPJsouth2-si BPJsouth-in Jc
 
+# Smaller depot
 
-# Castro/Market portal
+subtrack BPMsinorth-si BPMnorth-out! Un
+subtrack BPMsinorth-si BPM-in Un
+
+subtrack BPMsi-si BPMsinorth-si Un
+subtrack BPMsisouth-si BPMsi-si Un
+
+subtrack BPM-in BPMsisouth-si Un
+subtrack BPM-out BPMsisouth-si Un
+subtrack BPMsouth-in! BPMsisouth-si Un
+subtrack BPMsouth-out! BPMsisouth-si Un
+
+# M outfeed
+
+subtrack BPMnorth-in BPM-in Mo
+subtrack BPMnorth-out BPM-out Mo
+
+subtrack BPM-in BPMsouth-in Mo
+subtrack BPM-out BPMsouth-out Mo
+
+
+
+## Castro/Market portal
 
 track CMPortal-out M17C-out! Un
 track CMPortal-in M17C-in! Un
