@@ -51,7 +51,7 @@ platform 2 N By L
 
 # Market Street Subway stations, south to north
 
-station WPO West Portal -30.5,30.5
+station WPO West Portal -26.5,26.5
 label SE
 platform out NE SuTwi L
 platform in NE SuTwi R
@@ -65,7 +65,7 @@ platform out E
 platform in E
 
 
-station FOH Forest Hill -25.5,25.5
+station FOH Forest Hill -23.0,23.0
 label SE
 platform out NE SuTwi L
 platform in NE SuTwi R
@@ -125,7 +125,7 @@ platform 2 NE BbBy L
 
 # N Judah, west to east
 
-station OCB Ocean \n Beach -53.0,0.0
+station OCB Ocean \n Beach -56.0,0.0
 label S
 platform out E Nj L
 platform in E Nj R
@@ -142,7 +142,7 @@ waypoint OCBeast  OCB,3.5,0.0
 platform out E
 platform in E
 
-station JSU Judah & \n Sunset -46.0,0.0
+station JSU Judah & \n Sunset -49.0,0.0
 label N
 platform out E Nj L
 platform in E Nj R
@@ -155,7 +155,7 @@ label N
 platform out E Nj L
 platform in E Nj R
 
-waypoint JNTwest  JNT,-3.0,0.0
+waypoint JNTwest  JNT,-4.0,0.0
 platform out E
 platform in E
 
@@ -268,28 +268,28 @@ platform in NE Jc R
 
 station KCC City \n College -12.5,49.0
 label N
-platform in W Ki L
-platform out W Ki R
+platform in W Ki R
+platform out W Ki L
 
-station KOL Ocean & \n Lee -19.5,49.0
+station KOL Ocean & \n Lee -19.0,49.0
 label S
-platform in W Ki L
-platform out W Ki R
+platform in W Ki R
+platform out W Ki L
 
-station KOJ Ocean & \n Jules -27.0,49.0
+station KOJ Ocean & \n Jules -25.5,49.0
 label S
-platform in W Ki L
-platform out W Ki R
+platform in W Ki R
+platform out W Ki L
 
-station KJS Junipero Serra \n & Ocean -34.0,44.5
+station KJS Junipero Serra \n & Ocean -30.0,40.5
 label E
-platform out N Ki R
-platform in N Ki L
+platform out N Ki L
+platform in N Ki R
 
-station SFC St Francis \n Circle -35.5,38.5
+station SFC St Francis \n Circle -31.5,34.5
 label W
-platform out N Ki R
-platform in N Ki L
+platform out N Ki L
+platform in N Ki R
 
 waypoint SFCsouthk  SFC,1.5,3.0
 platform out N
@@ -298,6 +298,26 @@ platform in N
 
 # M Ocean View (south to north)
 
+station MBP Broad & \n Plymouth -9.5,71.0
+label S
+platform in W Mo R
+platform out W Mo L
+
+station MRA Randolph \n & Arch -21.5,70.0
+label S
+platform in W Mo R
+platform out W Mo L
+
+station MSS SF State -33.0,57.5
+label W
+platform out N Mo R
+platform in N Mo L
+
+station MST Stonestown -33.0,47.0
+label W
+platform out N Mo R
+platform in N Mo L
+
 waypoint SFCsouthm  SFC,-1.5,3.0
 platform out N
 platform in N
@@ -305,7 +325,52 @@ platform in N
 
 # L Taraval (west to east)
 
+station ZOO SF Zoo -56.0,35.0
+label S
+platform in E Lt R
 
+waypoint ZOOwest  ZOO,-2.5,-1.5
+platform out N
+
+waypoint ZOOnorth  ZOO,-0.5,-3.0
+platform out E
+
+waypoint L46  -56.5,27.0
+platform out E
+platform in E
+
+waypoint L46east  L46,5.0,0.0
+platform out E
+platform in E
+
+sidings L46west  L46,-3.0,-0.5
+platform si E Un
+
+waypoint L46south  L46,2.5,2.5
+platform out N
+platform in N
+
+station LSU Taraval & \n Sunset -49.0,27.0
+label S
+platform out E Lt R
+platform in E Lt L
+
+waypoint L35  -45.0,27.0
+platform out E
+platform in E
+
+waypoint L35east  L35,4.0,0.0
+platform out E
+platform in E
+
+waypoint L35north  L35,2.0,-3.0
+platform si S
+
+
+station L22 Taraval & \n 22nd Av -38.0,27.0
+label N
+platform out E Lt R
+platform in E Lt L
 
 
 # Balboa park complex
@@ -459,9 +524,12 @@ track MON-2 EMB-2 By
 
 track WPO-out FOH-out SuTwi
 track WPO-in FOH-in SuTwi
+subtrack WPO-out FOH-in SuTwi
 
-track FOH-out CAS-out SuTwi
-track FOH-in CAS-in SuTwi
+subtrack FOH-out CMPortal-out Un
+subtrack FOH-out CAS-out SuTwi
+track FOH-in CMPortal-in Un
+subtrack FOH-in CAS-in SuTwi
 
 track CAS-out CHU-out SuTwi
 track CAS-in CHU-in SuTwi
@@ -652,11 +720,59 @@ subtrack WPOsouth-in WPO-in Ki
 
 ## M Ocean View
 
+track BPMsouth-out MBP-out Mo
+track BPMsouth-in MBP-in Mo
 
+track MBP-out MRA-out Mo
+track MBP-in MRA-in Mo
 
+track MRA-out MSS-out Mo
+track MRA-in MSS-in Mo
+subtrack MRA-out MSS-in Mo
+subtrack MRA-in MSS-out Mo
+
+track MSS-out MST-out Mo
+track MSS-in MST-in Mo
+subtrack MSS-out MST-in Mo
+subtrack MSS-in MST-out Mo
+
+track MST-out SFCsouthm-out Mo
+track MST-in SFCsouthm-in Mo
 
 ## L Taraval
 
+track ZOO-in L46south-in Lt
+track ZOO-in! ZOOwest-out Lt
+track ZOOwest-out ZOOnorth-out Lt
+track ZOOnorth-out L46south-out Lt
+
+track L46west-si L46-out Un
+subtrack L46west-si L46-in Un
+subtrack L46south-out L46-in! Un
+subtrack L46-out L46east-out Un
+subtrack L46-in L46east-in Un
+
+subtrack L46south-out L46east-out Lt
+subtrack L46south-in L46east-in Lt
+
+track L46east-out LSU-out Lt
+track L46east-in LSU-in Lt
+
+track LSU-out L35-out Lt
+track LSU-in L35-in Lt
+subtrack LSU-out L35-in Lt
+
+subtrack L35north-si L35east-in Un
+subtrack L35north-si L35-out! Un
+subtrack L35-out L35east-out Lt
+subtrack L35-in L35east-in Lt
+
+track L35east-out L22-out Lt
+track L35east-in L22-in Lt
+subtrack L35east-out L22-in Lt
+
+track L22-out WPOwest-out Lt
+track L22-in WPOwest-in Lt
 
 subtrack WPOwest-out WPO-out Lt
 subtrack WPOwest-in WPO-in Lt
