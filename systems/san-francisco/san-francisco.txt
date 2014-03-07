@@ -95,28 +95,28 @@ platform in NE SuMkt L
 platform 1 NE BbBy N
 platform 2 NE BbBy N
 
-station CVC Civic Center 20.5,-19.0
+station CVC Civic Center 29.0,-27.5
 label SE
 platform out NE SuMkt R
 platform in NE SuMkt L
 platform 1 NE BbBy R
 platform 2 NE BbBy L
 
-station POW Powell 25.5,-24.0
+station POW Powell 36.5,-35.0
 label SE
 platform out NE SuMkt R
 platform in NE SuMkt L
 platform 1 NE BbBy R
 platform 2 NE BbBy L
 
-station MON Montgomery 30.5,-29.0
+station MON Montgomery 45.5,-44.0
 label SE
 platform out NE SuMkt R
 platform in NE SuMkt L
 platform 1 NE BbBy R
 platform 2 NE BbBy L
 
-station EMB Embarcadero 35.5,-34.0
+station EMB Embarcadero 54.5,-53.0
 label SE
 platform out NE SuMkt R
 platform in NE SuMkt L
@@ -476,7 +476,7 @@ label NW
 platform out NE Fm L
 platform in NE Fm R
 
-station MDD Dolores & \n Duboce 9.5,-14.0
+station MDD Dolores & Duboce 9.5,-14.0
 label NW
 platform out NE Fm L
 platform in NE Fm R
@@ -488,6 +488,76 @@ platform in NE Fm
 waypoint MDDsouth2  MDD,-9.5,9.5
 platform out NE Fm
 platform in NE Fm
+
+station MLG Laguna & Guerrero 12.5,-17.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
+
+station MHG Haight & Gough 15.5,-20.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
+
+station MVN Van Ness 18.5,-23.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
+
+station M9L 9th & Larkin 21.5,-26.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
+
+station M8H 8th & Hyde 24.5,-29.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
+
+station M7J 7th & Jones 27.5,-32.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
+
+station M6T 6th & Taylor 30.5,-35.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
+
+station M5P 5th & Powell 33.5,-38.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
+
+station M4S 4th & Stockton 36.5,-41.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
+
+station M3K 3rd & Kearny 39.5,-44.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
+
+station MMO Montgomery 42.5,-47.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
+
+station M2S 2nd & Sansome 45.5,-50.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
+
+station M1B 1st & Battery 48.5,-53.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
+
+station MMD Main & Drumm 51.5,-56.0
+label NW
+platform out NE Fm L
+platform in NE Fm R
 
 
 
@@ -874,6 +944,9 @@ subtrack DCHsi-in MDD-in Un
 subtrack DCHsi-out MDD-out Un
 subtrack MDDsouth-in MDD-in Fm
 subtrack MDDsouth-out MDD-out Fm
+
+track MDD-in MLG-in Fm
+track MDD-out MLG-out Fm
 
 
 # Post fixes
