@@ -2433,7 +2433,7 @@ platform road N Di
 
 station PUT Putney Bridge -47.5,24.0
 platform 1 N Di L
-platform 2 N Di R
+#platform 2 N Di R
 platform 3 N Di L
 
 waypoint PUTnorth  PUT,0.0,-2.0
@@ -4834,8 +4834,8 @@ subtrack PGRsi2-road PGRsouth-sb Di
 
 track PUT-1 PUTnorth-nb Di
 track PUT-3 PUTnorth-sb Di
-subtrack PUT-2 PUTnorth-sb Di
-subtrack PUT-2 PUTnorth-nb Di
+#subtrack PUT-2 PUTnorth-sb Di
+#subtrack PUT-2 PUTnorth-nb Di
 
 track EPY-1 PUT-1 Di
 track EPY-2 PUT-3 Di
