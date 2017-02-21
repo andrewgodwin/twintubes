@@ -1,6 +1,7 @@
 import cairo
 import os
 import sys
+import argparse
 from vector import Vector
 from draw import Direction, Segment
 from datastructures import SortedDict
@@ -288,13 +289,13 @@ class Map(object):
 
 
 if __name__ == "__main__":
-    originalFileName = "london.txt"
-    destinationFileName = "london.pdf"
+    parser = argparse.ArgumentParser(description="Generate a Twin Tubes map")
+    parser.add_argument('in_file', help='The source file for the map')
+    parser.add_argument('-o', '--out-file', help='The output file name')
+    args = parser.parse_args()
+    if args.out_file == None:
+        args.out_file = os.path.splitext(args.in_file)[0] + '.pdf'
 
-    if (len(sys.argv) == 3):
-        originalFileName = sys.argv[1]
-        destinationFileName = sys.argv[2]
-    
     m = Map()
-    m.load(originalFileName)
-    m.to_pdf(destinationFileName)
+    m.load(args.in_file)
+    m.to_pdf(args.out_file)
